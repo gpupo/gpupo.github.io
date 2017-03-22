@@ -64,7 +64,9 @@
     var $badge = $("<p>").addClass("badges").appendTo($itemDiv);
     $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/v/stable'));
     $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/downloads'));
-
+    $badge.append($("<img>").attr('src', 'https://secure.travis-ci.org/gpupo/'+repo.name+'.png?branch=master'));
+    $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
+    $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
 
     $item.appendTo("#repos");
   }

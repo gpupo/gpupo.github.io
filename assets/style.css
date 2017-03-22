@@ -140,7 +140,7 @@ div.header h1 {
 }
 
 li.repo {
-  height: 250px;
+  height: 350px;
 }
 
 li.repo > a {
@@ -211,7 +211,7 @@ li.repo h3 {
 li.repo .language {
   position: absolute;
   top: 3px;
-  right: 4px;  
+  right: 4px;
   text-align: right;
   z-index: 3;
   color: #fff;
