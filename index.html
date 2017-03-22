@@ -8,6 +8,15 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="assets/strftime.js"></script>
+
+    <!-- Google Tag Manager -->
+   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+   })(window,document,'script','dataLayer','GTM-WQLJK9S');</script>
+   <!-- End Google Tag Manager -->
+
     <script type="text/javascript">
     (function ($, undefined) {
 
@@ -19,7 +28,8 @@
       };
 
       function repoUrl(repo) {
-        return repoUrls[repo.name] || repo.homepage || repo.html_url;
+          return 'https://opensource.gpupo.com/'+repo.name;
+          //return repoUrls[repo.name] || repo.homepage || repo.html_url;
       }
       function repoDescription(repo) {
         return repoDescriptions[repo.name] || repo.description;
@@ -33,20 +43,20 @@
 
         var $item = $("<li>");
 
-        var $name = $("<a>").attr("href", repo.html_url).text(repo.name);
+        var $name = $("<a>").attr("href", repoUrl(repo)).text(repo.name);
         $item.append($("<span>").addClass("name").append($name));
 
-        var $time = $("<a>").attr("href", repo.html_url + "/commits").text(strftime("%h %e, %Y", repo.pushed_at));
+        var $time = $("<a>").attr("href", repoUrl(repo) + "/commits").text(strftime("%h %e, %Y", repo.pushed_at));
         $item.append($("<span>").addClass("time").append($time));
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $watchers = $("<a>").attr("href", repo.html_url + "/watchers").text(repo.watchers + " watchers");
+        var $watchers = $("<a>").attr("href", repoUrl(repo) + "/watchers").text(repo.watchers + " watchers");
         $item.append($("<span>").addClass("watchers").append($watchers));
 
         $item.append('<span class="bullet">&sdot;</span>');
 
-        var $forks = $("<a>").attr("href", repo.html_url + "/network").text(repo.forks + " forks");
+        var $forks = $("<a>").attr("href", repoUrl(repo) + "/network").text(repo.forks + " forks");
         $item.append($("<span>").addClass("forks").append($forks));
 
         $item.appendTo("#recently-updated-repos");
@@ -119,9 +129,13 @@
     </script>
   </head>
   <body>
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQLJK9S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+
     <div id="wrapper" class="grid clearfix">
       <div id="main" class="grid-1">
-        <div><h1>@gpupo's repos</h1></div>
+        <div><h1><a href="https://www.gpupo.com">@gpupo</a>'s repos</h1></div>
         <p>This is an index to my open source repos on github</p>
       </div>
 
@@ -132,7 +146,7 @@
             <a href="https://github.com/gpupo/repositories"><span id="num-repos">&nbsp;</span> public repos</a>
             <br>
           </p>
-          <p class="email"><a href="mailto:g@g1mr.com">g@g1mr.com</a></p>
+          <p class="email"><a href="mailto:contact@gpupo.com">contact@gpupo.com/a></p>
         </div>
 
         <div id="recently-updated" class="grid-2 omega header">
