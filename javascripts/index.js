@@ -8,7 +8,14 @@
   };
 
   function repoUrl(repo) {
+
+      if (null === repo.homepage || 10 > repo.homepage.length) {
+          return repo.html_url;
+      }
+
       return 'https://opensource.gpupo.com/'+repo.name;
+
+
       //return repoUrls[repo.name] || repo.homepage || repo.html_url;
   }
   function repoDescription(repo) {
@@ -62,11 +69,16 @@
     $itemDiv.append($("<h3>").addClass("language").text(repo.language));
 
     var $badge = $("<p>").addClass("badges").appendTo($itemDiv);
-    $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/v/stable'));
-    $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/downloads'));
-    $badge.append($("<img>").attr('src', 'https://secure.travis-ci.org/gpupo/'+repo.name+'.png?branch=master'));
-    $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
-    $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
+    if(repo.description.indexOf('[outdated]') !== -1){
+        //$badge.append($("<div>").addClass("outdated"));
+        $badge.append($("<img>").attr('src', 'images/dead-icon.png'));
+    } else if ('PHP' === repo.language){
+        $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/v/stable'));
+        $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/downloads'));
+        $badge.append($("<img>").attr('src', 'https://secure.travis-ci.org/gpupo/'+repo.name+'.png?branch=master'));
+        $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
+        $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
+    }
 
     $item.appendTo("#repos");
   }
@@ -78,6 +90,10 @@
       $("#num-repos").text(repos.length);
       // Convert pushed_at to Date.
       $.each(repos, function (i, repo) {
+        //console.log(repo);
+        if (true === repo.fork) {
+            return;
+        }
         repo.pushed_at = new Date(repo.pushed_at);
         var weekHalfLife  = 1.146 * Math.pow(10, -9);
         var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
