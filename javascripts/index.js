@@ -65,9 +65,10 @@
     $itemDiv.append($("<p>").text(repoDescription(repo)));
 
 
-    $itemDiv.append($("<p>").text("Updated "+strftime("%h %e, %Y", repo.pushed_at)));
-    $itemDiv.append($("<h3>").addClass("language").text(repo.language));
+    //$itemDiv.append($("<p>").text("Updated "+strftime("%h %e, %Y", repo.pushed_at)));
 
+    $itemDiv.append($("<h3>").addClass("language").text(repo.language));
+    repo.description = ""+repo.description
     var $badge = $("<p>").addClass("badges").appendTo($itemDiv);
     if(repo.description.indexOf('[outdated]') !== -1){
         //$badge.append($("<div>").addClass("outdated"));
@@ -79,6 +80,9 @@
         $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
         $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
     }
+
+    var pushat = "" +repo.pushed_at;
+    $itemDiv.append($("<p>").addClass("timestamp").text("Updated "+ pushat.substr(3,12)));
 
     $item.appendTo("#repos");
   }

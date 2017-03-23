@@ -263,3 +263,10 @@ li.repo .language {
   height: 100%;
   overflow: hidden;
 }
+
+p.badges{
+    width: 150px;
+}
+p.timestamp{
+    font-size: 80%;
+}
