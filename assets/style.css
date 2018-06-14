@@ -90,6 +90,14 @@ div.header h1 {
   margin-bottom: 10px;
 }
 
+#versions {
+    width: 500px;
+}
+
+#versions tr .label {
+    width: 400px;
+}
+
 #num-repos, #num-members {
   font-size: 14px;
   font-weight: bold;

@@ -49,14 +49,30 @@
     $item.appendTo("#recently-updated-repos");
   }
 
+
+  function addControllVersionInfo(repo)
+  {
+        $("<p>").text("git clone --depth=1 "+repo.ssh_url+";").appendTo("#clone");
+
+        var $versionP = $("<tr>").addClass(repo.name);
+        var $label = $("<td>").addClass("label").html(repo.name).appendTo($versionP);
+        var $version = $("<td>").addClass("v").appendTo($versionP);
+        $versionP.appendTo("#versions");
+
+        $.get(repo.tags_url).done(function (data) {
+          $('#versions .'+repo.name+" .v").html(data[0].name);
+        });
+  }
+
   function addRepo(repo) {
 
     if (repo.name.indexOf(".io") > 0) {
         return false;
     }
 
-    var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
 
+
+    var $item = $("<li>").addClass("repo grid-1 " + (repo.language || '').toLowerCase());
     var $itemDiv = $("<div>").addClass("item").appendTo($item);
 
     var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($itemDiv);
@@ -70,15 +86,18 @@
     $itemDiv.append($("<h3>").addClass("language").text(repo.language));
     repo.description = ""+repo.description
     var $badge = $("<p>").addClass("badges").appendTo($itemDiv);
-    if(repo.description.indexOf('[outdated]') !== -1){
+    if(repo.description.indexOf('[outdated]') !== -1 || repo.archived === true){
         //$badge.append($("<div>").addClass("outdated"));
         $badge.append($("<img>").attr('src', 'images/dead-icon.png'));
     } else if ('PHP' === repo.language){
+        addControllVersionInfo(repo);
         $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/v/stable'));
         $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/downloads'));
         $badge.append($("<img>").attr('src', 'https://secure.travis-ci.org/gpupo/'+repo.name+'.png?branch=master'));
         $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
         $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
+    } else {
+       addControllVersionInfo(repo);
     }
 
     var pushat = "" +repo.pushed_at;
