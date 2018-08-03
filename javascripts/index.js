@@ -13,10 +13,8 @@
           return repo.html_url;
       }
 
-      return 'https://opensource.gpupo.com/'+repo.name;
-
-
-      //return repoUrls[repo.name] || repo.homepage || repo.html_url;
+      // return 'https://opensource.gpupo.com/'+repo.name;
+      return repoUrls[repo.name] || repo.homepage || repo.html_url;
   }
   function repoDescription(repo) {
     return repoDescriptions[repo.name] || repo.description;
@@ -62,6 +60,8 @@
         $.get(repo.tags_url).done(function (data) {
           $('#versions .'+repo.name+" .v").html(data[0].name);
         });
+
+        $("<p>").text("ln -snf ~/workspace/gpupo/"+repo.name+" ./").appendTo("#linkAll");
   }
 
   function addRepo(repo) {
@@ -95,7 +95,7 @@
         $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/downloads'));
         $badge.append($("<img>").attr('src', 'https://secure.travis-ci.org/gpupo/'+repo.name+'.png?branch=master'));
         $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
-        $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
+        // $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
     } else {
        addControllVersionInfo(repo);
     }
