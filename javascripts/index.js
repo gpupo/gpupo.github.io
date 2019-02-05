@@ -50,7 +50,7 @@
 
   function addControllVersionInfo(repo)
   {
-        $("<p>").text("git clone --depth=1 "+repo.ssh_url+";").appendTo("#clone");
+        // $("<p>").text("git clone --depth=1 "+repo.ssh_url+";").appendTo("#clone");
 
         var $versionP = $("<tr>").addClass(repo.name);
         var $label = $("<td>").addClass("label").html(repo.name).appendTo($versionP);
@@ -61,7 +61,7 @@
           $('#versions .'+repo.name+" .v").html(data[0].name);
         });
 
-        $("<p>").text("ln -snf ~/workspace/gpupo/"+repo.name+" ./").appendTo("#linkAll");
+        // $("<p>").text("ln -snf ~/workspace/gpupo/"+repo.name+" ./").appendTo("#linkAll");
   }
 
   function addRepo(repo) {
@@ -94,7 +94,7 @@
         $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/v/stable'));
         $badge.append($("<img>").attr('src', 'https://poser.pugx.org/gpupo/'+repo.name+'/downloads'));
         $badge.append($("<img>").attr('src', 'https://secure.travis-ci.org/gpupo/'+repo.name+'.png?branch=master'));
-        $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
+        // $badge.append($("<img>").attr('src', 'https://scrutinizer-ci.com/g/gpupo/'+repo.name+'/badges/quality-score.png?b=master'));
         // $badge.append($("<img>").attr('src', 'https://codeclimate.com/github/gpupo/'+repo.name+'/badges/gpa.svg'));
     } else {
        addControllVersionInfo(repo);
