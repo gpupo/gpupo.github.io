@@ -1,0 +1,37 @@
+<h1>Active Repos</h1>
+<ul>
+    {% for repo in repos %}
+        {% if repo.archived == false %}
+        <li>
+        <a href="https://github.com/{{ repo.full_name|e }}/" target="_blank">
+            {{ repo.name }}
+        </a>
+        <span class="badges">
+
+        <a href="http://travis-ci.org/{{ repo.full_name|e }}" target="_blank">
+            <img src="https://secure.travis-ci.org/{{ repo.full_name|e }}.png?branch=master" />
+        </a>
+
+        <a href="https://github.com/{{ repo.full_name|e }}/actions" target="_blank">
+            <img src="https://github.com/{{ repo.full_name|e }}/workflows/CI/badge.svg" />
+        </a>
+
+        {% if repo.language == 'PHP' %}
+
+        <a href="https://packagist.org/{{ repo.full_name|e }}/actions" target="_blank">
+            <img src="https://poser.pugx.org/{{ repo.full_name|e }}/v/stable">
+        </a>
+
+        <a href="https://packagist.org/{{ repo.full_name|e }}/actions" target="_blank">
+            <img src="https://poser.pugx.org/{{ repo.full_name|e }}/downloads">
+        </a>
+
+        {% endif %}
+    </span>
+        {{ repo.description }}
+
+        </li>
+
+        {% endif %}
+    {% endfor %}
+</ul>

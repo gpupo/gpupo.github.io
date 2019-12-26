@@ -1,0 +1,36 @@
+{
+    "name": "gpupo/gpupo.github.io",
+    "description": "opensource.gpupo.com homepage",
+    "homepage": "https://opensource.gpupo.com/",
+    "authors": [
+        {
+            "name": "Gilmar Pupo",
+            "email": "contact@gpupo.com"
+        }
+    ],
+    "keywords": ["development"],
+    "license": "MIT",
+    "require": {
+        "symfony/console": "^5.0",
+        "knplabs/github-api": "^2.12",
+        "php-http/guzzle6-adapter": "^1.1",
+        "gpupo/common-sdk": "^5.1",
+        "gpupo/common-dev": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gpupo\\GithubIo\\": "src",
+            "Gpupo\\GithubIo\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
