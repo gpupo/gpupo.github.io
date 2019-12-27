@@ -35,6 +35,3 @@ jobs:
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest --no-scripts --ignore-platform-reqs
-
-      - name: Run test suite
-        run: composer run-script test
