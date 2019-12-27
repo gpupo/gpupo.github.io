@@ -18,6 +18,7 @@ declare(strict_types=1);
 namespace Gpupo\GithubIo\Console\Command;
 
 use Github\Client;
+use Github\Api\ApiInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Twig\Environment;
@@ -37,20 +38,26 @@ final class ReposCommand extends AbstractCommand
         parent::configure();
     }
 
-    protected function getClient(): Client
-    {
-        $client = new Client();
-
-        return $client;
-    }
-
     protected function loadRepos(): array
     {
-        if (file_exists(static::getResourcesPath().$this::FILENAME_REPOS)) {
+        if ($this::DEV_MODE === false && file_exists(static::getResourcesPath().$this::FILENAME_REPOS)) {
             return $this->getResourceYaml($this::FILENAME_REPOS);
         }
 
-        $repositories = $this->getClient()->api('user')->repositories('gpupo');
+        $repositories = $this->getUserApi()->repositories($this::USERNAME);
+
+        $api = $this->getClient()->api('repo');
+
+        foreach($repositories as $k => $repo) {
+            $branches = $api->branches($this::USERNAME, $repo['name']);
+
+            foreach($branches as $branch) {
+                $repositories[$k]['branches'][] = $branch['name'];
+            }
+
+            $repositories[$k]['tags'] = $api->tags($this::USERNAME, $repo['name']);
+        }
+
         $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_REPOS, $repositories);
 
         return $repositories;

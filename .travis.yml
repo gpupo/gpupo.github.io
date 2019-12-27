@@ -1,0 +1,14 @@
+sudo: false
+language: php
+os:
+  - linux
+php:
+  - 7.4
+before_script:
+  - composer self-update
+script: COMPOSER_MEMORY_LIMIT=5G composer install --prefer-dist
+notifications:
+  email: false
+branches:
+  only:
+  - master

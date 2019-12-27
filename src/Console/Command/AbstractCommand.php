@@ -21,11 +21,41 @@ use Gpupo\Common\Traits\TableTrait;
 use Gpupo\CommonSdk\Console\Command\AbstractCommand as Core;
 use Gpupo\CommonSdk\Traits\ResourcesTrait;
 use Symfony\Component\Console\Input\InputOption;
+use Github\Client;
+use Github\Api\ApiInterface;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 abstract class AbstractCommand extends Core
 {
     use TableTrait;
     use ResourcesTrait;
+
+    const USERNAME = 'gpupo';
+    const DEV_MODE = false;
+
+    protected $client;
+
+    protected function getClient(): Client
+    {
+        if (empty($this->client)) {
+            $this->client = new Client();
+            $this->client->authenticate($_ENV['GITHUB_TOKEN'], null, 'http_token');
+        }
+
+        return $this->client;
+    }
+
+    protected function getUserApi(): ApiInterface
+    {
+        $api = $this->getClient()->api('user');
+        $api->setPerPage(90);
+
+        return $api;
+    }
+
 
     protected function configure()
     {

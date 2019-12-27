@@ -4,3 +4,6 @@ services:
         image: gpupo/container-orchestration:php-dev-${CONTAINER_ORCHESTRATION_TAG_VERSION}
         volumes:
             - $PWD/:/var/www/app
+        env_file:
+            - .env
+            - .env.local    

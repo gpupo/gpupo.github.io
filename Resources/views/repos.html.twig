@@ -1,37 +1,49 @@
-<h1>Active Repos</h1>
-<ul>
+{% extends 'base.html.twig' %}
+{% block content %}
+<h2>Active Repos</h2>
+<ul class="list-group list-group-flush">
     {% for repo in repos %}
         {% if repo.archived == false %}
-        <li>
-        <a href="https://github.com/{{ repo.full_name|e }}/" target="_blank">
+    <li class="list-group-item">
+        <a href="{{ repo.html_url }}" target="_blank">
             {{ repo.name }}
         </a>
-        <span class="badges">
-
-        <a href="http://travis-ci.org/{{ repo.full_name|e }}" target="_blank">
-            <img src="https://secure.travis-ci.org/{{ repo.full_name|e }}.png?branch=master" />
-        </a>
-
-        <a href="https://github.com/{{ repo.full_name|e }}/actions" target="_blank">
-            <img src="https://github.com/{{ repo.full_name|e }}/workflows/CI/badge.svg" />
-        </a>
-
-        {% if repo.language == 'PHP' %}
-
-        <a href="https://packagist.org/{{ repo.full_name|e }}/actions" target="_blank">
-            <img src="https://poser.pugx.org/{{ repo.full_name|e }}/v/stable">
-        </a>
-
-        <a href="https://packagist.org/{{ repo.full_name|e }}/actions" target="_blank">
-            <img src="https://poser.pugx.org/{{ repo.full_name|e }}/downloads">
-        </a>
-
-        {% endif %}
-    </span>
-        {{ repo.description }}
-
-        </li>
-
+        {% include "includes/repo_badges.html.twig" %}
+        {% include "includes/repo_description.html.twig" %}
+    </li>
         {% endif %}
     {% endfor %}
 </ul>
+
+
+<h2>Lists</h2>
+<pre><code>
+{% for repo in repos %}{% if repo.archived == false %}
+test -d {{repo.name}} || git clone {{ repo.ssh_url }};
+{% endif %}{% endfor %}
+
+STRINGLIST="\
+{% for repo in repos %}{% if repo.archived == false %}{{ repo.name }} \
+{% endif %}{% endfor %}
+";
+</code></pre>
+
+
+<hr>
+
+<h2>Archived Repos</h2>
+<ul class="list-group list-group-flush">
+    {% for repo in repos %}
+        {% if repo.archived == true %}
+    <li class="list-group-item">
+        <a href="{{ repo.html_url }}" target="_blank">
+            {{ repo.name }}
+        </a>
+        {% include "includes/repo_description.html.twig" %}
+    </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+{% endblock content %}
