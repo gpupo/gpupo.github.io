@@ -1,14 +1,25 @@
 {% extends 'base.html.twig' %}
 {% block content %}
+
+
+
+<style>
+.repo.name {
+    width: 300px;
+}
+</style>
+
+
+
 <h2>Active Repos</h2>
 <ul class="list-group list-group-flush">
     {% for repo in repos %}
         {% if repo.archived == false %}
     <li class="list-group-item">
-        <a href="{{ repo.html_url }}" target="_blank">
-            {{ repo.name }}
-        </a>
         {% include "includes/repo_badges.html.twig" %}
+        <a href="{{ repo.html_url }}"  class="repo.name" target="_blank">
+            <div class="d-inline w-25 p-3"> {{ repo.name }}</div>
+        </a>
         {% include "includes/repo_description.html.twig" %}
     </li>
         {% endif %}

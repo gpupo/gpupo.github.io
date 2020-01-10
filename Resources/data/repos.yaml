@@ -265,16 +265,16 @@
   releases_url: 'https://api.github.com/repos/gpupo/brazilian-banking-automation/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/brazilian-banking-automation/deployments'
   created_at: '2018-05-24T12:07:52Z'
-  updated_at: '2019-12-27T17:18:07Z'
-  pushed_at: '2019-12-27T17:26:38Z'
+  updated_at: '2020-01-09T20:06:05Z'
+  pushed_at: '2020-01-09T20:06:02Z'
   git_url: 'git://github.com/gpupo/brazilian-banking-automation.git'
   ssh_url: 'git@github.com:gpupo/brazilian-banking-automation.git'
   clone_url: 'https://github.com/gpupo/brazilian-banking-automation.git'
   svn_url: 'https://github.com/gpupo/brazilian-banking-automation'
   homepage: 'https://opensource.gpupo.com/brazilian-banking-automation/'
-  size: 1097
-  stargazers_count: 0
-  watchers_count: 0
+  size: 33
+  stargazers_count: 1
+  watchers_count: 1
   language: PHP
   has_issues: true
   has_projects: false
@@ -294,7 +294,7 @@
     node_id: MDc6TGljZW5zZTEz
   forks: 3
   open_issues: 0
-  watchers: 0
+  watchers: 1
   default_branch: master
   permissions:
     admin: true
@@ -393,8 +393,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/brazilian-cars/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/brazilian-cars/deployments'
   created_at: '2019-01-30T18:33:19Z'
-  updated_at: '2019-12-26T19:17:37Z'
-  pushed_at: '2019-12-26T19:17:35Z'
+  updated_at: '2020-01-09T20:06:09Z'
+  pushed_at: '2020-01-09T20:06:06Z'
   git_url: 'git://github.com/gpupo/brazilian-cars.git'
   ssh_url: 'git@github.com:gpupo/brazilian-cars.git'
   clone_url: 'https://github.com/gpupo/brazilian-cars.git'
@@ -415,11 +415,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 0
   open_issues: 0
   watchers: 1
@@ -1388,8 +1388,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/common/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/common/deployments'
   created_at: '2014-10-23T11:46:17Z'
-  updated_at: '2019-12-26T13:06:02Z'
-  pushed_at: '2019-12-26T13:06:03Z'
+  updated_at: '2020-01-09T20:06:13Z'
+  pushed_at: '2020-01-09T20:06:11Z'
   git_url: 'git://github.com/gpupo/common.git'
   ssh_url: 'git@github.com:gpupo/common.git'
   clone_url: 'https://github.com/gpupo/common.git'
@@ -1410,11 +1410,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 0
   open_issues: 0
   watchers: 2
@@ -2046,14 +2046,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/common-schema/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/common-schema/deployments'
   created_at: '2014-08-08T17:42:54Z'
-  updated_at: '2019-12-27T17:33:33Z'
-  pushed_at: '2019-12-27T17:33:31Z'
+  updated_at: '2019-12-27T20:42:10Z'
+  pushed_at: '2019-12-27T20:42:07Z'
   git_url: 'git://github.com/gpupo/common-schema.git'
   ssh_url: 'git@github.com:gpupo/common-schema.git'
   clone_url: 'https://github.com/gpupo/common-schema.git'
   svn_url: 'https://github.com/gpupo/common-schema'
   homepage: ''
-  size: 658
+  size: 666
   stargazers_count: 0
   watchers_count: 0
   language: PHP
@@ -2391,8 +2391,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/common-sdk/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/common-sdk/deployments'
   created_at: '2014-09-22T12:39:22Z'
-  updated_at: '2019-12-26T19:29:21Z'
-  pushed_at: '2019-12-26T19:29:19Z'
+  updated_at: '2020-01-09T20:06:18Z'
+  pushed_at: '2020-01-09T20:06:16Z'
   git_url: 'git://github.com/gpupo/common-sdk.git'
   ssh_url: 'git@github.com:gpupo/common-sdk.git'
   clone_url: 'https://github.com/gpupo/common-sdk.git'
@@ -2413,11 +2413,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 2
   open_issues: 0
   watchers: 3
@@ -2735,14 +2735,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/container-orchestration/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/container-orchestration/deployments'
   created_at: '2018-06-04T11:15:36Z'
-  updated_at: '2019-12-20T12:12:16Z'
-  pushed_at: '2019-12-20T12:12:14Z'
+  updated_at: '2019-12-27T18:33:04Z'
+  pushed_at: '2019-12-27T18:33:01Z'
   git_url: 'git://github.com/gpupo/container-orchestration.git'
   ssh_url: 'git@github.com:gpupo/container-orchestration.git'
   clone_url: 'https://github.com/gpupo/container-orchestration.git'
   svn_url: 'https://github.com/gpupo/container-orchestration'
   homepage: 'https://opensource.gpupo.com/container-orchestration/'
-  size: 35201
+  size: 35204
   stargazers_count: 1
   watchers_count: 1
   language: Dockerfile
@@ -2757,11 +2757,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 1
   open_issues: 0
   watchers: 1
@@ -3082,8 +3082,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/content-butler/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/content-butler/deployments'
   created_at: '2018-08-16T17:34:29Z'
-  updated_at: '2019-12-27T14:00:47Z'
-  pushed_at: '2019-12-27T14:00:45Z'
+  updated_at: '2020-01-09T20:06:22Z'
+  pushed_at: '2020-01-09T20:06:20Z'
   git_url: 'git://github.com/gpupo/content-butler.git'
   ssh_url: 'git@github.com:gpupo/content-butler.git'
   clone_url: 'https://github.com/gpupo/content-butler.git'
@@ -3104,11 +3104,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 0
   open_issues: 0
   watchers: 0
@@ -3274,8 +3274,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/content-repository-server/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/content-repository-server/deployments'
   created_at: '2018-08-15T11:09:19Z'
-  updated_at: '2018-08-21T16:54:34Z'
-  pushed_at: '2018-08-21T16:54:37Z'
+  updated_at: '2020-01-09T20:06:27Z'
+  pushed_at: '2020-01-09T20:06:25Z'
   git_url: 'git://github.com/gpupo/content-repository-server.git'
   ssh_url: 'git@github.com:gpupo/content-repository-server.git'
   clone_url: 'https://github.com/gpupo/content-repository-server.git'
@@ -3295,7 +3295,12 @@
   archived: false
   disabled: false
   open_issues_count: 0
-  license: null
+  license:
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 1
   open_issues: 0
   watchers: 0
@@ -3485,14 +3490,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/gpupo-npm-common/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/gpupo-npm-common/deployments'
   created_at: '2019-09-23T19:12:07Z'
-  updated_at: '2019-12-04T18:23:13Z'
-  pushed_at: '2019-12-04T18:23:11Z'
+  updated_at: '2019-12-27T19:14:52Z'
+  pushed_at: '2019-12-27T19:14:50Z'
   git_url: 'git://github.com/gpupo/gpupo-npm-common.git'
   ssh_url: 'git@github.com:gpupo/gpupo-npm-common.git'
   clone_url: 'https://github.com/gpupo/gpupo-npm-common.git'
   svn_url: 'https://github.com/gpupo/gpupo-npm-common'
   homepage: null
-  size: 3
+  size: 4
   stargazers_count: 0
   watchers_count: 0
   language: JavaScript
@@ -3597,14 +3602,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/gpupo-npm-dev/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/gpupo-npm-dev/deployments'
   created_at: '2019-09-24T14:09:35Z'
-  updated_at: '2019-09-24T19:56:08Z'
-  pushed_at: '2019-09-24T19:56:11Z'
+  updated_at: '2019-12-27T19:21:11Z'
+  pushed_at: '2019-12-27T19:21:08Z'
   git_url: 'git://github.com/gpupo/gpupo-npm-dev.git'
   ssh_url: 'git@github.com:gpupo/gpupo-npm-dev.git'
   clone_url: 'https://github.com/gpupo/gpupo-npm-dev.git'
   svn_url: 'https://github.com/gpupo/gpupo-npm-dev'
   homepage: null
-  size: 4
+  size: 5
   stargazers_count: 0
   watchers_count: 0
   language: JavaScript
@@ -3717,14 +3722,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/gpupo.github.io/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/gpupo.github.io/deployments'
   created_at: '2015-07-15T12:37:35Z'
-  updated_at: '2019-12-26T19:10:05Z'
-  pushed_at: '2019-12-26T19:10:03Z'
+  updated_at: '2019-12-27T20:02:11Z'
+  pushed_at: '2019-12-27T20:02:09Z'
   git_url: 'git://github.com/gpupo/gpupo.github.io.git'
   ssh_url: 'git@github.com:gpupo/gpupo.github.io.git'
   clone_url: 'https://github.com/gpupo/gpupo.github.io.git'
   svn_url: 'https://github.com/gpupo/gpupo.github.io'
   homepage: null
-  size: 694
+  size: 737
   stargazers_count: 0
   watchers_count: 0
   language: CSS
@@ -3738,7 +3743,12 @@
   archived: false
   disabled: false
   open_issues_count: 0
-  license: null
+  license:
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 0
   open_issues: 0
   watchers: 0
@@ -3816,14 +3826,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/httpd-gateway/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/httpd-gateway/deployments'
   created_at: '2019-02-06T13:04:19Z'
-  updated_at: '2019-12-04T18:23:18Z'
-  pushed_at: '2019-12-04T18:23:16Z'
+  updated_at: '2019-12-27T19:48:57Z'
+  pushed_at: '2019-12-27T19:48:55Z'
   git_url: 'git://github.com/gpupo/httpd-gateway.git'
   ssh_url: 'git@github.com:gpupo/httpd-gateway.git'
   clone_url: 'https://github.com/gpupo/httpd-gateway.git'
   svn_url: 'https://github.com/gpupo/httpd-gateway'
   homepage: 'http://opensource.gpupo.com/httpd-gateway/'
-  size: 62
+  size: 64
   stargazers_count: 0
   watchers_count: 0
   language: Shell
@@ -3837,7 +3847,12 @@
   archived: false
   disabled: false
   open_issues_count: 0
-  license: null
+  license:
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 0
   open_issues: 0
   watchers: 0
@@ -4053,21 +4068,21 @@
   releases_url: 'https://api.github.com/repos/gpupo/MarkethubBundle/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/MarkethubBundle/deployments'
   created_at: '2015-04-06T19:00:03Z'
-  updated_at: '2019-12-13T13:34:26Z'
-  pushed_at: '2019-12-13T13:34:27Z'
+  updated_at: '2020-01-09T20:06:31Z'
+  pushed_at: '2020-01-09T20:06:29Z'
   git_url: 'git://github.com/gpupo/MarkethubBundle.git'
   ssh_url: 'git@github.com:gpupo/MarkethubBundle.git'
   clone_url: 'https://github.com/gpupo/MarkethubBundle.git'
   svn_url: 'https://github.com/gpupo/MarkethubBundle'
   homepage: 'https://opensource.gpupo.com/MarkethubBundle/'
-  size: 502
+  size: 203
   stargazers_count: 0
   watchers_count: 0
   language: PHP
   has_issues: true
-  has_projects: true
+  has_projects: false
   has_downloads: true
-  has_wiki: true
+  has_wiki: false
   has_pages: true
   forks_count: 1
   mirror_url: null
@@ -4075,11 +4090,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 1
   open_issues: 0
   watchers: 0
@@ -4089,7 +4104,6 @@
     push: true
     pull: true
   branches:
-    - gh-pages
     - master
   tags:
     -
@@ -4390,8 +4404,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/mercadolivre-sdk/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/mercadolivre-sdk/deployments'
   created_at: '2016-09-06T12:45:58Z'
-  updated_at: '2019-12-23T14:18:47Z'
-  pushed_at: '2019-12-23T14:18:44Z'
+  updated_at: '2020-01-09T20:06:36Z'
+  pushed_at: '2020-01-09T20:06:34Z'
   git_url: 'git://github.com/gpupo/mercadolivre-sdk.git'
   ssh_url: 'git@github.com:gpupo/mercadolivre-sdk.git'
   clone_url: 'https://github.com/gpupo/mercadolivre-sdk.git'
@@ -4412,11 +4426,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 5
   open_issues: 0
   watchers: 4
@@ -4689,14 +4703,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/mercadopago-sdk/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/mercadopago-sdk/deployments'
   created_at: '2018-06-15T12:15:08Z'
-  updated_at: '2019-12-23T14:20:50Z'
-  pushed_at: '2019-12-23T14:20:48Z'
+  updated_at: '2019-12-27T20:01:28Z'
+  pushed_at: '2019-12-27T20:01:26Z'
   git_url: 'git://github.com/gpupo/mercadopago-sdk.git'
   ssh_url: 'git@github.com:gpupo/mercadopago-sdk.git'
   clone_url: 'https://github.com/gpupo/mercadopago-sdk.git'
   svn_url: 'https://github.com/gpupo/mercadopago-sdk'
   homepage: 'https://opensource.gpupo.com/mercadopago-sdk'
-  size: 115
+  size: 116
   stargazers_count: 1
   watchers_count: 1
   language: PHP
@@ -4711,11 +4725,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 2
   open_issues: 0
   watchers: 1
@@ -5146,6 +5160,110 @@
         url: 'https://api.github.com/repos/gpupo/netshoes-sdk/commits/9da17bd27cf5307b5277d6df246c6833cde706da'
       node_id: MDM6UmVmNjE2NTg1ODA6MS4wLjA=
 -
+  id: 232890213
+  node_id: MDEwOlJlcG9zaXRvcnkyMzI4OTAyMTM=
+  name: pack-symfony-admin
+  full_name: gpupo/pack-symfony-admin
+  private: false
+  owner:
+    login: gpupo
+    id: 126154
+    node_id: MDQ6VXNlcjEyNjE1NA==
+    avatar_url: 'https://avatars3.githubusercontent.com/u/126154?v=4'
+    gravatar_id: ''
+    url: 'https://api.github.com/users/gpupo'
+    html_url: 'https://github.com/gpupo'
+    followers_url: 'https://api.github.com/users/gpupo/followers'
+    following_url: 'https://api.github.com/users/gpupo/following{/other_user}'
+    gists_url: 'https://api.github.com/users/gpupo/gists{/gist_id}'
+    starred_url: 'https://api.github.com/users/gpupo/starred{/owner}{/repo}'
+    subscriptions_url: 'https://api.github.com/users/gpupo/subscriptions'
+    organizations_url: 'https://api.github.com/users/gpupo/orgs'
+    repos_url: 'https://api.github.com/users/gpupo/repos'
+    events_url: 'https://api.github.com/users/gpupo/events{/privacy}'
+    received_events_url: 'https://api.github.com/users/gpupo/received_events'
+    type: User
+    site_admin: false
+  html_url: 'https://github.com/gpupo/pack-symfony-admin'
+  description: 'Pacote de componentes complementares para dashboards com Symfony Framework'
+  fork: false
+  url: 'https://api.github.com/repos/gpupo/pack-symfony-admin'
+  forks_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/forks'
+  keys_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/keys{/key_id}'
+  collaborators_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/collaborators{/collaborator}'
+  teams_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/teams'
+  hooks_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/hooks'
+  issue_events_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/issues/events{/number}'
+  events_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/events'
+  assignees_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/assignees{/user}'
+  branches_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/branches{/branch}'
+  tags_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/tags'
+  blobs_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/git/blobs{/sha}'
+  git_tags_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/git/tags{/sha}'
+  git_refs_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/git/refs{/sha}'
+  trees_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/git/trees{/sha}'
+  statuses_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/statuses/{sha}'
+  languages_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/languages'
+  stargazers_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/stargazers'
+  contributors_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/contributors'
+  subscribers_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/subscribers'
+  subscription_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/subscription'
+  commits_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/commits{/sha}'
+  git_commits_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/git/commits{/sha}'
+  comments_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/comments{/number}'
+  issue_comment_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/issues/comments{/number}'
+  contents_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/contents/{+path}'
+  compare_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/compare/{base}...{head}'
+  merges_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/merges'
+  archive_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/{archive_format}{/ref}'
+  downloads_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/downloads'
+  issues_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/issues{/number}'
+  pulls_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/pulls{/number}'
+  milestones_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/milestones{/number}'
+  notifications_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/notifications{?since,all,participating}'
+  labels_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/labels{/name}'
+  releases_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/releases{/id}'
+  deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/deployments'
+  created_at: '2020-01-09T19:39:20Z'
+  updated_at: '2020-01-09T20:48:33Z'
+  pushed_at: '2020-01-09T20:48:31Z'
+  git_url: 'git://github.com/gpupo/pack-symfony-admin.git'
+  ssh_url: 'git@github.com:gpupo/pack-symfony-admin.git'
+  clone_url: 'https://github.com/gpupo/pack-symfony-admin.git'
+  svn_url: 'https://github.com/gpupo/pack-symfony-admin'
+  homepage: null
+  size: 14
+  stargazers_count: 0
+  watchers_count: 0
+  language: PHP
+  has_issues: true
+  has_projects: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: null
+  archived: false
+  disabled: false
+  open_issues_count: 0
+  license:
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: true
+    push: true
+    pull: true
+  branches:
+    - master
+  tags: {  }
+-
   id: 229770545
   node_id: MDEwOlJlcG9zaXRvcnkyMjk3NzA1NDU=
   name: pack-symfony-b2c
@@ -5547,14 +5665,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/deployments'
   created_at: '2019-12-26T14:33:15Z'
-  updated_at: '2019-12-26T17:01:17Z'
-  pushed_at: '2019-12-26T17:01:15Z'
+  updated_at: '2019-12-27T20:08:08Z'
+  pushed_at: '2020-01-09T20:29:52Z'
   git_url: 'git://github.com/gpupo/pack-symfony-odm.git'
   ssh_url: 'git@github.com:gpupo/pack-symfony-odm.git'
   clone_url: 'https://github.com/gpupo/pack-symfony-odm.git'
   svn_url: 'https://github.com/gpupo/pack-symfony-odm'
   homepage: 'https://opensource.gpupo.com/pack-symfony-odm/'
-  size: 13
+  size: 14
   stargazers_count: 0
   watchers_count: 0
   language: PHP
@@ -5584,7 +5702,15 @@
     pull: true
   branches:
     - master
-  tags: {  }
+  tags:
+    -
+      name: 1.0.0
+      zipball_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/zipball/1.0.0'
+      tarball_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/tarball/1.0.0'
+      commit:
+        sha: 4818d91412bfda23ff661c8dc4b503fd6b52dfec
+        url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/commits/4818d91412bfda23ff661c8dc4b503fd6b52dfec'
+      node_id: MDM6UmVmMjMwMjc4MzIzOjEuMC4w
 -
   id: 22917702
   node_id: MDEwOlJlcG9zaXRvcnkyMjkxNzcwMg==
@@ -6164,8 +6290,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/shipping-services/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/shipping-services/deployments'
   created_at: '2016-08-05T13:40:35Z'
-  updated_at: '2019-12-23T17:26:39Z'
-  pushed_at: '2019-12-23T17:26:37Z'
+  updated_at: '2020-01-09T20:06:41Z'
+  pushed_at: '2020-01-09T20:06:38Z'
   git_url: 'git://github.com/gpupo/shipping-services.git'
   ssh_url: 'git@github.com:gpupo/shipping-services.git'
   clone_url: 'https://github.com/gpupo/shipping-services.git'
@@ -6186,11 +6312,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 0
   open_issues: 0
   watchers: 0
@@ -6325,14 +6451,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/similarity/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/similarity/deployments'
   created_at: '2014-05-30T19:47:19Z'
-  updated_at: '2019-02-14T20:27:32Z'
-  pushed_at: '2019-02-22T14:59:12Z'
+  updated_at: '2020-01-09T20:06:45Z'
+  pushed_at: '2020-01-09T20:06:43Z'
   git_url: 'git://github.com/gpupo/similarity.git'
   ssh_url: 'git@github.com:gpupo/similarity.git'
   clone_url: 'https://github.com/gpupo/similarity.git'
   svn_url: 'https://github.com/gpupo/similarity'
   homepage: 'https://opensource.gpupo.com/similarity/'
-  size: 72
+  size: 78
   stargazers_count: 7
   watchers_count: 7
   language: PHP
@@ -6347,11 +6473,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 1
   open_issues: 0
   watchers: 7
@@ -6365,6 +6491,14 @@
     - gh-pages
     - master
   tags:
+    -
+      name: 2.0.0
+      zipball_url: 'https://api.github.com/repos/gpupo/similarity/zipball/2.0.0'
+      tarball_url: 'https://api.github.com/repos/gpupo/similarity/tarball/2.0.0'
+      commit:
+        sha: 54410ba74f6624b7df687f85e21822b910b88dad
+        url: 'https://api.github.com/repos/gpupo/similarity/commits/54410ba74f6624b7df687f85e21822b910b88dad'
+      node_id: MDM6UmVmMjAzNDA0OTk6Mi4wLjA=
     -
       name: '1.2'
       zipball_url: 'https://api.github.com/repos/gpupo/similarity/zipball/1.2'
@@ -6712,14 +6846,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/submarino-sdk/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/submarino-sdk/deployments'
   created_at: '2014-09-18T18:14:38Z'
-  updated_at: '2019-12-20T19:56:39Z'
-  pushed_at: '2019-12-20T19:56:36Z'
+  updated_at: '2019-12-27T18:55:11Z'
+  pushed_at: '2019-12-27T18:55:09Z'
   git_url: 'git://github.com/gpupo/submarino-sdk.git'
   ssh_url: 'git@github.com:gpupo/submarino-sdk.git'
   clone_url: 'https://github.com/gpupo/submarino-sdk.git'
   svn_url: 'https://github.com/gpupo/submarino-sdk'
   homepage: 'https://opensource.gpupo.com/submarino-sdk/'
-  size: 818
+  size: 819
   stargazers_count: 14
   watchers_count: 14
   language: PHP
@@ -6734,11 +6868,11 @@
   disabled: false
   open_issues_count: 0
   license:
-    key: other
-    name: Other
-    spdx_id: NOASSERTION
-    url: null
-    node_id: MDc6TGljZW5zZTA=
+    key: mit
+    name: 'MIT License'
+    spdx_id: MIT
+    url: 'https://api.github.com/licenses/mit'
+    node_id: MDc6TGljZW5zZTEz
   forks: 18
   open_issues: 0
   watchers: 14

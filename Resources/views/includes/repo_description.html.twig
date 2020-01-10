@@ -1,16 +1,15 @@
-<div class="float-right">
-
-
-    <span class="badge badge-light">{{repo.updated_at}}</span>
-    <span class="badge badge-primary">{{repo.language}}</span>
+<div class="float-right" title="Updated at {{repo.updated_at}}">
     <small class="text-muted">{{ repo.description }}</small>
+    
+    <span class="badge badge-primary">{{repo.language}}</span>
 
     {% for branch in repo.branches %}
         <span class="badge badge-secondary">{{branch}}</span>
     {% endfor %}
 
-    {% for tag in repo.tags|slice(0, 5) %}
+    {% for tag in repo.tags|slice(0, 2) %}
         <span class="badge badge-info">{{tag.name}}</span>
     {% endfor %}
 
+    <small class="border border-info text-muted">{{ repo.license.name }}</small>
 </div>
