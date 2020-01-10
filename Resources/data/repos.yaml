@@ -266,13 +266,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/brazilian-banking-automation/deployments'
   created_at: '2018-05-24T12:07:52Z'
   updated_at: '2020-01-09T20:06:05Z'
-  pushed_at: '2020-01-09T20:06:02Z'
+  pushed_at: '2020-01-10T17:03:02Z'
   git_url: 'git://github.com/gpupo/brazilian-banking-automation.git'
   ssh_url: 'git@github.com:gpupo/brazilian-banking-automation.git'
   clone_url: 'https://github.com/gpupo/brazilian-banking-automation.git'
   svn_url: 'https://github.com/gpupo/brazilian-banking-automation'
   homepage: 'https://opensource.gpupo.com/brazilian-banking-automation/'
-  size: 33
+  size: 34
   stargazers_count: 1
   watchers_count: 1
   language: PHP
@@ -301,6 +301,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -394,13 +395,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/brazilian-cars/deployments'
   created_at: '2019-01-30T18:33:19Z'
   updated_at: '2020-01-09T20:06:09Z'
-  pushed_at: '2020-01-09T20:06:06Z'
+  pushed_at: '2020-01-10T17:03:07Z'
   git_url: 'git://github.com/gpupo/brazilian-cars.git'
   ssh_url: 'git@github.com:gpupo/brazilian-cars.git'
   clone_url: 'https://github.com/gpupo/brazilian-cars.git'
   svn_url: 'https://github.com/gpupo/brazilian-cars'
   homepage: 'https://opensource.gpupo.com/brazilian-cars/'
-  size: 1393
+  size: 1394
   stargazers_count: 1
   watchers_count: 1
   language: TSQL
@@ -429,6 +430,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -1389,13 +1391,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/common/deployments'
   created_at: '2014-10-23T11:46:17Z'
   updated_at: '2020-01-09T20:06:13Z'
-  pushed_at: '2020-01-09T20:06:11Z'
+  pushed_at: '2020-01-10T17:10:07Z'
   git_url: 'git://github.com/gpupo/common.git'
   ssh_url: 'git@github.com:gpupo/common.git'
   clone_url: 'https://github.com/gpupo/common.git'
   svn_url: 'https://github.com/gpupo/common'
   homepage: 'https://opensource.gpupo.com/common/'
-  size: 283
+  size: 284
   stargazers_count: 2
   watchers_count: 2
   language: PHP
@@ -1424,6 +1426,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - gh-pages
     - master
     - stable
@@ -1735,7 +1738,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/common-dev/deployments'
   created_at: '2019-09-19T17:57:01Z'
   updated_at: '2019-12-23T17:41:23Z'
-  pushed_at: '2019-12-23T17:41:25Z'
+  pushed_at: '2020-01-10T17:01:23Z'
   git_url: 'git://github.com/gpupo/common-dev.git'
   ssh_url: 'git@github.com:gpupo/common-dev.git'
   clone_url: 'https://github.com/gpupo/common-dev.git'
@@ -1770,6 +1773,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -1919,7 +1923,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/common-dev-extra/deployments'
   created_at: '2019-12-17T18:26:18Z'
   updated_at: '2019-12-26T19:26:41Z'
-  pushed_at: '2019-12-26T19:26:39Z'
+  pushed_at: '2020-01-10T17:12:16Z'
   git_url: 'git://github.com/gpupo/common-dev-extra.git'
   ssh_url: 'git@github.com:gpupo/common-dev-extra.git'
   clone_url: 'https://github.com/gpupo/common-dev-extra.git'
@@ -1954,6 +1958,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -2047,7 +2052,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/common-schema/deployments'
   created_at: '2014-08-08T17:42:54Z'
   updated_at: '2019-12-27T20:42:10Z'
-  pushed_at: '2019-12-27T20:42:07Z'
+  pushed_at: '2020-01-10T17:06:40Z'
   git_url: 'git://github.com/gpupo/common-schema.git'
   ssh_url: 'git@github.com:gpupo/common-schema.git'
   clone_url: 'https://github.com/gpupo/common-schema.git'
@@ -2392,13 +2397,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/common-sdk/deployments'
   created_at: '2014-09-22T12:39:22Z'
   updated_at: '2020-01-09T20:06:18Z'
-  pushed_at: '2020-01-09T20:06:16Z'
+  pushed_at: '2020-01-10T17:10:17Z'
   git_url: 'git://github.com/gpupo/common-sdk.git'
   ssh_url: 'git@github.com:gpupo/common-sdk.git'
   clone_url: 'https://github.com/gpupo/common-sdk.git'
   svn_url: 'https://github.com/gpupo/common-sdk'
   homepage: 'https://opensource.gpupo.com/common-sdk/'
-  size: 709
+  size: 710
   stargazers_count: 3
   watchers_count: 3
   language: PHP
@@ -2427,6 +2432,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -3083,13 +3089,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/content-butler/deployments'
   created_at: '2018-08-16T17:34:29Z'
   updated_at: '2020-01-09T20:06:22Z'
-  pushed_at: '2020-01-09T20:06:20Z'
+  pushed_at: '2020-01-10T17:03:20Z'
   git_url: 'git://github.com/gpupo/content-butler.git'
   ssh_url: 'git@github.com:gpupo/content-butler.git'
   clone_url: 'https://github.com/gpupo/content-butler.git'
   svn_url: 'https://github.com/gpupo/content-butler'
   homepage: 'https://opensource.gpupo.com/content-butler'
-  size: 9159
+  size: 9160
   stargazers_count: 0
   watchers_count: 0
   language: PHP
@@ -3118,6 +3124,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -3275,13 +3282,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/content-repository-server/deployments'
   created_at: '2018-08-15T11:09:19Z'
   updated_at: '2020-01-09T20:06:27Z'
-  pushed_at: '2020-01-09T20:06:25Z'
+  pushed_at: '2020-01-10T17:03:25Z'
   git_url: 'git://github.com/gpupo/content-repository-server.git'
   ssh_url: 'git@github.com:gpupo/content-repository-server.git'
   clone_url: 'https://github.com/gpupo/content-repository-server.git'
   svn_url: 'https://github.com/gpupo/content-repository-server'
   homepage: null
-  size: 77842
+  size: 77843
   stargazers_count: 0
   watchers_count: 0
   language: Dockerfile
@@ -3310,6 +3317,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -3491,7 +3499,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/gpupo-npm-common/deployments'
   created_at: '2019-09-23T19:12:07Z'
   updated_at: '2019-12-27T19:14:52Z'
-  pushed_at: '2019-12-27T19:14:50Z'
+  pushed_at: '2020-01-10T17:03:29Z'
   git_url: 'git://github.com/gpupo/gpupo-npm-common.git'
   ssh_url: 'git@github.com:gpupo/gpupo-npm-common.git'
   clone_url: 'https://github.com/gpupo/gpupo-npm-common.git'
@@ -3526,6 +3534,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -3603,7 +3612,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/gpupo-npm-dev/deployments'
   created_at: '2019-09-24T14:09:35Z'
   updated_at: '2019-12-27T19:21:11Z'
-  pushed_at: '2019-12-27T19:21:08Z'
+  pushed_at: '2020-01-10T17:03:33Z'
   git_url: 'git://github.com/gpupo/gpupo-npm-dev.git'
   ssh_url: 'git@github.com:gpupo/gpupo-npm-dev.git'
   clone_url: 'https://github.com/gpupo/gpupo-npm-dev.git'
@@ -3638,6 +3647,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -3722,8 +3732,8 @@
   releases_url: 'https://api.github.com/repos/gpupo/gpupo.github.io/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/gpupo.github.io/deployments'
   created_at: '2015-07-15T12:37:35Z'
-  updated_at: '2019-12-27T20:02:11Z'
-  pushed_at: '2019-12-27T20:02:09Z'
+  updated_at: '2020-01-10T16:52:07Z'
+  pushed_at: '2020-01-10T17:10:35Z'
   git_url: 'git://github.com/gpupo/gpupo.github.io.git'
   ssh_url: 'git@github.com:gpupo/gpupo.github.io.git'
   clone_url: 'https://github.com/gpupo/gpupo.github.io.git'
@@ -3758,6 +3768,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags: {  }
 -
@@ -3827,7 +3838,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/httpd-gateway/deployments'
   created_at: '2019-02-06T13:04:19Z'
   updated_at: '2019-12-27T19:48:57Z'
-  pushed_at: '2019-12-27T19:48:55Z'
+  pushed_at: '2020-01-10T17:03:38Z'
   git_url: 'git://github.com/gpupo/httpd-gateway.git'
   ssh_url: 'git@github.com:gpupo/httpd-gateway.git'
   clone_url: 'https://github.com/gpupo/httpd-gateway.git'
@@ -3862,6 +3873,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - gh-pages
     - master
   tags:
@@ -4069,13 +4081,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/MarkethubBundle/deployments'
   created_at: '2015-04-06T19:00:03Z'
   updated_at: '2020-01-09T20:06:31Z'
-  pushed_at: '2020-01-09T20:06:29Z'
+  pushed_at: '2020-01-10T17:03:42Z'
   git_url: 'git://github.com/gpupo/MarkethubBundle.git'
   ssh_url: 'git@github.com:gpupo/MarkethubBundle.git'
   clone_url: 'https://github.com/gpupo/MarkethubBundle.git'
   svn_url: 'https://github.com/gpupo/MarkethubBundle'
   homepage: 'https://opensource.gpupo.com/MarkethubBundle/'
-  size: 203
+  size: 205
   stargazers_count: 0
   watchers_count: 0
   language: PHP
@@ -4104,6 +4116,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -4405,13 +4418,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/mercadolivre-sdk/deployments'
   created_at: '2016-09-06T12:45:58Z'
   updated_at: '2020-01-09T20:06:36Z'
-  pushed_at: '2020-01-09T20:06:34Z'
+  pushed_at: '2020-01-10T17:12:46Z'
   git_url: 'git://github.com/gpupo/mercadolivre-sdk.git'
   ssh_url: 'git@github.com:gpupo/mercadolivre-sdk.git'
   clone_url: 'https://github.com/gpupo/mercadolivre-sdk.git'
   svn_url: 'https://github.com/gpupo/mercadolivre-sdk'
   homepage: 'https://opensource.gpupo.com/mercadolivre-sdk'
-  size: 402
+  size: 403
   stargazers_count: 4
   watchers_count: 4
   language: PHP
@@ -4441,6 +4454,7 @@
     pull: true
   branches:
     - 4.2.1
+    - develop
     - gh-pages
     - master
     - stable
@@ -4704,7 +4718,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/mercadopago-sdk/deployments'
   created_at: '2018-06-15T12:15:08Z'
   updated_at: '2019-12-27T20:01:28Z'
-  pushed_at: '2019-12-27T20:01:26Z'
+  pushed_at: '2020-01-10T17:03:48Z'
   git_url: 'git://github.com/gpupo/mercadopago-sdk.git'
   ssh_url: 'git@github.com:gpupo/mercadopago-sdk.git'
   clone_url: 'https://github.com/gpupo/mercadopago-sdk.git'
@@ -4739,6 +4753,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -5225,22 +5240,22 @@
   releases_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/deployments'
   created_at: '2020-01-09T19:39:20Z'
-  updated_at: '2020-01-09T20:48:33Z'
-  pushed_at: '2020-01-09T20:48:31Z'
+  updated_at: '2020-01-10T14:23:24Z'
+  pushed_at: '2020-01-10T14:23:21Z'
   git_url: 'git://github.com/gpupo/pack-symfony-admin.git'
   ssh_url: 'git@github.com:gpupo/pack-symfony-admin.git'
   clone_url: 'https://github.com/gpupo/pack-symfony-admin.git'
   svn_url: 'https://github.com/gpupo/pack-symfony-admin'
-  homepage: null
-  size: 14
+  homepage: 'https://opensource.gpupo.com/pack-symfony-admin/'
+  size: 23
   stargazers_count: 0
   watchers_count: 0
   language: PHP
   has_issues: true
-  has_projects: true
+  has_projects: false
   has_downloads: true
-  has_wiki: true
-  has_pages: false
+  has_wiki: false
+  has_pages: true
   forks_count: 0
   mirror_url: null
   archived: false
@@ -5262,7 +5277,15 @@
     pull: true
   branches:
     - master
-  tags: {  }
+  tags:
+    -
+      name: 1.0.0
+      zipball_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/zipball/1.0.0'
+      tarball_url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/tarball/1.0.0'
+      commit:
+        sha: c760e0f0b1dd60167c67d19a0852854f0634a1b1
+        url: 'https://api.github.com/repos/gpupo/pack-symfony-admin/commits/c760e0f0b1dd60167c67d19a0852854f0634a1b1'
+      node_id: MDM6UmVmMjMyODkwMjEzOjEuMC4w
 -
   id: 229770545
   node_id: MDEwOlJlcG9zaXRvcnkyMjk3NzA1NDU=
@@ -5330,7 +5353,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-b2c/deployments'
   created_at: '2019-12-23T14:43:37Z'
   updated_at: '2019-12-23T14:52:48Z'
-  pushed_at: '2019-12-23T14:52:50Z'
+  pushed_at: '2020-01-10T17:10:46Z'
   git_url: 'git://github.com/gpupo/pack-symfony-b2c.git'
   ssh_url: 'git@github.com:gpupo/pack-symfony-b2c.git'
   clone_url: 'https://github.com/gpupo/pack-symfony-b2c.git'
@@ -5365,6 +5388,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -5442,7 +5466,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-common/deployments'
   created_at: '2019-12-20T12:58:01Z'
   updated_at: '2019-12-26T19:45:56Z'
-  pushed_at: '2019-12-26T19:45:54Z'
+  pushed_at: '2020-01-10T17:03:52Z'
   git_url: 'git://github.com/gpupo/pack-symfony-common.git'
   ssh_url: 'git@github.com:gpupo/pack-symfony-common.git'
   clone_url: 'https://github.com/gpupo/pack-symfony-common.git'
@@ -5477,6 +5501,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags: {  }
 -
@@ -5546,7 +5571,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-dev/deployments'
   created_at: '2019-12-20T14:03:06Z'
   updated_at: '2019-12-23T19:13:09Z'
-  pushed_at: '2019-12-23T19:13:06Z'
+  pushed_at: '2020-01-10T17:10:53Z'
   git_url: 'git://github.com/gpupo/pack-symfony-dev.git'
   ssh_url: 'git@github.com:gpupo/pack-symfony-dev.git'
   clone_url: 'https://github.com/gpupo/pack-symfony-dev.git'
@@ -5581,6 +5606,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
     -
@@ -5665,14 +5691,14 @@
   releases_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/releases{/id}'
   deployments_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/deployments'
   created_at: '2019-12-26T14:33:15Z'
-  updated_at: '2019-12-27T20:08:08Z'
-  pushed_at: '2020-01-09T20:29:52Z'
+  updated_at: '2020-01-10T16:52:30Z'
+  pushed_at: '2020-01-10T17:18:08Z'
   git_url: 'git://github.com/gpupo/pack-symfony-odm.git'
   ssh_url: 'git@github.com:gpupo/pack-symfony-odm.git'
   clone_url: 'https://github.com/gpupo/pack-symfony-odm.git'
   svn_url: 'https://github.com/gpupo/pack-symfony-odm'
   homepage: 'https://opensource.gpupo.com/pack-symfony-odm/'
-  size: 14
+  size: 15
   stargazers_count: 0
   watchers_count: 0
   language: PHP
@@ -5680,7 +5706,7 @@
   has_projects: true
   has_downloads: true
   has_wiki: true
-  has_pages: false
+  has_pages: true
   forks_count: 0
   mirror_url: null
   archived: false
@@ -5701,8 +5727,17 @@
     push: true
     pull: true
   branches:
+    - develop
     - master
   tags:
+    -
+      name: 1.1.0
+      zipball_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/zipball/1.1.0'
+      tarball_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/tarball/1.1.0'
+      commit:
+        sha: e60f935d4382e749189863d21711de08296ea05a
+        url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/commits/e60f935d4382e749189863d21711de08296ea05a'
+      node_id: MDM6UmVmMjMwMjc4MzIzOjEuMS4w
     -
       name: 1.0.0
       zipball_url: 'https://api.github.com/repos/gpupo/pack-symfony-odm/zipball/1.0.0'
@@ -6291,13 +6326,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/shipping-services/deployments'
   created_at: '2016-08-05T13:40:35Z'
   updated_at: '2020-01-09T20:06:41Z'
-  pushed_at: '2020-01-09T20:06:38Z'
+  pushed_at: '2020-01-10T17:04:01Z'
   git_url: 'git://github.com/gpupo/shipping-services.git'
   ssh_url: 'git@github.com:gpupo/shipping-services.git'
   clone_url: 'https://github.com/gpupo/shipping-services.git'
   svn_url: 'https://github.com/gpupo/shipping-services'
   homepage: 'https://opensource.gpupo.com/shipping-services/'
-  size: 689
+  size: 690
   stargazers_count: 0
   watchers_count: 0
   language: PHP
@@ -6326,6 +6361,7 @@
     push: true
     pull: true
   branches:
+    - develop
     - gh-pages
     - master
   tags:
@@ -6452,13 +6488,13 @@
   deployments_url: 'https://api.github.com/repos/gpupo/similarity/deployments'
   created_at: '2014-05-30T19:47:19Z'
   updated_at: '2020-01-09T20:06:45Z'
-  pushed_at: '2020-01-09T20:06:43Z'
+  pushed_at: '2020-01-10T17:05:58Z'
   git_url: 'git://github.com/gpupo/similarity.git'
   ssh_url: 'git@github.com:gpupo/similarity.git'
   clone_url: 'https://github.com/gpupo/similarity.git'
   svn_url: 'https://github.com/gpupo/similarity'
   homepage: 'https://opensource.gpupo.com/similarity/'
-  size: 78
+  size: 79
   stargazers_count: 7
   watchers_count: 7
   language: PHP
@@ -6847,7 +6883,7 @@
   deployments_url: 'https://api.github.com/repos/gpupo/submarino-sdk/deployments'
   created_at: '2014-09-18T18:14:38Z'
   updated_at: '2019-12-27T18:55:11Z'
-  pushed_at: '2019-12-27T18:55:09Z'
+  pushed_at: '2020-01-10T17:04:14Z'
   git_url: 'git://github.com/gpupo/submarino-sdk.git'
   ssh_url: 'git@github.com:gpupo/submarino-sdk.git'
   clone_url: 'https://github.com/gpupo/submarino-sdk.git'
@@ -6883,6 +6919,7 @@
     pull: true
   branches:
     - 3.x
+    - develop
     - gh-pages
     - master
     - v2.4.1
