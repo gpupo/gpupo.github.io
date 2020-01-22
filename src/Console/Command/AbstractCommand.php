@@ -57,6 +57,16 @@ abstract class AbstractCommand extends Core
         return $this->client;
     }
 
+    protected function factoryTwig(): Environment
+    {
+        $paths = [
+            './Resources/views',
+        ];
+        $loader = new FilesystemLoader($paths);
+
+        return new Environment($loader, []);
+    }
+
     protected function factoryApi(string $name): ApiInterface
     {
         $api = $this->getClient()->api($name);

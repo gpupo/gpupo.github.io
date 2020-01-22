@@ -21,8 +21,6 @@ use Github\Client;
 use Github\Api\ApiInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
 
 final class ReposCommand extends AbstractCommand
 {
@@ -104,7 +102,16 @@ final class ReposCommand extends AbstractCommand
                 $repositories[$k]['branches'][] = $branch['name'];
             }
 
-            $repositories[$k]['tags'] = $api->tags($entity_name, $repo['name']);
+            foreach([
+                'tags',
+                'teams',
+                'contributors',
+            ] as $method) {
+                $string = sprintf('Fetching %s::<comment>%s</> repo <info>%s</>', $entity_name, $repo['name'], $method);
+                $output->writeln($string, OutputInterface::VERBOSITY_VERBOSE);
+                $data = $api->$method($entity_name, $repo['name']);
+                $repositories[$k][$method] = $data;
+            }
         }
 
         $this->saveResourceToYamlFile(static::getResourcesPath().$yamlFile, $repositories);
@@ -113,16 +120,6 @@ final class ReposCommand extends AbstractCommand
         return $repositories;
     }
 
-
-    protected function factoryTwig(): Environment
-    {
-        $paths = [
-            './Resources/views',
-        ];
-        $loader = new FilesystemLoader($paths);
-
-        return new Environment($loader, []);
-    }
 
     protected function buildHtml(array $parameters, string $filenameHtml, OutputInterface $output):void
     {

@@ -1,3 +1,8 @@
+{% for team in repo.teams %}
+    <span class="badge badge-secondary">{{team.name}}</span>
+{% endfor %}
+
+
 <div class="float-right" title="Updated at {{repo.updated_at}}">
     <small class="text-muted">{{ repo.description }}</small>
 
