@@ -38,27 +38,30 @@ final class ReposCommand extends AbstractCommand
         parent::configure();
     }
 
-    protected function loadRepos(): array
+    protected function loadRepos(OutputInterface $output): array
     {
-        if ($this::DEV_MODE === false && file_exists(static::getResourcesPath().$this::FILENAME_REPOS)) {
+        if ($this->dev_mode === false && file_exists(static::getResourcesPath().$this::FILENAME_REPOS)) {
+            $output->writeln(sprintf('Using <comment>%s</> from cache', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
+
             return $this->getResourceYaml($this::FILENAME_REPOS);
         }
 
-        $repositories = $this->getUserApi()->repositories($this::USERNAME);
+        $repositories = $this->getUserApi()->repositories($this->github_username);
 
         $api = $this->getClient()->api('repo');
 
         foreach($repositories as $k => $repo) {
-            $branches = $api->branches($this::USERNAME, $repo['name']);
+            $branches = $api->branches($this->github_username, $repo['name']);
 
             foreach($branches as $branch) {
                 $repositories[$k]['branches'][] = $branch['name'];
             }
 
-            $repositories[$k]['tags'] = $api->tags($this::USERNAME, $repo['name']);
+            $repositories[$k]['tags'] = $api->tags($this->github_username, $repo['name']);
         }
 
         $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_REPOS, $repositories);
+        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
 
         return $repositories;
     }
@@ -75,10 +78,14 @@ final class ReposCommand extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $repos = $this->loadRepos();
+        parent::execute($input, $output);
+        $repos = $this->loadRepos($output);
+
         $twig = $this->factoryTwig();
         $content = $twig->render('repos.html.twig', ['repos' => $repos]);
         file_put_contents($this::FILENAME_HTML, $content);
+        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_HTML), OutputInterface::VERBOSITY_VERBOSE);
+        $output->writeln('Done!');
 
         return 0;
     }

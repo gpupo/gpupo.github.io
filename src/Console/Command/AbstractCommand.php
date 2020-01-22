@@ -33,10 +33,19 @@ abstract class AbstractCommand extends Core
     use TableTrait;
     use ResourcesTrait;
 
-    const USERNAME = 'gpupo';
-    const DEV_MODE = false;
+    protected bool $dev_mode = false;
 
-    protected $client;
+    protected string $github_username = '';
+
+    protected int $max_records_per_page = 90;
+
+    protected ?Client $client = null;
+
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
+        $this->github_username = $_ENV['GITHUB_USERNAME'];
+        $this->dev_mode = 'true' === $_ENV['DEV_MODE'];
+    }
 
     protected function getClient(): Client
     {
@@ -48,14 +57,23 @@ abstract class AbstractCommand extends Core
         return $this->client;
     }
 
-    protected function getUserApi(): ApiInterface
+    protected function factoryApi(string $name): ApiInterface
     {
-        $api = $this->getClient()->api('user');
-        $api->setPerPage(90);
+        $api = $this->getClient()->api($name);
+        $api->setPerPage($this->max_records_per_page);
 
         return $api;
     }
 
+    protected function getUserApi(): ApiInterface
+    {
+        return $this->factoryApi('user');
+    }
+
+    protected function getOrganizationApi(): ApiInterface
+    {
+        return $this->factoryApi('organization');
+    }
 
     protected function configure()
     {

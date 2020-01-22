@@ -14,7 +14,7 @@
         "symfony/console": "^5.0",
         "knplabs/github-api": "^2.12",
         "php-http/guzzle6-adapter": "^1.1",
-        "gpupo/common-sdk": "^5.1",
+        "gpupo/common-sdk": "^5.2",
         "gpupo/common-dev": "^5.2"
     },
     "autoload": {
