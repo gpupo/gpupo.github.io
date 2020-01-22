@@ -46,10 +46,18 @@ final class ReposCommand extends AbstractCommand
             return $this->getResourceYaml($this::FILENAME_REPOS);
         }
 
-        $repositories = $this->getUserApi()->repositories($this->github_username);
-
         $api = $this->getClient()->api('repo');
 
+        $repositories = fetchReposFromEntity($this->github_username, $api, $this->getUserApi()->repositories($this->github_username));
+
+        $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_REPOS, $repositories);
+        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
+
+        return $repositories;
+    }
+
+    protected function fetchReposFromEntity(string $entity_name, ApiInterface $api, array $repositories): array
+    {
         foreach($repositories as $k => $repo) {
             $branches = $api->branches($this->github_username, $repo['name']);
 
@@ -60,11 +68,9 @@ final class ReposCommand extends AbstractCommand
             $repositories[$k]['tags'] = $api->tags($this->github_username, $repo['name']);
         }
 
-        $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_REPOS, $repositories);
-        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
-
         return $repositories;
     }
+
 
     protected function factoryTwig(): Environment
     {
