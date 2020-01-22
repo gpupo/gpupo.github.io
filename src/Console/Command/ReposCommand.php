@@ -26,8 +26,8 @@ use Twig\Loader\FilesystemLoader;
 
 final class ReposCommand extends AbstractCommand
 {
+    const FILENAME_USER_INFO = 'data/user_info.yaml';
     const FILENAME_REPOS = 'data/repos.yaml';
-    const FILENAME_HTML = 'docs/repos.html';
 
     protected function configure()
     {
@@ -38,7 +38,24 @@ final class ReposCommand extends AbstractCommand
         parent::configure();
     }
 
-    protected function loadRepos(OutputInterface $output): array
+    protected function loadUserInfo(OutputInterface $output): array
+    {
+        if ($this->dev_mode === false && file_exists(static::getResourcesPath().$this::FILENAME_USER_INFO)) {
+            $output->writeln(sprintf('Using <comment>%s</> from cache', $this::FILENAME_USER_INFO), OutputInterface::VERBOSITY_VERBOSE);
+
+            return $this->getResourceYaml($this::FILENAME_USER_INFO);
+        }
+        $api = $this->getUserApi();
+        $info = $api->show($this->github_username);
+        $info['organizations'] = $api->orgs();
+        $info['repositories'] = $api->myRepositories();
+        $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_USER_INFO, $info);
+        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_USER_INFO), OutputInterface::VERBOSITY_VERBOSE);
+
+        return $info;
+    }
+
+    protected function loadRepos(array $user_info, OutputInterface $output): array
     {
         if ($this->dev_mode === false && file_exists(static::getResourcesPath().$this::FILENAME_REPOS)) {
             $output->writeln(sprintf('Using <comment>%s</> from cache', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
@@ -47,8 +64,13 @@ final class ReposCommand extends AbstractCommand
         }
 
         $api = $this->getClient()->api('repo');
+        $repositories = [
+            $this->github_username => $this->fetchReposFromEntity($this->github_username, $api, $this->getUserApi()->repositories($this->github_username), $output),
+        ];
 
-        $repositories = fetchReposFromEntity($this->github_username, $api, $this->getUserApi()->repositories($this->github_username));
+        foreach($user_info['organizations'] as $org) {
+            $repositories[$org['login']] = $this->fetchReposFromEntity($org['login'], $api, $this->getOrganizationApi()->repositories($org['login']), $output);
+        }
 
         $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_REPOS, $repositories);
         $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
@@ -56,17 +78,28 @@ final class ReposCommand extends AbstractCommand
         return $repositories;
     }
 
-    protected function fetchReposFromEntity(string $entity_name, ApiInterface $api, array $repositories): array
+    protected function fetchReposFromEntity(string $entity_name, ApiInterface $api, array $repositories, OutputInterface $output): array
     {
+        $yamlFile = sprintf('data/%s-repos.yaml', $entity_name);
+        if ($this->dev_mode === false && file_exists(static::getResourcesPath().$yamlFile)) {
+            $output->writeln(sprintf('Using <comment>%s</> from cache', $yamlFile), OutputInterface::VERBOSITY_VERBOSE);
+
+            return $this->getResourceYaml($yamlFile);
+        }
+
         foreach($repositories as $k => $repo) {
-            $branches = $api->branches($this->github_username, $repo['name']);
+            $output->writeln(sprintf('Fetching %s::<comment>%s</> repo', $entity_name, $repo['name']));
+            $branches = $api->branches($entity_name, $repo['name']);
 
             foreach($branches as $branch) {
                 $repositories[$k]['branches'][] = $branch['name'];
             }
 
-            $repositories[$k]['tags'] = $api->tags($this->github_username, $repo['name']);
+            $repositories[$k]['tags'] = $api->tags($entity_name, $repo['name']);
         }
+
+        $this->saveResourceToYamlFile(static::getResourcesPath().$yamlFile, $repositories);
+        $output->writeln(sprintf('File <comment>%s</> saved', $yamlFile), OutputInterface::VERBOSITY_VERBOSE);
 
         return $repositories;
     }
@@ -82,15 +115,28 @@ final class ReposCommand extends AbstractCommand
         return new Environment($loader, []);
     }
 
+    protected function buildHtml(array $parameters, string $filenameHtml, OutputInterface $output):void
+    {
+        $twig = $this->factoryTwig();
+        $content = $twig->render('repos.html.twig', $parameters);
+        file_put_contents($filenameHtml, $content);
+        $output->writeln(sprintf('File <comment>%s</> saved', $filenameHtml), OutputInterface::VERBOSITY_VERBOSE);
+    }
+
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         parent::execute($input, $output);
-        $repos = $this->loadRepos($output);
+        $user_info = $this->loadUserInfo($output);
+        $repos = $this->loadRepos($user_info, $output);
 
-        $twig = $this->factoryTwig();
-        $content = $twig->render('repos.html.twig', ['repos' => $repos]);
-        file_put_contents($this::FILENAME_HTML, $content);
-        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_HTML), OutputInterface::VERBOSITY_VERBOSE);
+        foreach($repos as $k => $repos) {
+            $parameters = [
+                'user_info' => $user_info,
+                'repos' => $repos,
+            ];
+            $this->buildHtml($parameters, sprintf('docs/%s-repos.html', $k), $output);
+        }
+
         $output->writeln('Done!');
 
         return 0;

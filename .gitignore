@@ -3,3 +3,6 @@ composer.phar
 *.cache
 *.lock
 .env.local
+Resources/data/*.yaml
+var/*
+docs/*
