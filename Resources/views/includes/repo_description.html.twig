@@ -1,5 +1,5 @@
 {% for team in repo.teams %}
-    <span class="badge badge-secondary">{{team.name}}</span>
+    <span class="badge badge-pill badge-light repo-permission-{{team.permission}}"><i class="fas fa-users"></i>{{team.name}}</span>
 {% endfor %}
 
 
@@ -7,7 +7,7 @@
     <small class="text-muted">{{ repo.description }}</small>
 
     <a href="{{ repo.html_url }}" target="_blank">
-        <span class="badge badge-primary">{{repo.language}}</span>
+        <span class="badge badge-pill badge-primary"><i class="fas fa-code"></i> {{repo.language}}</span>
     </a>
 
     {% for branch in repo.branches %}
@@ -19,7 +19,7 @@
     {% endfor %}
 
     {% if repo.private == true %}
-        <span class="badge badge-info">Private</span>
+        <i class="fas fa-lock"></i>
     {% else %}
         {% include "includes/repo_badges_public.html.twig" %}
     {% endif %}
