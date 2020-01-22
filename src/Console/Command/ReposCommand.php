@@ -46,8 +46,12 @@ final class ReposCommand extends AbstractCommand
             return $this->getResourceYaml($this::FILENAME_USER_INFO);
         }
         $api = $this->getUserApi();
-        $info = $api->show($this->github_username);
-        $info['organizations'] = $api->orgs();
+        $info['organizations'][$this->github_username] = $api->show($this->github_username);
+
+        foreach ($api->orgs() as $org) {
+            $info['organizations'][$org['login']] = $org;
+        }
+
         $info['repositories'] = $api->myRepositories();
         $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_USER_INFO, $info);
         $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_USER_INFO), OutputInterface::VERBOSITY_VERBOSE);
@@ -64,16 +68,21 @@ final class ReposCommand extends AbstractCommand
         }
 
         $api = $this->getClient()->api('repo');
-        $repositories = [
-            $this->github_username => $this->fetchReposFromEntity($this->github_username, $api, $this->getUserApi()->repositories($this->github_username), $output),
-        ];
+        $repositories = [];
 
         foreach($user_info['organizations'] as $org) {
-            $repositories[$org['login']] = $this->fetchReposFromEntity($org['login'], $api, $this->getOrganizationApi()->repositories($org['login']), $output);
+
+            if ($this->github_username === $org['login']) {
+                $customApi = $this->getUserApi()->repositories($this->github_username);
+            } else {
+                $customApi = $this->getOrganizationApi()->repositories($org['login']);
+            }
+
+            $repositories[$org['login']] = $this->fetchReposFromEntity($org['login'], $api, $customApi, $output);
         }
 
         $this->saveResourceToYamlFile(static::getResourcesPath().$this::FILENAME_REPOS, $repositories);
-        $output->writeln(sprintf('File <comment>%s</> saved', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
+        $output->writeln(sprintf('File <info>%s</> saved', $this::FILENAME_REPOS), OutputInterface::VERBOSITY_VERBOSE);
 
         return $repositories;
     }
@@ -132,6 +141,7 @@ final class ReposCommand extends AbstractCommand
         foreach($repos as $k => $repos) {
             $parameters = [
                 'user_info' => $user_info,
+                'org' => $user_info['organizations'][$k],
                 'repos' => $repos,
             ];
             $this->buildHtml($parameters, sprintf('docs/%s-repos.html', $k), $output);
