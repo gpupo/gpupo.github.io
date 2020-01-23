@@ -1,0 +1,10 @@
+<pre><code>
+{% for repo in repos %}{% if repo.archived == false %}
+test -d {{repo.name}} || git clone {{ repo.ssh_url }};
+{% endif %}{% endfor %}
+
+STRINGLIST="\
+{% for repo in repos %}{% if repo.archived == false %}{{ repo.name }} \
+{% endif %}{% endfor %}
+";
+</code></pre>

@@ -1,25 +1,10 @@
 {% extends 'base.html.twig' %}
-{% block content %}
-<style>
-    .repo.name {
-        width: 300px;
-    }
-
-    span.repo-permission-pull {
-        color: red;
-    }
-
-    span.repo-permission-push {
-        color: blue;
-    }
+{% block style_block %}
+    {% include "includes/repo.css.twig" %}
+{% endblock style_block %}
 
 
-</style>
-
-{% if org.login is defined %}
-    {% block title_block %}Org {{ org.login }}{% endblock title_block %}
-{% endif %}
-
+{% block content_block %}
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Actived Repos</a>
@@ -34,45 +19,21 @@
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
       <ul class="list-group list-group-flush">
-          {% for repo in repos %}
-              {% if repo.archived == false %}
-          <li class="list-group-item">
-              {% include "includes/repo_badges.html.twig" %}
-              <a href="{% if repo.homepage is empty %}{{ repo.html_url}}{% else %}{{ repo.homepage}}{% endif %}"  class="repo.name" target="_blank">
-                  <div class="d-inline w-25 p-3"> {{ repo.name }}</div>
-              </a>
-              {% include "includes/repo_description.html.twig" %}
-          </li>
-              {% endif %}
-          {% endfor %}
+      {% for repo in repos %}
+          {% include "includes/repo.html.twig" %}
+      {% endfor %}
       </ul>
   </div>
   <div class="tab-pane fade" id="script" role="tabpanel" aria-labelledby="script-tab">
-      <pre><code>
-      {% for repo in repos %}{% if repo.archived == false %}
-      test -d {{repo.name}} || git clone {{ repo.ssh_url }};
-      {% endif %}{% endfor %}
-
-      STRINGLIST="\
-      {% for repo in repos %}{% if repo.archived == false %}{{ repo.name }} \
-      {% endif %}{% endfor %}
-      ";
-      </code></pre>
+      {% include "includes/repo_code.html.twig" %}
   </div>
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <ul class="list-group list-group-flush">
-          {% for repo in repos %}
-              {% if repo.archived == true %}
-          <li class="list-group-item">
-              <a href="{{ repo.html_url }}" target="_blank">
-                  {{ repo.name }}
-              </a>
-              {% include "includes/repo_description.html.twig" %}
-          </li>
-              {% endif %}
-          {% endfor %}
+      {% for repo in repos %}
+          {% include "includes/repo_archieved.html.twig" %}
+      {% endfor %}
       </ul>
   </div>
 </div>
 
-{% endblock content %}
+{% endblock content_block %}

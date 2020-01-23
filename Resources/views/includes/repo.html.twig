@@ -1,0 +1,9 @@
+{% if repo.archived == false %}
+<li class="list-group-item">
+{% include "includes/repo_badges.html.twig" %}
+<a href="{% if repo.homepage is empty %}{{ repo.html_url}}{% else %}{{ repo.homepage}}{% endif %}"  class="repo.name" target="_blank">
+    <div class="d-inline w-25 p-3"> {{ repo.name }}</div>
+</a>
+{% include "includes/repo_description.html.twig" %}
+</li>
+{% endif %}

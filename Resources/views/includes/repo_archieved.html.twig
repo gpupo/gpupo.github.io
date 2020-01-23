@@ -1,0 +1,8 @@
+{% if repo.archived == true %}
+<li class="list-group-item">
+<a href="{{ repo.html_url }}" target="_blank">
+    {{ repo.name }}
+</a>
+{% include "includes/repo_description.html.twig" %}
+</li>
+{% endif %}
