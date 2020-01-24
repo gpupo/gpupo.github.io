@@ -10,5 +10,19 @@ STRINGLIST="\
 {% endif %}{% endfor %}
 ";
 
+function_do_something_with_repo_without_changes() {
+    printf "\r";
+    # git branch | grep -q develop || (git checkout -b develop && git push -f --set-upstream origin develop);
+    # git pull;
+    # git push;
+}
+
+function_do_something_with_repo_without_changes() {
+    git status --porcelain
+    # git add LICENSE && git commit -m 'Simplify LICENSE FILE' && git push
+    #php-cs-fixer fix;
+    # make common-build@gh-page
+}
+
 source "$(dirname "$0")/functions/bootstrap.sh"
 source "$(dirname "$0")/functions/normalize-repos"
