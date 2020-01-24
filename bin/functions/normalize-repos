@@ -8,7 +8,7 @@ for REPO in $STRINGLIST; do
   if [ -z "$(git status --porcelain)" ]; then
       function_do_something_with_repo_without_changes
   else
-      function_do_something_with_repo_without_changes
+      function_do_something_with_repo_with_changes
   fi
   cd $MAIN_DIR;
 done
