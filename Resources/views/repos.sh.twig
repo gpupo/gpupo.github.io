@@ -1,0 +1,14 @@
+#!/bin/bash
+
+## Clone if local repository don't exist
+{% for repo in repos %}{% if repo.archived == false %}
+test -d {{repo.name}} || git clone {{ repo.ssh_url }};
+{% endif %}{% endfor %}
+
+STRINGLIST="\
+{% for repo in repos %}{% if repo.archived == false %}{{ repo.name }} \
+{% endif %}{% endfor %}
+";
+
+source "$(dirname "$0")/functions/bootstrap.sh"
+source "$(dirname "$0")/functions/normalize-repos"

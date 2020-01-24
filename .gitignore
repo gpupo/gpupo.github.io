@@ -6,3 +6,4 @@ composer.phar
 Resources/data/*.yaml
 var/*
 docs/*
+bin/*-repos.sh

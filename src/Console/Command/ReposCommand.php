@@ -129,6 +129,14 @@ final class ReposCommand extends AbstractCommand
         $output->writeln(sprintf('File <comment>%s</> saved', $filenameHtml), OutputInterface::VERBOSITY_VERBOSE);
     }
 
+    protected function buildFiles(array $parameters, string $filename, OutputInterface $output):void
+    {
+        $twig = $this->factoryTwig();
+        $content = $twig->render('repos.sh.twig', $parameters);
+        file_put_contents($filename, $content);
+        $output->writeln(sprintf('File <comment>%s</> saved', $filename), OutputInterface::VERBOSITY_VERBOSE);
+    }
+
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         parent::execute($input, $output);
@@ -142,6 +150,7 @@ final class ReposCommand extends AbstractCommand
                 'repos' => $repos,
             ];
             $this->buildHtml($parameters, sprintf('docs/%s-repos.html', $k), $output);
+            $this->buildFiles($parameters, sprintf('bin/normalize-%s-repos.sh', $k), $output);
         }
 
         $output->writeln('Done!');

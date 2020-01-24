@@ -1,0 +1,21 @@
+#!/bin/bash
+
+MAIN_DIR=$(pwd)
+
+for REPO in $STRINGLIST; do
+    printf "\n-- $REPO\n";
+    cd $MAIN_DIR/$REPO;
+
+  if [ -z "$(git status --porcelain)" ]; then
+    printf "\r";
+    # git branch | grep -q develop || (git checkout -b develop && git push -f --set-upstream origin develop);
+    # git pull;
+    # git push;
+  else
+    git status --porcelain
+    # git add LICENSE && git commit -m 'Simplify LICENSE FILE' && git push
+    #php-cs-fixer fix;
+    # make common-build@gh-page
+  fi
+  cd $MAIN_DIR;
+done
