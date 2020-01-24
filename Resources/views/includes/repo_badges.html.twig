@@ -1,7 +1,5 @@
 <span class="badges">
-    <a href="{{ repo.html_url }}/actions" target="_blank">
-        <img src="https://github.com/{{ repo.full_name|e }}/workflows/CI/badge.svg" />
-    </a>
+    <a href="{{ repo.html_url }}/actions" target="_blank"><img src="https://github.com/{{ repo.full_name|e }}/workflows/CI/badge.svg" /></a>
 {% if repo.private != true %}
     <a href="http://travis-ci.org/{{ repo.full_name|e }}" target="_blank">
         <img src="https://secure.travis-ci.org/{{ repo.full_name|e }}.png?branch=master" />
