@@ -1,0 +1,20 @@
+
+https://github.com/gpupo/gpupo.github.io
+
+Instruções de uso:
+
+Requer PHP > 7.4.
+
+1) Criar o arquivo .env.local com os seguintes parametros:
+
+    GITHUB_USERNAME=seu_username
+    GITHUB_TOKEN=seu_personal_token_configurado_em_seu_perfil
+    DEV_MODE=false
+
+
+2) Rodar:
+
+    ./bin/console repos:list -v
+
+
+3) Abrir no navegador os arquivos html gerados no diretório docs/
