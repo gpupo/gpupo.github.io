@@ -1,4 +1,7 @@
 <pre><code>
+
+mkdir -p ~/workspace/{{ org.login }};
+cd ~/workspace/{{ org.login }};
 {% for repo in repos %}{% if repo.archived == false %}
 test -d {{repo.name}} || git clone {{ repo.ssh_url }};
 {% endif %}{% endfor %}
@@ -7,4 +10,9 @@ STRINGLIST="\
 {% for repo in repos %}{% if repo.archived == false %}{{ repo.name }} \
 {% endif %}{% endfor %}
 ";
+
+cd ~/workspace/{{ org.login }};
+
+bash ~/workspace/gpupo/gpupo.github.io/bin/normalize-{{ org.login }}-repos.sh;
+
 </code></pre>
