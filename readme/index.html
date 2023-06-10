@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt_BR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>🛠️Como esse site foi feito | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="🛠️Como esse site foi feito" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Aprimorando Produtividade Corporativa: Maximizando Equipes, Inovação Tecnológica e Relevância no Mercado" />
+<meta property="og:description" content="Aprimorando Produtividade Corporativa: Maximizando Equipes, Inovação Tecnológica e Relevância no Mercado" />
+<link rel="canonical" href="/readme/" />
+<meta property="og:url" content="/readme/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="🛠️Como esse site foi feito" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Aprimorando Produtividade Corporativa: Maximizando Equipes, Inovação Tecnológica e Relevância no Mercado","headline":"🛠️Como esse site foi feito","url":"/readme/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Gilmar Pupo" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Gilmar Pupo</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/lessons/">🧾 Aulas</a><a class="page-link" href="/livros/">📚Livros</a><a class="page-link" href="/about/">👤 About</a><a class="page-link" href="/updates/">💬Updates</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">🛠️Como esse site foi feito</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Este site foi desenvolvido utilizando a combinação poderosa do 🔧 Jekyll, o tema 🎨 Minimal e scripts em 🐍 Python. A minha intenção era criar uma plataforma para exibir de forma automática e organizada os meus artigos no 💼 Linkedin, os Gists no 🐙 Github e até mesmo os meus livros no 📚 Goodreads.</p>
+
+<h3 id="jekyll-e-minimal-️">Jekyll e Minimal 🖌️</h3>
+
+<p>O Jekyll é um gerador de sites estáticos que simplifica o processo de criação e manutenção de sites. Com o Jekyll, pude tirar proveito das suas funcionalidades de compilação automática, gerenciamento de layouts e facilidade na criação de páginas dinâmicas.</p>
+
+<p>O tema Minimal foi escolhido como base para o design deste site. Sua estética limpa e minimalista se encaixou perfeitamente com a proposta do site. O tema Minimal também oferece uma estrutura bem organizada, com diferentes seções que facilitaram a apresentação de conteúdo de maneira clara e intuitiva.</p>
+
+<h3 id="scripts-em-python-">Scripts em Python 🐍</h3>
+
+<p>A personalização desse site envolveu a escrita de scripts em Python para compilar e integrar o conteúdo das minhas diferentes plataformas. Eu criei esses scripts para extrair os artigos do Linkedin, os Gists do Github e os dados dos meus livros no Goodreads. Com esses dados em mãos, o Jekyll se encarregou de renderizar as páginas estáticas de acordo com o layout definido pelo tema Minimal.</p>
+
+<p>A escolha do Python como linguagem de programação se deu pela sua versatilidade e pela ampla gama de bibliotecas disponíveis para manipulação de dados, web scraping e integração com APIs. Essas características foram essenciais para automatizar o processo de coleta de dados e tornar a atualização do site mais eficiente.</p>
+
+<p>Compartilho aqui um dos scripts que transforma o HTML fornecido pelo Linkedin em uma solicitação de meus dados pessoais, em um arquivo markdown no formato adequado para o Jekyll:</p>
+
+<pre><code class="language-`python">
+import json
+import os
+import shutil
+from bs4 import BeautifulSoup
+from markdownify import markdownify
+from unidecode import unidecode
+
+# Caminho para o diretório do LinkedIn Archive
+linkedin_archive_path = './resources/'
+
+# Caminho para o diretório de saída das páginas Jekyll
+output_path = './'
+
+# Processar posts
+posts_directory = os.path.join(linkedin_archive_path, 'Articles/Articles')
+if os.path.exists(posts_directory):
+    # Criar diretório de saída para os posts das páginas Jekyll
+    jekyll_posts_directory = os.path.join(output_path, '_posts')
+    os.makedirs(jekyll_posts_directory, exist_ok=True)
+
+    # Iterar sobre os arquivos de posts no diretório do LinkedIn Archive
+    for filename in os.listdir(posts_directory):
+        post_file = os.path.join(posts_directory, filename)
+        if os.path.isfile(post_file):
+            with open(post_file, 'r') as f:
+                post_data = f.read()
+
+                # Parsear o conteúdo HTML do post
+                soup = BeautifulSoup(post_data, 'html.parser')
+                
+                # Extrair o título do post
+                title_element = soup.find('h1')
+                if title_element:
+                    title_link = title_element.find('a')
+                    if title_link:
+                        title = title_link.text.strip()
+                    else:
+                        title = title_element.text.strip()
+                else:
+                    title = "No Title"
+
+                # Se não há título, pular para o próximo post
+                if title == "No Title":
+                    continue
+
+                # Extrair a data de criação e publicação do post
+                created = soup.find('p', class_='created').text.split('on ')[1].strip()
+                published = soup.find('p', class_='published').text.split('on ')[1].strip()
+
+                #Não publica rascunhos
+                if len(published) &lt; 5:
+                    continue    
+
+                # Extrair o conteúdo do post e convertê-lo para Markdown
+                content = soup.find('div').prettify()
+                markdown_lines = content.splitlines()
+                markdown_content = "\n".join(line.strip() for line in markdown_lines)
+
+                # Criar arquivo de post no formato Jekyll
+                # Omitir a data e hora do valor de created
+                created_date = created.split()[0]
+                jekyll_post_filename = f"{created_date.replace(' ', '_')}-{unidecode(title).replace(' ', '-').replace(':', 'h').lower()}.markdown"
+
+                jekyll_post_file = os.path.join(jekyll_posts_directory, jekyll_post_filename)
+                with open(jekyll_post_file, 'w') as jekyll_f:
+                    jekyll_f.write('---\n')
+                    jekyll_f.write(f"layout: post\n")
+                    jekyll_f.write(f"language: pt\n")
+                    jekyll_f.write(f"categories: artigos\n")
+                    # Verificar se o título contém ":" e substituir por "-"
+                    jekyll_f.write(f"title: {title.replace(':', '-')}\n")
+                    jekyll_f.write(f"url: {unidecode(title).replace(' ', '-').lower()}\n")
+                    jekyll_f.write(f"date: {created}\n")
+                    jekyll_f.write('---\n')
+                    jekyll_f.write(markdown_content)
+                    print(f"Criado o arquivo {jekyll_post_filename}")
+</code></pre>
+
+<h3 id="hospedagem-no-github-pages-">Hospedagem no GitHub Pages 🌐</h3>
+
+<p>Este site está hospedado no GitHub Pages, uma plataforma de hospedagem gratuita fornecida pelo GitHub. O GitHub Pages permite a publicação direta de sites estáticos a partir de repositórios do GitHub. Com a integração entre o Jekyll e o GitHub Pages, foi possível automatizar a compilação e a atualização do site sempre que houver alterações no código ou nos dados.</p>
+
+<p>Espero que essa breve explicação sobre o desenvolvimento deste site tenha sido útil.</p>
+
+<p>Obrigado por visitar! 😊</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>RSS</span>
+          </a><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/updates/">💬Updates</a><a class="page-link" href="/readme/">🛠️Como esse site foi feito</a></div>
+    </div>
+
+
+  </div>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <a class="libutton"
+          href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">Subscribe on LinkedIn</a>
+        <div class="newsletter-text">
+        📰 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">NEWSLETTER</a>
+          <b>Bora Gil RePensar</b>:
+          <i>Repense junto comigo temas relacionados à inovação, e-commerce e tecnologia</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
