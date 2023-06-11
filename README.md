@@ -94,7 +94,9 @@ if os.path.exists(posts_directory):
                     jekyll_f.write('---\n')
                     jekyll_f.write(markdown_content)
                     print(f"Criado o arquivo {jekyll_post_filename}")
-```                    
+
+
+```
 
 
 ### Hospedagem no GitHub Pages 🌐
