@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Uso de distância de Levenshtein para calcular a similaridade entre as categorias entre dois arquivos CSV | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Uso de distância de Levenshtein para calcular a similaridade entre as categorias entre dois arquivos CSV" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Gist ID: 15d7634f81ced00d26423841bac9efc3" />
+<meta property="og:description" content="Gist ID: 15d7634f81ced00d26423841bac9efc3" />
+<link rel="canonical" href="https://www.gpupo.com/lessons/uso-de-distancia-de-levenshtein-para-calcular-a-similaridade-entre-as-categorias-entre-dois-arquivos-csv/" />
+<meta property="og:url" content="https://www.gpupo.com/lessons/uso-de-distancia-de-levenshtein-para-calcular-a-similaridade-entre-as-categorias-entre-dois-arquivos-csv/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-17T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Uso de distância de Levenshtein para calcular a similaridade entre as categorias entre dois arquivos CSV" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-06-17T00:00:00-03:00","datePublished":"2023-06-17T00:00:00-03:00","description":"Gist ID: 15d7634f81ced00d26423841bac9efc3","headline":"Uso de distância de Levenshtein para calcular a similaridade entre as categorias entre dois arquivos CSV","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/lessons/uso-de-distancia-de-levenshtein-para-calcular-a-similaridade-entre-as-categorias-entre-dois-arquivos-csv/"},"url":"https://www.gpupo.com/lessons/uso-de-distancia-de-levenshtein-para-calcular-a-similaridade-entre-as-categorias-entre-dois-arquivos-csv/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.gpupo.com/feed.xml" title="Gilmar Pupo" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+<script>
+  window['ga-disable-G-Q7VM0ZXN60'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q7VM0ZXN60');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Gilmar Pupo</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/lessons/">🧾 Aulas</a><a class="page-link" href="/livros/">📚Livros</a><a class="page-link" href="/about/">📜 About</a><a class="page-link" href="/updates/">💬Updates</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Uso de distância de Levenshtein para calcular a similaridade entre as categorias entre dois arquivos CSV</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2023-06-17T00:00:00-03:00" itemprop="datePublished">
+        Jun 17, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Gist ID: 15d7634f81ced00d26423841bac9efc3</p>
+
+<pre><code class="language-python">import csv
+import Levenshtein
+
+"""
+O script tem como objetivo encontrar a categoria mais similar 
+para cada categoria presente no arquivo "categorias.csv" com base
+nas categorias do arquivo "categorias_native.csv". 
+
+Ele utiliza a distância de Levenshtein para calcular 
+a similaridade entre as categorias.
+"""
+
+def encontrar_categoria_similar(categoria, categorias_native):
+    melhor_similaridade = 0
+    melhor_categoria = None
+
+    for linha in categorias_native:
+        similiaridade = Levenshtein.ratio(categoria, linha[2])
+        if similiaridade &gt; melhor_similaridade:
+            melhor_similaridade = similiaridade
+            melhor_categoria = linha
+
+    return melhor_categoria
+
+"""
+O script começa carregando as categorias do arquivo "categorias_native.csv" 
+em uma lista chamada categorias_native. 
+
+Em seguida, abre o arquivo "categorias.csv" para leitura e 
+o arquivo de saída "resultado.csv" para escrita.
+"""
+
+arquivo_categorias_native = 'categorias_native.csv'
+arquivo_categorias_foreigner = 'data/categorias.csv'
+arquivo_saida = 'resultado.csv'
+
+# Carregar as categorias do arquivo categorias_native.csv
+
+categorias_native = []
+with open(arquivo_categorias_native, 'r') as arquivo_native:
+    leitor_native = csv.reader(arquivo_native)
+    next(leitor_native)  # Ignorar o cabeçalho
+    for linha in leitor_native:
+        categorias_native.append(linha)
+
+"""
+O cabeçalho do arquivo de saída é composto pelo cabeçalho original 
+do arquivo "categorias.csv" acrescido das colunas "Categoria Predict ID" e "Categoria Predict Breadcrumb". 
+Essas colunas armazenarão o ID e o breadcrumb da categoria mais similar encontrada.
+Abrir o arquivo de categorias.csv para leitura e o arquivo de saída para escrita
+"""
+
+with open(arquivo_categorias_foreigner, 'r') as arquivo_categorias_foreigner, open(arquivo_saida, 'w', newline='') as arquivo_saida:
+    leitor_categorias = csv.reader(arquivo_categorias_foreigner)
+    escritor_saida = csv.writer(arquivo_saida)
+    cabecalho_saida = next(leitor_categorias) + ['Categoria Predict ID', 'Categoria Predict Breadcrumb']
+    escritor_saida.writerow(cabecalho_saida)
+"""
+O script itera pelas linhas do arquivo "categorias.csv". 
+Para cada linha, chama a função encontrar_categoria_similar passando a categoria como argumento. 
+A função retorna a categoria mais similar encontrada, juntamente com seu ID e breadcrumb correspondentes.
+A linha de saída é composta pelos valores da linha original do arquivo "categorias.csv" 
+acrescidos dos valores do ID e breadcrumb da categoria mais similar. 
+Essa linha é escrita no arquivo de saída.
+Após processar todas as linhas do arquivo "categorias.csv", o script exibe uma mensagem 
+indicando a conclusão do processo e o arquivo "resultado.csv" onde os resultados foram gravados.
+
+A função encontrar_categoria_similar recebe uma categoria como entrada e percorre todas 
+as linhas das categorias presentes em "categorias_native.csv". 
+Para cada linha, é calculada a similaridade usando a função Levenshtein.ratio da biblioteca Levenshtein. 
+A categoria com a maior similaridade é armazenada juntamente com o valor de similaridade correspondente.
+"""
+    for linha in leitor_categorias:
+        categoria = linha[0]
+        categoria_correspondente = encontrar_categoria_similar(categoria, categorias_native)
+        linha_saida = linha + [categoria_correspondente[1], categoria_correspondente[2]]
+        escritor_saida.writerow(linha_saida)
+
+print("Processo concluído. Resultado gravado em", arquivo_saida)
+</code></pre>
+
+  </div><a class="u-url" href="/lessons/uso-de-distancia-de-levenshtein-para-calcular-a-similaridade-entre-as-categorias-entre-dois-arquivos-csv/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+          <a href="https://www.gpupo.com/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>RSS</span>
+          </a><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/updates/">💬Updates</a><a class="page-link" href="/readme/">🛠️Como fiz esse site</a></div>
+    </div>
+
+
+  </div>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <a class="libutton"
+          href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">Subscribe on LinkedIn</a>
+        <div class="newsletter-text">
+        📰 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">NEWSLETTER</a>
+          <b>Bora Gil RePensar</b>:
+          <i>Repense comigo temas relacionados à inovação, e-commerce e tecnologia</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer></body>
+
+</html>
