@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>RePensando Arquitetura- Monolitos e Microservices | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="RePensando Arquitetura- Monolitos e Microservices" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Fui um entusiasta dos microsserviços e fiquei animado com as possibilidades que eles oferecem. A ideia de criar um sistema modular, escalável e distribuído, onde cada serviço pode ser desenvolvido e dimensionado independentemente é fascinante e nosso esforço é que essa abordagem traga flexibilidade e agilidade para nossos projetos. É importante ponderar melhor sobre o uso de microsserviços. Os desafios e complexidades associados a essa arquitetura não devem ser subestimados. A história da Amazon com a transição de sua arquitetura de microsserviços para um monolito foi um  ponto de inflexão para mim. O fato de eles terem alcançado uma redução de 90% nos custos operacionais e uma simplificação do sistema ao adotar um monolito levanta questões importantes. Embora a teoria dos microsserviços seja atraente, a implementação prática pode ser desafiadora. A fragmentação de um sistema em diversos serviços traz consigo a necessidade de gerenciar a comunicação entre eles, lidar com problemas de consistência de dados e garantir que todos os serviços estejam adequadamente sincronizados e esses desafios podem complicar desnecessariamente o desenvolvimento e a manutenção do sistema. A introdução de serviços serverless , embora promissora em termos de dimensionamento automático e flexibilidade, também pode trazer sua parcela de complexidade e desafios. A latência de rede e a gestão de estado em ambientes sem servidor exigem uma atenção especial para evitar problemas de desempenho e inconsistências nos dados. Imagem: https://www.goodtechthings.com/after-serverless/ Entendo que a escolha da arquitetura deve ser feita de forma criteriosa, levando em conta as características do sistema, as necessidades da equipe e os objetivos do projeto. Existem casos em que os microsserviços podem ser a melhor solução, especialmente para projetos de grande escala e equipes altamente especializadas. No entanto, é fundamental avaliar cuidadosamente os benefícios e os desafios associados a essa abordagem, para garantir que ela seja a escolha certa para o contexto específico em que estamos trabalhando. Vamos focar em adotar uma abordagem mais equilibrada , considerando os prós e contras de diferentes arquiteturas antes de tomar uma decisão. A tecnologia é um campo em constante evolução, e é importante estar aberto a novas ideias e abordagens , ao mesmo tempo em que exercemos um pensamento crítico sobre o que realmente atende às necessidades dos nossos projetos. Imagem: Arquitetura antes da mudança Imagem: Arquitetura depois da mudança Aqui estão algumas fontes e referências que podem ser úteis para aprofundar sua compreensão sobre microsserviços e suas implicações: Martin Fowler - &quot;Microservices&quot; (martinfowler.com/articles/microservices.html): Martin Fowler é um especialista reconhecido em arquitetura de software, e seu artigo sobre microsserviços é uma leitura popular sobre o assunto. Chris Richardson - &quot;Microservices.io&quot; (microservices.io): Este site é uma excelente fonte de informações sobre microsserviços, fornecendo uma visão geral, padrões e práticas recomendadas, estudos de caso e exemplos de implementações. Sam Newman - &quot;Building Microservices&quot; (samnewman.io/books/building_microservices): Este livro explora os aspectos técnicos e organizacionais da adoção de microsserviços, incluindo padrões, testes, implantação e monitoramento. Amazon Web Services (AWS) - &quot;Microservices on AWS&quot; (aws.amazon.com/microservices): A AWS fornece uma série de recursos, estudos de caso e white papers que descrevem como projetar, implantar e operar microsserviços na plataforma AWS. Netflix - &quot;The Netflix Tech Blog&quot; (netflixtechblog.com): O blog de tecnologia da Netflix contém várias postagens que compartilham experiências e insights sobre a adoção de microsserviços em uma escala significativa." />
+<meta property="og:description" content="Fui um entusiasta dos microsserviços e fiquei animado com as possibilidades que eles oferecem. A ideia de criar um sistema modular, escalável e distribuído, onde cada serviço pode ser desenvolvido e dimensionado independentemente é fascinante e nosso esforço é que essa abordagem traga flexibilidade e agilidade para nossos projetos. É importante ponderar melhor sobre o uso de microsserviços. Os desafios e complexidades associados a essa arquitetura não devem ser subestimados. A história da Amazon com a transição de sua arquitetura de microsserviços para um monolito foi um  ponto de inflexão para mim. O fato de eles terem alcançado uma redução de 90% nos custos operacionais e uma simplificação do sistema ao adotar um monolito levanta questões importantes. Embora a teoria dos microsserviços seja atraente, a implementação prática pode ser desafiadora. A fragmentação de um sistema em diversos serviços traz consigo a necessidade de gerenciar a comunicação entre eles, lidar com problemas de consistência de dados e garantir que todos os serviços estejam adequadamente sincronizados e esses desafios podem complicar desnecessariamente o desenvolvimento e a manutenção do sistema. A introdução de serviços serverless , embora promissora em termos de dimensionamento automático e flexibilidade, também pode trazer sua parcela de complexidade e desafios. A latência de rede e a gestão de estado em ambientes sem servidor exigem uma atenção especial para evitar problemas de desempenho e inconsistências nos dados. Imagem: https://www.goodtechthings.com/after-serverless/ Entendo que a escolha da arquitetura deve ser feita de forma criteriosa, levando em conta as características do sistema, as necessidades da equipe e os objetivos do projeto. Existem casos em que os microsserviços podem ser a melhor solução, especialmente para projetos de grande escala e equipes altamente especializadas. No entanto, é fundamental avaliar cuidadosamente os benefícios e os desafios associados a essa abordagem, para garantir que ela seja a escolha certa para o contexto específico em que estamos trabalhando. Vamos focar em adotar uma abordagem mais equilibrada , considerando os prós e contras de diferentes arquiteturas antes de tomar uma decisão. A tecnologia é um campo em constante evolução, e é importante estar aberto a novas ideias e abordagens , ao mesmo tempo em que exercemos um pensamento crítico sobre o que realmente atende às necessidades dos nossos projetos. Imagem: Arquitetura antes da mudança Imagem: Arquitetura depois da mudança Aqui estão algumas fontes e referências que podem ser úteis para aprofundar sua compreensão sobre microsserviços e suas implicações: Martin Fowler - &quot;Microservices&quot; (martinfowler.com/articles/microservices.html): Martin Fowler é um especialista reconhecido em arquitetura de software, e seu artigo sobre microsserviços é uma leitura popular sobre o assunto. Chris Richardson - &quot;Microservices.io&quot; (microservices.io): Este site é uma excelente fonte de informações sobre microsserviços, fornecendo uma visão geral, padrões e práticas recomendadas, estudos de caso e exemplos de implementações. Sam Newman - &quot;Building Microservices&quot; (samnewman.io/books/building_microservices): Este livro explora os aspectos técnicos e organizacionais da adoção de microsserviços, incluindo padrões, testes, implantação e monitoramento. Amazon Web Services (AWS) - &quot;Microservices on AWS&quot; (aws.amazon.com/microservices): A AWS fornece uma série de recursos, estudos de caso e white papers que descrevem como projetar, implantar e operar microsserviços na plataforma AWS. Netflix - &quot;The Netflix Tech Blog&quot; (netflixtechblog.com): O blog de tecnologia da Netflix contém várias postagens que compartilham experiências e insights sobre a adoção de microsserviços em uma escala significativa." />
+<link rel="canonical" href="https://www.gpupo.com/artigos/repensando-arquiteturah-monolitos-e-microservices/" />
+<meta property="og:url" content="https://www.gpupo.com/artigos/repensando-arquiteturah-monolitos-e-microservices/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-15T10:44:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="RePensando Arquitetura- Monolitos e Microservices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-15T10:44:00-03:00","datePublished":"2023-05-15T10:44:00-03:00","description":"Fui um entusiasta dos microsserviços e fiquei animado com as possibilidades que eles oferecem. A ideia de criar um sistema modular, escalável e distribuído, onde cada serviço pode ser desenvolvido e dimensionado independentemente é fascinante e nosso esforço é que essa abordagem traga flexibilidade e agilidade para nossos projetos. É importante ponderar melhor sobre o uso de microsserviços. Os desafios e complexidades associados a essa arquitetura não devem ser subestimados. A história da Amazon com a transição de sua arquitetura de microsserviços para um monolito foi um  ponto de inflexão para mim. O fato de eles terem alcançado uma redução de 90% nos custos operacionais e uma simplificação do sistema ao adotar um monolito levanta questões importantes. Embora a teoria dos microsserviços seja atraente, a implementação prática pode ser desafiadora. A fragmentação de um sistema em diversos serviços traz consigo a necessidade de gerenciar a comunicação entre eles, lidar com problemas de consistência de dados e garantir que todos os serviços estejam adequadamente sincronizados e esses desafios podem complicar desnecessariamente o desenvolvimento e a manutenção do sistema. A introdução de serviços serverless , embora promissora em termos de dimensionamento automático e flexibilidade, também pode trazer sua parcela de complexidade e desafios. A latência de rede e a gestão de estado em ambientes sem servidor exigem uma atenção especial para evitar problemas de desempenho e inconsistências nos dados. Imagem: https://www.goodtechthings.com/after-serverless/ Entendo que a escolha da arquitetura deve ser feita de forma criteriosa, levando em conta as características do sistema, as necessidades da equipe e os objetivos do projeto. Existem casos em que os microsserviços podem ser a melhor solução, especialmente para projetos de grande escala e equipes altamente especializadas. No entanto, é fundamental avaliar cuidadosamente os benefícios e os desafios associados a essa abordagem, para garantir que ela seja a escolha certa para o contexto específico em que estamos trabalhando. Vamos focar em adotar uma abordagem mais equilibrada , considerando os prós e contras de diferentes arquiteturas antes de tomar uma decisão. A tecnologia é um campo em constante evolução, e é importante estar aberto a novas ideias e abordagens , ao mesmo tempo em que exercemos um pensamento crítico sobre o que realmente atende às necessidades dos nossos projetos. Imagem: Arquitetura antes da mudança Imagem: Arquitetura depois da mudança Aqui estão algumas fontes e referências que podem ser úteis para aprofundar sua compreensão sobre microsserviços e suas implicações: Martin Fowler - &quot;Microservices&quot; (martinfowler.com/articles/microservices.html): Martin Fowler é um especialista reconhecido em arquitetura de software, e seu artigo sobre microsserviços é uma leitura popular sobre o assunto. Chris Richardson - &quot;Microservices.io&quot; (microservices.io): Este site é uma excelente fonte de informações sobre microsserviços, fornecendo uma visão geral, padrões e práticas recomendadas, estudos de caso e exemplos de implementações. Sam Newman - &quot;Building Microservices&quot; (samnewman.io/books/building_microservices): Este livro explora os aspectos técnicos e organizacionais da adoção de microsserviços, incluindo padrões, testes, implantação e monitoramento. Amazon Web Services (AWS) - &quot;Microservices on AWS&quot; (aws.amazon.com/microservices): A AWS fornece uma série de recursos, estudos de caso e white papers que descrevem como projetar, implantar e operar microsserviços na plataforma AWS. Netflix - &quot;The Netflix Tech Blog&quot; (netflixtechblog.com): O blog de tecnologia da Netflix contém várias postagens que compartilham experiências e insights sobre a adoção de microsserviços em uma escala significativa.","headline":"RePensando Arquitetura- Monolitos e Microservices","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/artigos/repensando-arquiteturah-monolitos-e-microservices/"},"url":"https://www.gpupo.com/artigos/repensando-arquiteturah-monolitos-e-microservices/"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.gpupo.com/feed.xml" title="Gilmar Pupo" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q7VM0ZXN60');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Gilmar Pupo</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/readme/">🛠️Como fiz esse site</a>
+  <a class="nav-item" href="/about/">📜 About</a>
+  <a class="nav-item" href="/lessons/">🧾 Aulas</a>
+  <a class="nav-item" href="/livros/">📚Livros</a>
+  <a class="nav-item" href="/">📝 Artigos</a>
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">RePensando Arquitetura- Monolitos e Microservices</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2023-05-15T10:44:00-03:00" itemprop="datePublished">
+        May 15, 2023
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div>
+<p>
+Fui um entusiasta dos microsserviços e fiquei animado com as possibilidades que eles oferecem. A ideia de criar um sistema modular, escalável e distribuído, onde cada serviço pode ser desenvolvido e dimensionado independentemente é fascinante e nosso esforço é que essa abordagem traga flexibilidade e agilidade para nossos projetos.
+</p>
+<figure class="slate-resizable-image-embed slate-image-embed__resize-full-width">
+<img alt="No alt text provided for this image" data-media-urn="urn:li:digitalmediaAsset:D4D12AQHiEHoAtA2RoA" src="https://media.licdn.com/dms/image/D4D12AQHiEHoAtA2RoA/article-inline_image-shrink_1000_1488/0/1684147702973?e=1719446400&amp;v=beta&amp;t=0fYYxSG4TFzy3Leg-rw9v8STQLEPvOGD9UCXsT7P4gQ" />
+</figure>
+<p>
+É importante ponderar melhor sobre o uso de microsserviços. Os desafios e complexidades associados a essa arquitetura não devem ser subestimados.
+</p>
+<p>
+A
+<a href="https://thenewstack.io/return-of-the-monolith-amazon-dumps-microservices-for-video-monitoring/" target="_blank">
+história da Amazon
+</a>
+com a transição de sua arquitetura de microsserviços para um monolito foi um  ponto de inflexão para mim. O fato de eles terem alcançado uma redução de 90% nos custos operacionais e uma simplificação do sistema ao adotar um monolito levanta questões importantes.
+</p>
+<p>
+Embora a teoria dos microsserviços seja atraente, a implementação prática pode ser desafiadora. A fragmentação de um sistema em diversos serviços traz consigo a necessidade de gerenciar a comunicação entre eles, lidar com problemas de consistência de dados e garantir que todos os serviços estejam adequadamente sincronizados e esses desafios podem complicar desnecessariamente o desenvolvimento e a manutenção do sistema.
+</p>
+<p>
+A introdução de serviços
+<strong>
+serverless
+</strong>
+, embora promissora em termos de dimensionamento automático e flexibilidade, também pode trazer sua parcela de complexidade e desafios. A latência de rede e a gestão de estado em ambientes sem servidor exigem uma atenção especial para evitar problemas de desempenho e inconsistências nos dados.
+</p>
+<figure class="slate-resizable-image-embed slate-image-embed__resize-full-width">
+<img alt="No alt text provided for this image" data-media-urn="urn:li:digitalmediaAsset:D4D12AQHyYhSQdPpoaQ" src="https://media.licdn.com/dms/image/D4D12AQHyYhSQdPpoaQ/article-inline_image-shrink_1000_1488/0/1684148708998?e=1719446400&amp;v=beta&amp;t=aRbwvCiQQAEJS_QV7J-vlS0iTdBHwixImir6Xzci28A" />
+<figcaption>
+Imagem: https://www.goodtechthings.com/after-serverless/
+</figcaption>
+</figure>
+<p>
+<br />
+</p>
+<p>
+Entendo que a
+<strong>
+escolha da arquitetura
+</strong>
+deve ser feita de forma criteriosa, levando em conta as características do sistema, as necessidades da equipe e os objetivos do projeto.
+</p>
+<p>
+Existem casos em que os microsserviços podem ser a melhor solução, especialmente para projetos de grande escala e equipes altamente especializadas. No entanto, é fundamental avaliar cuidadosamente os benefícios e os desafios associados a essa abordagem, para garantir que ela seja a escolha certa para o contexto específico em que estamos trabalhando.
+</p>
+<p>
+Vamos focar em adotar uma
+<strong>
+abordagem mais equilibrada
+</strong>
+, considerando os prós e contras de diferentes arquiteturas antes de tomar uma decisão.
+</p>
+<p>
+A tecnologia é um campo em constante evolução, e é importante estar
+<strong>
+aberto a novas ideias e abordagens
+</strong>
+, ao mesmo tempo em que exercemos um
+<strong>
+pensamento crítico sobre o que realmente atende às necessidades
+</strong>
+dos nossos projetos.
+</p>
+<figure class="slate-resizable-image-embed slate-image-embed__resize-full-width">
+<img alt="No alt text provided for this image" data-media-urn="urn:li:digitalmediaAsset:D4D12AQG8LGKl7_svuQ" src="https://media.licdn.com/dms/image/D4D12AQG8LGKl7_svuQ/article-inline_image-shrink_1000_1488/0/1684147810594?e=1719446400&amp;v=beta&amp;t=QfMTvQCKQHweJjUcSYAEkyU_oJs0S7sJXYtI8JIW3L0" />
+<figcaption>
+Imagem: Arquitetura antes da mudança
+</figcaption>
+</figure>
+<figure class="slate-resizable-image-embed slate-image-embed__resize-full-width">
+<img alt="No alt text provided for this image" data-media-urn="urn:li:digitalmediaAsset:D4D12AQGQo9uOP7D3-A" src="https://media.licdn.com/dms/image/D4D12AQGQo9uOP7D3-A/article-inline_image-shrink_1000_1488/0/1684148231261?e=1719446400&amp;v=beta&amp;t=07Rjd7XW4U3Hz9P_hR52oyB7FAj5ZWhNOMnbzWh2xBo" />
+<figcaption>
+Imagem: Arquitetura depois da mudança
+</figcaption>
+</figure>
+<p>
+<br />
+</p>
+<p>
+<strong>
+Aqui estão algumas fontes e referências que podem ser úteis para aprofundar sua compreensão sobre microsserviços e suas implicações:
+</strong>
+</p>
+<ol>
+<li>
+Martin Fowler - "Microservices" (martinfowler.com/articles/microservices.html): Martin Fowler é um especialista reconhecido em arquitetura de software, e seu artigo sobre microsserviços é uma leitura popular sobre o assunto.
+</li>
+<li>
+Chris Richardson - "Microservices.io" (microservices.io): Este site é uma excelente fonte de informações sobre microsserviços, fornecendo uma visão geral, padrões e práticas recomendadas, estudos de caso e exemplos de implementações.
+</li>
+<li>
+Sam Newman - "Building Microservices" (samnewman.io/books/building_microservices): Este livro explora os aspectos técnicos e organizacionais da adoção de microsserviços, incluindo padrões, testes, implantação e monitoramento.
+</li>
+<li>
+Amazon Web Services (AWS) - "Microservices on AWS" (aws.amazon.com/microservices): A AWS fornece uma série de recursos, estudos de caso e white papers que descrevem como projetar, implantar e operar microsserviços na plataforma AWS.
+</li>
+<li>
+Netflix - "The Netflix Tech Blog" (netflixtechblog.com): O blog de tecnologia da Netflix contém várias postagens que compartilham experiências e insights sobre a adoção de microsserviços em uma escala significativa.
+</li>
+</ol>
+<p>
+<br />
+</p>
+<p>
+<br />
+</p>
+</div>
+
+  </div>
+
+  <a class="u-url" href="/artigos/repensando-arquiteturah-monolitos-e-microservices/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+          <a href="https://www.gpupo.com/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>RSS</span>
+          </a><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/readme/">🛠️Como fiz esse site</a></div>
+    </div>
+
+
+  </div>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <a class="libutton"
+          href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">Subscribe on LinkedIn</a>
+        <div class="newsletter-text">
+        📰 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">NEWSLETTER</a>
+          <b>Bora Gil RePensar</b>:
+          <i>Repense comigo temas relacionados à inovação, e-commerce e tecnologia</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

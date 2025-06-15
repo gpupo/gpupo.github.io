@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bash, um interpretador de comandos para sistemas operacionais Unix | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Bash, um interpretador de comandos para sistemas operacionais Unix" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Gist ID: 06e0ee5372a9253b93e532cdf34b742c" />
+<meta property="og:description" content="Gist ID: 06e0ee5372a9253b93e532cdf34b742c" />
+<link rel="canonical" href="https://www.gpupo.com/lessons/bash-um-interpretador-de-comandos-para-sistemas-operacionais-unix/" />
+<meta property="og:url" content="https://www.gpupo.com/lessons/bash-um-interpretador-de-comandos-para-sistemas-operacionais-unix/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-16T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bash, um interpretador de comandos para sistemas operacionais Unix" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-16T00:00:00-03:00","datePublished":"2023-05-16T00:00:00-03:00","description":"Gist ID: 06e0ee5372a9253b93e532cdf34b742c","headline":"Bash, um interpretador de comandos para sistemas operacionais Unix","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/lessons/bash-um-interpretador-de-comandos-para-sistemas-operacionais-unix/"},"url":"https://www.gpupo.com/lessons/bash-um-interpretador-de-comandos-para-sistemas-operacionais-unix/"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.gpupo.com/feed.xml" title="Gilmar Pupo" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q7VM0ZXN60');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Gilmar Pupo</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/readme/">🛠️Como fiz esse site</a>
+  <a class="nav-item" href="/about/">📜 About</a>
+  <a class="nav-item" href="/lessons/">🧾 Aulas</a>
+  <a class="nav-item" href="/livros/">📚Livros</a>
+  <a class="nav-item" href="/">📝 Artigos</a>
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Bash, um interpretador de comandos para sistemas operacionais Unix</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2023-05-16T00:00:00-03:00" itemprop="datePublished">
+        May 16, 2023
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Gist ID: 06e0ee5372a9253b93e532cdf34b742c</p>
+
+<h1 id="bash-um-interpretador-de-comandos-para-sistemas-operacionais-unix">Bash, um interpretador de comandos para sistemas operacionais Unix</h1>
+
+<p>Criei um documento para uso nas minhas aulas sobre <em>Programação com foco em componentes de infraestrutura</em>. É uma síntese de tópicos importantes que espero que seja útil para você.</p>
+
+<p>Fique à vontade para explorar o conteúdo e utilize-o como um guia durante as aulas. 
+Espero que aproveite e tenha uma ótima experiência de aprendizado!</p>
+
+<p>O Bash (Bourne Again SHell) é um interpretador de comandos para sistemas operacionais Unix, como Linux e macOS. Ele fornece uma interface de linha de comando poderosa e flexível, permitindo que os usuários executem comandos e automatizem tarefas no sistema operacional.</p>
+
+<h3 id="programação-procedural">Programação procedural</h3>
+
+<p>A programação procedural é baseada na execução sequencial de instruções, onde o programa é dividido em funções ou procedimentos que manipulam dados. Nesse paradigma, o foco está na estrutura do programa, com ênfase nas ações e procedimentos a serem realizados.</p>
+
+<h3 id="utilidades-do-bash-na-infraestrutura-de-ti">Utilidades do Bash na infraestrutura de TI</h3>
+
+<ul>
+  <li>Automatizar o provisionamento de servidores e configuração de serviços.</li>
+  <li>Realizar backups e restauração de dados.</li>
+  <li>Monitorar e gerenciar servidores e redes.</li>
+  <li>Executar comandos remotos em vários sistemas.</li>
+  <li>Coletar e analisar dados de log.</li>
+  <li>Realizar integração e entrega contínua (CI/CD).</li>
+</ul>
+
+<p>O Bash é amplamente suportado em sistemas operacionais Unix e Linux, tornando-o uma escolha popular para a automação de tarefas de infraestrutura de TI.</p>
+
+<h3 id="diferenças-entre-o-bash-e-outras-linguagens-de-programação">Diferenças entre o Bash e outras linguagens de programação.</h3>
+
+<p>O Bash é uma linguagem de script do shell Unix, voltada principalmente para automação de tarefas no ambiente de linha de comando. Ao contrário de outras linguagens de programação, como Python ou Java, o Bash é interpretado em vez de ser compilado. Ele possui recursos específicos para interagir com o sistema operacional e executar comandos. Além disso, o Bash possui uma sintaxe mais simples e direta, focada em manipulação de texto e execução de comandos do sistema, enquanto outras linguagens de programação são mais versáteis e abrangem uma ampla gama de aplicações, como desenvolvimento web, ciência de dados e aplicativos de desktop.</p>
+
+<h3 id="uso-de-source-e-funções-no-terminal-unix">Uso de <code>source</code> e funções no terminal Unix.</h3>
+
+<p>No terminal Unix, o comando source é usado para executar um arquivo de script no contexto atual do shell, permitindo que as variáveis e funções definidas no arquivo sejam acessadas no terminal. Por exemplo, ao executar source arquivo.sh, as funções declaradas no “arquivo.sh” estarão disponíveis para uso imediato. As funções no terminal Unix são blocos de código reutilizáveis que podem ser definidos usando a sintaxe nome_da_funcao() { comandos }. Elas permitem agrupar comandos relacionados e executá-los facilmente, tornando o trabalho no terminal mais eficiente e organizado.</p>
+
+<h3 id="variáveis-de-ambiente-declaração-atribuição-e-utilização-de-variáveis-no-bash">Variáveis de ambiente: declaração, atribuição e utilização de variáveis no Bash.</h3>
+
+<p>No Bash, as variáveis de ambiente podem ser declaradas e atribuídas da seguinte forma: VARIAVEL=valor. Para acessar o valor de uma variável, utiliza-se o prefixo $, por exemplo: $VARIAVEL. É possível definir variáveis de ambiente no arquivo .bashrc ou no momento da execução do script usando o comando export VARIAVEL=valor. Para exibir o valor de uma variável, usa-se o comando echo $VARIAVEL. As variáveis de ambiente são úteis para armazenar informações como caminhos de diretórios, configurações e outros dados que podem ser acessados em diferentes partes do sistema.</p>
+
+<h3 id="permissões-de-execução-chmod-chown-chgrp">Permissões de execução (chmod, chown, chgrp).</h3>
+
+<p>As permissões de execução dos arquivos com scripts Bash são importantes para controlar quem pode executar esses scripts. O comando chmod é usado para definir as permissões de um arquivo. Por exemplo, chmod +x script.sh concede permissão de execução ao arquivo “script.sh”. O comando chown permite alterar o proprietário de um arquivo, enquanto chgrp permite alterar o grupo do arquivo. Por exemplo, chown user script.sh atribui o proprietário “user” ao arquivo. As permissões de execução são essenciais para garantir que os scripts Bash sejam executados apenas por usuários autorizados, reforçando a segurança e o controle de acesso aos arquivos.</p>
+
+<p>Um exemplo de programa em Bash</p>
+
+<pre><code class="language-bash">#!/bin/bash
+
+# Constantes
+readonly PI=3.14159
+readonly GREETING="Olá, bem-vindo(a)!"
+
+# Função para calcular a área de um círculo
+# Parâmetro: raio do círculo
+# Retorna: área do círculo
+calculate_area() {
+  local radius=$1
+  local area=$(echo "scale=2; $PI * $radius * $radius" | bc)
+  echo "A área do círculo com raio $radius é: $area"
+}
+
+# Função para cumprimentar o usuário
+greet_user() {
+  echo "$GREETING"
+  echo "Qual é o seu nome?"
+  read name
+  echo "Olá, $name! É um prazer conhecê-lo(a)."
+}
+
+# Função principal
+main() {
+  greet_user
+  echo "Vamos calcular a área de um círculo."
+  echo "Por favor, informe o raio do círculo:"
+  read radius
+  calculate_area $radius
+}
+
+# Chamada da função principal
+main
+
+</code></pre>
+
+<p>Este programa em Bash apresenta as seguintes características:</p>
+
+<p>Define duas constantes: PI e GREETING.
+Implementa duas funções: calculate_area para calcular a área de um círculo com base no raio fornecido e greet_user para cumprimentar o usuário e solicitar seu nome.
+A função main é a função principal que chama as outras funções.
+O programa solicita ao usuário que forneça o raio do círculo e, em seguida, calcula e exibe a área do círculo com base no raio fornecido.</p>
+
+<h2 id="sugestão-de-leitura">Sugestão de leitura:</h2>
+
+<ul>
+  <li>“The Linux Command Line” de William Shotts, disponível gratuitamente em http://linuxcommand.org/tlcl.php.</li>
+</ul>
+
+<h2 id="tutoriais-online-interativos-para-praticar-bash">Tutoriais online interativos para praticar Bash:</h2>
+
+<ul>
+  <li>https://www.learnshell.org/</li>
+  <li>https://www.shellscript.sh/</li>
+</ul>
+
+<p><strong>Comment by gpupo:</strong></p>
+
+<h2 id="desafio-earned-a-badge">Desafio Earned a badge:</h2>
+
+<h3 id="linkedin-bash-assessment">Linkedin Bash assessment</h3>
+<p>https://www.linkedin.com/help/linkedin/answer/a513320</p>
+
+<p>A funcionalidade LinkedIn Skill Assessments feature permite demonstrar seu conhecimento nas habilidades que você adicionou ao seu perfil.</p>
+
+<p>Os tópicos na avaliação de Bash incluem:</p>
+
+<ul>
+  <li>Operators</li>
+  <li>Scripting</li>
+  <li>Expansion</li>
+  <li>Environment</li>
+  <li>Constructs</li>
+  <li>Data Structures</li>
+  <li>Commands</li>
+  <li>Access Control</li>
+  <li>Bash Commands</li>
+  <li>Pattern Matching</li>
+</ul>
+
+<p><strong>Comment by gpupo:</strong></p>
+
+<p>Um exemplo simples: REMOVE all branches local and remote, except master banch
+https://gist.github.com/gpupo/ba16de62edde71ac850a98ce41a2d47e</p>
+
+<p><strong>Comment by gpupo:</strong></p>
+
+<p>Algumas funções um pouco mais complexas no meu repositório <strong>kakashi</strong>  https://github.com/gpupo/kakashi/tree/master/src/flood-monitor</p>
+
+<p><strong>Comment by gpupo:</strong></p>
+
+<p>Mais alguns arquivos para compilação kakashi (2015)  https://github.com/gpupo/kakashi/tree/master/bin</p>
+
+<p><strong>Comment by gpupo:</strong></p>
+
+<p><a href="https://github.com/gpupo/container-orchestration">container-orchestration</a>
+https://github.com/gpupo/container-orchestration/tree/master/bin</p>
+
+
+  </div>
+
+  <a class="u-url" href="/lessons/bash-um-interpretador-de-comandos-para-sistemas-operacionais-unix/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+          <a href="https://www.gpupo.com/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>RSS</span>
+          </a><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/readme/">🛠️Como fiz esse site</a></div>
+    </div>
+
+
+  </div>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <a class="libutton"
+          href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">Subscribe on LinkedIn</a>
+        <div class="newsletter-text">
+        📰 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">NEWSLETTER</a>
+          <b>Bora Gil RePensar</b>:
+          <i>Repense comigo temas relacionados à inovação, e-commerce e tecnologia</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

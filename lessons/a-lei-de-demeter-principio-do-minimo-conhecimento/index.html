@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Lei de Demeter, princípio do mínimo conhecimento | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="A Lei de Demeter, princípio do mínimo conhecimento" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Gist ID: 6385b8d4e27b6fb5a8bf919f44bce296" />
+<meta property="og:description" content="Gist ID: 6385b8d4e27b6fb5a8bf919f44bce296" />
+<link rel="canonical" href="https://www.gpupo.com/lessons/a-lei-de-demeter-principio-do-minimo-conhecimento/" />
+<meta property="og:url" content="https://www.gpupo.com/lessons/a-lei-de-demeter-principio-do-minimo-conhecimento/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-25T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Lei de Demeter, princípio do mínimo conhecimento" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-25T00:00:00-03:00","datePublished":"2023-05-25T00:00:00-03:00","description":"Gist ID: 6385b8d4e27b6fb5a8bf919f44bce296","headline":"A Lei de Demeter, princípio do mínimo conhecimento","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/lessons/a-lei-de-demeter-principio-do-minimo-conhecimento/"},"url":"https://www.gpupo.com/lessons/a-lei-de-demeter-principio-do-minimo-conhecimento/"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.gpupo.com/feed.xml" title="Gilmar Pupo" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q7VM0ZXN60');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Gilmar Pupo</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/readme/">🛠️Como fiz esse site</a>
+  <a class="nav-item" href="/about/">📜 About</a>
+  <a class="nav-item" href="/lessons/">🧾 Aulas</a>
+  <a class="nav-item" href="/livros/">📚Livros</a>
+  <a class="nav-item" href="/">📝 Artigos</a>
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A Lei de Demeter, princípio do mínimo conhecimento</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2023-05-25T00:00:00-03:00" itemprop="datePublished">
+        May 25, 2023
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Gist ID: 6385b8d4e27b6fb5a8bf919f44bce296</p>
+
+<p>A Lei de Demeter, também conhecida como princípio do mínimo conhecimento, é uma diretriz para o design de objetos. Segundo essa lei, um objeto deve limitar suas interações a um número limitado de “amigos íntimos” e evitar conhecer as estruturas internas de outros objetos.</p>
+
+<p>Vou dar um exemplo de código JavaScript que viola a Lei de Demeter e depois mostrar como corrigi-lo. No exemplo, vamos considerar um objeto Carro que tem um objeto Motor:</p>
+
+<pre><code class="language-JS">function Carro() {
+    this.motor = new Motor();
+}
+
+function Motor() {
+    this.revolucoesPorMinuto = 0;
+    
+    this.aumentarRevolucoes = function() {
+        this.revolucoesPorMinuto += 100;
+    }
+}
+//...
+$(document).ready(function() {
+    var carro = new Carro();
+    
+    $("#botaoAcelerar").click(function() {
+        carro.motor.aumentarRevolucoes();
+    });
+});
+</code></pre>
+
+<p>E então, modificamos o código que usa jQuery para chamar o método acelerar() do Carro, em vez de chamar diretamente o método aumentarRevolucoes() do Motor:</p>
+
+<pre><code class="language-JS">$(document).ready(function() {
+    var carro = new Carro();
+    
+    $("#botaoAcelerar").click(function() {
+        carro.acelerar();
+    });
+});
+</code></pre>
+
+<p>Agora, o objeto Carro não precisa mais saber sobre a estrutura interna do objeto Motor. Isso torna o código mais fácil de entender e manter, e mais resistente a mudanças no design dos objetos.</p>
+
+<p>Agora um exemplo mais completo:</p>
+
+<pre><code class="language-JS">/** 
+ * ### Carro fora da lei ####
+ * Neste exemplo, a classe Carro está violando a Lei de Demeter ao chamar diretamente 
+ * o método injetar() do BicoInjetor através do Motor e do Pistao. 
+ * De acordo com a Lei de Demeter, um objeto só deve se comunicar com seus vizinhos
+ *  imediatos, então Carro só deve se comunicar com Motor, e não com Pistao ou 
+ * BicoInjetor.
+*/
+
+class BicoInjetor {
+    injetar() {
+        // Injeta combustível
+        let i=0
+        while(i&lt;5) {
+          console.log("Tome gas!\n");
+          i++;
+        }
+      console.log("Vrummmmmm!\n");      
+    }
+}
+
+class Pistao {
+    constructor() {
+        this.bicoInjetor = new BicoInjetor();
+    }
+
+    mover() {
+        // Move o pistão
+        this.bicoInjetor.injetar();
+    }
+}
+
+class Motor {
+    constructor() {
+        this.pistao = new Pistao();
+    }
+
+    iniciar() {
+        // Inicia o motor
+        this.pistao.mover();
+    }
+}
+
+class Carro {
+    constructor() {
+        this.motor = new Motor();
+    }
+
+    ligar() {
+        // Ligar o carro
+        this.motor.pistao.bicoInjetor.injetar(); // Violação da Lei de Demeter
+    }
+}
+
+let carro=new Carro();
+carro.ligar();
+console.log("Parado na Blitz do Demeter");
+</code></pre>
+
+<p>Refatorado:</p>
+
+<pre><code class="language-JS">/** 
+ * ### Carro Legal ####
+ * Nesta versão refatorada, a classe Carro agora apenas se comunica com 
+ * a classe Motor, que é seu vizinho imediato. Isso adere à Lei de Demeter, pois 
+ * Carro não tem mais conhecimento dos detalhes internos de Pistao ou BicoInjetor.
+*/
+
+class BicoInjetor {
+    injetar() {
+        // Injeta combustível
+        let i=0
+        while(i&lt;5) {
+          console.log("Tome gas!\n");
+          i++;
+        }
+      console.log("Vrummmmmm!\n");      
+    }
+}
+class Pistao {
+    constructor() {
+        this.bicoInjetor = new BicoInjetor();
+    }
+
+    mover() {
+        // Move o pistão
+        this.bicoInjetor.injetar();
+    }
+}
+
+class Motor {
+    constructor() {
+        this.pistao = new Pistao();
+    }
+
+    iniciar() {
+        // Inicia o motor
+        this.pistao.mover();
+    }
+}
+
+class Carro {
+    constructor() {
+        this.motor = new Motor();
+    }
+
+    ligar() {
+        // Ligar o carro
+        this.motor.iniciar(); // Adere à Lei de Demeter
+    }
+}
+
+let carro=new Carro()
+carro.ligar()
+</code></pre>
+
+<h1 id="exemplos-de-infrações-no-dia-a-dia">Exemplos de infrações no dia a dia</h1>
+
+<p>A Lei de Demeter é frequentemente infringida quando os desenvolvedores não percebem que estão expondo muitos detalhes de um objeto para outro. Isso pode acontecer em várias situações. Aqui estão alguns exemplos:</p>
+
+<h2 id="manipulação-de-dom-em-javascript">Manipulação de DOM em JavaScript:</h2>
+
+<pre><code class="language-JS">document.getElementById('meuId').style.color = 'red';
+</code></pre>
+<p>Neste caso, estamos acessando a propriedade style do elemento DOM retornado por getElementById(‘meuId’) e então alterando a propriedade color desse objeto style. Isso é uma violação da Lei de Demeter, pois estamos navegando através de vários níveis de objetos.</p>
+
+<h2 id="uso-de-bibliotecas-e-frameworks">Uso de bibliotecas e frameworks:</h2>
+
+<pre><code class="language-JS">let database = firebase.database();
+let ref = database.ref('meusDados');
+</code></pre>
+
+<p>Neste exemplo, estamos acessando a database de firebase e então acessando a referência a ‘meusDados’ dessa database. Novamente, isso é uma violação da Lei de Demeter, pois estamos navegando através de vários níveis de objetos.</p>
+
+<h2 id="manipulação-de-objetos-complexos">Manipulação de objetos complexos</h2>
+
+<pre><code class="language-JS">let valor = objeto.propriedade1.propriedade2.propriedade3;
+</code></pre>
+
+<p>Neste caso, estamos acessando propriedade1 de objeto, depois propriedade2 de propriedade1, e finalmente propriedade3 de propriedade2. Essa cadeia de acessos é uma violação clara da Lei de Demeter.</p>
+
+<p>Embora seja tentador usar esses atalhos e eles possam tornar o código mais conciso, eles também podem tornar o código mais difícil de entender e manter. Aderir à Lei de Demeter pode resultar em código mais robusto e modularizado.</p>
+
+
+  </div>
+
+  <a class="u-url" href="/lessons/a-lei-de-demeter-principio-do-minimo-conhecimento/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+          <a href="https://www.gpupo.com/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>RSS</span>
+          </a><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/readme/">🛠️Como fiz esse site</a></div>
+    </div>
+
+
+  </div>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <a class="libutton"
+          href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">Subscribe on LinkedIn</a>
+        <div class="newsletter-text">
+        📰 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">NEWSLETTER</a>
+          <b>Bora Gil RePensar</b>:
+          <i>Repense comigo temas relacionados à inovação, e-commerce e tecnologia</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

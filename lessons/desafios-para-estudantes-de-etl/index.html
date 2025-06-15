@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Desafios para estudantes de ETL | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Desafios para estudantes de ETL" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Gist ID: 7e934be8ddfbe7642a9ce43182f34684" />
+<meta property="og:description" content="Gist ID: 7e934be8ddfbe7642a9ce43182f34684" />
+<link rel="canonical" href="https://www.gpupo.com/lessons/desafios-para-estudantes-de-etl/" />
+<meta property="og:url" content="https://www.gpupo.com/lessons/desafios-para-estudantes-de-etl/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-26T00:00:00-03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Desafios para estudantes de ETL" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-06-26T00:00:00-03:00","datePublished":"2023-06-26T00:00:00-03:00","description":"Gist ID: 7e934be8ddfbe7642a9ce43182f34684","headline":"Desafios para estudantes de ETL","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/lessons/desafios-para-estudantes-de-etl/"},"url":"https://www.gpupo.com/lessons/desafios-para-estudantes-de-etl/"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://www.gpupo.com/feed.xml" title="Gilmar Pupo" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q7VM0ZXN60');
+</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"></head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">Gilmar Pupo</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/readme/">🛠️Como fiz esse site</a>
+  <a class="nav-item" href="/about/">📜 About</a>
+  <a class="nav-item" href="/lessons/">🧾 Aulas</a>
+  <a class="nav-item" href="/livros/">📚Livros</a>
+  <a class="nav-item" href="/">📝 Artigos</a>
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Desafios para estudantes de ETL</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2023-06-26T00:00:00-03:00" itemprop="datePublished">
+        Jun 26, 2023
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Gist ID: 7e934be8ddfbe7642a9ce43182f34684</p>
+
+<p>Aqui está um exercício simples para um estudante iniciante em Python, envolvendo a manipulação de dados em que você partirá de um arquivo JSON multidimensional e gravará os dados em um arquivo CSV. Vamos supor que você tenha um arquivo JSON chamado “dados.json” com a seguinte estrutura:</p>
+
+<pre><code class="language-json">{
+  "pessoas": [
+    {
+      "nome": "João",
+      "idade": 25,
+      "cidade": "São Paulo"
+    },
+    {
+      "nome": "Maria",
+      "idade": 30,
+      "cidade": "Rio de Janeiro"
+    },
+    {
+      "nome": "Carlos",
+      "idade": 35,
+      "cidade": "Belo Horizonte"
+    }
+  ],
+  "veiculos": [
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": 2018
+    },
+    {
+      "marca": "Honda",
+      "modelo": "Civic",
+      "ano": 2020
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Golf",
+      "ano": 2017
+    }
+  ]
+}
+</code></pre>
+
+<p>Neste exemplo, temos duas listas de objetos: “pessoas” e “veiculos”. Você deseja ler esses dados do arquivo JSON e gravá-los em um arquivo CSV separado para cada lista, onde cada linha representa um objeto e as colunas representam os atributos de cada objeto.</p>
+
+<p>Aqui está um exemplo de código em Python que realiza essa tarefa:</p>
+
+<pre><code class="language-python">import json
+import csv
+
+# Abre o arquivo JSON
+with open('dados.json', 'r') as file:
+    data = json.load(file)
+
+# Processa cada lista do JSON e cria um arquivo CSV correspondente
+for key, values in data.items():
+    # Gera o nome do arquivo CSV baseado na chave do JSON
+    csv_filename = key + '.csv'
+
+    # Abre o arquivo CSV para escrita
+    with open(csv_filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+
+        # Obtém as chaves do primeiro item para escrever como cabeçalho do CSV
+        headers = list(values[0].keys())
+        writer.writerow(headers)
+
+        # Escreve os dados de cada item no CSV
+        for item in values:
+            writer.writerow(list(item.values()))
+            
+    print(f"CSV '{csv_filename}' gerado com sucesso!")
+
+</code></pre>
+
+<p>Após executar esse código, ele lerá os dados do arquivo JSON, criará dois arquivos CSV: “pessoas.csv” e “veiculos.csv”.</p>
+
+  </div>
+
+  <a class="u-url" href="/lessons/desafios-para-estudantes-de-etl/" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/%20/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+          <a href="https://www.gpupo.com/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>RSS</span>
+          </a><a class="page-link" href="/">📝 Artigos</a><a class="page-link" href="/readme/">🛠️Como fiz esse site</a></div>
+    </div>
+
+
+  </div>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <a class="libutton"
+          href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">Subscribe on LinkedIn</a>
+        <div class="newsletter-text">
+        📰 <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384"
+          target="_blank">NEWSLETTER</a>
+          <b>Bora Gil RePensar</b>:
+          <i>Repense comigo temas relacionados à inovação, e-commerce e tecnologia</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>
