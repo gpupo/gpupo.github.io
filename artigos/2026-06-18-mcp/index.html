@@ -1,0 +1,165 @@
+<p>Desenvolver aplicações de IA que <strong>agem no mundo real</strong>, e não apenas geram texto, ainda é um desafio. Os LLMs são ótimos para conversação, mas não acessam dados externos nem executam ações em sistemas — é como ter um consultor brilhante que não consegue agir.</p>
+
+<p>O <strong>Model Context Protocol (MCP)</strong> surge como uma <strong>solução estruturada</strong> para isso. Ele funciona como uma <strong>ponte segura e padronizada</strong> entre agentes de IA e o mundo externo, permitindo que eles <strong>recomendem ações baseadas em dados reais</strong>.</p>
+
+<h3 id="como-o-mcp-funciona"><strong>🧩Como o MCP Funciona</strong></h3>
+
+<p>O MCP define uma arquitetura cliente-servidor:</p>
+
+<ul>
+  <li>
+    <p>O <strong>cliente</strong> é seu app com IA.</p>
+  </li>
+  <li>
+    <p>O <strong>servidor MCP</strong> expõe <strong>ferramentas</strong> (APIs, funcionalidades) e <strong>recursos</strong> (dados externos, como arquivos ou bancos de dados).</p>
+  </li>
+  <li>
+    <p>A comunicação entre os dois acontece via <strong>JSON-RPC sobre HTTP</strong>.</p>
+  </li>
+</ul>
+
+<p>Quando um usuário faz um pedido (ex: “Quero agendar um café com o Peter”), o app consulta o servidor MCP para descobrir as ferramentas e dados disponíveis. O LLM pode <strong>sugerir</strong> o uso de uma API de calendário ou consultar uma lista de locais. <strong>A decisão final é do app cliente</strong>, que pode inclusive pedir confirmação ao usuário antes de executar a ação.</p>
+
+<h3 id="vantagens-do-mcp"><strong>🧩Vantagens do MCP</strong></h3>
+
+<ul>
+  <li>
+    <p><strong>Plugabilidade:</strong> Ferramentas e dados podem ser adicionados ou removidos sem reescrever a aplicação.</p>
+  </li>
+  <li>
+    <p><strong>Descoberta Dinâmica:</strong> O app pode descobrir funcionalidades em tempo de execução, reduzindo acoplamento.</p>
+  </li>
+  <li>
+    <p><strong>Composição:</strong> Servidores MCP podem ser combinados, criando soluções complexas a partir de blocos simples — como montar com LEGO.</p>
+  </li>
+</ul>
+
+<p>Estruturas como <strong>LangChain</strong> e <strong>LlamaIndex</strong> ajudam, mas ainda dependem de conectores específicos para cada fonte. O MCP resolve esse problema ao funcionar como uma <strong>ponte padronizada</strong>, permitindo que os agentes acessem dados e executem ações de forma estruturada e reutilizável.</p>
+
+<p>O MCP é a base para construir agentes de IA realmente úteis no ambiente corporativo. Ele te tira da “IA que só fala” e leva para a “IA que faz”. Pense em como externalizar ferramentas e dados. O próximo passo da IA é agir com responsabilidade, contexto e impacto real.</p>
+
+<h3 id="️-propósito-do-mcp"><strong>⚙️ Propósito do MCP</strong></h3>
+
+<p>O MCP padroniza <strong>como agentes recuperam e interagem com dados externos</strong>, como:</p>
+
+<ul>
+  <li>
+    <p>Buscar registros de clientes em bancos de dados.</p>
+  </li>
+  <li>
+    <p>Acessar documentos em armazenamento em nuvem.</p>
+  </li>
+  <li>
+    <p>Executar workflows com base em eventos em tempo real.</p>
+  </li>
+</ul>
+
+<p>Isso libera os desenvolvedores para focarem na lógica do agente — e não em problemas de integração.</p>
+
+<h2 id="-componentes-do-mcp"><strong>🧩 Componentes do MCP</strong></h2>
+
+<ol>
+  <li>
+    <p><strong>Ferramentas (Tools):</strong> Funções acionáveis pelos agentes, como criar tópicos Kafka ou consultar APIs.</p>
+  </li>
+  <li>
+    <p><strong>Recursos (Resources):</strong> Fontes de dados estruturadas, acessíveis sem lógica adicional.</p>
+  </li>
+  <li>
+    <p><strong>Prompts:</strong> Modelos pré-definidos que orientam como o agente usa ferramentas e recursos.</p>
+  </li>
+</ol>
+
+<h2 id="-arquitetura-cliente-servidor"><strong>🏗 Arquitetura Cliente-Servidor</strong></h2>
+
+<ul>
+  <li>
+    <p><strong>Cliente MCP:</strong> Aplicações com IA (ex: Claude Desktop, Goose) que acessam ferramentas e dados via MCP.</p>
+  </li>
+  <li>
+    <p><strong>Servidor MCP:</strong> Gateway de dados que expõe recursos ao cliente.</p>
+  </li>
+  <li>
+    <p><strong>Protocolo:</strong> Comunicação segura via <strong>JSON-RPC 2.0</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Fluxo:</strong> O cliente descobre recursos → invoca ferramentas com base no input → o agente processa → gera ação ou resposta.</p>
+  </li>
+</ul>
+
+<p>O <strong>Model Context Protocol</strong> representa um avanço fundamental para <strong>IA agentic</strong>, oferecendo um padrão robusto para integração com ferramentas e dados.</p>
+
+<h2 id="-referências"><strong>🧩 Referências</strong></h2>
+
+<ul>
+  <li><a href="https://www.confluent.io/blog/ai-agents-using-anthropic-mcp/"><strong>Powering AI Agents with Real-Time Data Using Anthropic’s MCP and Confluent</strong></a><br />
+Post sobre o Confluent MCP Server, solução que integra agentes de IA com dados em tempo real usando o Modelo de Protocolo de Contexto (MCP) da Anthropic, um padrão que simplifica a conexão de IA com ferramentas e fontes de dados externas.</li>
+  <li><a href="https://www.youtube.com/watch?v=FLpS7OfD5-s">Why MCP really is a big deal | Model Context Protocol with Tim Berglund</a><br />
+Vídeo sobrecomo o Modelo de Protocolo de Contexto (MCP) é uma estrutura crucial para desenvolver aplicações de IA agêntica profissionais, indo além da simples melhoria de aplicações de desktop. Ele aborda as limitações dos Modelos de Linguagem Grande (LLMs) que apenas geram palavras, permitindo que a IA realize ações no mundo real e acesse informações externas e atualizadas através de “ferramentas” e “recursos”.</li>
+</ul>
+
+<h2 id="dicionário"><strong>Dicionário</strong></h2>
+
+<ol>
+  <li>
+    <p><strong>Agente (Agent):</strong> Entidade autônoma que percebe, raciocina e age para atingir objetivos.</p>
+  </li>
+  <li>
+    <p><strong>Ambiente (Environment):</strong> Contexto ou “sandbox” onde o agente opera.</p>
+  </li>
+  <li>
+    <p><strong>Percepção (Perception):</strong> Interpretação de dados sensoriais ou ambientais.</p>
+  </li>
+  <li>
+    <p><strong>Estado (State):</strong> Representação atual do mundo ou da situação pelo agente.</p>
+  </li>
+  <li>
+    <p><strong>Memória (Memory):</strong> Armazenamento de informações para continuidade e aprendizado.</p>
+  </li>
+  <li>
+    <p><strong>LLMs (Large Language Models):</strong> Modelos base que geram e compreendem linguagem.</p>
+  </li>
+  <li>
+    <p><strong>Agente Reflexivo (Reflex Agent):</strong> Agente simples baseado em regras “condição-ação”.</p>
+  </li>
+  <li>
+    <p><strong>Base de Conhecimento:</strong> Repositório de dados usado para tomada de decisão.</p>
+  </li>
+  <li>
+    <p><strong>Cadeia de Pensamento (CoT):</strong> Raciocínio em etapas para tarefas complexas.</p>
+  </li>
+  <li>
+    <p><strong>ReAct (Reasoning and Acting):</strong> Framework que une raciocínio e ação.</p>
+  </li>
+  <li>
+    <p><strong>Ferramentas (Tools):</strong> APIs/sistemas externos usados por agentes.</p>
+  </li>
+  <li>
+    <p><strong>Ação (Action):</strong> Comportamento executado com base no raciocínio.</p>
+  </li>
+  <li>
+    <p><strong>Planejamento (Planning):</strong> Sequência de ações para atingir objetivos.</p>
+  </li>
+  <li>
+    <p><strong>Orquestração (Orchestration):</strong> Coordenação de agentes, ferramentas e tarefas.</p>
+  </li>
+  <li>
+    <p><strong>Transferência (Handoffs):</strong> Passagem de tarefas entre agentes.</p>
+  </li>
+  <li>
+    <p><strong>Sistema Multiagente:</strong> Múltiplos agentes colaborando em um ambiente.</p>
+  </li>
+  <li>
+    <p><strong>Enxame (Swarm):</strong> Inteligência coletiva emergente de muitos agentes simples.</p>
+  </li>
+  <li>
+    <p><strong>Debate de Agentes:</strong> Agentes argumentam entre si para melhorar decisões.</p>
+  </li>
+  <li>
+    <p><strong>Avaliação (Evaluation):</strong> Medição de sucesso e eficácia dos agentes.</p>
+  </li>
+  <li>
+    <p><strong>Loop de Aprendizagem:</strong> Melhoria contínua com base em feedback.</p>
+  </li>
+</ol>
+
