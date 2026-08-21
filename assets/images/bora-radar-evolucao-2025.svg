@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">A evolução do Bora Radar em 2025</title>
+  <desc id="desc">Infográfico com 26 edições distribuídas em quatro atos: sinais, agentes, ecossistema e fundamentos, entre junho e dezembro de 2025.</desc>
+  <rect width="1200" height="700" rx="28" fill="#f2efe7"/>
+  <text x="64" y="70" fill="#2439a8" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">BORA / RADAR · LINHA DO TEMPO</text>
+  <text x="64" y="132" fill="#171713" font-family="Georgia, serif" font-size="54">Da novidade ao sistema.</text>
+  <text x="64" y="166" fill="#65645e" font-family="Arial, sans-serif" font-size="19">O foco das notícias mudou ao longo de 26 edições.</text>
+
+  <g aria-label="Números do experimento">
+    <text x="64" y="246" fill="#2439a8" font-family="Arial, sans-serif" font-size="74" font-weight="900">26</text>
+    <text x="68" y="275" fill="#65645e" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">EDIÇÕES</text>
+    <text x="250" y="246" fill="#2439a8" font-family="Arial, sans-serif" font-size="74" font-weight="900">7</text>
+    <text x="254" y="275" fill="#65645e" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">MESES</text>
+    <text x="390" y="246" fill="#2439a8" font-family="Arial, sans-serif" font-size="74" font-weight="900">24+1</text>
+    <text x="396" y="275" fill="#65645e" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1">EPISÓDIOS + COMPILADO</text>
+  </g>
+
+  <g aria-label="Quatro atos da evolução">
+    <rect x="64" y="316" width="1072" height="12" rx="6" fill="#e7e3d8"/>
+    <rect x="64" y="316" width="268" height="12" rx="6" fill="#ff5c1a"/>
+    <rect x="332" y="316" width="268" height="12" fill="#d9ff59"/>
+    <rect x="600" y="316" width="268" height="12" fill="#2439a8"/>
+    <rect x="868" y="316" width="268" height="12" rx="6" fill="#171713"/>
+    <circle cx="64" cy="322" r="15" fill="#ff5c1a" stroke="#f2efe7" stroke-width="6"/>
+    <circle cx="332" cy="322" r="15" fill="#d9ff59" stroke="#f2efe7" stroke-width="6"/>
+    <circle cx="600" cy="322" r="15" fill="#2439a8" stroke="#f2efe7" stroke-width="6"/>
+    <circle cx="868" cy="322" r="15" fill="#171713" stroke="#f2efe7" stroke-width="6"/>
+
+    <g transform="translate(64 370)">
+      <text fill="#ff5c1a" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">01 · SINAIS</text>
+      <text y="39" fill="#171713" font-family="Georgia, serif" font-size="28">Desconfiança útil</text>
+      <text y="71" fill="#65645e" font-family="Arial, sans-serif" font-size="15">junho — 13 julho · #1–#6</text>
+      <text y="112" fill="#171713" font-family="Arial, sans-serif" font-size="15">Capacidade, segurança,</text>
+      <text y="134" fill="#171713" font-family="Arial, sans-serif" font-size="15">revisão humana e limites.</text>
+    </g>
+
+    <g transform="translate(332 370)">
+      <text fill="#657900" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">02 · AGENTES</text>
+      <text y="39" fill="#171713" font-family="Georgia, serif" font-size="28">IA no fluxo</text>
+      <text y="71" fill="#65645e" font-family="Arial, sans-serif" font-size="15">20 julho — 24 agosto · #7–#12</text>
+      <text y="112" fill="#171713" font-family="Arial, sans-serif" font-size="15">Terminal, tarefas,</text>
+      <text y="134" fill="#171713" font-family="Arial, sans-serif" font-size="15">orquestração e retorno.</text>
+    </g>
+
+    <g transform="translate(600 370)">
+      <text fill="#2439a8" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">03 · ECOSSISTEMA</text>
+      <text y="39" fill="#171713" font-family="Georgia, serif" font-size="28">Modelos em rede</text>
+      <text y="71" fill="#65645e" font-family="Arial, sans-serif" font-size="15">31 agosto — 5 outubro · #13–#18</text>
+      <text y="112" fill="#171713" font-family="Arial, sans-serif" font-size="15">Imagem, vídeo, navegador,</text>
+      <text y="134" fill="#171713" font-family="Arial, sans-serif" font-size="15">MCP e ferramentas.</text>
+    </g>
+
+    <g transform="translate(868 370)">
+      <text fill="#171713" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2">04 · FUNDAMENTOS</text>
+      <text y="39" fill="#171713" font-family="Georgia, serif" font-size="28">Confiança na base</text>
+      <text y="71" fill="#65645e" font-family="Arial, sans-serif" font-size="15">12 outubro — 22 dezembro · #19–#26</text>
+      <text y="112" fill="#171713" font-family="Arial, sans-serif" font-size="15">Arquitetura, supply chain,</text>
+      <text y="134" fill="#171713" font-family="Arial, sans-serif" font-size="15">permissões e resiliência.</text>
+    </g>
+  </g>
+
+  <rect x="64" y="585" width="1072" height="1" fill="#171713" opacity=".2"/>
+  <text x="64" y="630" fill="#2439a8" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">CAPACIDADE</text>
+  <text x="248" y="630" fill="#65645e" font-family="Arial, sans-serif" font-size="26">→</text>
+  <text x="286" y="630" fill="#2439a8" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">EXECUÇÃO</text>
+  <text x="474" y="630" fill="#65645e" font-family="Arial, sans-serif" font-size="26">→</text>
+  <text x="514" y="630" fill="#2439a8" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">ECOSSISTEMA</text>
+  <text x="748" y="630" fill="#65645e" font-family="Arial, sans-serif" font-size="26">→</text>
+  <text x="788" y="630" fill="#2439a8" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="2">CONFIANÇA</text>
+  <text x="64" y="665" fill="#65645e" font-family="Arial, sans-serif" font-size="14">A linha do tempo mostra uma mudança de foco: do que os modelos prometiam para o que os sistemas conseguiam sustentar.</text>
+</svg>

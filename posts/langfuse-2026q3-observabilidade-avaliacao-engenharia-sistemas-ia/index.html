@@ -1,0 +1,3556 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Langfuse em 2026Q3: observabilidade, avaliação e engenharia de sistemas de IA | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Langfuse em 2026Q3: observabilidade, avaliação e engenharia de sistemas de IA" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Como combinar tracing, scores, datasets, experiments e revisão humana para transformar execuções de IA em evidência para o próximo release." />
+<meta property="og:description" content="Como combinar tracing, scores, datasets, experiments e revisão humana para transformar execuções de IA em evidência para o próximo release." />
+<link rel="canonical" href="https://www.gpupo.com/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/" />
+<meta property="og:url" content="https://www.gpupo.com/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta property="og:image:alt" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-17T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta name="twitter:image:alt" content="Gilmar Pupo" />
+<meta property="twitter:title" content="Langfuse em 2026Q3: observabilidade, avaliação e engenharia de sistemas de IA" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-08-17T00:00:00-03:00","datePublished":"2026-08-17T00:00:00-03:00","description":"Como combinar tracing, scores, datasets, experiments e revisão humana para transformar execuções de IA em evidência para o próximo release.","headline":"Langfuse em 2026Q3: observabilidade, avaliação e engenharia de sistemas de IA","image":{"alt":"Gilmar Pupo","url":"https://www.gpupo.com/android-chrome-512x512.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/"},"url":"https://www.gpupo.com/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/",
+  "image": "https://www.gpupo.com/assets/profile.jpeg"
+}
+</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight">
+  Gilmar Pupo
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Posts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/posts/" class="nav-list-link">Posts</a><ul class="nav-list"><li class="nav-list-item"><a href="/posts/tags/" class="nav-list-link">Tags</a></li></ul></li><li class="nav-list-item"><a href="/notas/" class="nav-list-link">Notas</a></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    Langfuse em 2026Q3: observabilidade, avaliação e engenharia de sistemas de IA
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-08-17T00:00:00-03:00" itemprop="datePublished">
+        17/08/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Flangfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Flangfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Como combinar tracing, scores, datasets, experiments e revisão humana para transformar execuções de IA em evidência para o próximo release.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#o-problema-aparece-quando-a-aplicação-vira-um-sistema">O problema aparece quando a aplicação vira um sistema</a></li><li><a href="#observation-trace-e-session-têm-papéis-diferentes">Observation, trace e session têm papéis diferentes</a></li><li><a href="#a-instrumentação-manual-precisa-contar-a-mesma-história">A instrumentação manual precisa contar a mesma história</a></li><li><a href="#integrações-automáticas-e-opentelemetry-podem-conviver">Integrações automáticas e OpenTelemetry podem conviver</a></li><li><a href="#contexto-transforma-volume-em-diagnóstico">Contexto transforma volume em diagnóstico</a></li><li><a href="#observar-ainda-não-diz-se-a-resposta-foi-boa">Observar ainda não diz se a resposta foi boa</a></li><li><a href="#llm-as-a-judge-é-um-sinal-não-uma-sentença">LLM-as-a-Judge é um sinal, não uma sentença</a></li><li><a href="#dataset-experiment-e-prompt-fecham-o-loop">Dataset, experiment e prompt fecham o loop</a></li><li><a href="#self-hosting-controla-o-destino-não-o-conteúdo-capturado">Self-hosting controla o destino, não o conteúdo capturado</a></li><li><a href="#eu-começaria-pelo-caminho-crítico">Eu começaria pelo caminho crítico</a></li><li><a href="#o-dashboard-não-é-o-objetivo">O dashboard não é o objetivo</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body post-body--editorial-code" itemprop="articleBody">
+    <p>Colocar uma aplicação com LLM em produção leva rapidamente a perguntas que um
+log de entrada e saída não responde bem:</p>
+
+<ul>
+  <li>qual prompt e qual modelo produziram a resposta;</li>
+  <li>onde ficou a maior parte do custo e da latência;</li>
+  <li>qual ferramenta o agente decidiu chamar;</li>
+  <li>se o retriever trouxe os documentos adequados;</li>
+  <li>qual versão da aplicação estava ativa;</li>
+  <li>se a resposta foi boa e, quando não foi, qual parte falhou.</li>
+</ul>
+
+<p>É nesse espaço que uso o Langfuse. O projeto se apresenta como uma plataforma
+<em>open source</em> de AI Engineering que reúne tracing, métricas, gestão de prompts,
+avaliações, datasets e experiments. Essas capacidades estão documentadas no
+<a href="https://github.com/langfuse/langfuse">repositório oficial</a> e na
+<a href="https://langfuse.com/docs">visão geral do produto</a>.</p>
+
+<p>O ponto que me interessa não é apenas enxergar uma chamada ao modelo. É
+acompanhar o comportamento de uma aplicação de IA como um sistema de software e
+transformar falhas observadas em casos reproduzíveis para o próximo release.</p>
+
+<p>Este texto é um recorte de 17 de agosto de 2026. Os exemplos seguem os conceitos
+do Langfuse v4 e a API atual do SDK Python v4. Não são uma aplicação completa:
+funções como <code class="language-plaintext highlighter-rouge">search_documents()</code> e <code class="language-plaintext highlighter-rouge">generate_answer()</code> pertencem ao sistema
+que está sendo instrumentado. Como os SDKs mudam, vale conferir o
+<a href="https://langfuse.com/docs/observability/sdk/upgrade-path/python-v3-to-v4">guia de migração do Python v3 para v4</a>
+antes de copiar um trecho para outra versão.</p>
+<h2 id="o-problema-aparece-quando-a-aplicação-vira-um-sistema">
+  
+  
+    <a href="#o-problema-aparece-quando-a-aplicação-vira-um-sistema" class="anchor-heading" aria-labelledby="o-problema-aparece-quando-a-aplicação-vira-um-sistema"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O problema aparece quando a aplicação vira um sistema
+  
+  
+</h2>
+    
+
+<p>Uma chamada isolada pode ser representada assim:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>usuário → prompt → LLM → resposta
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Registrar entrada, saída, tokens e latência resolve boa parte da investigação
+nesse caso. Um agente real tende a acrescentar outras fronteiras:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>request
+└── agent
+    ├── retriever
+    ├── generation
+    ├── tool → API externa
+    ├── outro agent
+    │   ├── retriever
+    │   └── generation
+    ├── guardrail
+    └── resposta
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A resposta final pode estar errada mesmo quando a geração funcionou como
+esperado. O retriever pode ter escolhido o documento errado, a ferramenta pode
+ter recebido argumentos incorretos, a API externa pode ter devolvido dados
+incompletos ou o guardrail pode ter alterado a saída.</p>
+
+<p>Sem a árvore inteira, tudo isso tende a aparecer como “o modelo falhou”. Com a
+árvore, a investigação começa na etapa que produziu o comportamento.</p>
+<h2 id="observation-trace-e-session-têm-papéis-diferentes">
+  
+  
+    <a href="#observation-trace-e-session-têm-papéis-diferentes" class="anchor-heading" aria-labelledby="observation-trace-e-session-têm-papéis-diferentes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Observation, trace e session têm papéis diferentes
+  
+  
+</h2>
+    
+
+<p>O <a href="https://langfuse.com/docs/observability/data-model">modelo de dados do
+Langfuse</a> organiza a
+telemetria em três conceitos:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>session
+└── trace
+    ├── observation
+    ├── observation
+    └── observation
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Uma <strong>observation</strong> é uma unidade de trabalho: geração, chamada de ferramenta,
+retrieval, avaliação ou outro passo. Observations podem ser aninhadas.</p>
+
+<p>Um <strong>trace</strong> agrupa as observations de uma operação lógica, como processar uma
+mensagem. Uma <strong>session</strong> pode agrupar vários traces relacionados, por exemplo
+os turnos de uma conversa.</p>
+
+<p>Os <a href="https://langfuse.com/docs/observability/features/observation-types">tipos de
+observation</a>
+incluem <code class="language-plaintext highlighter-rouge">generation</code>, <code class="language-plaintext highlighter-rouge">agent</code>, <code class="language-plaintext highlighter-rouge">tool</code>, <code class="language-plaintext highlighter-rouge">chain</code>, <code class="language-plaintext highlighter-rouge">retriever</code>, <code class="language-plaintext highlighter-rouge">evaluator</code>,
+<code class="language-plaintext highlighter-rouge">embedding</code>, <code class="language-plaintext highlighter-rouge">guardrail</code>, <code class="language-plaintext highlighter-rouge">span</code> e <code class="language-plaintext highlighter-rouge">event</code>. A tipagem não é decorativa. Uma
+<code class="language-plaintext highlighter-rouge">generation</code>, por exemplo, comporta modelo, uso e custo; uma <code class="language-plaintext highlighter-rouge">tool</code> pode ser
+filtrada separadamente quando quero avaliar seleção e argumentos.</p>
+
+<p>Uma árvore útil preserva o vocabulário da aplicação:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>customer-support-agent
+├── retriever: search-documentation
+├── generation: analyze-question
+├── tool: billing-api
+├── generation: compose-answer
+└── guardrail: validate-output
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+<h2 id="a-instrumentação-manual-precisa-contar-a-mesma-história">
+  
+  
+    <a href="#a-instrumentação-manual-precisa-contar-a-mesma-história" class="anchor-heading" aria-labelledby="a-instrumentação-manual-precisa-contar-a-mesma-história"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A instrumentação manual precisa contar a mesma história
+  
+  
+</h2>
+    
+
+<p>O primeiro passo é instalar o SDK e configurar as credenciais. Para Langfuse
+Cloud, a URL depende da região; em uma instalação própria, aponta para a
+instância local.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>python <span class="nt">-m</span> pip <span class="nb">install</span> <span class="nt">--upgrade</span> langfuse
+
+<span class="nb">export </span><span class="nv">LANGFUSE_SECRET_KEY</span><span class="o">=</span><span class="s2">"sk-lf-..."</span>
+<span class="nb">export </span><span class="nv">LANGFUSE_PUBLIC_KEY</span><span class="o">=</span><span class="s2">"pk-lf-..."</span>
+<span class="nb">export </span><span class="nv">LANGFUSE_BASE_URL</span><span class="o">=</span><span class="s2">"https://cloud.langfuse.com"</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O exemplo abaixo instrumenta um fluxo pequeno, mas coerente. O contexto é
+propagado antes de abrir a observation raiz; retrieval e generation aparecem
+como filhos. O código registra a quantidade de documentos, não seu conteúdo
+integral — uma escolha que precisa ser revista conforme a política de dados e a
+necessidade de depuração.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">langfuse</span> <span class="kn">import</span> <span class="n">get_client</span><span class="p">,</span> <span class="n">propagate_attributes</span>
+
+<span class="n">langfuse</span> <span class="o">=</span> <span class="nf">get_client</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="nf">propagate_attributes</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+    <span class="n">environment</span><span class="o">=</span><span class="sh">"</span><span class="s">production</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">RELEASE</span><span class="p">,</span>
+    <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">customer-support</span><span class="sh">"</span><span class="p">],</span>
+<span class="p">):</span>
+    <span class="k">with</span> <span class="n">langfuse</span><span class="p">.</span><span class="nf">start_as_current_observation</span><span class="p">(</span>
+        <span class="n">as_type</span><span class="o">=</span><span class="sh">"</span><span class="s">agent</span><span class="sh">"</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">answer-user</span><span class="sh">"</span><span class="p">,</span>
+        <span class="nb">input</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">question</span><span class="sh">"</span><span class="p">:</span> <span class="n">question</span><span class="p">},</span>
+    <span class="p">)</span> <span class="k">as</span> <span class="n">agent</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">langfuse</span><span class="p">.</span><span class="nf">start_as_current_observation</span><span class="p">(</span>
+            <span class="n">as_type</span><span class="o">=</span><span class="sh">"</span><span class="s">retriever</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">search-knowledge-base</span><span class="sh">"</span><span class="p">,</span>
+            <span class="nb">input</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">query</span><span class="sh">"</span><span class="p">:</span> <span class="n">question</span><span class="p">},</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">retrieval</span><span class="p">:</span>
+            <span class="n">documents</span> <span class="o">=</span> <span class="nf">search_documents</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+            <span class="n">retrieval</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span>
+                <span class="n">output</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">documents_found</span><span class="sh">"</span><span class="p">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">documents</span><span class="p">)}</span>
+            <span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">langfuse</span><span class="p">.</span><span class="nf">start_as_current_observation</span><span class="p">(</span>
+            <span class="n">as_type</span><span class="o">=</span><span class="sh">"</span><span class="s">generation</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">compose-answer</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">model</span><span class="o">=</span><span class="n">MODEL</span><span class="p">,</span>
+            <span class="nb">input</span><span class="o">=</span><span class="p">{</span>
+                <span class="sh">"</span><span class="s">question</span><span class="sh">"</span><span class="p">:</span> <span class="n">question</span><span class="p">,</span>
+                <span class="sh">"</span><span class="s">document_count</span><span class="sh">"</span><span class="p">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">documents</span><span class="p">),</span>
+            <span class="p">},</span>
+        <span class="p">)</span> <span class="k">as</span> <span class="n">generation</span><span class="p">:</span>
+            <span class="n">answer</span> <span class="o">=</span> <span class="nf">generate_answer</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">documents</span><span class="p">)</span>
+            <span class="n">generation</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">answer</span><span class="sh">"</span><span class="p">:</span> <span class="n">answer</span><span class="p">})</span>
+
+        <span class="n">agent</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">answer</span><span class="sh">"</span><span class="p">:</span> <span class="n">answer</span><span class="p">})</span>
+
+<span class="n">langfuse</span><span class="p">.</span><span class="nf">flush</span><span class="p">()</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O uso de <code class="language-plaintext highlighter-rouge">start_as_current_observation()</code> mantém o contexto OpenTelemetry ativo
+e faz os filhos herdarem o pai. Essa é a forma principal descrita no
+<a href="https://langfuse.com/docs/observability/sdk/instrumentation">guia oficial de
+instrumentação</a>.
+Em processos curtos, <code class="language-plaintext highlighter-rouge">flush()</code> evita encerrar antes de enviar os eventos
+pendentes; aplicações servidoras normalmente deixam o SDK agrupar e enviar os
+eventos em segundo plano.</p>
+<h2 id="integrações-automáticas-e-opentelemetry-podem-conviver">
+  
+  
+    <a href="#integrações-automáticas-e-opentelemetry-podem-conviver" class="anchor-heading" aria-labelledby="integrações-automáticas-e-opentelemetry-podem-conviver"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Integrações automáticas e OpenTelemetry podem conviver
+  
+  
+</h2>
+    
+
+<p>Quando a aplicação usa diretamente o SDK Python da OpenAI, o wrapper do
+Langfuse preserva uma interface familiar e cria a generation:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">langfuse.openai</span> <span class="kn">import</span> <span class="n">openai</span>
+
+<span class="n">completion</span> <span class="o">=</span> <span class="n">openai</span><span class="p">.</span><span class="n">chat</span><span class="p">.</span><span class="n">completions</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">support-answer</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">MODEL</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">{</span>
+            <span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">system</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Answer using the provided context.</span><span class="sh">"</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="p">{</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">user</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">question</span><span class="p">},</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A integração e os parâmetros suportados estão no
+<a href="https://langfuse.com/guides/cookbook/integration_openai_sdk">cookbook oficial para OpenAI</a>.
+Se a chamada ocorrer dentro de uma observation ativa, ela entra naquela árvore
+em vez de ficar isolada.</p>
+
+<p>No LangChain, o <code class="language-plaintext highlighter-rouge">CallbackHandler</code> transforma eventos do framework em
+observations. A instrumentação manual continua útil para acrescentar a unidade
+de domínio que o framework não conhece:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">langfuse</span> <span class="kn">import</span> <span class="n">propagate_attributes</span>
+<span class="kn">from</span> <span class="n">langfuse.langchain</span> <span class="kn">import</span> <span class="n">CallbackHandler</span>
+
+<span class="n">handler</span> <span class="o">=</span> <span class="nc">CallbackHandler</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="nf">propagate_attributes</span><span class="p">(</span>
+    <span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
+    <span class="n">session_id</span><span class="o">=</span><span class="n">session_id</span><span class="p">,</span>
+    <span class="n">environment</span><span class="o">=</span><span class="sh">"</span><span class="s">production</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">RELEASE</span><span class="p">,</span>
+<span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">chain</span><span class="p">.</span><span class="nf">invoke</span><span class="p">(</span>
+        <span class="p">{</span><span class="sh">"</span><span class="s">question</span><span class="sh">"</span><span class="p">:</span> <span class="n">question</span><span class="p">},</span>
+        <span class="n">config</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">callbacks</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="n">handler</span><span class="p">]},</span>
+    <span class="p">)</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O <a href="https://langfuse.com/docs/observability/get-started">guia inicial de
+observabilidade</a> mantém
+exemplos do handler. O cuidado é não assumir que instrumentação automática
+produzirá, sozinha, a melhor árvore para o domínio.</p>
+
+<p>Os SDKs atuais são baseados em OpenTelemetry. Isso permite manter o Langfuse na
+camada especializada de IA e outra stack para HTTP, banco, CPU, filas e
+infraestrutura:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>                    aplicação
+                        │
+              contexto OpenTelemetry
+                 ┌──────┴──────┐
+                 ↓             ↓
+          observabilidade    Langfuse
+            tradicional
+          HTTP · DB · CPU    LLM · agent
+          filas · infra      tools · evals
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Não significa que todos os spans devam ir para todos os destinos. O SDK possui
+filtros por escopo de instrumentação, e a seleção precisa equilibrar capacidade
+de diagnóstico, ruído e custo. A documentação de
+<a href="https://langfuse.com/docs/observability/sdk/advanced-features">recursos avançados</a>
+explica filtragem, sampling e isolamento de providers OpenTelemetry.</p>
+<h2 id="contexto-transforma-volume-em-diagnóstico">
+  
+  
+    <a href="#contexto-transforma-volume-em-diagnóstico" class="anchor-heading" aria-labelledby="contexto-transforma-volume-em-diagnóstico"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Contexto transforma volume em diagnóstico
+  
+  
+</h2>
+    
+
+<p>Um trace isolado já ajuda a depurar. Milhões de traces só permitem comparação
+quando carregam dimensões consistentes, como usuário, sessão, ambiente, release,
+feature e versão do agente ou do prompt.</p>
+
+<p>Esses atributos permitem perguntas que importam para a operação:</p>
+
+<ul>
+  <li>qual release começou a produzir mais erros;</li>
+  <li>qual feature concentra custo ou latência;</li>
+  <li>quais traces pertencem à mesma sessão;</li>
+  <li>como um agente se comporta por ambiente;</li>
+  <li>quanto uma conversa ou um tenant consome.</li>
+</ul>
+
+<p>O <code class="language-plaintext highlighter-rouge">propagate_attributes()</code> usado no exemplo é o mecanismo atual para propagar
+<code class="language-plaintext highlighter-rouge">user_id</code>, <code class="language-plaintext highlighter-rouge">session_id</code>, <code class="language-plaintext highlighter-rouge">version</code>, <code class="language-plaintext highlighter-rouge">tags</code>, <code class="language-plaintext highlighter-rouge">metadata</code> e <code class="language-plaintext highlighter-rouge">environment</code>. A
+<a href="https://langfuse.com/docs/observability/sdk/instrumentation">documentação de
+instrumentação</a>
+ressalta que <code class="language-plaintext highlighter-rouge">environment</code> é um atributo de primeira classe no SDK Python, não
+apenas uma chave arbitrária em metadata.</p>
+
+<p>Custo também precisa de proveniência. O Langfuse pode receber uso e custo do
+provedor ou inferi-los a partir da definição do modelo; valores enviados têm
+prioridade. A <a href="https://langfuse.com/docs/observability/features/token-and-cost-tracking">documentação de tokens e
+custos</a>
+também alerta que buckets sobrepostos podem contar tokens duas vezes.</p>
+
+<p>Latência precisa ser decomposta pelo mesmo motivo. Os números abaixo são
+ilustrativos, não uma medição deste projeto:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Etapa</th>
+      <th style="text-align: right">Latência ilustrativa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>retrieval</td>
+      <td style="text-align: right">400 ms</td>
+    </tr>
+    <tr>
+      <td>generation 1</td>
+      <td style="text-align: right">1.800 ms</td>
+    </tr>
+    <tr>
+      <td>tool HTTP</td>
+      <td style="text-align: right">4.700 ms</td>
+    </tr>
+    <tr>
+      <td>generation 2</td>
+      <td style="text-align: right">900 ms</td>
+    </tr>
+    <tr>
+      <td>validation</td>
+      <td style="text-align: right">200 ms</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>“O agente demorou oito segundos” descreve o sintoma. A árvore mostra qual
+fronteira merece investigação.</p>
+<h2 id="observar-ainda-não-diz-se-a-resposta-foi-boa">
+  
+  
+    <a href="#observar-ainda-não-diz-se-a-resposta-foi-boa" class="anchor-heading" aria-labelledby="observar-ainda-não-diz-se-a-resposta-foi-boa"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Observar ainda não diz se a resposta foi boa
+  
+  
+</h2>
+    
+
+<p>Uma execução pode ter baixa latência, custo pequeno e nenhum erro técnico, mas
+entregar uma resposta incorreta. Por isso, tracing e avaliação precisam se
+encontrar.</p>
+
+<p>No Langfuse, <strong>scores</strong> armazenam resultados de avaliação. Eles podem vir de
+feedback do usuário, revisão humana, código, LLM-as-a-Judge ou outro pipeline e
+podem ser ligados a trace, observation, session ou dataset run. A
+<a href="https://langfuse.com/docs/evaluation/scores/overview">documentação de scores</a>
+distingue valores numéricos, categóricos, booleanos e textuais.</p>
+
+<p>A granularidade muda o diagnóstico. Em vez de um único “bom” ou “ruim” para a
+execução inteira, posso separar:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Alvo</th>
+      <th>Exemplo de sinal</th>
+      <th>Pergunta respondida</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>retriever</td>
+      <td><code class="language-plaintext highlighter-rouge">retrieval_relevance</code></td>
+      <td>Os documentos sustentavam a resposta?</td>
+    </tr>
+    <tr>
+      <td>tool</td>
+      <td><code class="language-plaintext highlighter-rouge">tool_selection</code></td>
+      <td>O agente escolheu a operação correta?</td>
+    </tr>
+    <tr>
+      <td>generation</td>
+      <td><code class="language-plaintext highlighter-rouge">answer_correctness</code></td>
+      <td>A saída respondeu ao pedido?</td>
+    </tr>
+    <tr>
+      <td>trace</td>
+      <td><code class="language-plaintext highlighter-rouge">user_satisfaction</code></td>
+      <td>O resultado final serviu ao usuário?</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Uma resposta ruim pode vir de uma geração boa apoiada no documento errado. Um
+score único esconderia essa diferença.</p>
+<h2 id="llm-as-a-judge-é-um-sinal-não-uma-sentença">
+  
+  
+    <a href="#llm-as-a-judge-é-um-sinal-não-uma-sentença" class="anchor-heading" aria-labelledby="llm-as-a-judge-é-um-sinal-não-uma-sentença"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> LLM-as-a-Judge é um sinal, não uma sentença
+  
+  
+</h2>
+    
+
+<p>Um Judge recebe entrada, saída, contexto e rubrica, e devolve um score com uma
+justificativa. A <a href="https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge">documentação de
+LLM-as-a-Judge</a>
+permite aplicar avaliadores a observations de produção ou a experiments com
+datasets.</p>
+
+<p>Isso ajuda a avaliar volume, mas eu evitaria transformar o Judge em árbitro
+absoluto. Uso três sinais com autoridades diferentes:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Sinal</th>
+      <th>Onde ajuda</th>
+      <th>Limitação principal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>regra determinística</td>
+      <td>schema, regex, campos e contratos objetivos</td>
+      <td>só prova a regra implementada</td>
+    </tr>
+    <tr>
+      <td>LLM-as-a-Judge</td>
+      <td>critérios semânticos e revisão em escala</td>
+      <td>pode reproduzir vieses e discordar de especialistas</td>
+    </tr>
+    <tr>
+      <td>avaliação humana</td>
+      <td>decisão contextual e casos de alto impacto</td>
+      <td>custa tempo e não escala da mesma forma</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>As <a href="https://langfuse.com/docs/evaluation/evaluation-methods/annotation-queues">Annotation Queues</a>
+organizam revisão manual de traces, observations ou sessions e permitem que
+especialistas acrescentem scores, comentários e saídas corrigidas.</p>
+
+<p>Em outro post, mostrei <a href="/posts/langfuse-llm-as-a-judge/">como uso Langfuse com LLM-as-a-Judge sem tratar score
+como verdade</a>. Ali há
+uma execução observada, números reais, diferenças entre dois projetos e os
+motivos pelos quais o Judge ainda não funciona como gate. Este texto tem outro
+papel: organizar as peças da plataforma e o loop que elas podem formar.</p>
+<h2 id="dataset-experiment-e-prompt-fecham-o-loop">
+  
+  
+    <a href="#dataset-experiment-e-prompt-fecham-o-loop" class="anchor-heading" aria-labelledby="dataset-experiment-e-prompt-fecham-o-loop"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Dataset, experiment e prompt fecham o loop
+  
+  
+</h2>
+    
+
+<p>Um caso interessante encontrado em produção pode deixar de ser apenas um
+incidente e entrar no conjunto permanente de avaliação:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>falha em produção
+      ↓
+trace + análise
+      ↓
+dataset item
+      ↓
+experiment
+      ↓
+proteção contra regressão
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O <a href="https://langfuse.com/docs/evaluation/experiments/datasets">guia de datasets</a>
+define cada dataset como uma coleção de entradas e, opcionalmente, saídas
+esperadas. O <a href="https://langfuse.com/docs/evaluation/core-concepts">modelo de avaliação</a>
+combina esses itens com uma task, métodos de avaliação e uma execução do
+experiment.</p>
+
+<p>O mesmo dataset permite comparar prompts, modelos, retrievers ou releases do
+agente. Os números abaixo também são hipotéticos; mostram o formato da decisão,
+não o resultado de um benchmark:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Métrica</th>
+      <th style="text-align: right">Versão A</th>
+      <th style="text-align: right">Versão B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>correctness</td>
+      <td style="text-align: right">0,82</td>
+      <td style="text-align: right">0,89</td>
+    </tr>
+    <tr>
+      <td>latência</td>
+      <td style="text-align: right">2,1 s</td>
+      <td style="text-align: right">2,4 s</td>
+    </tr>
+    <tr>
+      <td>custo por caso</td>
+      <td style="text-align: right">US$ 0,011</td>
+      <td style="text-align: right">US$ 0,008</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Não existe vencedor universal nessa tabela. A versão B melhora dois sinais e
+piora outro; a escolha depende do limite de latência, da relevância do ganho de
+qualidade e da confiabilidade do método que produziu o score.</p>
+
+<p>Prompt Management acrescenta proveniência. Versões preservam o conteúdo exato;
+labels como <code class="language-plaintext highlighter-rouge">staging</code> e <code class="language-plaintext highlighter-rouge">production</code> apontam para a versão usada por cada
+ambiente. A <a href="https://langfuse.com/docs/prompt-management/features/prompt-version-control">documentação de controle de
+versão</a>
+mostra que mover o label também permite rollback.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>prompt version
+      ↓
+experiment
+      ↓
+evaluation
+      ↓
+production label
+      ↓
+traces e scores
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O trace precisa continuar ligado à versão efetivamente usada. Caso contrário,
+o prompt fica versionado na plataforma, mas a resposta em produção perde a
+proveniência.</p>
+<h2 id="self-hosting-controla-o-destino-não-o-conteúdo-capturado">
+  
+  
+    <a href="#self-hosting-controla-o-destino-não-o-conteúdo-capturado" class="anchor-heading" aria-labelledby="self-hosting-controla-o-destino-não-o-conteúdo-capturado"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Self-hosting controla o destino, não o conteúdo capturado
+  
+  
+</h2>
+    
+
+<p>O Langfuse pode ser executado na própria infraestrutura. A arquitetura atual é
+formada por Web, Worker, PostgreSQL, ClickHouse, Redis ou Valkey e object
+storage. Um desenho simplificado é:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>SDKs e usuários
+       ↓
+   Langfuse Web
+   ├── PostgreSQL
+   ├── ClickHouse
+   ├── object storage
+   └── Redis / Valkey → Worker
+                        ├── PostgreSQL
+                        ├── ClickHouse
+                        └── object storage
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A <a href="https://github.com/langfuse/langfuse/blob/main/CONTRIBUTING.md#architecture-overview">arquitetura mantida no repositório
+oficial</a>
+explica o papel desses componentes. O
+<a href="https://langfuse.com/self-hosting/deployment/docker-compose">Docker Compose</a> é
+o caminho mais simples para uma máquina ou ambiente de teste, mas a própria
+documentação registra que esse arranjo não oferece alta disponibilidade,
+escalabilidade horizontal ou backup. Para cargas maiores, existe o
+<a href="https://langfuse.com/self-hosting/deployment/kubernetes-helm">deployment com Kubernetes e Helm</a>,
+inclusive com serviços de dados externos.</p>
+
+<p>Eu já descrevi <a href="/artigos/email-marvin-gerencio-infraestrutura-2026/">um upgrade real do Langfuse no meu
+homelab</a>,
+com backup, restauração, Nomad e uma pendência de compatibilidade que permaneceu
+depois do deploy.</p>
+
+<p>Self-hosting ajuda a controlar onde os traces ficam. Não decide quais dados
+deveriam entrar neles. Prompt, documentos recuperados, parâmetros de tools,
+respostas, dados de usuário e metadata podem carregar informações pessoais,
+segredos ou conteúdo interno.</p>
+
+<p>A política precisa responder, antes da captura:</p>
+
+<ul>
+  <li>quais campos são necessários para investigar e avaliar;</li>
+  <li>o que não pode sair da aplicação;</li>
+  <li>o que precisa ser mascarado;</li>
+  <li>quem pode acessar cada ambiente;</li>
+  <li>quanto tempo os dados serão mantidos;</li>
+  <li>quando basta registrar ids, tamanhos ou contagens.</li>
+</ul>
+
+<p>O Langfuse oferece <a href="https://langfuse.com/docs/observability/features/masking">masking no
+SDK</a>, inclusive no
+estágio de exportação OpenTelemetry. Masking é uma barreira adicional; não
+substitui reduzir a coleta na origem. Observabilidade não deve criar um novo
+vazamento em nome de investigar o anterior.</p>
+<h2 id="eu-começaria-pelo-caminho-crítico">
+  
+  
+    <a href="#eu-começaria-pelo-caminho-crítico" class="anchor-heading" aria-labelledby="eu-começaria-pelo-caminho-crítico"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Eu começaria pelo caminho crítico
+  
+  
+</h2>
+    
+
+<p>Em uma aplicação nova, eu não instrumentaria tudo nem criaria dez scores de uma
+vez. Começaria pelo fluxo cuja falha possui consequência identificável:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>request
+   ↓
+agent
+   ↓
+retrieval
+   ↓
+tools
+   ↓
+generations
+   ↓
+response
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Depois acrescentaria:</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">user_id</code>, <code class="language-plaintext highlighter-rouge">session_id</code>, ambiente, release e versões de agente e prompt;</li>
+  <li>entrada e saída estritamente necessárias para revisar o caso;</li>
+  <li>latência, uso, custo e feedback do usuário;</li>
+  <li>um ou dois checks determinísticos ligados ao contrato;</li>
+  <li>uma rubrica semântica curta, quando houver razão para usar um Judge;</li>
+  <li>revisão humana associada exatamente à saída avaliada.</li>
+</ol>
+
+<p>O próximo hábito é perguntar, depois de cada falha relevante: <strong>este caso deve
+entrar no dataset?</strong> Se a resposta for sim, o incidente passa a proteger uma
+comparação futura. A aplicação não aprende sozinha; o processo de engenharia
+acumula casos reais e os usa para avaliar releases.</p>
+<h2 id="o-dashboard-não-é-o-objetivo">
+  
+  
+    <a href="#o-dashboard-não-é-o-objetivo" class="anchor-heading" aria-labelledby="o-dashboard-não-é-o-objetivo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O dashboard não é o objetivo
+  
+  
+</h2>
+    
+
+<p>É fácil instalar observabilidade, abrir uma tela cheia de traces e sentir que o
+problema foi resolvido. Milhares de traces sem processo continuam sendo apenas
+milhares de traces.</p>
+
+<p>O valor aparece quando existe um loop operacional:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>observar
+   ↓
+entender e medir
+   ↓
+transformar em caso reproduzível
+   ↓
+experimentar e comparar
+   ↓
+mudar e medir novamente ↺
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Tracing é a porta de entrada. O ganho maior aparece quando uma execução fica
+ligada a usuário, sessão, release, prompt, custo, latência, score, feedback,
+dataset e experiment.</p>
+
+<p>Nesse ponto, a pergunta deixa de ser apenas “o que o modelo respondeu?” e passa
+a orientar a evolução do sistema:</p>
+
+<blockquote>
+  <p><strong>Como sabemos se este sistema está ficando melhor?</strong></p>
+</blockquote>
+
+<p>Para mim, essa é uma das perguntas centrais de AI Engineering em 2026.</p>
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Flangfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Flangfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#langfuse" rel="tag">Langfuse</a>, 
+    
+    <a href="/posts/tags/#observabilidade" rel="tag">Observabilidade</a>, 
+    
+    <a href="/posts/tags/#avaliação-de-ia" rel="tag">Avaliação de IA</a>, 
+    
+    <a href="/posts/tags/#opentelemetry" rel="tag">OpenTelemetry</a>, 
+    
+    <a href="/posts/tags/#engenharia-de-software" rel="tag">Engenharia de Software</a>, 
+    
+    <a href="/posts/tags/#agentes-de-ia" rel="tag">Agentes de IA</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/langfuse-llm-as-a-judge/">Como uso Langfuse com LLM-as-a-judge sem tratar score como verdade</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/numeros-nao-mentem/">Números não mentem?</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/pipeline-de-agentes-rede-versionada/">Como versionar uma rede de agentes além dos microserviços</a></li>
+            
+            
+          
+        
+      
+        
+          
+          
+            <li><a href="/artigos/email-marvin-gerencio-infraestrutura-2026/">O e-mail do Marvin e como gerencio minha infraestrutura em 2026</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é escrito e mantido por mim com apoio de inteligência artificial. Uso IA como ferramenta de pesquisa, revisão, estruturação, automação e desenvolvimento. As ideias, opiniões, escolhas editoriais e responsabilidade pelo conteúdo são minhas.
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/" rel="canonical">https://www.gpupo.com/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

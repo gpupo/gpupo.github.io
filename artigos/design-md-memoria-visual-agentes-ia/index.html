@@ -1,0 +1,3172 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DESIGN.md: como dar memória visual aos agentes de IA | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="DESIGN.md: como dar memória visual aos agentes de IA" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Como registrar tokens, princípios e restrições visuais no repositório para reduzir a inconsistência de interfaces geradas por agentes de IA." />
+<meta property="og:description" content="Como registrar tokens, princípios e restrições visuais no repositório para reduzir a inconsistência de interfaces geradas por agentes de IA." />
+<link rel="canonical" href="https://www.gpupo.com/artigos/design-md-memoria-visual-agentes-ia/" />
+<meta property="og:url" content="https://www.gpupo.com/artigos/design-md-memoria-visual-agentes-ia/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta property="og:image:alt" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-06T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta name="twitter:image:alt" content="Gilmar Pupo" />
+<meta property="twitter:title" content="DESIGN.md: como dar memória visual aos agentes de IA" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-08-06T00:00:00-03:00","datePublished":"2026-08-06T00:00:00-03:00","description":"Como registrar tokens, princípios e restrições visuais no repositório para reduzir a inconsistência de interfaces geradas por agentes de IA.","headline":"DESIGN.md: como dar memória visual aos agentes de IA","image":{"alt":"Gilmar Pupo","url":"https://www.gpupo.com/android-chrome-512x512.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/artigos/design-md-memoria-visual-agentes-ia/"},"url":"https://www.gpupo.com/artigos/design-md-memoria-visual-agentes-ia/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/",
+  "image": "https://www.gpupo.com/assets/profile.jpeg"
+}
+</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight">
+  Gilmar Pupo
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Posts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/posts/" class="nav-list-link">Posts</a><ul class="nav-list"><li class="nav-list-item"><a href="/posts/tags/" class="nav-list-link">Tags</a></li></ul></li><li class="nav-list-item"><a href="/notas/" class="nav-list-link">Notas</a></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    DESIGN.md: como dar memória visual aos agentes de IA
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-08-06T00:00:00-03:00" itemprop="datePublished">
+        06/08/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fdesign-md-memoria-visual-agentes-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fdesign-md-memoria-visual-agentes-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Como registrar tokens, princípios e restrições visuais no repositório para reduzir a inconsistência de interfaces geradas por agentes de IA.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#o-que-é-o-designmd">O que é o DESIGN.md</a></li><li><a href="#definir-cores-não-basta">Definir cores não basta</a></li><li><a href="#tokens-dizem-o-valor-o-designmd-explica-a-decisão">Tokens dizem o valor; o DESIGN.md explica a decisão</a></li><li><a href="#um-exemplo-mais-completo">Um exemplo mais completo</a></li><li><a href="#um-agentsmd-para-a-camada-visual">Um AGENTS.md para a camada visual</a></li><li><a href="#onde-o-arquivo-entra-no-fluxo-de-trabalho">Onde o arquivo entra no fluxo de trabalho</a></li><li><a href="#o-que-o-designmd-não-substitui">O que o DESIGN.md não substitui</a></li><li><a href="#comece-pelos-conflitos-recorrentes">Comece pelos conflitos recorrentes</a></li><li><a href="#o-risco-de-criar-outra-fonte-de-verdade">O risco de criar outra fonte de verdade</a></li><li><a href="#a-memória-precisa-permanecer-verificável">A memória precisa permanecer verificável</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body" itemprop="articleBody">
+    <p>Ferramentas de IA já conseguem gerar interfaces e código de front-end a partir de uma descrição em linguagem natural. O problema aparece depois da primeira tela.</p>
+
+<p>Você pede uma página inicial. Depois solicita um dashboard. Em seguida, adiciona um formulário, uma área administrativa e uma nova jornada de cadastro.</p>
+
+<p>Pouco a pouco, o produto perde coerência. O botão principal muda de cor. Os cards ganham sombras diferentes. O espaçamento varia entre as páginas. Algumas telas parecem minimalistas; outras ficam carregadas de elementos decorativos.</p>
+
+<p>Isso não significa necessariamente que o modelo falhou. Sem uma referência persistente, o agente volta a tomar decisões visuais a cada interação.</p>
+
+<p>O <code class="language-plaintext highlighter-rouge">DESIGN.md</code> é uma forma de registrar essa referência dentro do projeto.</p>
+<h2 id="o-que-é-o-designmd">
+  
+  
+    <a href="#o-que-é-o-designmd" class="anchor-heading" aria-labelledby="o-que-é-o-designmd"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O que é o DESIGN.md
+  
+  
+</h2>
+    
+
+<p>O <code class="language-plaintext highlighter-rouge">DESIGN.md</code> é um arquivo Markdown com as regras visuais e os princípios de interface de um produto. Ele funciona como memória de design para agentes de IA, desde que as instruções do projeto determinem que o arquivo seja consultado.</p>
+
+<p>Em vez de repetir em cada prompt quais cores, fontes, espaçamentos e componentes devem ser usados, o time registra essas decisões no repositório.</p>
+
+<p>O arquivo pode reunir:</p>
+
+<ul>
+  <li>paleta de cores;</li>
+  <li>tipografia;</li>
+  <li>escala de espaçamento;</li>
+  <li>raios de borda;</li>
+  <li>comportamento de botões;</li>
+  <li>organização dos cards;</li>
+  <li>princípios de layout;</li>
+  <li>regras de responsividade;</li>
+  <li>estados dos componentes;</li>
+  <li>práticas visuais que devem ser evitadas.</li>
+</ul>
+
+<p>O ecossistema do Google Stitch oferece um exemplo público desse fluxo. Um <a href="https://codelabs.developers.google.com/design-to-code-with-antigravity-stitch?hl=pt_br" title="Design para código com Antigravity e Stitch MCP">codelab oficial do Google</a> orienta o agente a buscar um projeto pelo MCP do Stitch, extrair paleta e tipografia e gerar um <code class="language-plaintext highlighter-rouge">DESIGN.md</code> na raiz do projeto. Isso demonstra um uso possível do arquivo, não a existência de uma especificação universal para seu formato.</p>
+<h2 id="definir-cores-não-basta">
+  
+  
+    <a href="#definir-cores-não-basta" class="anchor-heading" aria-labelledby="definir-cores-não-basta"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Definir cores não basta
+  
+  
+</h2>
+    
+
+<p>Uma primeira versão de um <code class="language-plaintext highlighter-rouge">DESIGN.md</code> poderia ser parecida com esta:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="nn">---</span>
+<span class="na">colors</span><span class="pi">:</span>
+  <span class="na">primary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#F97316"</span>
+  <span class="na">background</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#FFFFFF"</span>
+  <span class="na">surface</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#F8FAFC"</span>
+  <span class="na">text</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#172033"</span>
+
+<span class="na">rounded</span><span class="pi">:</span>
+  <span class="na">sm</span><span class="pi">:</span> <span class="s">4px</span>
+  <span class="na">md</span><span class="pi">:</span> <span class="s">8px</span>
+<span class="nn">---</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Isso já reduz algumas escolhas, mas ainda deixa uma dúvida importante: quando cada valor deve ser usado?</p>
+
+<p>O agente conhece a cor primária, porém pode aplicá-la em botões, títulos, ícones, bordas, gráficos e fundos ao mesmo tempo. Tecnicamente, ele respeitou a paleta. Visualmente, pode ter destruído a hierarquia.</p>
+
+<p>Por isso, um <code class="language-plaintext highlighter-rouge">DESIGN.md</code> útil combina valores objetivos com critérios de uso.</p>
+
+<p>A primeira camada registra códigos de cores, tamanhos de fonte, pesos tipográficos, espaçamentos, larguras, bordas e breakpoints. A segunda explica o significado dessas decisões:</p>
+
+<blockquote>
+  <p>Use a cor primária apenas em ações principais, estados ativos e elementos que precisam direcionar a atenção.</p>
+</blockquote>
+
+<blockquote>
+  <p>Cards operacionais devem priorizar densidade e legibilidade, evitando grandes áreas vazias.</p>
+</blockquote>
+
+<blockquote>
+  <p>Não use mais de uma ação primária por seção.</p>
+</blockquote>
+
+<blockquote>
+  <p>Evite gradientes decorativos e sombras exageradas.</p>
+</blockquote>
+
+<p>Essa segunda camada transforma tokens em orientação de design.</p>
+<h2 id="tokens-dizem-o-valor-o-designmd-explica-a-decisão">
+  
+  
+    <a href="#tokens-dizem-o-valor-o-designmd-explica-a-decisão" class="anchor-heading" aria-labelledby="tokens-dizem-o-valor-o-designmd-explica-a-decisão"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tokens dizem o valor; o DESIGN.md explica a decisão
+  
+  
+</h2>
+    
+
+<p>Design tokens mantêm valores consistentes no código:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">--color-primary</span><span class="o">:</span> <span class="nf">#f97316</span><span class="o">;</span>
+<span class="nt">--space-md</span><span class="o">:</span> <span class="err">16</span><span class="nt">px</span><span class="o">;</span>
+<span class="nt">--radius-md</span><span class="o">:</span> <span class="err">8</span><span class="nt">px</span><span class="o">;</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Eles não explicam sozinhos como a interface deve se comportar. O <code class="language-plaintext highlighter-rouge">DESIGN.md</code> pode registrar que a cor primária deve ser usada com moderação, que dashboards precisam de mais densidade do que páginas institucionais e que informações secundárias devem perder contraste visual sem prejudicar a leitura.</p>
+
+<p>O código controla o que será renderizado. O <code class="language-plaintext highlighter-rouge">DESIGN.md</code> orienta parte das decisões tomadas antes de o código ser escrito.</p>
+
+<p>Essa separação também evita colocar no Markdown uma responsabilidade que pertence à implementação. O arquivo pode dizer que um botão precisa de estados de foco, carregamento e desabilitado. O componente continua sendo a fonte do comportamento real.</p>
+<h2 id="um-exemplo-mais-completo">
+  
+  
+    <a href="#um-exemplo-mais-completo" class="anchor-heading" aria-labelledby="um-exemplo-mais-completo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Um exemplo mais completo
+  
+  
+</h2>
+    
+
+<p>Um arquivo inicial para um produto B2B poderia ter esta estrutura:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+</pre></td><td class="rouge-code"><pre><span class="nn">---</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">BP Stack</span>
+
+<span class="na">colors</span><span class="pi">:</span>
+  <span class="na">primary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#F97316"</span>
+  <span class="na">background</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#FFFFFF"</span>
+  <span class="na">surface</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#F8FAFC"</span>
+  <span class="na">text</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#172033"</span>
+  <span class="na">muted</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#64748B"</span>
+  <span class="na">border</span><span class="pi">:</span> <span class="s2">"</span><span class="s">#E2E8F0"</span>
+
+<span class="na">typography</span><span class="pi">:</span>
+  <span class="na">fontFamily</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Inter,</span><span class="nv"> </span><span class="s">sans-serif"</span>
+
+<span class="na">rounded</span><span class="pi">:</span>
+  <span class="na">sm</span><span class="pi">:</span> <span class="s">4px</span>
+  <span class="na">md</span><span class="pi">:</span> <span class="s">8px</span>
+  <span class="na">lg</span><span class="pi">:</span> <span class="s">12px</span>
+
+<span class="na">spacing</span><span class="pi">:</span>
+  <span class="na">sm</span><span class="pi">:</span> <span class="s">8px</span>
+  <span class="na">md</span><span class="pi">:</span> <span class="s">16px</span>
+  <span class="na">lg</span><span class="pi">:</span> <span class="s">24px</span>
+  <span class="na">xl</span><span class="pi">:</span> <span class="s">32px</span>
+<span class="nn">---</span>
+
+<span class="gh"># Identidade visual</span>
+
+A interface deve parecer técnica, clara e operacional.
+
+O produto deve transmitir confiabilidade sem parecer excessivamente
+corporativo ou burocrático.
+
+<span class="gu">## Cores</span>
+
+Use laranja somente para:
+<span class="p">
+-</span> ações principais;
+<span class="p">-</span> estados ativos;
+<span class="p">-</span> indicadores que exigem atenção.
+
+Não use a cor primária como decoração.
+
+<span class="gu">## Layout</span>
+
+Dashboards devem priorizar leitura rápida e boa densidade de informação.
+
+Evite grandes áreas vazias em telas operacionais. Use largura máxima em
+páginas de conteúdo; dashboards devem aproveitar melhor a área disponível.
+
+<span class="gu">## Cards</span>
+
+Cards devem ter bordas discretas e pouco relevo.
+
+Use sombras somente quando forem necessárias para indicar sobreposição
+ou hierarquia.
+
+<span class="gu">## Botões</span>
+
+Cada seção deve ter no máximo uma ação primária.
+
+Ações secundárias devem usar menor contraste visual.
+
+<span class="gu">## Evitar</span>
+<span class="p">
+-</span> gradientes decorativos;
+<span class="p">-</span> excesso de sombras;
+<span class="p">-</span> múltiplas cores de destaque;
+<span class="p">-</span> textos longos dentro de botões;
+<span class="p">-</span> cards dentro de cards sem necessidade;
+<span class="p">-</span> ícones meramente decorativos.
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Esse arquivo não elimina ambiguidades. Ele reduz o espaço de interpretação e oferece critérios para revisar o resultado.</p>
+<h2 id="um-agentsmd-para-a-camada-visual">
+  
+  
+    <a href="#um-agentsmd-para-a-camada-visual" class="anchor-heading" aria-labelledby="um-agentsmd-para-a-camada-visual"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Um AGENTS.md para a camada visual
+  
+  
+</h2>
+    
+
+<p>Um <a href="/artigos/agents-md-nao-e-um-readme/"><code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>
+informa ao agente como trabalhar no repositório: organização dos arquivos,
+comandos de validação, padrões de código e limites da alteração.</p>
+
+<p>O <code class="language-plaintext highlighter-rouge">DESIGN.md</code> cumpre um papel semelhante na camada visual. Ele informa qual linguagem seguir, como priorizar elementos, quais componentes reutilizar e que decisões não devem ser reinventadas.</p>
+
+<p>Os dois arquivos também precisam se conectar. A instrução do repositório pode determinar que qualquer mudança de interface consulte o <code class="language-plaintext highlighter-rouge">DESIGN.md</code>, reutilize os tokens e componentes existentes e atualize o documento quando uma decisão visual mudar de forma intencional.</p>
+
+<p>Sem essa instrução, o arquivo pode existir e continuar ignorado pelo agente.</p>
+<h2 id="onde-o-arquivo-entra-no-fluxo-de-trabalho">
+  
+  
+    <a href="#onde-o-arquivo-entra-no-fluxo-de-trabalho" class="anchor-heading" aria-labelledby="onde-o-arquivo-entra-no-fluxo-de-trabalho"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Onde o arquivo entra no fluxo de trabalho
+  
+  
+</h2>
+    
+
+<p>Um fluxo simples pode seguir esta sequência:</p>
+
+<ol>
+  <li>O time identifica ou extrai os padrões visuais já usados no produto.</li>
+  <li>Registra princípios, restrições e fontes técnicas no <code class="language-plaintext highlighter-rouge">DESIGN.md</code>.</li>
+  <li>Versiona o arquivo junto com o código.</li>
+  <li>Instrui os agentes a consultá-lo antes de alterar interfaces.</li>
+  <li>Revisa mudanças na linguagem visual junto com a implementação.</li>
+  <li>Atualiza o documento quando uma nova decisão passa a valer para o produto.</li>
+</ol>
+
+<p>O ganho operacional é tirar essas decisões de prompts isolados e do conhecimento informal do time. Uma mudança visual passa a aparecer no histórico do repositório e pode ser discutida no mesmo pull request que altera a interface.</p>
+
+<p>Esse fluxo, porém, só funciona quando o documento descreve o estado real do produto. Uma regra desatualizada pode orientar o agente com a mesma confiança de uma regra correta.</p>
+<h2 id="o-que-o-designmd-não-substitui">
+  
+  
+    <a href="#o-que-o-designmd-não-substitui" class="anchor-heading" aria-labelledby="o-que-o-designmd-não-substitui"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O que o DESIGN.md não substitui
+  
+  
+</h2>
+    
+
+<p>O <code class="language-plaintext highlighter-rouge">DESIGN.md</code> não substitui um design system implementado. Ele também não substitui:</p>
+
+<ul>
+  <li>componentes;</li>
+  <li>variáveis CSS;</li>
+  <li>configuração do Tailwind;</li>
+  <li>bibliotecas de interface;</li>
+  <li>Storybook;</li>
+  <li>arquivos do Figma;</li>
+  <li>testes de regressão visual;</li>
+  <li>revisão de design;</li>
+  <li>validação com usuários.</li>
+</ul>
+
+<p>Um botão documentado em Markdown não garante que todos os botões renderizados serão idênticos. A consistência ainda depende da implementação e da validação.</p>
+
+<p>O papel do arquivo é orientar o agente a encontrar e reutilizar decisões existentes antes de propor outra solução.</p>
+<h2 id="comece-pelos-conflitos-recorrentes">
+  
+  
+    <a href="#comece-pelos-conflitos-recorrentes" class="anchor-heading" aria-labelledby="comece-pelos-conflitos-recorrentes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Comece pelos conflitos recorrentes
+  
+  
+</h2>
+    
+
+<p>Tentar documentar todo o design system antes de usar o arquivo tende a produzir um documento longo e difícil de manter. Eu começaria pelos pontos que mais causam inconsistência:</p>
+
+<ul>
+  <li>paleta e uso semântico das cores;</li>
+  <li>tipografia;</li>
+  <li>espaçamento;</li>
+  <li>botões e hierarquia de ações;</li>
+  <li>cards;</li>
+  <li>layout das páginas;</li>
+  <li>responsividade e estados de interação;</li>
+  <li>componentes que já devem ser reutilizados;</li>
+  <li>práticas proibidas.</li>
+</ul>
+
+<p>Depois, o documento pode evoluir a partir de problemas observados. Se o agente cria sombras demais, registre o critério para usar sombras. Se cada dashboard aparece com uma densidade diferente, documente o princípio de densidade. Se várias ações competem pela atenção, explicite a hierarquia.</p>
+
+<p>Restrições concretas costumam ser mais úteis do que adjetivos. “Interface moderna e limpa” aceita interpretações demais. “Não usar gradientes, não criar um componente quando já existe um equivalente e não colocar mais de uma ação primária no mesmo bloco” elimina decisões incompatíveis com o produto.</p>
+<h2 id="o-risco-de-criar-outra-fonte-de-verdade">
+  
+  
+    <a href="#o-risco-de-criar-outra-fonte-de-verdade" class="anchor-heading" aria-labelledby="o-risco-de-criar-outra-fonte-de-verdade"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O risco de criar outra fonte de verdade
+  
+  
+</h2>
+    
+
+<p>O projeto pode acabar com versões diferentes da mesma decisão no Figma, no <code class="language-plaintext highlighter-rouge">DESIGN.md</code>, nos tokens, no Tailwind, nos componentes e nos prompts dos agentes.</p>
+
+<p>Nesse cenário, o arquivo deixa de reduzir inconsistência e cria outra camada de divergência.</p>
+
+<p>Uma divisão possível é:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Artefato</th>
+      <th>Responsabilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Figma</td>
+      <td>Exploração e referência visual</td>
+    </tr>
+    <tr>
+      <td>Tokens</td>
+      <td>Valores reutilizáveis</td>
+    </tr>
+    <tr>
+      <td>Componentes</td>
+      <td>Aparência e comportamento implementados</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">DESIGN.md</code></td>
+      <td>Princípios, critérios e instruções para agentes</td>
+    </tr>
+    <tr>
+      <td>Testes visuais</td>
+      <td>Verificação do resultado renderizado</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Essa divisão não precisa ser universal. O importante é definir qual artefato prevalece em caso de conflito e fazer o <code class="language-plaintext highlighter-rouge">DESIGN.md</code> apontar para as fontes técnicas existentes, em vez de copiá-las sem necessidade.</p>
+<h2 id="a-memória-precisa-permanecer-verificável">
+  
+  
+    <a href="#a-memória-precisa-permanecer-verificável" class="anchor-heading" aria-labelledby="a-memória-precisa-permanecer-verificável"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A memória precisa permanecer verificável
+  
+  
+</h2>
+    
+
+<p>À medida que agentes participam mais da construção de interfaces, gerar código correto deixa de ser o único critério. Eles também precisam reconhecer o produto em que estão trabalhando.</p>
+
+<p>Arquivos como <code class="language-plaintext highlighter-rouge">AGENTS.md</code>, ADRs e <code class="language-plaintext highlighter-rouge">DESIGN.md</code> tornam parte desse contexto legível dentro do repositório. O efeito prático não é dar memória permanente ao modelo, mas fornecer uma referência que pode ser consultada e revisada a cada tarefa.</p>
+
+<p>Eu começaria com um arquivo curto, ligado aos tokens e componentes reais, e uma instrução explícita para que o agente o leia antes de modificar a interface. A primeira revisão deve procurar contradições entre documento e código.</p>
+
+<p>Sem essa manutenção, o <code class="language-plaintext highlighter-rouge">DESIGN.md</code> envelhece como qualquer documentação. Com responsabilidades claras, ele se torna um contrato versionável entre design, produto, engenharia e os agentes que passam a alterar a interface.</p>
+
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fdesign-md-memoria-visual-agentes-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fdesign-md-memoria-visual-agentes-ia%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#documentação-para-agentes" rel="tag">Documentação para agentes</a>, 
+    
+    <a href="/posts/tags/#design" rel="tag">Design</a>, 
+    
+    <a href="/posts/tags/#design-systems" rel="tag">Design systems</a>, 
+    
+    <a href="/posts/tags/#agentes-de-ia" rel="tag">Agentes de IA</a>, 
+    
+    <a href="/posts/tags/#interfaces" rel="tag">Interfaces</a>, 
+    
+    <a href="/posts/tags/#inteligência-artificial" rel="tag">Inteligência Artificial</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/agents-md-nao-e-um-readme/">AGENTS.md não é um README — e isso é uma ótima notícia</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/prd-md-contexto-produto-agentes-ia/">PRD.md: como dar contexto de produto aos agentes de IA</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/o-llm-pode-decidir-o-calculo-nao-deveria-ser-a-calculadora/">O LLM pode decidir o cálculo. Não deveria ser a calculadora</a></li>
+            
+            
+          
+        
+      
+        
+          
+          
+            <li><a href="/posts/flow-por-fora-agents-onde-autonomia-agrega/">Flow por fora, Agents onde a autonomia agrega</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é escrito e mantido por mim com apoio de inteligência artificial. Uso IA como ferramenta de pesquisa, revisão, estruturação, automação e desenvolvimento. As ideias, opiniões, escolhas editoriais e responsabilidade pelo conteúdo são minhas.
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/artigos/design-md-memoria-visual-agentes-ia/" rel="canonical">https://www.gpupo.com/artigos/design-md-memoria-visual-agentes-ia/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

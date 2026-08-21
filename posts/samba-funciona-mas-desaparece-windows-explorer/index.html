@@ -1,0 +1,3351 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Quando o Samba funciona, mas desaparece do Windows Explorer | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Quando o Samba funciona, mas desaparece do Windows Explorer" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Um share guest bloqueado pelo diretório-pai e um servidor invisível sem WS-Discovery pareciam uma falha única. Eram problemas diferentes, com testes diferentes." />
+<meta property="og:description" content="Um share guest bloqueado pelo diretório-pai e um servidor invisível sem WS-Discovery pareciam uma falha única. Eram problemas diferentes, com testes diferentes." />
+<link rel="canonical" href="https://www.gpupo.com/posts/samba-funciona-mas-desaparece-windows-explorer/" />
+<meta property="og:url" content="https://www.gpupo.com/posts/samba-funciona-mas-desaparece-windows-explorer/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta property="og:image:alt" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-18T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta name="twitter:image:alt" content="Gilmar Pupo" />
+<meta property="twitter:title" content="Quando o Samba funciona, mas desaparece do Windows Explorer" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-08-18T00:00:00-03:00","datePublished":"2026-08-18T00:00:00-03:00","description":"Um share guest bloqueado pelo diretório-pai e um servidor invisível sem WS-Discovery pareciam uma falha única. Eram problemas diferentes, com testes diferentes.","headline":"Quando o Samba funciona, mas desaparece do Windows Explorer","image":{"alt":"Gilmar Pupo","url":"https://www.gpupo.com/android-chrome-512x512.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/posts/samba-funciona-mas-desaparece-windows-explorer/"},"url":"https://www.gpupo.com/posts/samba-funciona-mas-desaparece-windows-explorer/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/",
+  "image": "https://www.gpupo.com/assets/profile.jpeg"
+}
+</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight">
+  Gilmar Pupo
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Posts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/posts/" class="nav-list-link">Posts</a><ul class="nav-list"><li class="nav-list-item"><a href="/posts/tags/" class="nav-list-link">Tags</a></li></ul></li><li class="nav-list-item"><a href="/notas/" class="nav-list-link">Notas</a></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    Quando o Samba funciona, mas desaparece do Windows Explorer
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-08-18T00:00:00-03:00" itemprop="datePublished">
+        18/08/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fsamba-funciona-mas-desaparece-windows-explorer%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fsamba-funciona-mas-desaparece-windows-explorer%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Um share guest bloqueado pelo diretório-pai e um servidor invisível sem WS-Discovery pareciam uma falha única. Eram problemas diferentes, com testes diferentes.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#o-que-eu-precisava-distinguir">O que eu precisava distinguir</a></li><li><a href="#a-porta-respondia-mas-o-acesso-guest-falhava">A porta respondia, mas o acesso guest falhava</a></li><li><a href="#a-permissão-problemática-estava-um-nível-acima">A permissão problemática estava um nível acima</a></li><li><a href="#0711-abriu-a-travessia-não-a-listagem">0711 abriu a travessia, não a listagem</a></li><li><a href="#o-playbook-precisava-provar-mais-que-a-configuração">O playbook precisava provar mais que a configuração</a></li><li><a href="#acesso-por-unc-e-descoberta-são-capacidades-diferentes">Acesso por UNC e descoberta são capacidades diferentes</a></li><li><a href="#o-servidor-passou-a-responder-por-ws-discovery">O servidor passou a responder por WS-Discovery</a></li><li><a href="#eu-também-normalizei-o-lado-do-windows">Eu também normalizei o lado do Windows</a></li><li><a href="#a-interface-do-explorer-não-foi-meu-teste-principal">A interface do Explorer não foi meu teste principal</a></li><li><a href="#dois-falsos-caminhos-também-fizeram-parte-do-diagnóstico">Dois falsos caminhos também fizeram parte do diagnóstico</a></li><li><a href="#o-estado-que-consigo-sustentar">O estado que consigo sustentar</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body" itemprop="articleBody">
+    <p>Seis atalhos do Windows apontavam para compartilhamentos que pareciam ter
+desaparecido:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>\\192.168.0.140\common-shared
+\\192.168.0.140\inbox-empresa
+\\192.168.0.140\inbox-geral
+\\192.168.0.140\inbox-pessoal
+\\192.168.0.140\public-shared
+\\192.168.0.140\work-shared
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>As portas SMB respondiam, mas o Explorer não mostrava os diretórios. Depois que
+o acesso direto voltou, surgiu uma segunda estranheza: o servidor continuava
+ausente em <strong>Rede</strong> no Windows 11.</p>
+
+<p>Os dois sintomas pareciam parte da mesma falha. O diagnóstico mostrou duas
+causas independentes:</p>
+
+<ul>
+  <li>uma permissão Unix no diretório-pai bloqueava um dos acessos guest;</li>
+  <li>o Samba não publicava o servidor pelo mecanismo usado pelo Explorer moderno.</li>
+</ul>
+
+<p>A diferença importa porque cada camada exige um teste próprio. Uma porta 445
+aberta não demonstra que o share aceita determinada identidade. Um share
+acessível por caminho UNC também não demonstra que o servidor será descoberto
+na tela <strong>Rede</strong>.</p>
+<h2 id="o-que-eu-precisava-distinguir">
+  
+  
+    <a href="#o-que-eu-precisava-distinguir" class="anchor-heading" aria-labelledby="o-que-eu-precisava-distinguir"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O que eu precisava distinguir
+  
+  
+</h2>
+    
+
+<p>O servidor era um LXC com Debian 13 no Proxmox, disponível em
+<code class="language-plaintext highlighter-rouge">192.168.0.140</code>. O Samba, gerenciado por Ansible, oferecia seis áreas:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Share</th>
+      <th>Política</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inbox-geral</code></td>
+      <td>privado, leitura e escrita por <code class="language-plaintext highlighter-rouge">gpupo</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inbox-empresa</code></td>
+      <td>privado, leitura e escrita por <code class="language-plaintext highlighter-rouge">gpupo</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">inbox-pessoal</code></td>
+      <td>privado, leitura e escrita por <code class="language-plaintext highlighter-rouge">gpupo</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">work-shared</code></td>
+      <td>escrita por <code class="language-plaintext highlighter-rouge">gpupo</code> e pelo grupo <code class="language-plaintext highlighter-rouge">sambashare</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common-shared</code></td>
+      <td>leitura guest e escrita autenticada</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">public-shared</code></td>
+      <td>leitura e escrita guest</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>O cliente usado no diagnóstico foi o <code class="language-plaintext highlighter-rouge">node6</code>, um Windows 11 em
+<code class="language-plaintext highlighter-rouge">192.168.0.56</code>.</p>
+
+<p>Antes de mudar a configuração, separei três perguntas:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>TCP 445 responde?
+        ↓
+o share aceita a identidade usada?
+        ↓
+o servidor é descoberto pelo Explorer?
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Essa sequência acabou sendo mais útil que tratar “o Samba não funciona” como
+um único estado.</p>
+<h2 id="a-porta-respondia-mas-o-acesso-guest-falhava">
+  
+  
+    <a href="#a-porta-respondia-mas-o-acesso-guest-falhava" class="anchor-heading" aria-labelledby="a-porta-respondia-mas-o-acesso-guest-falhava"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A porta respondia, mas o acesso guest falhava
+  
+  
+</h2>
+    
+
+<p>Comecei pelo servidor, sem reiniciar serviços:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>systemctl is-active smbd nmbd
+testparm <span class="nt">-s</span>
+ss <span class="nt">-lntp</span> | <span class="nb">grep</span> <span class="nt">-E</span> <span class="s1">':139|:445'</span>
+smbstatus <span class="nt">--shares</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O resultado enfraqueceu a hipótese de falha geral:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">smbd</code> e <code class="language-plaintext highlighter-rouge">nmbd</code> estavam ativos;</li>
+  <li><code class="language-plaintext highlighter-rouge">testparm</code> carregava a configuração sem erros;</li>
+  <li>os seis shares apareciam na configuração efetiva;</li>
+  <li>existia uma conexão aberta em <code class="language-plaintext highlighter-rouge">common-shared</code>.</li>
+</ul>
+
+<p>O host tinha iniciado pouco antes, o que explicava parte da indisponibilidade
+vista minutos antes. Não explicava, porém, por que o acesso guest ao
+<code class="language-plaintext highlighter-rouge">common-shared</code> ainda recebia <code class="language-plaintext highlighter-rouge">STATUS_ACCESS_DENIED</code>.</p>
+
+<p>Testei os seis caminhos pelo protocolo SMB com a credencial mantida fora do
+repositório. Todos funcionaram de forma autenticada. Como guest, o resultado
+foi diferente:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>public-shared: OK
+common-shared: STATUS_ACCESS_DENIED
+inbox-geral:   STATUS_ACCESS_DENIED (esperado)
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Se <code class="language-plaintext highlighter-rouge">public-shared</code> aceitava guest, uma explicação genérica como “o Windows
+bloqueia acesso anônimo” não cobria o que eu observava. A diferença estava nos
+caminhos ou na identidade efetiva usada por cada share.</p>
+<h2 id="a-permissão-problemática-estava-um-nível-acima">
+  
+  
+    <a href="#a-permissão-problemática-estava-um-nível-acima" class="anchor-heading" aria-labelledby="a-permissão-problemática-estava-um-nível-acima"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A permissão problemática estava um nível acima
+  
+  
+</h2>
+    
+
+<p>A configuração do <code class="language-plaintext highlighter-rouge">common-shared</code> parecia coerente com a política:</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nn">[common-shared]</span><span class="w">
+   </span><span class="py">path</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">/data/common-shared</span>
+<span class="w">   </span><span class="py">browseable</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">   </span><span class="na">read</span><span class="w"> </span><span class="py">only</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">   </span><span class="na">guest</span><span class="w"> </span><span class="py">ok</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">yes</span>
+<span class="w">   </span><span class="na">write</span><span class="w"> </span><span class="py">list</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">gpupo</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O próprio diretório também não indicava o bloqueio:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>drwxr-xr-x gpupo:gpupo /data/common-shared
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O detalhe apareceu quando inspecionei todos os componentes do caminho:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>namei <span class="nt">-l</span> /data/common-shared
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>drwxr-xr-x root:root   /
+drwx------ gpupo:gpupo data
+drwxr-xr-x gpupo:gpupo common-shared
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O diretório <code class="language-plaintext highlighter-rouge">/data</code> estava em <code class="language-plaintext highlighter-rouge">0700</code>. Quando o Samba mapeava um usuário
+desconhecido para a conta guest <code class="language-plaintext highlighter-rouge">nobody</code>, essa conta não conseguia atravessar o
+diretório-pai. O log registrava a mesma identidade e a mesma falha:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>vfs_ChDir(/data/common-shared) failed: Permission denied
+Current token: uid=65534, gid=65534
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Esse comportamento corresponde à resolução de caminhos no Linux: cada
+componente intermediário precisa conceder permissão de busca, representada pelo
+bit de execução em diretórios. Sem ela, a resolução termina com <code class="language-plaintext highlighter-rouge">EACCES</code>, ainda
+que o diretório final tenha permissões mais abertas. A distinção entre leitura
+e busca está descrita em
+<a href="https://man7.org/linux/man-pages/man7/path_resolution.7.html"><code class="language-plaintext highlighter-rouge">path_resolution(7)</code></a>.</p>
+
+<p>O <code class="language-plaintext highlighter-rouge">public-shared</code> escondia o problema porque sua configuração usava
+<code class="language-plaintext highlighter-rouge">force user = gpupo</code>. A operação acabava executada com uma identidade que podia
+atravessar <code class="language-plaintext highlighter-rouge">/data</code>. Os dois shares aceitavam guest no Samba, mas chegavam ao
+sistema de arquivos com identidades diferentes.</p>
+<h2 id="0711-abriu-a-travessia-não-a-listagem">
+  
+  
+    <a href="#0711-abriu-a-travessia-não-a-listagem" class="anchor-heading" aria-labelledby="0711-abriu-a-travessia-não-a-listagem"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <code class="language-plaintext highlighter-rouge">0711</code> abriu a travessia, não a listagem
+  
+  
+</h2>
+    
+
+<p>Minha correção foi alterar somente a raiz <code class="language-plaintext highlighter-rouge">/data</code> para <code class="language-plaintext highlighter-rouge">0711</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Garantir raiz de dados atravessavel pelos acessos guest</span>
+  <span class="na">ansible.builtin.file</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">/data</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">directory</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">gpupo</span>
+    <span class="na">group</span><span class="pi">:</span> <span class="s">gpupo</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0711"</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O bit de execução permite atravessar o diretório quando o nome do próximo
+componente é conhecido. Como a conta guest não recebeu leitura na raiz, ela
+continua sem poder listar o conteúdo de <code class="language-plaintext highlighter-rouge">/data</code>.</p>
+
+<p>As permissões específicas permaneceram nos diretórios finais:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>/data                       0711
+/data/inbox-geral           0700
+/data/inbox-empresa         0700
+/data/inbox-pessoal         0700
+/data/work-shared           2770
+/data/common-shared         0755
+/data/public-shared         0777
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Isso não torna <code class="language-plaintext highlighter-rouge">0711</code> uma recomendação universal para toda raiz de shares. A
+decisão fez sentido aqui porque os nomes publicados pelo Samba são conhecidos,
+os diretórios privados continuam fechados e a política de cada share permanece
+explícita. ACLs, identidades forçadas ou outra organização de caminhos podem
+pedir uma fronteira diferente.</p>
+<h2 id="o-playbook-precisava-provar-mais-que-a-configuração">
+  
+  
+    <a href="#o-playbook-precisava-provar-mais-que-a-configuração" class="anchor-heading" aria-labelledby="o-playbook-precisava-provar-mais-que-a-configuração"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O playbook precisava provar mais que a configuração
+  
+  
+</h2>
+    
+
+<p>Durante o diagnóstico encontrei uma falha no próprio processo de automação. O
+playbook tentava usar <code class="language-plaintext highlighter-rouge">smbclient</code>, mas não instalava o pacote. A validação
+também acontecia antes de a configuração ser publicada e antes de os serviços
+estarem garantidos como ativos.</p>
+
+<p>Reordenei o fluxo para:</p>
+
+<ol>
+  <li>instalar <code class="language-plaintext highlighter-rouge">samba</code>, <code class="language-plaintext highlighter-rouge">samba-common</code>, <code class="language-plaintext highlighter-rouge">smbclient</code> e, depois, <code class="language-plaintext highlighter-rouge">wsdd2</code>;</li>
+  <li>criar usuários, grupos e diretórios;</li>
+  <li>validar o template antes de substituir <code class="language-plaintext highlighter-rouge">smb.conf</code>;</li>
+  <li>garantir os serviços ativos;</li>
+  <li>aplicar handlers pendentes;</li>
+  <li>listar os seis shares com autenticação;</li>
+  <li>listar <code class="language-plaintext highlighter-rouge">common-shared</code> e <code class="language-plaintext highlighter-rouge">public-shared</code> como guest.</li>
+</ol>
+
+<p>O template passou a usar a validação oferecida pelo módulo
+<a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/template_module.html"><code class="language-plaintext highlighter-rouge">ansible.builtin.template</code></a>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy Samba smb.conf configuration</span>
+  <span class="na">ansible.builtin.template</span><span class="pi">:</span>
+    <span class="na">src</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/../templates/services/samba.conf.j2"</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s">/etc/samba/smb.conf</span>
+    <span class="na">owner</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">group</span><span class="pi">:</span> <span class="s">root</span>
+    <span class="na">mode</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0644"</span>
+    <span class="na">validate</span><span class="pi">:</span> <span class="s">testparm -s %s</span>
+  <span class="na">notify</span><span class="pi">:</span> <span class="s">Restart Samba services</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Depois da correção, uma segunda execução terminou assim:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>samba-server: ok=15 changed=0 failed=0
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Nesse ponto eu tinha evidência para a segunda pergunta: os shares aceitavam as
+identidades esperadas. Ainda não tinha respondido por que o servidor não
+aparecia em <strong>Rede</strong>.</p>
+<h2 id="acesso-por-unc-e-descoberta-são-capacidades-diferentes">
+  
+  
+    <a href="#acesso-por-unc-e-descoberta-são-capacidades-diferentes" class="anchor-heading" aria-labelledby="acesso-por-unc-e-descoberta-são-capacidades-diferentes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Acesso por UNC e descoberta são capacidades diferentes
+  
+  
+</h2>
+    
+
+<p>No <code class="language-plaintext highlighter-rouge">node6</code>, o caminho direto funcionava:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="n">Test-Path</span><span class="w"> </span><span class="s1">'\\192.168.0.140\common-shared'</span><span class="w">
+</span></pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>True
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Mesmo assim, o servidor não aparecia em <strong>Explorador de Arquivos → Rede</strong>.</p>
+
+<p>A <a href="https://learn.microsoft.com/en-us/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows">documentação da
+Microsoft</a>
+explica a separação histórica: o antigo serviço Computer Browser dependia de
+SMB1 e, sem ele, o Explorer deixa de listar computadores pelo método legado de
+browsing via datagramas NetBIOS. O Windows 11 não instala cliente nem servidor
+SMB1 por padrão, e a Microsoft recomenda não reinstalar o protocolo por causa
+de seus problemas de segurança.</p>
+
+<p>A <a href="https://wiki.samba.org/index.php/FAQ#Why_does_Windows_Network_Neighborhood_not_show_Samba_server(s)?">FAQ do
+Samba</a>
+descreve a consequência prática: com SMB2 ou SMB3, o recurso ainda pode ser
+aberto diretamente por nome ou IP, enquanto a descoberta de rede usa WSD e
+LLMNR. Era exatamente a divisão observada no <code class="language-plaintext highlighter-rouge">node6</code>.</p>
+
+<p>Minha configuração manteve <code class="language-plaintext highlighter-rouge">min protocol = SMB2</code>. Reativar SMB1 para recuperar
+a tela <strong>Rede</strong> teria alterado o protocolo de compartilhamento para corrigir um
+problema de publicação.</p>
+<h2 id="o-servidor-passou-a-responder-por-ws-discovery">
+  
+  
+    <a href="#o-servidor-passou-a-responder-por-ws-discovery" class="anchor-heading" aria-labelledby="o-servidor-passou-a-responder-por-ws-discovery"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O servidor passou a responder por WS-Discovery
+  
+  
+</h2>
+    
+
+<p>No Debian 13 usado no LXC, <code class="language-plaintext highlighter-rouge">apt-cache</code> não apresentava candidato para <code class="language-plaintext highlighter-rouge">wsdd</code>,
+mas oferecia <code class="language-plaintext highlighter-rouge">wsdd2</code> na versão <code class="language-plaintext highlighter-rouge">1.8.7+dfsg-1.2</code>. O
+<a href="https://packages.debian.org/stable/wsdd2"><code class="language-plaintext highlighter-rouge">wsdd2</code> empacotado pelo
+Debian</a> é descrito como um daemon WSD
+que anuncia compartilhamentos e responde a Probes de clientes Windows. O pacote
+também implementa resolução multicast por LLMNR.</p>
+
+<p>Acrescentei o pacote e o serviço ao playbook do Samba:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install Samba packages</span>
+  <span class="na">ansible.builtin.apt</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">samba</span>
+      <span class="pi">-</span> <span class="s">samba-common</span>
+      <span class="pi">-</span> <span class="s">smbclient</span>
+      <span class="pi">-</span> <span class="s">wsdd2</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Ensure Samba services are enabled and started</span>
+  <span class="na">ansible.builtin.service</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">started</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="na">loop</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">smbd</span>
+    <span class="pi">-</span> <span class="s">nmbd</span>
+    <span class="pi">-</span> <span class="s">wsdd2</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Depois do deploy, observei o daemon em UDP e TCP 3702, usados na descoberta e
+na troca de metadados, e em UDP e TCP 5355 para LLMNR. O nome anunciado era
+<code class="language-plaintext highlighter-rouge">SAMBA-SERVER</code>, no workgroup <code class="language-plaintext highlighter-rouge">WORKGROUP</code>.</p>
+
+<p>O <code class="language-plaintext highlighter-rouge">nmbd</code> permaneceu ativo para compatibilidade e nomes NetBIOS. O resultado do
+teste, porém, não dependia de reativar o browsing legado.</p>
+<h2 id="eu-também-normalizei-o-lado-do-windows">
+  
+  
+    <a href="#eu-também-normalizei-o-lado-do-windows" class="anchor-heading" aria-labelledby="eu-também-normalizei-o-lado-do-windows"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Eu também normalizei o lado do Windows
+  
+  
+</h2>
+    
+
+<p>No cliente encontrei este estado:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>Rede "Cogumelo": Public
+fdPHost:             Running / Manual
+FDResPub:            Stopped / Manual
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Como se tratava de uma rede doméstica confiável, criei um playbook dedicado ao
+<code class="language-plaintext highlighter-rouge">node6</code> que:</p>
+
+<ul>
+  <li>altera somente perfis de rede ativos para <code class="language-plaintext highlighter-rouge">Private</code>;</li>
+  <li>mantém <code class="language-plaintext highlighter-rouge">fdPHost</code> e <code class="language-plaintext highlighter-rouge">FDResPub</code> automáticos e ativos;</li>
+  <li>habilita somente as regras privadas do grupo nativo <strong>Network Discovery</strong>;</li>
+  <li>confirma que <code class="language-plaintext highlighter-rouge">common-shared</code> continua acessível.</li>
+</ul>
+
+<p>Os serviços ficaram declarados assim:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Garantir servicos de descoberta ativos</span>
+  <span class="na">ansible.windows.win_service</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">start_mode</span><span class="pi">:</span> <span class="s">auto</span>
+    <span class="na">state</span><span class="pi">:</span> <span class="s">started</span>
+  <span class="na">loop</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">fdPHost</span>
+    <span class="pi">-</span> <span class="s">FDResPub</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>As regras foram selecionadas por grupo e perfil, sem abrir portas para o perfil
+público:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="n">Get-NetFirewallRule</span><span class="w"> </span><span class="nt">-DisplayGroup</span><span class="w"> </span><span class="s1">'Network Discovery'</span><span class="w"> </span><span class="o">|</span><span class="w">
+  </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="bp">$_</span><span class="o">.</span><span class="nf">Profile</span><span class="o">.</span><span class="nf">ToString</span><span class="p">()</span><span class="w"> </span><span class="o">-match</span><span class="w"> </span><span class="s1">'Private'</span><span class="w"> </span><span class="o">-and</span><span class="w">
+    </span><span class="bp">$_</span><span class="o">.</span><span class="nf">Enabled</span><span class="w"> </span><span class="o">-ne</span><span class="w"> </span><span class="s1">'True'</span><span class="w">
+  </span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w">
+  </span><span class="n">Enable-NetFirewallRule</span><span class="w">
+</span></pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A orientação da Microsoft para diagnosticar aplicações WSD inclui verificar a
+exceção de firewall <strong>Network Discovery</strong> e as portas de descoberta e troca de
+metadados. Esse é o limite que usei para as regras, conforme a documentação de
+<a href="https://learn.microsoft.com/en-us/windows/win32/wsdapi/inspecting-adapter-and-firewall-settings">configuração de adaptador e
+firewall</a>.</p>
+
+<p>A segunda execução do playbook do Windows também ficou limpa:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>node6: ok=4 changed=0 failed=0
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Eu não isolei cada mudança do cliente em experimentos separados. Portanto, o
+resultado não demonstra que mudar o perfil, iniciar os dois serviços e
+habilitar as regras tenham sido individualmente necessários para este servidor
+aparecer. O que validei foi o estado final desejado e o tráfego WSD completo
+nesse estado.</p>
+<h2 id="a-interface-do-explorer-não-foi-meu-teste-principal">
+  
+  
+    <a href="#a-interface-do-explorer-não-foi-meu-teste-principal" class="anchor-heading" aria-labelledby="a-interface-do-explorer-não-foi-meu-teste-principal"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A interface do Explorer não foi meu teste principal
+  
+  
+</h2>
+    
+
+<p>Uma sessão SSH no Windows não reproduz perfeitamente o namespace, o cache e o
+ciclo de atualização da sessão gráfica do Explorer. Em vez de tratar a tela
+<strong>Rede</strong> como única evidência, validei as etapas do protocolo:</p>
+
+<ol>
+  <li>o <code class="language-plaintext highlighter-rouge">node6</code> enviou um Probe multicast para <code class="language-plaintext highlighter-rouge">239.255.255.250:3702</code>;</li>
+  <li>o <code class="language-plaintext highlighter-rouge">wsdd2</code> recebeu o Probe;</li>
+  <li>o <code class="language-plaintext highlighter-rouge">node6</code> recebeu <code class="language-plaintext highlighter-rouge">ProbeMatches</code> de <code class="language-plaintext highlighter-rouge">192.168.0.140</code>;</li>
+  <li><code class="language-plaintext highlighter-rouge">SAMBA-SERVER</code> resolveu para <code class="language-plaintext highlighter-rouge">192.168.0.140</code> por LLMNR;</li>
+  <li>o cliente alcançou TCP 3702 para obter os metadados WSD;</li>
+  <li><code class="language-plaintext highlighter-rouge">\\SAMBA-SERVER\common-shared</code> abriu e listou o conteúdo.</li>
+</ol>
+
+<p>O fluxo é compatível com a especificação publicada pela Microsoft: o cliente
+envia um Probe multicast e o serviço descoberto devolve um Probe Match. A
+sequência está descrita no cenário de
+<a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-netod/a0315263-20cf-4401-95f0-1a16c942e245">descoberta dinâmica por
+WS-Discovery</a>.</p>
+
+<p>O resumo do teste ficou assim:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>wsd-server=192.168.0.140
+probe-match=True
+resolved-address=192.168.0.140
+tcp445=True
+wsd-tcp3702=True
+share-by-name=True
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Esse teste prova mais que uma captura da interface: o servidor respondeu ao
+protocolo, o nome resolveu, as portas necessárias estavam alcançáveis e o share
+abriu pelo nome anunciado.</p>
+<h2 id="dois-falsos-caminhos-também-fizeram-parte-do-diagnóstico">
+  
+  
+    <a href="#dois-falsos-caminhos-também-fizeram-parte-do-diagnóstico" class="anchor-heading" aria-labelledby="dois-falsos-caminhos-também-fizeram-parte-do-diagnóstico"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Dois falsos caminhos também fizeram parte do diagnóstico
+  
+  
+</h2>
+    
+
+<p>Meu primeiro Probe manual foi rejeitado pelo <code class="language-plaintext highlighter-rouge">wsdd2</code> como
+<code class="language-plaintext highlighter-rouge">Unsupported query</code>. O XML era semanticamente equivalente ao esperado e outros
+dispositivos responderam, mas eu tinha usado aliases de namespace como <code class="language-plaintext highlighter-rouge">a:</code> e
+<code class="language-plaintext highlighter-rouge">d:</code>. O parser do <code class="language-plaintext highlighter-rouge">wsdd2</code> esperava os prefixos convencionais <code class="language-plaintext highlighter-rouge">wsa:</code> e <code class="language-plaintext highlighter-rouge">wsd:</code>.
+Quando repeti o envelope com esses prefixos, o Samba respondeu imediatamente
+com <code class="language-plaintext highlighter-rouge">ProbeMatches</code>.</p>
+
+<p>Não generalizo esse resultado para XML ou para toda implementação de
+WS-Discovery. Foi uma incompatibilidade observada neste parser, nesta versão,
+durante um teste manual.</p>
+
+<p>Também investiguei a bridge e o firewall do Proxmox porque um listener auxiliar
+parecia não receber multicast. O debug do próprio <code class="language-plaintext highlighter-rouge">wsdd2</code> mostrou que o Probe do
+<code class="language-plaintext highlighter-rouge">node6</code> chegava normalmente. Descartei a hipótese de bloqueio na virtualização
+sem alterar o firewall.</p>
+<h2 id="o-estado-que-consigo-sustentar">
+  
+  
+    <a href="#o-estado-que-consigo-sustentar" class="anchor-heading" aria-labelledby="o-estado-que-consigo-sustentar"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O estado que consigo sustentar
+  
+  
+</h2>
+    
+
+<p>Ao final da manutenção:</p>
+
+<ul>
+  <li>os seis shares funcionavam com autenticação;</li>
+  <li><code class="language-plaintext highlighter-rouge">common-shared</code> e <code class="language-plaintext highlighter-rouge">public-shared</code> funcionavam como guest;</li>
+  <li><code class="language-plaintext highlighter-rouge">SAMBA-SERVER</code> respondia a Probes WS-Discovery;</li>
+  <li>o <code class="language-plaintext highlighter-rouge">node6</code> resolvia o nome e abria o share sem usar o IP;</li>
+  <li>o Windows estava em perfil privado, com os serviços e as regras de descoberta
+declarados pelo playbook;</li>
+  <li>os dois playbooks repetiam com <code class="language-plaintext highlighter-rouge">changed=0</code>;</li>
+  <li>a configuração operacional estava registrada na Wiki do homelab.</li>
+</ul>
+
+<p>Neste ambiente, “Samba funcionando” precisava ser dividido em disponibilidade,
+autorização e descoberta. Para uma ocorrência semelhante, eu começaria pelos
+mesmos limites: testaria TCP 445, depois cada share com a identidade relevante
+e somente então o Probe WSD. Essa ordem reduz a chance de alterar o firewall ou
+reativar um protocolo legado para corrigir uma permissão que estava em
+<code class="language-plaintext highlighter-rouge">/data</code>.</p>
+
+<p><em>Ambiente validado em 18 de agosto de 2026: Debian 13 em LXC/Proxmox, Samba
+4.22.10, wsdd2 1.8.7, Windows 11 e Ansible Core 2.21.1.</em></p>
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fsamba-funciona-mas-desaparece-windows-explorer%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fsamba-funciona-mas-desaparece-windows-explorer%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#samba" rel="tag">Samba</a>, 
+    
+    <a href="/posts/tags/#windows-11" rel="tag">Windows 11</a>, 
+    
+    <a href="/posts/tags/#ansible" rel="tag">Ansible</a>, 
+    
+    <a href="/posts/tags/#homelab" rel="tag">Homelab</a>, 
+    
+    <a href="/posts/tags/#diagnóstico" rel="tag">Diagnóstico</a>, 
+    
+    <a href="/posts/tags/#ws-discovery" rel="tag">WS-Discovery</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/email-marvin-gerencio-infraestrutura-2026/">O e-mail do Marvin e como gerencio minha infraestrutura em 2026</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/observabilidade-com-agente-e-ansible/">Usar um agente para ajustar observabilidade com Ansible</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/backup-offline-pbs-usb-rotativo/">Backup offline com PBS, LUKS e dois discos USB rotativos</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/publicando-apps-python-no-nomad-sem-docker/">Publicando apps Python no Nomad sem Docker</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é escrito e mantido por mim com apoio de inteligência artificial. Uso IA como ferramenta de pesquisa, revisão, estruturação, automação e desenvolvimento. As ideias, opiniões, escolhas editoriais e responsabilidade pelo conteúdo são minhas.
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/posts/samba-funciona-mas-desaparece-windows-explorer/" rel="canonical">https://www.gpupo.com/posts/samba-funciona-mas-desaparece-windows-explorer/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+
