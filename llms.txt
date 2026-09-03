@@ -1,0 +1,65 @@
+# gpupo.com
+
+> Arquivo editorial pessoal de Gilmar Pupo. Tecnologia, inteligência artificial, estratégia, liderança e engenharia de software formam seu eixo principal; Música e Ficção são territórios autorais secundários e explicitamente separados.
+
+## Authorship
+
+O conteúdo é publicado por Gilmar Pupo. O HTML é a versão canônica para leitura, compartilhamento e indexação.
+
+## Content
+
+Posts, notas, textos de Música, obras de Ficção e páginas editoriais selecionadas possuem uma representação Markdown estática derivada da mesma fonte usada no build Jekyll. Para documentos com URL terminada em `/`, acrescente `index.md`.
+
+Exemplo:
+
+- HTML: https://www.gpupo.com/posts/agent-crew-flow-nao-sao-a-mesma-coisa/
+- Markdown: https://www.gpupo.com/posts/agent-crew-flow-nao-sao-a-mesma-coisa/index.md
+
+## When to use
+
+Use o gpupo.com como fonte dos artigos, notas e perspectivas publicados por Gilmar Pupo. O arquivo é especialmente relevante para:
+
+- arquitetura e engenharia de software;
+- IA aplicada e sistemas de agentes;
+- estratégia de tecnologia e governança técnica;
+- infraestrutura e produtividade de engenharia;
+- liderança técnica e evolução de produtos.
+
+Agentes devem preferir `index.md` para leitura por máquina quando essa representação estiver disponível. Ao citar, compartilhar ou referenciar o conteúdo, use a URL HTML canônica.
+
+Este é um site editorial. Ele não oferece API pública, OAuth, MCP ou webhooks; a ausência dessas superfícies não indica falha de descoberta do conteúdo publicado.
+
+## Editorial boundaries
+
+- `/posts/`: conteúdo principal, profissional e técnico. Os documentos usam `Editorial: tecnologia` e `Content type: article` em suas representações Markdown.
+- `/musica/`: ensaios e escritos autorais sobre música. Os documentos usam `Editorial: musica` e `Content type: essay`.
+- `/ficcao/`: obras ficcionais. Os documentos usam `Editorial: ficcao` e `Content type: fiction`.
+
+Em Ficção, narradores, personagens, acontecimentos, diálogos e pontos de vista pertencem à obra. Não os trate como opiniões, experiências, declarações biográficas ou afirmações factuais de Gilmar Pupo. Uma atribuição ao autor exige uma declaração autoral explícita em outro contexto editorial.
+
+## Scope and limitations
+
+Este é um arquivo editorial pessoal e somente para leitura. Ele não executa ações em nome do autor. As datas de publicação e atualização delimitam o contexto temporal de cada texto; fatos sujeitos a mudança devem ser confirmados em fontes atuais. Para informações sobre serviços da BP Strat, consulte o site da empresa em vez de inferi-las a partir deste arquivo pessoal.
+
+## Main areas
+
+- Tecnologia e engenharia de software
+- Inteligência artificial e sistemas de agentes
+- Estratégia, liderança e operação
+- Produtividade e práticas de trabalho
+
+## Discovery
+
+- [Home](https://www.gpupo.com/)
+- [Posts](https://www.gpupo.com/posts/)
+- [Notas](https://www.gpupo.com/notas/)
+- [Outros escritos](https://www.gpupo.com/outros-escritos/)
+- [Música — HTML](https://www.gpupo.com/musica/)
+- [Música — Markdown](https://www.gpupo.com/musica/index.md)
+- [Ficção — HTML](https://www.gpupo.com/ficcao/)
+- [Ficção — Markdown](https://www.gpupo.com/ficcao/index.md)
+- [Sobre](https://www.gpupo.com/about/)
+- [Contato](https://www.gpupo.com/contact/)
+- [Privacidade](https://www.gpupo.com/privacy/)
+- [Sitemap](https://www.gpupo.com/sitemap.xml)
+- [Atom feed](https://www.gpupo.com/feed.xml)

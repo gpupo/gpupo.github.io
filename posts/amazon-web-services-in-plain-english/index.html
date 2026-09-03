@@ -1,0 +1,4026 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AWS em português claro: o que EC2, IAM, S3 e outros serviços fazem | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="AWS em português claro: o que EC2, IAM, S3 e outros serviços fazem" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Uma tradução bem-humorada dos nomes e funções dos principais serviços da AWS para português claro." />
+<meta property="og:description" content="Uma tradução bem-humorada dos nomes e funções dos principais serviços da AWS para português claro." />
+<link rel="canonical" href="https://www.gpupo.com/posts/amazon-web-services-in-plain-english/" />
+<meta property="og:url" content="https://www.gpupo.com/posts/amazon-web-services-in-plain-english/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta property="og:image:alt" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-21T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta name="twitter:image:alt" content="Gilmar Pupo" />
+<meta property="twitter:title" content="AWS em português claro: o que EC2, IAM, S3 e outros serviços fazem" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-08-21T00:00:00-03:00","datePublished":"2026-08-21T00:00:00-03:00","description":"Uma tradução bem-humorada dos nomes e funções dos principais serviços da AWS para português claro.","headline":"AWS em português claro: o que EC2, IAM, S3 e outros serviços fazem","image":{"alt":"Gilmar Pupo","url":"https://www.gpupo.com/android-chrome-512x512.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/posts/amazon-web-services-in-plain-english/"},"url":"https://www.gpupo.com/posts/amazon-web-services-in-plain-english/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+
+<link rel="alternate" type="text/markdown" href="/posts/amazon-web-services-in-plain-english/index.md">
+
+
+
+<meta name="gpupo:editorial" content="tecnologia">
+
+
+<meta name="gpupo:content_type" content="article">
+
+
+
+<meta property="article:section" content="tecnologia">
+
+
+
+
+
+<script src="/assets/js/ask-my-texts.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.gpupo.com/#person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/about/",
+  "description": "Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.",
+  "image": "https://www.gpupo.com/assets/profile.jpeg",
+  "sameAs": ["https://github.com/gpupo","https://www.linkedin.com/in/gpupo/","https://mastodon.social/@gpupo","https://www.threads.com/@g1mar","https://bsky.app/profile/g1mar.bsky.social"]
+}
+</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight"><span aria-hidden="true">gil://</span><span class="sr-only">Gilmar Pupo</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Posts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/posts/" class="nav-list-link">Posts</a><ul class="nav-list"><li class="nav-list-item"><a href="/posts/tags/" class="nav-list-link">Tags</a></li></ul></li><li class="nav-list-item"><a href="/notas/" class="nav-list-link">Notas</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Outros escritos submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/outros-escritos/" class="nav-list-link">Outros escritos</a><ul class="nav-list"><li class="nav-list-item"><a href="/musica/" class="nav-list-link">Música</a></li><li class="nav-list-item"><a href="/ficcao/" class="nav-list-link">Ficção</a></li></ul></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    AWS em português claro: o que EC2, IAM, S3 e outros serviços fazem
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-08-21T00:00:00-03:00" itemprop="datePublished">
+        21/08/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Famazon-web-services-in-plain-english%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Famazon-web-services-in-plain-english%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Uma tradução bem-humorada dos nomes e funções dos principais serviços da AWS para português claro.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#primeiro-o-kit-básico">Primeiro, o kit básico</a><ul><li><a href="#ec2">EC2</a></li><li><a href="#iam">IAM</a></li><li><a href="#s3">S3</a></li><li><a href="#vpc">VPC</a></li><li><a href="#lambda">Lambda</a></li></ul></li><li><a href="#construindo-aplicações-web">Construindo aplicações web</a><ul><li><a href="#api-gateway">API Gateway</a></li><li><a href="#rds">RDS</a></li><li><a href="#route-53">Route 53</a></li><li><a href="#ses">SES</a></li><li><a href="#cloudfront">CloudFront</a></li><li><a href="#elasticache">ElastiCache</a></li><li><a href="#dynamodb">DynamoDB</a></li></ul></li><li><a href="#mensagens-e-integração">Mensagens e integração</a><ul><li><a href="#sqs">SQS</a></li><li><a href="#sns">SNS</a></li><li><a href="#eventbridge">EventBridge</a></li></ul></li><li><a href="#containers">Containers</a><ul><li><a href="#ecs">ECS</a></li><li><a href="#eks">EKS</a></li><li><a href="#fargate">Fargate</a></li></ul></li><li><a href="#deploy-e-infraestrutura">Deploy e infraestrutura</a><ul><li><a href="#cloudformation">CloudFormation</a></li><li><a href="#codepipeline">CodePipeline</a></li><li><a href="#codedeploy">CodeDeploy</a></li><li><a href="#elastic-beanstalk">Elastic Beanstalk</a></li></ul></li><li><a href="#dados">Dados</a><ul><li><a href="#kinesis">Kinesis</a></li><li><a href="#redshift">Redshift</a></li><li><a href="#glue">Glue</a></li><li><a href="#athena">Athena</a></li></ul></li><li><a href="#backup-e-arquivos-que-você-talvez-nunca-mais-queira-ver">Backup e arquivos que você talvez nunca mais queira ver</a><ul><li><a href="#glacier">Glacier</a></li></ul></li><li><a href="#redes-corporativas">Redes corporativas</a><ul><li><a href="#direct-connect">Direct Connect</a></li><li><a href="#storage-gateway">Storage Gateway</a></li><li><a href="#workspaces">WorkSpaces</a></li></ul></li><li><a href="#segurança">Segurança</a><ul><li><a href="#waf">WAF</a></li><li><a href="#inspector">Inspector</a></li><li><a href="#secrets-manager">Secrets Manager</a></li></ul></li><li><a href="#e-finalmente-os-serviços-necessários-para-administrar-os-serviços">E finalmente: os serviços necessários para administrar os serviços</a><ul><li><a href="#cloudwatch">CloudWatch</a></li><li><a href="#cloudtrail">CloudTrail</a></li><li><a href="#aws-config">AWS Config</a></li><li><a href="#trusted-advisor">Trusted Advisor</a></li></ul></li><li><a href="#o-verdadeiro-problema-não-são-os-nomes">O verdadeiro problema não são os nomes</a></li><li><a href="#minha-regra-continua-sendo-a-mesma">Minha regra continua sendo a mesma</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body" itemprop="articleBody">
+    <p>Já faz tempo que eu dou risada com um tipo de conteúdo que se repete pela web.</p>
+
+<p>A AWS anuncia um serviço chamado qualquer coisa como <strong>ContainerCache</strong>, <strong>ElastiCast</strong> ou <strong>QR72</strong> e, por alguns segundos, você se pergunta:</p>
+
+<blockquote>
+  <p>Isso existe mesmo ou alguém acabou de inventar?</p>
+</blockquote>
+
+<p>Os três nomes acima eu inventei.</p>
+
+<p>O problema é que poderiam perfeitamente existir.</p>
+
+<p>Depois de tantos anos trabalhando com infraestrutura, cloud e arquitetura, resolvi deixar no blog uma versão adaptada daquela velha brincadeira: <strong>como seriam os serviços da AWS se os nomes explicassem o que eles realmente fazem?</strong></p>
+
+<p>Não é documentação oficial, muito menos um catálogo completo da AWS.</p>
+
+<p>É um tradutor.</p>
+
+<p>De <strong>AWSês</strong> para português.</p>
+<h2 id="primeiro-o-kit-básico">
+  
+  
+    <a href="#primeiro-o-kit-básico" class="anchor-heading" aria-labelledby="primeiro-o-kit-básico"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Primeiro, o kit básico
+  
+  
+</h2>
+    
+
+<p>Há alguns serviços que aparecem em praticamente qualquer conversa sobre AWS.</p>
+<h3 id="ec2">
+  
+  
+    <a href="#ec2" class="anchor-heading" aria-labelledby="ec2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> EC2
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Virtual Servers</p>
+
+<p><strong>Para que serve:</strong> rodar máquinas virtuais.</p>
+
+<p>Você escolhe CPU, memória, disco, sistema operacional e sobe aquilo que, antes da nuvem, chamaríamos simplesmente de <strong>servidor</strong>.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Preciso de um Linux ligado em algum lugar.”</p>
+</blockquote>
+
+<p>EC2.</p>
+<h3 id="iam">
+  
+  
+    <a href="#iam" class="anchor-heading" aria-labelledby="iam"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> IAM
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Users, Permissions and Keys</p>
+
+<p>IAM é o lugar onde você responde perguntas como:</p>
+
+<ul>
+  <li>quem pode entrar;</li>
+  <li>quem pode fazer o quê;</li>
+  <li>qual aplicação pode acessar qual serviço;</li>
+  <li>quais credenciais existem;</li>
+  <li>quais permissões estão sendo concedidas.</li>
+</ul>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quem pode apertar este botão?”</p>
+</blockquote>
+
+<p>IAM.</p>
+
+<p>E, como quase sempre acontece com segurança, começa simples e pode terminar com uma política JSON que ninguém quer editar na sexta-feira às 17h42.</p>
+<h3 id="s3">
+  
+  
+    <a href="#s3" class="anchor-heading" aria-labelledby="s3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> S3
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Giant File Bucket</p>
+
+<p>Você coloca arquivos lá.</p>
+
+<p>Imagens. Backups. Logs. Artefatos. Exports. Datasets. Documentos. Arquivos estáticos.</p>
+
+<p>E metade da AWS parece, em algum momento, querer colocar alguma coisa no S3 ou buscar alguma coisa de lá.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Preciso guardar um arquivo e não quero administrar um filesystem.”</p>
+</blockquote>
+
+<p>S3.</p>
+<h3 id="vpc">
+  
+  
+    <a href="#vpc" class="anchor-heading" aria-labelledby="vpc"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> VPC
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Private Network</p>
+
+<p>É a sua rede virtual dentro da AWS.</p>
+
+<p>Subnets, rotas, gateways, endereços IP, regras e os demais ingredientes necessários para transformar:</p>
+
+<blockquote>
+  <p>“Tenho algumas máquinas na nuvem.”</p>
+</blockquote>
+
+<p>em:</p>
+
+<blockquote>
+  <p>“Tenho uma arquitetura de rede que agora precisa de um diagrama.”</p>
+</blockquote>
+
+<p>Para quem conhece redes tradicionais, pense em switches, segmentos, roteamento e firewalls, só que definidos por software.</p>
+<h3 id="lambda">
+  
+  
+    <a href="#lambda" class="anchor-heading" aria-labelledby="lambda"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Lambda
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Run This Function For Me</p>
+
+<p>Você entrega uma pequena função. A AWS executa quando alguma coisa acontece.</p>
+
+<p>Um arquivo chegou. Uma API foi chamada. Uma mensagem apareceu. Um evento ocorreu.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quando acontecer X, rode esse código.”</p>
+</blockquote>
+
+<p>Lambda.</p>
+
+<p>É simples até alguém construir uma aplicação inteira com 137 funções, 46 triggers e ninguém mais lembrar quem chama quem.</p>
+<h2 id="construindo-aplicações-web">
+  
+  
+    <a href="#construindo-aplicações-web" class="anchor-heading" aria-labelledby="construindo-aplicações-web"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Construindo aplicações web
+  
+  
+</h2>
+    
+
+<p>Agora entramos na parte que normalmente aparece quando alguém decide colocar uma aplicação na AWS.</p>
+<h3 id="api-gateway">
+  
+  
+    <a href="#api-gateway" class="anchor-heading" aria-labelledby="api-gateway"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> API Gateway
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon API Front Door</p>
+
+<p>Fica na frente da sua API.</p>
+
+<p>Pode receber requisições, definir rotas, autenticação, limites e versões, além de encaminhar chamadas para outros componentes.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Tudo que chega na minha API passa primeiro por aqui.”</p>
+</blockquote>
+<h3 id="rds">
+  
+  
+    <a href="#rds" class="anchor-heading" aria-labelledby="rds"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> RDS
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon SQL Database</p>
+
+<p>Você quer PostgreSQL, MySQL ou algum outro banco relacional sem precisar administrar cada detalhe da máquina onde ele roda.</p>
+
+<p>RDS.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quero um PostgreSQL, mas prefiro não passar meu domingo atualizando PostgreSQL.”</p>
+</blockquote>
+<h3 id="route-53">
+  
+  
+    <a href="#route-53" class="anchor-heading" aria-labelledby="route-53"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Route 53
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon DNS</p>
+
+<p>É DNS.</p>
+
+<p>Registros. Domínios. Resolução de nomes. Health checks. Roteamento.</p>
+
+<p>O nome vem de uma referência à porta 53 usada pelo DNS, porque naturalmente essa é a primeira coisa que todo desenvolvedor pensa quando precisa configurar um domínio.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quero que api.exemplo.com aponte para alguma coisa.”</p>
+</blockquote>
+
+<p>Route 53.</p>
+<h3 id="ses">
+  
+  
+    <a href="#ses" class="anchor-heading" aria-labelledby="ses"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> SES
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Send Email</p>
+
+<p>Serve para enviar e-mails por aplicações.</p>
+
+<p>Confirmação de cadastro. Recuperação de senha. Alertas. Notificações. Campanhas, dependendo de como você construir a solução.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Minha aplicação precisa mandar e-mail.”</p>
+</blockquote>
+
+<p>SES.</p>
+<h3 id="cloudfront">
+  
+  
+    <a href="#cloudfront" class="anchor-heading" aria-labelledby="cloudfront"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CloudFront
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon CDN</p>
+
+<p>Distribui conteúdo por diversos pontos da infraestrutura da AWS para entregá-lo mais perto do usuário.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quero que este arquivo chegue mais rápido para alguém do outro lado do planeta.”</p>
+</blockquote>
+
+<p>CloudFront.</p>
+<h3 id="elasticache">
+  
+  
+    <a href="#elasticache" class="anchor-heading" aria-labelledby="elasticache"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ElastiCache
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Managed Cache</p>
+
+<p>Redis, Valkey, Memcached e coisas dessa família.</p>
+
+<p>A ideia é evitar ir ao banco toda vez que alguém pergunta a mesma coisa.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Já calculei isso uma vez. Posso guardar o resultado por alguns minutos?”</p>
+</blockquote>
+
+<p>ElastiCache.</p>
+<h3 id="dynamodb">
+  
+  
+    <a href="#dynamodb" class="anchor-heading" aria-labelledby="dynamodb"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DynamoDB
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Very Fast NoSQL Database</p>
+
+<p>Banco distribuído, gerenciado e projetado para trabalhar em grande escala sem você precisar administrar servidores de banco.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Preciso guardar e buscar dados muito rapidamente e meu problema não exige necessariamente SQL.”</p>
+</blockquote>
+
+<p>DynamoDB.</p>
+<h2 id="mensagens-e-integração">
+  
+  
+    <a href="#mensagens-e-integração" class="anchor-heading" aria-labelledby="mensagens-e-integração"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Mensagens e integração
+  
+  
+</h2>
+    
+
+<p>Aplicações distribuídas eventualmente descobrem uma verdade universal:</p>
+
+<p><strong>às vezes é melhor deixar um recado do que ficar esperando o outro sistema responder.</strong></p>
+
+<p>É aí que começam filas, eventos e mensageria.</p>
+<h3 id="sqs">
+  
+  
+    <a href="#sqs" class="anchor-heading" aria-labelledby="sqs"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> SQS
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Queue</p>
+
+<p>É uma fila.</p>
+
+<p>Alguém coloca uma mensagem. Outro componente pega depois.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Faça isso quando puder.”</p>
+</blockquote>
+
+<p>SQS.</p>
+
+<p>É uma das ideias mais simples e úteis de arquitetura distribuída.</p>
+
+<p>E não: “message” aqui não significa WhatsApp, SMS ou e-mail. É apenas uma unidade de trabalho esperando alguém processá-la.</p>
+<h3 id="sns">
+  
+  
+    <a href="#sns" class="anchor-heading" aria-labelledby="sns"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> SNS
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Publish This Everywhere</p>
+
+<p>Você publica uma mensagem e vários interessados podem recebê-la.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Aconteceu uma coisa. Avisem quem estiver interessado.”</p>
+</blockquote>
+
+<p>SNS.</p>
+<h3 id="eventbridge">
+  
+  
+    <a href="#eventbridge" class="anchor-heading" aria-labelledby="eventbridge"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> EventBridge
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Something Happened</p>
+
+<p>Um evento aconteceu.</p>
+
+<p>Pedido criado. Arquivo processado. Deploy concluído. Pagamento confirmado.</p>
+
+<p>Alguma coisa muda e outros sistemas podem reagir.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quando acontecer X, quem quiser pode fazer Y.”</p>
+</blockquote>
+<h2 id="containers">
+  
+  
+    <a href="#containers" class="anchor-heading" aria-labelledby="containers"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Containers
+  
+  
+</h2>
+    
+
+<p>Naturalmente, a AWS também precisava de várias respostas diferentes para:</p>
+
+<blockquote>
+  <p>“Onde eu rodo meu container?”</p>
+</blockquote>
+<h3 id="ecs">
+  
+  
+    <a href="#ecs" class="anchor-heading" aria-labelledby="ecs"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ECS
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Run My Containers</p>
+
+<p>Você tem containers. A AWS coordena onde e como eles vão rodar.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Tenho Docker. Quero executar isso na AWS sem necessariamente adotar Kubernetes.”</p>
+</blockquote>
+
+<p>ECS.</p>
+<h3 id="eks">
+  
+  
+    <a href="#eks" class="anchor-heading" aria-labelledby="eks"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> EKS
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Kubernetes</p>
+
+<p>É Kubernetes administrado pela AWS.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quero Kubernetes.”</p>
+</blockquote>
+
+<p>EKS.</p>
+
+<p>Naturalmente, isso não significa:</p>
+
+<blockquote>
+  <p>“Quero simplicidade.”</p>
+</blockquote>
+
+<p>São frases diferentes.</p>
+<h3 id="fargate">
+  
+  
+    <a href="#fargate" class="anchor-heading" aria-labelledby="fargate"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Fargate
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Containers Without Thinking About Servers</p>
+
+<p>Você quer executar containers, mas não quer ficar escolhendo e administrando os servidores que estarão por trás deles.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Só roda meu container.”</p>
+</blockquote>
+
+<p>Fargate.</p>
+<h2 id="deploy-e-infraestrutura">
+  
+  
+    <a href="#deploy-e-infraestrutura" class="anchor-heading" aria-labelledby="deploy-e-infraestrutura"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Deploy e infraestrutura
+  
+  
+</h2>
+    
+
+<p>Em algum momento, alguém percebeu que clicar cinquenta vezes no console não é exatamente uma estratégia operacional.</p>
+<h3 id="cloudformation">
+  
+  
+    <a href="#cloudformation" class="anchor-heading" aria-labelledby="cloudformation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CloudFormation
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Infrastructure Definition File</p>
+
+<p>Você descreve sua infraestrutura. A AWS tenta construir aquilo para você.</p>
+
+<p>Servidor. Rede. Banco. Load balancer. Permissões. Outros serviços.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Em vez de clicar tudo novamente, quero declarar como minha infraestrutura deve ser.”</p>
+</blockquote>
+
+<p>CloudFormation.</p>
+
+<p>Ou, para quem já foi longe demais:</p>
+
+<blockquote>
+  <p>“O YAML agora administra meu datacenter.”</p>
+</blockquote>
+<h3 id="codepipeline">
+  
+  
+    <a href="#codepipeline" class="anchor-heading" aria-labelledby="codepipeline"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CodePipeline
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon CI/CD Pipeline</p>
+
+<p>Organiza etapas de build, teste e deploy.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quando alguém fizer commit, quero que uma sequência de coisas aconteça.”</p>
+</blockquote>
+<h3 id="codedeploy">
+  
+  
+    <a href="#codedeploy" class="anchor-heading" aria-labelledby="codedeploy"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CodeDeploy
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Put This Version Into Production</p>
+
+<p>Ajuda a distribuir novas versões de aplicações para ambientes de execução.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“A versão nova está pronta. Coloque-a nos servidores sem transformar isso num ritual.”</p>
+</blockquote>
+<h3 id="elastic-beanstalk">
+  
+  
+    <a href="#elastic-beanstalk" class="anchor-heading" aria-labelledby="elastic-beanstalk"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Elastic Beanstalk
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Please Deploy My App</p>
+
+<p>Você entrega sua aplicação. O serviço configura boa parte da infraestrutura necessária para executá-la.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Eu tenho uma aplicação. Não quero começar desenhando subnets.”</p>
+</blockquote>
+
+<p>Beanstalk tenta ajudar.</p>
+<h2 id="dados">
+  
+  
+    <a href="#dados" class="anchor-heading" aria-labelledby="dados"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Dados
+  
+  
+</h2>
+    
+
+<p>Quando você acumula dados suficientes, a AWS naturalmente oferece outra coleção inteira de serviços.</p>
+<h3 id="kinesis">
+  
+  
+    <a href="#kinesis" class="anchor-heading" aria-labelledby="kinesis"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Kinesis
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Firehose of Events</p>
+
+<p>Serve para receber grandes fluxos de dados continuamente.</p>
+
+<p>Telemetria. Eventos. Logs. Clicks. Sensores. Transações.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Tem uma quantidade enorme de dados chegando sem parar.”</p>
+</blockquote>
+
+<p>Kinesis.</p>
+<h3 id="redshift">
+  
+  
+    <a href="#redshift" class="anchor-heading" aria-labelledby="redshift"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Redshift
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Data Warehouse</p>
+
+<p>Serve para armazenar e consultar grandes volumes de dados analíticos.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Temos muitos dados e agora alguém quer um dashboard.”</p>
+</blockquote>
+
+<p>Redshift.</p>
+<h3 id="glue">
+  
+  
+    <a href="#glue" class="anchor-heading" aria-labelledby="glue"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Glue
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Data Plumbing</p>
+
+<p>Ajuda a descobrir, preparar, catalogar e transformar dados.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Os dados estão espalhados por todo lado e precisamos transformar isso em alguma coisa utilizável.”</p>
+</blockquote>
+
+<p>Glue.</p>
+
+<p>O nome, curiosamente, é um dos poucos que até faz sentido.</p>
+
+<p>É cola.</p>
+<h3 id="athena">
+  
+  
+    <a href="#athena" class="anchor-heading" aria-labelledby="athena"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Athena
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon SQL Over Files</p>
+
+<p>Você tem arquivos no S3 e quer executar SQL sobre eles.</p>
+
+<p>Athena.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Será que eu consigo consultar esse monte de CSV e Parquet sem subir um banco?”</p>
+</blockquote>
+
+<p>Sim.</p>
+<h2 id="backup-e-arquivos-que-você-talvez-nunca-mais-queira-ver">
+  
+  
+    <a href="#backup-e-arquivos-que-você-talvez-nunca-mais-queira-ver" class="anchor-heading" aria-labelledby="backup-e-arquivos-que-você-talvez-nunca-mais-queira-ver"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Backup e arquivos que você talvez nunca mais queira ver
+  
+  
+</h2>
+    
+<h3 id="glacier">
+  
+  
+    <a href="#glacier" class="anchor-heading" aria-labelledby="glacier"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Glacier
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Put This Somewhere Cheap</p>
+
+<p>Serve para arquivamento de longo prazo.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Preciso guardar isso durante anos, mas provavelmente ninguém vai abrir amanhã.”</p>
+</blockquote>
+
+<p>Perfeito para o arquivo:</p>
+
+<p><code class="language-plaintext highlighter-rouge">backup_final_final_agora-vai_2019.zip</code></p>
+<h2 id="redes-corporativas">
+  
+  
+    <a href="#redes-corporativas" class="anchor-heading" aria-labelledby="redes-corporativas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Redes corporativas
+  
+  
+</h2>
+    
+
+<p>Para empresas que ainda possuem datacenters, isto é, praticamente qualquer empresa suficientemente grande, existem serviços específicos.</p>
+<h3 id="direct-connect">
+  
+  
+    <a href="#direct-connect" class="anchor-heading" aria-labelledby="direct-connect"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Direct Connect
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Private Cable To AWS</p>
+
+<p>Cria conectividade dedicada entre sua infraestrutura e a AWS.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Não quero depender somente da internet pública para ligar meu datacenter à AWS.”</p>
+</blockquote>
+<h3 id="storage-gateway">
+  
+  
+    <a href="#storage-gateway" class="anchor-heading" aria-labelledby="storage-gateway"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Storage Gateway
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Cloud Storage Pretending To Be Local Storage</p>
+
+<p>Faz a ponte entre ambientes locais e armazenamento AWS.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Tenho sistemas antigos esperando encontrar armazenamento aqui, mas quero colocar os dados lá.”</p>
+</blockquote>
+<h3 id="workspaces">
+  
+  
+    <a href="#workspaces" class="anchor-heading" aria-labelledby="workspaces"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WorkSpaces
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Remote Desktop</p>
+
+<p>Desktop virtual hospedado na AWS.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Preciso entregar um computador corporativo para alguém sem entregar fisicamente um computador.”</p>
+</blockquote>
+<h2 id="segurança">
+  
+  
+    <a href="#segurança" class="anchor-heading" aria-labelledby="segurança"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Segurança
+  
+  
+</h2>
+    
+
+<p>Naturalmente, depois que você construiu tudo isso, surge outra pequena pergunta:</p>
+
+<blockquote>
+  <p>Está seguro?</p>
+</blockquote>
+
+<p>A AWS também vende algumas respostas.</p>
+<h3 id="waf">
+  
+  
+    <a href="#waf" class="anchor-heading" aria-labelledby="waf"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> WAF
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Web Request Bouncer</p>
+
+<p>Analisa requisições HTTP e pode bloquear padrões indesejados.</p>
+
+<p>Bots. Ataques. Tentativas repetidas. Requests suspeitas.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Antes dessa requisição chegar na minha aplicação, veja se parece uma péssima ideia.”</p>
+</blockquote>
+
+<p>WAF.</p>
+<h3 id="inspector">
+  
+  
+    <a href="#inspector" class="anchor-heading" aria-labelledby="inspector"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Inspector
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Security Inspector</p>
+
+<p>Aqui os responsáveis pelos nomes quase acertaram.</p>
+
+<p>Procura vulnerabilidades e problemas de segurança em workloads.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Dê uma olhada nisso e diga onde estou potencialmente encrencado.”</p>
+</blockquote>
+<h3 id="secrets-manager">
+  
+  
+    <a href="#secrets-manager" class="anchor-heading" aria-labelledby="secrets-manager"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Secrets Manager
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Please Don’t Put Passwords In Git</p>
+
+<p>Guarda senhas, tokens e outras credenciais.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Onde colocamos aquela senha que definitivamente não deveria estar no <code class="language-plaintext highlighter-rouge">.env.production</code> enviado por Slack?”</p>
+</blockquote>
+
+<p>Aqui.</p>
+<h2 id="e-finalmente-os-serviços-necessários-para-administrar-os-serviços">
+  
+  
+    <a href="#e-finalmente-os-serviços-necessários-para-administrar-os-serviços" class="anchor-heading" aria-labelledby="e-finalmente-os-serviços-necessários-para-administrar-os-serviços"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> E finalmente: os serviços necessários para administrar os serviços
+  
+  
+</h2>
+    
+
+<p>Essa talvez seja minha categoria favorita.</p>
+
+<p>A AWS ficou poderosa o suficiente para ser complexa.</p>
+
+<p>Depois criou serviços para ajudar você a administrar a complexidade dos serviços que ela própria criou.</p>
+
+<p>É quase uma categoria filosófica.</p>
+<h3 id="cloudwatch">
+  
+  
+    <a href="#cloudwatch" class="anchor-heading" aria-labelledby="cloudwatch"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CloudWatch
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Metrics, Logs and Alarms</p>
+
+<p>Você observa aplicações e infraestrutura.</p>
+
+<p>Métricas. Logs. Alarmes. Dashboards.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quero descobrir que alguma coisa quebrou antes do cliente me ligar.”</p>
+</blockquote>
+
+<p>CloudWatch.</p>
+<h3 id="cloudtrail">
+  
+  
+    <a href="#cloudtrail" class="anchor-heading" aria-labelledby="cloudtrail"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> CloudTrail
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon Who Did That?</p>
+
+<p>Registra atividades realizadas na sua conta AWS.</p>
+
+<p>Quem chamou determinada API? Quem mudou uma configuração? Quando?</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Quem mexeu nisso?”</p>
+</blockquote>
+
+<p>CloudTrail.</p>
+
+<p>Talvez um dos serviços mais úteis depois de alguém dizer:</p>
+
+<blockquote>
+  <p>“Eu não alterei nada.”</p>
+</blockquote>
+<h3 id="aws-config">
+  
+  
+    <a href="#aws-config" class="anchor-heading" aria-labelledby="aws-config"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> AWS Config
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon What Changed?</p>
+
+<p>Mantém histórico e avalia configurações dos seus recursos.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Ontem funcionava. O que mudou?”</p>
+</blockquote>
+<h3 id="trusted-advisor">
+  
+  
+    <a href="#trusted-advisor" class="anchor-heading" aria-labelledby="trusted-advisor"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Trusted Advisor
+  
+  
+</h3>
+    
+
+<p><strong>Deveria se chamar:</strong> Amazon You Are Wasting Money Here</p>
+
+<p>Analisa seu ambiente e oferece recomendações relacionadas a custo, desempenho, segurança e outros aspectos.</p>
+
+<p><strong>Em português claro:</strong></p>
+
+<blockquote>
+  <p>“Tem alguma coisa ligada que ninguém usa?”</p>
+</blockquote>
+
+<p>Frequentemente, sim.</p>
+<h2 id="o-verdadeiro-problema-não-são-os-nomes">
+  
+  
+    <a href="#o-verdadeiro-problema-não-são-os-nomes" class="anchor-heading" aria-labelledby="o-verdadeiro-problema-não-são-os-nomes"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O verdadeiro problema não são os nomes
+  
+  
+</h2>
+    
+
+<p>A piada funciona porque os nomes da AWS são peculiares.</p>
+
+<p>EC2. S3. SQS. SNS. ECS. EKS. SES. RDS. IAM. VPC.</p>
+
+<p>Você pode participar de uma reunião perfeitamente séria dizendo:</p>
+
+<blockquote>
+  <p>“Coloca o ALB na frente do ECS dentro da VPC, usa IAM para acessar S3, manda eventos pelo SNS para SQS e observa tudo no CloudWatch.”</p>
+</blockquote>
+
+<p>E ninguém chama a polícia.</p>
+
+<p>Depois de alguns anos, isso parece completamente normal.</p>
+
+<p>Mas existe um problema mais interessante por trás da piada.</p>
+
+<p><strong>Cloud computing criou uma abstração para praticamente cada problema operacional que encontramos.</strong></p>
+
+<p>Servidor virou serviço.</p>
+
+<p>Disco virou serviço.</p>
+
+<p>Fila virou serviço.</p>
+
+<p>DNS virou serviço.</p>
+
+<p>Banco virou serviço.</p>
+
+<p>Cache virou serviço.</p>
+
+<p>Load balancer virou serviço.</p>
+
+<p>Logs viraram serviço.</p>
+
+<p>Segredos viraram serviço.</p>
+
+<p>Eventos viraram serviço.</p>
+
+<p>Permissões viraram serviço.</p>
+
+<p>Até administrar os serviços virou serviço.</p>
+
+<p>Isso é extraordinariamente poderoso.</p>
+
+<p>E também explica por que arquiteturas cloud conseguem ficar extraordinariamente complicadas.</p>
+<h2 id="minha-regra-continua-sendo-a-mesma">
+  
+  
+    <a href="#minha-regra-continua-sendo-a-mesma" class="anchor-heading" aria-labelledby="minha-regra-continua-sendo-a-mesma"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Minha regra continua sendo a mesma
+  
+  
+</h2>
+    
+
+<p>Quando estou avaliando uma arquitetura AWS, tento ignorar os nomes dos produtos por alguns minutos.</p>
+
+<p>Em vez de perguntar:</p>
+
+<blockquote>
+  <p>“Vamos usar EventBridge, SNS ou SQS?”</p>
+</blockquote>
+
+<p>Primeiro pergunto:</p>
+
+<blockquote>
+  <p>“Qual problema estamos tentando resolver?”</p>
+</blockquote>
+
+<p>Precisamos de uma fila?</p>
+
+<p>Precisamos publicar um evento?</p>
+
+<p>Precisamos que vários consumidores sejam avisados?</p>
+
+<p>Precisamos desacoplar dois sistemas?</p>
+
+<p>Precisamos executar alguma coisa depois?</p>
+
+<p>Só então volto aos nomes dos serviços.</p>
+
+<p>Porque arquitetura deveria começar pelo problema.</p>
+
+<p>Não pelo catálogo do fornecedor.</p>
+
+<p>Talvez essa seja a versão mais útil de <strong>Amazon Web Services in Plain English</strong>:</p>
+
+<p><strong>EC2 é um servidor.</strong></p>
+
+<p><strong>S3 guarda arquivos.</strong></p>
+
+<p><strong>RDS é banco de dados.</strong></p>
+
+<p><strong>SQS é uma fila.</strong></p>
+
+<p><strong>SNS distribui mensagens.</strong></p>
+
+<p><strong>Lambda executa funções.</strong></p>
+
+<p><strong>CloudFront é CDN.</strong></p>
+
+<p><strong>Route 53 é DNS.</strong></p>
+
+<p><strong>IAM controla quem pode fazer o quê.</strong></p>
+
+<p><strong>CloudWatch ajuda a descobrir o que está acontecendo.</strong></p>
+
+<p>E AWS?</p>
+
+<p>Bem.</p>
+
+<p>AWS deveria talvez ter sido chamada simplesmente de:</p>
+
+<p><strong>Amazon Datacenter as an API.</strong></p>
+
+<p>Mas provavelmente alguém do marketing teria achado simples demais.</p>
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Famazon-web-services-in-plain-english%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Famazon-web-services-in-plain-english%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+
+<section class="ask-my-texts" data-ask-my-texts aria-labelledby="ask-my-texts-post-title"><header class="ask-my-texts-header">
+<h2 id="ask-my-texts-post-title">
+  
+  
+    <a href="#ask-my-texts-post-title" class="anchor-heading" aria-labelledby="ask-my-texts-post-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pergunte aos meus textos
+  
+  
+</h2>
+    
+    <p>
+      Faça uma pergunta. O ChatGPT usará os textos publicados neste site como
+      referência para responder.
+    </p>
+  </header>
+
+  <form
+    class="ask-my-texts-form"
+    action="https://chatgpt.com/"
+    method="get"
+    target="_blank"
+    data-ask-my-texts-form
+  >
+    <label for="ask-my-texts-post-question">Sua pergunta</label>
+    <textarea
+      id="ask-my-texts-post-question"
+      name="q"
+      rows="4"
+      placeholder="O que você pensa sobre software agêntico?"
+      required
+      data-ask-my-texts-question
+    ></textarea>
+
+    <div class="ask-my-texts-actions">
+      <button class="btn btn-primary" type="submit" data-ask-my-texts-submit>
+        Perguntar no ChatGPT
+      </button>
+    </div>
+  </form>
+
+  <p class="ask-my-texts-feedback" data-ask-my-texts-feedback aria-live="polite" hidden></p>
+
+  <div class="ask-my-texts-fallback" data-ask-my-texts-fallback hidden>
+    <label for="ask-my-texts-post-prompt">Prompt completo para cópia manual</label>
+    <textarea
+      id="ask-my-texts-post-prompt"
+      rows="10"
+      readonly
+      data-ask-my-texts-prompt
+    ></textarea>
+  </div>
+
+  <p class="ask-my-texts-privacy">
+    Sua pergunta não é enviada para este site. O texto é preparado localmente no
+    navegador e a conversa acontece no ChatGPT.
+  </p>
+
+  <noscript>
+    <p class="ask-my-texts-noscript">
+      Com JavaScript desabilitado, a pergunta será aberta diretamente no ChatGPT
+      sem o contexto preparado.
+    </p>
+  </noscript>
+</section>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#aws" rel="tag">AWS</a>, 
+    
+    <a href="/posts/tags/#cloud" rel="tag">Cloud</a>, 
+    
+    <a href="/posts/tags/#infraestrutura" rel="tag">Infraestrutura</a>, 
+    
+    <a href="/posts/tags/#arquitetura-de-software" rel="tag">Arquitetura de software</a>, 
+    
+    <a href="/posts/tags/#computação-em-nuvem" rel="tag">Computação em nuvem</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/disponibilidade-modelo-tambem-tem-preco/">Qualidade, latência e disponibilidade têm preço nos modelos de IA</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/email-marvin-gerencio-infraestrutura-2026/">O e-mail do Marvin e como gerencio minha infraestrutura em 2026</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/whisper-cpp-api-local-transcricao-compativel/">Whisper.cpp local: uma API de transcrição sem depender da nuvem</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/artigos/litellm-gateway-modelos-locais-cloud/">Um endpoint para modelos locais e cloud: por que usei LiteLLM como gateway</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é meu arquivo editorial. Escrevo, reviso e respondo pelo que publico. Para organizar o material e manter o site, uso Obsidian, Jekyll, bibliotecas de software e, quando faz sentido, ferramentas de IA em tarefas como pesquisa, estruturação, revisão e automação.
+</p>
+<p class="text-small mb-0">
+  <a href="/contact/">Contato</a> ·
+  <a href="/privacy/">Privacidade</a>
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/posts/amazon-web-services-in-plain-english/" rel="canonical">https://www.gpupo.com/posts/amazon-web-services-in-plain-english/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

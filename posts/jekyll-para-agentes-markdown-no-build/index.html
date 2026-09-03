@@ -1,0 +1,3712 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Jekyll para agentes: Markdown no build, sem transformar o blog em aplicação | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Jekyll para agentes: Markdown no build, sem transformar o blog em aplicação" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Uma auditoria de agent readiness levou a corrigir acesso e redirects e a gerar representações Markdown no build, sem adicionar API, backend ou negociação de conteúdo ao blog." />
+<meta property="og:description" content="Uma auditoria de agent readiness levou a corrigir acesso e redirects e a gerar representações Markdown no build, sem adicionar API, backend ou negociação de conteúdo ao blog." />
+<link rel="canonical" href="https://www.gpupo.com/posts/jekyll-para-agentes-markdown-no-build/" />
+<meta property="og:url" content="https://www.gpupo.com/posts/jekyll-para-agentes-markdown-no-build/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta property="og:image:alt" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-26T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta name="twitter:image:alt" content="Gilmar Pupo" />
+<meta property="twitter:title" content="Jekyll para agentes: Markdown no build, sem transformar o blog em aplicação" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-08-26T00:00:00-03:00","datePublished":"2026-08-26T00:00:00-03:00","description":"Uma auditoria de agent readiness levou a corrigir acesso e redirects e a gerar representações Markdown no build, sem adicionar API, backend ou negociação de conteúdo ao blog.","headline":"Jekyll para agentes: Markdown no build, sem transformar o blog em aplicação","image":{"alt":"Gilmar Pupo","url":"https://www.gpupo.com/android-chrome-512x512.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/posts/jekyll-para-agentes-markdown-no-build/"},"url":"https://www.gpupo.com/posts/jekyll-para-agentes-markdown-no-build/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+
+<link rel="alternate" type="text/markdown" href="/posts/jekyll-para-agentes-markdown-no-build/index.md">
+
+
+
+<meta name="gpupo:editorial" content="tecnologia">
+
+
+<meta name="gpupo:content_type" content="article">
+
+
+
+<meta property="article:section" content="tecnologia">
+
+
+
+
+
+<script src="/assets/js/ask-my-texts.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.gpupo.com/#person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/about/",
+  "description": "Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.",
+  "image": "https://www.gpupo.com/assets/profile.jpeg",
+  "sameAs": ["https://github.com/gpupo","https://www.linkedin.com/in/gpupo/","https://mastodon.social/@gpupo","https://www.threads.com/@g1mar","https://bsky.app/profile/g1mar.bsky.social"]
+}
+</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight"><span aria-hidden="true">gil://</span><span class="sr-only">Gilmar Pupo</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Posts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/posts/" class="nav-list-link">Posts</a><ul class="nav-list"><li class="nav-list-item"><a href="/posts/tags/" class="nav-list-link">Tags</a></li></ul></li><li class="nav-list-item"><a href="/notas/" class="nav-list-link">Notas</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Outros escritos submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/outros-escritos/" class="nav-list-link">Outros escritos</a><ul class="nav-list"><li class="nav-list-item"><a href="/musica/" class="nav-list-link">Música</a></li><li class="nav-list-item"><a href="/ficcao/" class="nav-list-link">Ficção</a></li></ul></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    Jekyll para agentes: Markdown no build, sem transformar o blog em aplicação
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-08-26T00:00:00-03:00" itemprop="datePublished">
+        26/08/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fjekyll-para-agentes-markdown-no-build%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fjekyll-para-agentes-markdown-no-build%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Uma auditoria de agent readiness levou a corrigir acesso e redirects e a gerar representações Markdown no build, sem adicionar API, backend ou negociação de conteúdo ao blog.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#a-primeira-falha-estava-antes-do-jekyll">A primeira falha estava antes do Jekyll</a></li><li><a href="#o-redirect-descartava-o-caminho">O redirect descartava o caminho</a></li><li><a href="#robots-e-sitemap-já-resolviam-parte-da-descoberta">Robots e sitemap já resolviam parte da descoberta</a></li><li><a href="#a-auditoria-pediu-negociação-de-conteúdo">A auditoria pediu negociação de conteúdo</a></li><li><a href="#o-markdown-publicado-não-é-uma-cópia-do-arquivo-fonte">O Markdown publicado não é uma cópia do arquivo-fonte</a></li><li><a href="#o-html-anuncia-a-alternativa">O HTML anuncia a alternativa</a></li><li><a href="#a-convenção-chegou-às-páginas">A convenção chegou às páginas</a></li><li><a href="#o-build-verifica-os-dois-lados">O build verifica os dois lados</a></li><li><a href="#a-nota-chegou-a-80">A nota chegou a 80</a></li><li><a href="#accept-textmarkdown-continua-sem-implementação">Accept: text/markdown continua sem implementação</a></li><li><a href="#agent-readiness-não-transforma-todo-produto-em-api">Agent readiness não transforma todo produto em API</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body" itemprop="articleBody">
+    <p>Em agosto de 2026, olhei para o <code class="language-plaintext highlighter-rouge">gpupo.com</code> como uma fonte que agentes de IA
+precisam conseguir descobrir, acessar e interpretar.</p>
+
+<p>O ponto de partida foi uma auditoria automatizada de <em>agent readiness</em>. A
+primeira nota foi:</p>
+
+<p><strong>2/100.</strong></p>
+
+<p>A ferramenta sugeria OpenAPI, respostas JSON, negociação de conteúdo,
+documentação para desenvolvedores e outras capacidades comuns em produtos com
+API. Meu site, porém, é um blog em Jekyll publicado como arquivos estáticos no
+GitHub Pages. A própria <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll">documentação do GitHub descreve o Jekyll como um
+gerador de sites estáticos</a>.</p>
+
+<p>O score não é um padrão universal de qualidade. Este relato também não registra
+uma rubrica que permita comparar a nota com outros sites. Uso os números apenas
+para comparar execuções da mesma auditoria durante o trabalho.</p>
+
+<p>A pergunta útil não era como chegar a 100. Era quais falhas impediam o acesso
+ao conteúdo e quais sugestões apenas empurrariam o blog para uma arquitetura de
+que ele não precisava.</p>
+<h2 id="a-primeira-falha-estava-antes-do-jekyll">
+  
+  
+    <a href="#a-primeira-falha-estava-antes-do-jekyll" class="anchor-heading" aria-labelledby="a-primeira-falha-estava-antes-do-jekyll"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A primeira falha estava antes do Jekyll
+  
+  
+</h2>
+    
+
+<p>A auditoria dizia que a página inicial não funcionava sem JavaScript e que
+vários agentes estavam bloqueados. Isso não combinava com a arquitetura: o HTML
+já nasce no build e chega pronto ao navegador.</p>
+
+<p>O bloqueio estava no Cloudflare. Eu mantinha uma regra de segurança que impedia
+acessos internacionais. Para visitantes brasileiros, o site funcionava. Para a
+auditoria executada fora do Brasil, o caminho terminava num challenge antes do
+conteúdo:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>agente
+  ↓
+Cloudflare
+  ↓
+challenge
+  ✕
+site
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A ferramenta não recebia o HTML e interpretava o resultado como falta de
+conteúdo utilizável.</p>
+
+<p>Removi o bloqueio e executei a mesma auditoria outra vez. A nota passou de:</p>
+
+<p><strong>2 → 55</strong></p>
+
+<p>Nenhuma linha do Jekyll havia mudado. A primeira melhoria de <em>agent readiness</em>
+foi tornar o conteúdo alcançável para o consumidor que tentava avaliá-lo.</p>
+
+<p>Isso também expôs uma limitação do score: a nota inicial misturava
+acessibilidade de rede e organização do conteúdo numa única medida.</p>
+<h2 id="o-redirect-descartava-o-caminho">
+  
+  
+    <a href="#o-redirect-descartava-o-caminho" class="anchor-heading" aria-labelledby="o-redirect-descartava-o-caminho"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O redirect descartava o caminho
+  
+  
+</h2>
+    
+
+<p>O domínio canônico é:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>https://www.gpupo.com
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O domínio sem <code class="language-plaintext highlighter-rouge">www</code> existe para redirecionar até ele. A regra anterior se
+comportava assim:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>gpupo.com/*
+→
+https://www.gpupo.com
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Ela capturava o caminho original, mas não o reutilizava no destino. Por isso:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>https://gpupo.com/posts/algum-artigo/
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>terminava em:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>https://www.gpupo.com/
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Uma URL inexistente também acabava na página inicial com HTTP <code class="language-plaintext highlighter-rouge">200</code>. Isso
+impedia o consumidor de distinguir um artigo movido de um recurso inexistente.</p>
+
+<p>A <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes">documentação do Google sobre mudanças de
+URL</a>
+alerta que redirecionar muitas URLs para uma página irrelevante, como a home,
+pode ser tratado como <em>soft 404</em>. O problema não era exclusivo de agentes; o
+comportamento HTTP estava errado para qualquer cliente.</p>
+
+<p>Corrigi a regra para preservar caminho e query string:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>https://gpupo.com/posts/foo/
+→
+https://www.gpupo.com/posts/foo/
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Agora um caminho inexistente continua inexistente no domínio canônico e recebe
+HTTP <code class="language-plaintext highlighter-rouge">404</code>.</p>
+<h2 id="robots-e-sitemap-já-resolviam-parte-da-descoberta">
+  
+  
+    <a href="#robots-e-sitemap-já-resolviam-parte-da-descoberta" class="anchor-heading" aria-labelledby="robots-e-sitemap-já-resolviam-parte-da-descoberta"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Robots e sitemap já resolviam parte da descoberta
+  
+  
+</h2>
+    
+
+<p>O <code class="language-plaintext highlighter-rouge">robots.txt</code> já permitia acesso geral e apontava para o sitemap:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>User-agent: *
+Allow: /
+
+Sitemap: https://www.gpupo.com/sitemap.xml
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O sitemap também já existia. Não precisei criar uma camada paralela de
+descoberta para descartar mecanismos que a web já oferece.</p>
+
+<p>Minha interpretação é que buscadores e agentes compartilham parte das mesmas
+necessidades num site editorial:</p>
+
+<ul>
+  <li>URLs estáveis;</li>
+  <li>redirects que preservam o recurso;</li>
+  <li>status HTTP coerentes;</li>
+  <li>conteúdo acessível sem execução obrigatória de JavaScript;</li>
+  <li>sitemap, feed e metadados;</li>
+  <li>uma URL canônica identificável.</li>
+</ul>
+
+<p>Isso não torna SEO e acesso por agentes equivalentes. Apenas evita reconstruir
+como novidade uma infraestrutura de descoberta que já funciona.</p>
+<h2 id="a-auditoria-pediu-negociação-de-conteúdo">
+  
+  
+    <a href="#a-auditoria-pediu-negociação-de-conteúdo" class="anchor-heading" aria-labelledby="a-auditoria-pediu-negociação-de-conteúdo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A auditoria pediu negociação de conteúdo
+  
+  
+</h2>
+    
+
+<p>Um dos checks esperava esta requisição:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="err">GET /posts/meu-artigo/
+Accept: text/markdown
+</span></pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O cabeçalho <code class="language-plaintext highlighter-rouge">Accept</code> permite que um cliente informe quais tipos de mídia prefere
+receber. Esse mecanismo faz parte da negociação de conteúdo definida pela <a href="https://www.rfc-editor.org/rfc/rfc9110.html#section-12.5.1">RFC
+9110</a>.</p>
+
+<p>Para atender ao check na mesma URL, eu precisaria colocar uma camada capaz de
+inspecionar a requisição e escolher entre HTML e Markdown:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>cliente
+  ↓
+proxy ou worker
+  ↓
+GitHub Pages
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Não queria introduzir runtime apenas para satisfazer a auditoria. Escolhi gerar
+uma representação Markdown dedicada durante o build.</p>
+
+<p>O HTML continua canônico:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/posts/meu-artigo/
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>e o mesmo build também publica:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/posts/meu-artigo/index.md
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A estrutura resultante é estática:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>/posts/foo/
+    ├── index.html
+    └── index.md
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Uma única fonte editorial gera as duas representações. Não existe um
+<code class="language-plaintext highlighter-rouge">artigo-para-agentes.md</code> mantido manualmente ao lado do artigo original.</p>
+<h2 id="o-markdown-publicado-não-é-uma-cópia-do-arquivo-fonte">
+  
+  
+    <a href="#o-markdown-publicado-não-é-uma-cópia-do-arquivo-fonte" class="anchor-heading" aria-labelledby="o-markdown-publicado-não-é-uma-cópia-do-arquivo-fonte"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O Markdown publicado não é uma cópia do arquivo-fonte
+  
+  
+</h2>
+    
+
+<p>O arquivo usado pelo Jekyll contém detalhes do processo editorial, como front
+matter, comentários internos e expressões Liquid. Eles não deveriam aparecer
+sem tratamento na representação pública.</p>
+
+<p>O plugin executado no build captura o conteúdo, resolve Liquid, remove
+comentários internos e acrescenta metadados públicos. O resultado segue esta
+forma:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="gh"># Título do artigo</span>
+
+Published: 2026-08-26
+Author: Gilmar Pupo
+Canonical: https://www.gpupo.com/posts/exemplo/
+Tags: Jekyll, Agentes de IA
+<span class="p">
+---
+</span>
+Conteúdo...
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Campos internos como <code class="language-plaintext highlighter-rouge">layout</code>, <code class="language-plaintext highlighter-rouge">published</code> e <code class="language-plaintext highlighter-rouge">permalink</code> não são copiados. O
+HTML continua sendo a URL para citação, compartilhamento e indexação; o Markdown
+é uma representação alternativa para leitura.</p>
+
+<p>Essa separação mantém explícitos dois contratos:</p>
+
+<ul>
+  <li>o arquivo-fonte pertence ao processo editorial;</li>
+  <li>o <code class="language-plaintext highlighter-rouge">index.md</code> pertence ao produto publicado.</li>
+</ul>
+<h2 id="o-html-anuncia-a-alternativa">
+  
+  
+    <a href="#o-html-anuncia-a-alternativa" class="anchor-heading" aria-labelledby="o-html-anuncia-a-alternativa"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O HTML anuncia a alternativa
+  
+  
+</h2>
+    
+
+<p>Nas páginas que possuem representação Markdown, o <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> inclui:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;link</span>
+  <span class="na">rel=</span><span class="s">"alternate"</span>
+  <span class="na">type=</span><span class="s">"text/markdown"</span>
+  <span class="na">href=</span><span class="s">"/posts/foo/index.md"</span><span class="nt">&gt;</span>
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O cliente não precisa adivinhar a convenção apenas pelo nome do arquivo. O HTML
+aponta para a representação alternativa e preserva seu próprio <code class="language-plaintext highlighter-rouge">canonical</code>.</p>
+
+<p>Também publiquei:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>https://www.gpupo.com/llms.txt
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Uso esse arquivo como uma porta de entrada editorial. Ele apresenta autoria,
+escopo, áreas principais, sitemap, feed e a convenção HTML/Markdown. Também diz
+explicitamente que o site não oferece API pública, OAuth, MCP ou webhooks.</p>
+
+<p>Não trato o <code class="language-plaintext highlighter-rouge">llms.txt</code> como substituto de <code class="language-plaintext highlighter-rouge">robots.txt</code>, sitemap, feed ou HTML.
+Ele documenta como consumir este site específico.</p>
+<h2 id="a-convenção-chegou-às-páginas">
+  
+  
+    <a href="#a-convenção-chegou-às-páginas" class="anchor-heading" aria-labelledby="a-convenção-chegou-às-páginas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A convenção chegou às páginas
+  
+  
+</h2>
+    
+
+<p>Depois dos artigos, estendi a geração a páginas editoriais selecionadas. O
+resultado segue uma transformação previsível:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>/                    → HTML
+/index.md            → Markdown
+
+/about/              → HTML
+/about/index.md      → Markdown
+
+/posts/foo/          → HTML
+/posts/foo/index.md  → Markdown
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A previsibilidade reduz a descoberta a uma regra de caminho. Ela também evita
+exceções diferentes para a home, páginas institucionais e posts.</p>
+<h2 id="o-build-verifica-os-dois-lados">
+  
+  
+    <a href="#o-build-verifica-os-dois-lados" class="anchor-heading" aria-labelledby="o-build-verifica-os-dois-lados"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O build verifica os dois lados
+  
+  
+</h2>
+    
+
+<p>A implementação ganhou uma validação própria. Depois de gerar o site, o teste
+confere, entre outros pontos:</p>
+
+<ul>
+  <li>se cada post publicado possui uma representação Markdown;</li>
+  <li>se o <code class="language-plaintext highlighter-rouge">rel="alternate"</code> aponta para um arquivo existente;</li>
+  <li>se o HTML preserva exatamente um <code class="language-plaintext highlighter-rouge">canonical</code>;</li>
+  <li>se front matter e Liquid não resolvido não vazaram para o documento público;</li>
+  <li>se rascunhos, posts futuros e conteúdos excluídos não foram publicados;</li>
+  <li>se URLs HTML e Markdown existentes respondem no teste local;</li>
+  <li>se caminhos inexistentes continuam retornando <code class="language-plaintext highlighter-rouge">404</code>.</li>
+</ul>
+
+<p>Esses testes não demonstram que todo agente interpretará corretamente o
+conteúdo. Eles verificam propriedades sob controle do build: existência,
+ligação entre representações, isolamento editorial e comportamento básico das
+rotas.</p>
+<h2 id="a-nota-chegou-a-80">
+  
+  
+    <a href="#a-nota-chegou-a-80" class="anchor-heading" aria-labelledby="a-nota-chegou-a-80"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A nota chegou a 80
+  
+  
+</h2>
+    
+
+<p>Depois das mudanças, a mesma auditoria atribuiu:</p>
+
+<p><strong>80/100.</strong></p>
+
+<p>Os números intermediários ficaram assim:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>2  → acesso bloqueado antes do conteúdo
+55 → acesso liberado
+80 → redirects, descoberta e Markdown estático revisados
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Essa leitura é uma interpretação do processo, não a decomposição oficial do
+algoritmo da ferramenta.</p>
+
+<p>Alguns problemas indicados pela auditoria eram materiais para o blog:</p>
+
+<ul>
+  <li>agentes não conseguiam chegar ao site;</li>
+  <li>redirects descartavam o caminho;</li>
+  <li>recursos inexistentes acabavam na home;</li>
+  <li>não havia uma representação Markdown explícita;</li>
+  <li>a descoberta específica para agentes era limitada.</li>
+</ul>
+
+<p>Outros checks pertenciam a outro tipo de produto:</p>
+
+<ul>
+  <li>OpenAPI;</li>
+  <li>OAuth;</li>
+  <li>MCP;</li>
+  <li>webhooks;</li>
+  <li>documentação de API;</li>
+  <li>recursos para desenvolvedores integrarem um serviço.</li>
+</ul>
+
+<p>O blog não oferece uma API pública. Criar um <code class="language-plaintext highlighter-rouge">/openapi.json</code> sem operações úteis
+melhoraria a presença de um artefato esperado pelo check, mas não a capacidade
+de ler os artigos.</p>
+<h2 id="accept-textmarkdown-continua-sem-implementação">
+  
+  
+    <a href="#accept-textmarkdown-continua-sem-implementação" class="anchor-heading" aria-labelledby="accept-textmarkdown-continua-sem-implementação"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <code class="language-plaintext highlighter-rouge">Accept: text/markdown</code> continua sem implementação
+  
+  
+</h2>
+    
+
+<p>A URL canônica ainda devolve HTML, independentemente deste cabeçalho:</p>
+
+<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="err">Accept: text/markdown
+</span></pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O Markdown fica numa URL estática própria. Essa foi uma decisão consciente.</p>
+
+<p>Se a mesma URL selecionasse a representação com base em <code class="language-plaintext highlighter-rouge">Accept</code>, eu também
+precisaria tratar o cache como parte do contrato. A <a href="https://www.rfc-editor.org/rfc/rfc9110.html#section-12.5.5">seção sobre
+<code class="language-plaintext highlighter-rouge">Vary</code></a> da RFC 9110
+explica como esse cabeçalho informa quais campos da requisição influenciaram a
+resposta e amplia a chave usada para reutilização em caches.</p>
+
+<p>É possível implementar essa negociação num proxy ou worker. No estado atual,
+o custo seria uma nova camada operacional para oferecer algo que as URLs
+dedicadas já resolvem de maneira suficiente para o meu caso.</p>
+
+<p>O check correspondente continua falhando. A limitação está documentada em vez
+de escondida por uma implementação parcial.</p>
+<h2 id="agent-readiness-não-transforma-todo-produto-em-api">
+  
+  
+    <a href="#agent-readiness-não-transforma-todo-produto-em-api" class="anchor-heading" aria-labelledby="agent-readiness-não-transforma-todo-produto-em-api"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Agent readiness não transforma todo produto em API
+  
+  
+</h2>
+    
+
+<p>Para uma aplicação bancária ou um SaaS com integrações, API, OAuth, MCP e
+webhooks podem fazer parte do problema real. Para este site editorial, minha
+necessidade ficou mais estreita:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>descobrir
+   ↓
+acessar
+   ↓
+ler
+   ↓
+navegar
+   ↓
+citar
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A arquitetura permanece:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>Jekyll
+  ↓
+build
+  ↓
+arquivos estáticos
+  ↓
+GitHub Pages
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Sem banco, backend ou API criada para aumentar o score.</p>
+
+<p>A mudança estrutural cabe no build:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>uma fonte editorial
+       │
+       ├── HTML canônico
+       └── Markdown alternativo
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>A auditoria foi de 2 para 80, mas o critério de decisão não foi maximizar a
+nota. Corrigi as falhas que impediam acesso e descoberta, mantive explícito o
+que o site não oferece e recusei infraestrutura que não correspondia ao produto.</p>
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fjekyll-para-agentes-markdown-no-build%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fjekyll-para-agentes-markdown-no-build%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+
+<section class="ask-my-texts" data-ask-my-texts aria-labelledby="ask-my-texts-post-title"><header class="ask-my-texts-header">
+<h2 id="ask-my-texts-post-title">
+  
+  
+    <a href="#ask-my-texts-post-title" class="anchor-heading" aria-labelledby="ask-my-texts-post-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pergunte aos meus textos
+  
+  
+</h2>
+    
+    <p>
+      Faça uma pergunta. O ChatGPT usará os textos publicados neste site como
+      referência para responder.
+    </p>
+  </header>
+
+  <form
+    class="ask-my-texts-form"
+    action="https://chatgpt.com/"
+    method="get"
+    target="_blank"
+    data-ask-my-texts-form
+  >
+    <label for="ask-my-texts-post-question">Sua pergunta</label>
+    <textarea
+      id="ask-my-texts-post-question"
+      name="q"
+      rows="4"
+      placeholder="O que você pensa sobre software agêntico?"
+      required
+      data-ask-my-texts-question
+    ></textarea>
+
+    <div class="ask-my-texts-actions">
+      <button class="btn btn-primary" type="submit" data-ask-my-texts-submit>
+        Perguntar no ChatGPT
+      </button>
+    </div>
+  </form>
+
+  <p class="ask-my-texts-feedback" data-ask-my-texts-feedback aria-live="polite" hidden></p>
+
+  <div class="ask-my-texts-fallback" data-ask-my-texts-fallback hidden>
+    <label for="ask-my-texts-post-prompt">Prompt completo para cópia manual</label>
+    <textarea
+      id="ask-my-texts-post-prompt"
+      rows="10"
+      readonly
+      data-ask-my-texts-prompt
+    ></textarea>
+  </div>
+
+  <p class="ask-my-texts-privacy">
+    Sua pergunta não é enviada para este site. O texto é preparado localmente no
+    navegador e a conversa acontece no ChatGPT.
+  </p>
+
+  <noscript>
+    <p class="ask-my-texts-noscript">
+      Com JavaScript desabilitado, a pergunta será aberta diretamente no ChatGPT
+      sem o contexto preparado.
+    </p>
+  </noscript>
+</section>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#jekyll" rel="tag">Jekyll</a>, 
+    
+    <a href="/posts/tags/#agentes-de-ia" rel="tag">Agentes de IA</a>, 
+    
+    <a href="/posts/tags/#markdown" rel="tag">Markdown</a>, 
+    
+    <a href="/posts/tags/#github-pages" rel="tag">GitHub Pages</a>, 
+    
+    <a href="/posts/tags/#cloudflare" rel="tag">Cloudflare</a>, 
+    
+    <a href="/posts/tags/#arquitetura-web" rel="tag">Arquitetura web</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/pergunte-aos-meus-textos-usando-o-site-inteiro-como-contexto-para-o-chatgpt/">Pergunte aos meus textos: usando o site inteiro como contexto para o ChatGPT</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/depois-do-tldr-ia-ajuda-a-compartilhar-o-post/">ChatGPT e Claude no fim do post: sugestões para compartilhar o artigo</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/bookmarklet-tldr-chatgpt/">Um favorito para pedir o TL;DR de qualquer página ao ChatGPT</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+          
+          
+            <li><a href="/posts/talvez-a-interface-nao-precise-mais-perguntar-tudo/">Talvez a interface não precise mais perguntar tudo</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é meu arquivo editorial. Escrevo, reviso e respondo pelo que publico. Para organizar o material e manter o site, uso Obsidian, Jekyll, bibliotecas de software e, quando faz sentido, ferramentas de IA em tarefas como pesquisa, estruturação, revisão e automação.
+</p>
+<p class="text-small mb-0">
+  <a href="/contact/">Contato</a> ·
+  <a href="/privacy/">Privacidade</a>
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/posts/jekyll-para-agentes-markdown-no-build/" rel="canonical">https://www.gpupo.com/posts/jekyll-para-agentes-markdown-no-build/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

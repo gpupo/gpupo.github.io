@@ -1,0 +1,3758 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Como transformei vídeos e podcasts em uma biblioteca pessoal de pesquisa | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Como transformei vídeos e podcasts em uma biblioteca pessoal de pesquisa" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Como uso IA local para transformar vídeos e podcasts em transcrições, referências e artefatos pesquisáveis." />
+<meta property="og:description" content="Como uso IA local para transformar vídeos e podcasts em transcrições, referências e artefatos pesquisáveis." />
+<link rel="canonical" href="https://www.gpupo.com/artigos/biblioteca-pessoal-videos-podcasts/" />
+<meta property="og:url" content="https://www.gpupo.com/artigos/biblioteca-pessoal-videos-podcasts/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta property="og:image:alt" content="Gilmar Pupo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-08-06T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/android-chrome-512x512.png" />
+<meta name="twitter:image:alt" content="Gilmar Pupo" />
+<meta property="twitter:title" content="Como transformei vídeos e podcasts em uma biblioteca pessoal de pesquisa" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-08-06T00:00:00-03:00","datePublished":"2026-08-06T00:00:00-03:00","description":"Como uso IA local para transformar vídeos e podcasts em transcrições, referências e artefatos pesquisáveis.","headline":"Como transformei vídeos e podcasts em uma biblioteca pessoal de pesquisa","image":{"alt":"Gilmar Pupo","url":"https://www.gpupo.com/android-chrome-512x512.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/artigos/biblioteca-pessoal-videos-podcasts/"},"url":"https://www.gpupo.com/artigos/biblioteca-pessoal-videos-podcasts/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+
+<link rel="alternate" type="text/markdown" href="/artigos/biblioteca-pessoal-videos-podcasts/index.md">
+
+
+
+<meta name="gpupo:editorial" content="tecnologia">
+
+
+<meta name="gpupo:content_type" content="article">
+
+
+
+<meta property="article:section" content="tecnologia">
+
+
+
+
+
+<script src="/assets/js/ask-my-texts.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.gpupo.com/#person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/about/",
+  "description": "Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.",
+  "image": "https://www.gpupo.com/assets/profile.jpeg",
+  "sameAs": ["https://github.com/gpupo","https://www.linkedin.com/in/gpupo/","https://mastodon.social/@gpupo","https://www.threads.com/@g1mar","https://bsky.app/profile/g1mar.bsky.social"]
+}
+</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight"><span aria-hidden="true">gil://</span><span class="sr-only">Gilmar Pupo</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Posts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/posts/" class="nav-list-link">Posts</a><ul class="nav-list"><li class="nav-list-item"><a href="/posts/tags/" class="nav-list-link">Tags</a></li></ul></li><li class="nav-list-item"><a href="/notas/" class="nav-list-link">Notas</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Outros escritos submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/outros-escritos/" class="nav-list-link">Outros escritos</a><ul class="nav-list"><li class="nav-list-item"><a href="/musica/" class="nav-list-link">Música</a></li><li class="nav-list-item"><a href="/ficcao/" class="nav-list-link">Ficção</a></li></ul></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    Como transformei vídeos e podcasts em uma biblioteca pessoal de pesquisa
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-08-06T00:00:00-03:00" itemprop="datePublished">
+        06/08/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fbiblioteca-pessoal-videos-podcasts%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fbiblioteca-pessoal-videos-podcasts%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Como uso IA local para transformar vídeos e podcasts em transcrições, referências e artefatos pesquisáveis.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#o-problema-estava-na-recuperação">O problema estava na recuperação</a></li><li><a href="#o-pipeline-de-ingestão">O pipeline de ingestão</a></li><li><a href="#a-transcrição-é-o-primeiro-artefato-não-o-último">A transcrição é o primeiro artefato, não o último</a></li><li><a href="#ia-local-como-parte-da-arquitetura">IA local como parte da arquitetura</a></li><li><a href="#a-interface-virou-uma-ferramenta-de-triagem">A interface virou uma ferramenta de triagem</a><ul><li><a href="#avaliação-por-estrelas">Avaliação por estrelas</a></li><li><a href="#coleções-temáticas">Coleções temáticas</a></li><li><a href="#busca-na-transcrição">Busca na transcrição</a></li></ul></li><li><a href="#a-ficha-bibliográfica-encurta-o-caminho-até-as-notas">A ficha bibliográfica encurta o caminho até as notas</a></li><li><a href="#o-que-fica-em-cada-camada">O que fica em cada camada</a></li><li><a href="#assíncrono-desde-o-começo">Assíncrono desde o começo</a></li><li><a href="#observabilidade-e-publicação">Observabilidade e publicação</a></li><li><a href="#limites-que-considero-parte-do-produto">Limites que considero parte do produto</a></li><li><a href="#o-que-mudou-no-meu-processo">O que mudou no meu processo</a></li><li><a href="#próximas-medições">Próximas medições</a></li><li><a href="#conclusão">Conclusão</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body" itemprop="articleBody">
+    <p>Durante muito tempo, eu salvava vídeos e podcasts interessantes para assistir depois. Quando finalmente assistia a algum deles, o problema apenas mudava de lugar: alguns dias mais tarde eu lembrava da ideia, mas não lembrava em qual conteúdo ela aparecia, em que trecho era discutida ou como se relacionava com o que eu já estava estudando.</p>
+
+<p>O link guardado não registrava esse contexto. Ele só apontava para uma coisa que eu pretendia consumir.</p>
+
+<p>Foi dessa frustração que nasceu o <code class="language-plaintext highlighter-rouge">video-data-product</code>, um projeto para transformar vídeos do YouTube e episódios de podcast em uma biblioteca pessoal de pesquisa. No início, ele baixava metadados e transcrições. Com o uso, passou a organizar referências, gerar artefatos de leitura e reduzir o esforço para recuperar uma ideia antiga.</p>
+<h2 id="o-problema-estava-na-recuperação">
+  
+  
+    <a href="#o-problema-estava-na-recuperação" class="anchor-heading" aria-labelledby="o-problema-estava-na-recuperação"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O problema estava na recuperação
+  
+  
+</h2>
+    
+
+<p>Vídeos e podcasts são bons formatos para acompanhar uma conversa, uma demonstração ou uma explicação longa. Eles são menos convenientes quando preciso consultar uma ideia específica.</p>
+
+<p>Um vídeo de uma hora pode conter dois minutos relevantes para uma decisão. Um episódio de podcast pode mencionar uma referência importante no meio de uma conversa que não quero rever inteira. Procurar essa passagem pela memória ou arrastar a timeline exige um custo alto para uma pergunta pequena.</p>
+
+<p>Eu queria responder a três perguntas sem reassistir tudo:</p>
+
+<ul>
+  <li>O conteúdo realmente trata do assunto que estou pesquisando?</li>
+  <li>Em qual trecho aparece a ideia relevante?</li>
+  <li>Vale a pena transformar esse material em uma referência permanente?</li>
+</ul>
+
+<p>A biblioteca deveria ajudar nessa triagem e preservar o contexto daquilo que merecesse continuar disponível.</p>
+<h2 id="o-pipeline-de-ingestão">
+  
+  
+    <a href="#o-pipeline-de-ingestão" class="anchor-heading" aria-labelledby="o-pipeline-de-ingestão"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O pipeline de ingestão
+  
+  
+</h2>
+    
+
+<p>O projeto recebe uma URL ou um identificador e executa um processamento assíncrono:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>URL ou ID
+  → metadados e descrição
+  → legendas ou áudio
+  → transcrição normalizada
+  → resumo e outros artefatos
+  → índice, coleções e referências
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Para o YouTube, uso <code class="language-plaintext highlighter-rouge">yt-dlp</code> para coletar os metadados e obter as legendas disponíveis. A transcrição é normalizada e armazenada em texto, além de uma versão estruturada por segmentos e timestamps.</p>
+
+<p>Podcasts exigem outro caminho. Quando não existe uma transcrição publicada, o sistema resolve os dados do episódio, baixa o áudio temporariamente, normaliza o arquivo com <code class="language-plaintext highlighter-rouge">ffmpeg</code> e o envia ao serviço de ASR do meu homelab. Esse serviço usa Whisper por trás de um endpoint LiteLLM compatível com a API da OpenAI. Depois disso, o episódio entra nas mesmas etapas semânticas usadas pelos vídeos.</p>
+
+<p>Essa diferença fica restrita à ingestão. Depois de processados, vídeo e podcast são itens do mesmo catálogo.</p>
+
+<figure>
+  <img src="/assets/images/video-data-product-pipeline.svg" alt="Diagrama do pipeline da biblioteca: YouTube passa por yt-dlp, podcasts passam por ffmpeg e Whisper local, as duas origens convergem em uma transcrição estruturada e seguem para análise com Qwen 3.5." loading="lazy" />
+  <figcaption>Vídeos e podcasts têm ingestões diferentes, mas convergem na mesma transcrição, no mesmo pipeline de IA local e nos mesmos artefatos de pesquisa.</figcaption>
+</figure>
+<h2 id="a-transcrição-é-o-primeiro-artefato-não-o-último">
+  
+  
+    <a href="#a-transcrição-é-o-primeiro-artefato-não-o-último" class="anchor-heading" aria-labelledby="a-transcrição-é-o-primeiro-artefato-não-o-último"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A transcrição é o primeiro artefato, não o último
+  
+  
+</h2>
+    
+
+<p>A transcrição tornou o conteúdo pesquisável, mas uma transcrição completa pode ter dezenas de milhares de palavras. Ela ajuda a encontrar um trecho, mas não responde rapidamente se vale a pena investir tempo naquele item.</p>
+
+<p>Por isso, acrescentei artefatos derivados:</p>
+
+<ul>
+  <li>resumo para uma primeira leitura;</li>
+  <li>ideia principal, com uma frase e um parágrafo de contexto;</li>
+  <li>ficha bibliográfica para o Obsidian;</li>
+  <li>insights que destacam pontos menos óbvios;</li>
+  <li>mapa conceitual interativo;</li>
+  <li>segmentos com timestamps para voltar à fonte original.</li>
+</ul>
+
+<p>Esses artefatos têm funções diferentes. O resumo serve para triagem. A ficha bibliográfica preserva a referência. Os segmentos permitem auditoria. O mapa ajuda a observar relações entre assuntos.</p>
+
+<p>Eu não trato a análise gerada por modelo como fonte final. Quando uma afirmação parece importante, volto à transcrição e, se necessário, ao vídeo ou episódio original. O modelo reduz o tempo de leitura inicial; a fonte continua responsável pela evidência.</p>
+<h2 id="ia-local-como-parte-da-arquitetura">
+  
+  
+    <a href="#ia-local-como-parte-da-arquitetura" class="anchor-heading" aria-labelledby="ia-local-como-parte-da-arquitetura"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> IA local como parte da arquitetura
+  
+  
+</h2>
+    
+
+<p>A geração desses artefatos acontece com IA local. A aplicação não chama diretamente uma API pública de modelos: ela envia as requisições por HTTP para o LiteLLM que mantenho no homelab, usando uma interface compatível com a API da OpenAI. Na configuração registrada em agosto de 2026, os cinco passos de análise são executados com o modelo <code class="language-plaintext highlighter-rouge">qwen/qwen3.5-9b</code>.</p>
+
+<p>O modelo não está acoplado ao backend FastAPI. O LiteLLM funciona como gateway entre a aplicação e a infraestrutura de inferência, então posso trocar o modelo ou ajustar o roteamento sem reescrever o pipeline. Cada tarefa também possui um prompt próprio, versionado junto com o código: resumir, extrair a ideia principal, produzir a ficha bibliográfica, encontrar insights e criar o mapa conceitual.</p>
+
+<p>Esse desenho mantém transcrições e análises dentro da minha infraestrutura e torna viável reprocessar o acervo sem transformar cada experimento em consumo de uma API comercial. O custo não desaparece; ele muda para capacidade de inferência, energia, tempo de fila e operação do homelab. Em troca, ganho controle sobre os modelos, os prompts e o destino dos dados.</p>
+
+<p>O mesmo princípio vale para podcasts sem transcrição publicada. O Whisper é oferecido como outro serviço atrás do gateway local. Para a aplicação, análise de texto e ASR usam contratos conhecidos; para mim, continuam sendo componentes que posso observar, atualizar e substituir de forma independente.</p>
+
+<figure>
+  <img src="/assets/images/video-data-product-ia-local.svg" alt="Diagrama da arquitetura local: FastAPI e o worker enviam texto e áudio ao LiteLLM no homelab, que roteia as requisições para Qwen 3.5 e Whisper antes de devolver os resultados para armazenamento e consulta." loading="lazy" />
+  <figcaption>O LiteLLM desacopla a aplicação dos modelos: Qwen 3.5 cuida dos artefatos semânticos e Whisper da transcrição, ambos dentro do homelab.</figcaption>
+</figure>
+<h2 id="a-interface-virou-uma-ferramenta-de-triagem">
+  
+  
+    <a href="#a-interface-virou-uma-ferramenta-de-triagem" class="anchor-heading" aria-labelledby="a-interface-virou-uma-ferramenta-de-triagem"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A interface virou uma ferramenta de triagem
+  
+  
+</h2>
+    
+
+<p>Hoje uso a aplicação como uma combinação de caixa de entrada, catálogo e ferramenta de pesquisa. Envio um conteúdo sem decidir naquele instante se ele merece uma hora da minha atenção. Depois do processamento, encontro thumbnail, status, descrição, resumo e transcrição em um só lugar.</p>
+
+<p>Minha primeira leitura é o resumo. Ele responde à decisão mais prática: continuar investigando ou deixar o item arquivado?</p>
+<h3 id="avaliação-por-estrelas">
+  
+  
+    <a href="#avaliação-por-estrelas" class="anchor-heading" aria-labelledby="avaliação-por-estrelas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Avaliação por estrelas
+  
+  
+</h3>
+    
+
+<p>Uso estrelas como um filtro simples. Nem todo item precisa virar referência permanente. Alguns servem para uma pesquisa pontual; outros merecem ser revisitados e relacionados a notas existentes.</p>
+
+<p>Uma avaliação curta permite separar esses casos sem criar um processo de catalogação pesado.</p>
+<h3 id="coleções-temáticas">
+  
+  
+    <a href="#coleções-temáticas" class="anchor-heading" aria-labelledby="coleções-temáticas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Coleções temáticas
+  
+  
+</h3>
+    
+
+<p>As coleções reúnem itens por problema ou linha de pesquisa, e não apenas por canal, data ou título. Um mesmo vídeo pode participar de uma coleção sobre agentes de IA e de outra sobre observabilidade, porque os assuntos não respeitam uma única categoria.</p>
+<h3 id="busca-na-transcrição">
+  
+  
+    <a href="#busca-na-transcrição" class="anchor-heading" aria-labelledby="busca-na-transcrição"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Busca na transcrição
+  
+  
+</h3>
+    
+
+<p>Quando lembro de um termo, tecnologia ou exemplo, procuro diretamente no texto e vejo os timestamps associados. A mesma busca também serve antes de assistir: consigo confirmar se o assunto foi realmente discutido ou se aparece apenas no título e na descrição.</p>
+<h2 id="a-ficha-bibliográfica-encurta-o-caminho-até-as-notas">
+  
+  
+    <a href="#a-ficha-bibliográfica-encurta-o-caminho-até-as-notas" class="anchor-heading" aria-labelledby="a-ficha-bibliográfica-encurta-o-caminho-até-as-notas"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A ficha bibliográfica encurta o caminho até as notas
+  
+  
+</h2>
+    
+
+<p>A ficha bibliográfica foi desenhada para entrar no meu sistema de notas. Ela contém frontmatter, dados bibliográficos, referência em formato ABNT, temas, citações e links wiki.</p>
+
+<p>O ganho não está somente em economizar alguns minutos de formatação. É reduzir a distância entre encontrar uma fonte e relacioná-la com uma decisão arquitetural, uma nota antiga ou outra referência da biblioteca.</p>
+
+<p>Quando essa distância é grande, o material interessante volta a ser apenas um link salvo. Quando o caminho é curto, a fonte passa a fazer parte do contexto que consigo consultar.</p>
+<h2 id="o-que-fica-em-cada-camada">
+  
+  
+    <a href="#o-que-fica-em-cada-camada" class="anchor-heading" aria-labelledby="o-que-fica-em-cada-camada"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O que fica em cada camada
+  
+  
+</h2>
+    
+
+<p>Tratei o projeto como um produto de dados porque cada tipo de informação tem um ciclo de vida diferente:</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Camada</th>
+      <th>Responsabilidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Armazenamento compatível com S3</td>
+      <td>Arquivos originais e artefatos derivados</td>
+    </tr>
+    <tr>
+      <td>PostgreSQL</td>
+      <td>Índice, status, avaliações, coleções e associações</td>
+    </tr>
+    <tr>
+      <td>Filesystem local</td>
+      <td>Cache e arquivos temporários do processamento</td>
+    </tr>
+    <tr>
+      <td>FastAPI</td>
+      <td>API e coordenação das operações</td>
+    </tr>
+    <tr>
+      <td>SvelteKit</td>
+      <td>Interface da biblioteca</td>
+    </tr>
+    <tr>
+      <td>CLI</td>
+      <td>Reprocessamento, reconciliação e diagnóstico</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Transcrições permanecem disponíveis como texto e JSON. As análises são arquivos Markdown. O mapa conceitual é um HTML autônomo. Formatos simples tornam possível consultar o material fora da interface atual e reduzem o risco de prender o acervo a uma única aplicação.</p>
+<h2 id="assíncrono-desde-o-começo">
+  
+  
+    <a href="#assíncrono-desde-o-começo" class="anchor-heading" aria-labelledby="assíncrono-desde-o-começo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Assíncrono desde o começo
+  
+  
+</h2>
+    
+
+<p>Baixar conteúdo, converter áudio, transcrever e chamar modelos são operações demoradas. O processamento assíncrono permite que a interface continue útil enquanto o item avança pela fila.</p>
+
+<p>O sistema mantém estados explícitos de pendência, processamento, sucesso e erro. Durante a inicialização, ele reconcilia trabalhos incompletos para que uma reinicialização não transforme a fila em um estado desconhecido.</p>
+
+<p>Essa decisão só se tornou evidente quando o projeto deixou de processar um item ocasionalmente. Um script síncrono era suficiente para o primeiro teste. Uma biblioteca que recebe itens continuamente precisa informar o que aconteceu com cada trabalho e oferecer uma forma de reprocessá-lo.</p>
+<h2 id="observabilidade-e-publicação">
+  
+  
+    <a href="#observabilidade-e-publicação" class="anchor-heading" aria-labelledby="observabilidade-e-publicação"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Observabilidade e publicação
+  
+  
+</h2>
+    
+
+<p>O projeto possui instrumentação com OpenTelemetry para acompanhar a fila, as etapas de ingestão, as chamadas de análise, os erros e os tempos de processamento. Evito incluir transcrições, títulos ou URLs nos atributos de telemetria; esses dados pertencem ao catálogo, não aos traces.</p>
+
+<p>No deploy, backend e frontend são publicados em imagens separadas com a mesma revisão e executados no Nomad. O fluxo aplica migrations, reconcilia o catálogo e valida a aplicação antes de concluir a publicação.</p>
+
+<p>Essas decisões seriam exageradas para o script inicial. Tornaram-se úteis quando o sistema passou a guardar uma parte real da minha pesquisa e um erro de processamento deixou de ser apenas um inconveniente local.</p>
+<h2 id="limites-que-considero-parte-do-produto">
+  
+  
+    <a href="#limites-que-considero-parte-do-produto" class="anchor-heading" aria-labelledby="limites-que-considero-parte-do-produto"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Limites que considero parte do produto
+  
+  
+</h2>
+    
+
+<p>Há quatro limites que eu não esconderia de quem tentar construir algo parecido.</p>
+
+<p>Primeiro, a transcrição depende da qualidade das legendas ou do áudio. Nomes próprios, termos técnicos e falas sobrepostas podem gerar erros. Timestamps ajudam a revisar, mas não eliminam a necessidade de conferir a fonte.</p>
+
+<p>Segundo, análises semânticas têm custo e variabilidade, mesmo quando o modelo roda localmente. O resumo pode ser útil para triagem e ainda assim omitir uma nuance importante. A saída precisa ser tratada como um índice de leitura, não como uma edição autorizada do conteúdo.</p>
+
+<p>Terceiro, local não significa sem fronteiras. O backend envia áudio e texto para serviços separados dentro do homelab, por isso mantenho esses componentes em rede controlada e evito registrar transcrições, prompts ou respostas na telemetria. Se o gateway fosse configurado para usar um provedor externo, eu precisaria reavaliar retenção, termos de uso e adequação do conteúdo antes de enviar material sensível.</p>
+
+<p>Quarto, baixar e armazenar mídia não resolve direitos autorais. A biblioteca é para pesquisa pessoal, deve preservar a origem e precisa respeitar os termos da plataforma e as regras aplicáveis ao uso do conteúdo.</p>
+<h2 id="o-que-mudou-no-meu-processo">
+  
+  
+    <a href="#o-que-mudou-no-meu-processo" class="anchor-heading" aria-labelledby="o-que-mudou-no-meu-processo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O que mudou no meu processo
+  
+  
+</h2>
+    
+
+<p>Antes, eu acumulava links. Agora acumulo artefatos que consigo consultar.</p>
+
+<p>Essa diferença alterou a forma como consumo conteúdo. Nem todo vídeo precisa ser visto do início ao fim. Às vezes o resumo resolve a triagem. Às vezes a busca encontra um trecho específico. Em outros casos, a análise indica que vale a pena assistir com atenção, registrar uma nota e relacionar a fonte com outras ideias.</p>
+
+<p>O projeto não foi criado para aumentar o volume de consumo. Ele reduz o custo de selecionar, recuperar e preservar o que continua relevante.</p>
+<h2 id="próximas-medições">
+  
+  
+    <a href="#próximas-medições" class="anchor-heading" aria-labelledby="próximas-medições"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Próximas medições
+  
+  
+</h2>
+    
+
+<p>O próximo passo é substituir impressões por medidas simples:</p>
+
+<ul>
+  <li>tempo entre o envio de uma URL e a transcrição pesquisável;</li>
+  <li>taxa de sucesso e de reprocessamento por origem;</li>
+  <li>amostragem de erros de transcrição em termos técnicos;</li>
+  <li>tempo para encontrar um trecho usando a busca, comparado à navegação manual;</li>
+  <li>quantidade de itens que viram referências permanentes depois da triagem.</li>
+</ul>
+
+<p>Essas medidas ajudam a decidir onde investir. Se a ingestão falha, preciso melhorar a fila e os adaptadores. Se a transcrição está correta, mas ninguém volta aos itens, o problema provavelmente está na interface ou nos artefatos de triagem.</p>
+<h2 id="conclusão">
+  
+  
+    <a href="#conclusão" class="anchor-heading" aria-labelledby="conclusão"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conclusão
+  
+  
+</h2>
+    
+
+<p>O <code class="language-plaintext highlighter-rouge">video-data-product</code> começou como uma API para extrair metadados e transcrições. Hoje ele me ajuda a preservar o contexto das fontes que encontro e a decidir quais merecem atenção continuada.</p>
+
+<p>O princípio que ficou é simples: uma biblioteca de pesquisa precisa registrar mais do que o endereço de uma mídia. Ela deve preservar o conteúdo consultável, a referência, os sinais de relevância e o caminho de volta à fonte original.</p>
+
+<p>Para quem quiser construir algo semelhante, eu começaria com uma única origem, uma transcrição pesquisável e um fluxo explícito de reprocessamento. Só depois adicionaria análises semânticas, coleções e mapas conceituais. A biblioteca fica mais útil quando cada camada resolve um problema observado no uso, e não quando a interface apenas acumula funções.</p>
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fbiblioteca-pessoal-videos-podcasts%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fartigos%2Fbiblioteca-pessoal-videos-podcasts%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+
+<section class="ask-my-texts" data-ask-my-texts aria-labelledby="ask-my-texts-post-title"><header class="ask-my-texts-header">
+<h2 id="ask-my-texts-post-title">
+  
+  
+    <a href="#ask-my-texts-post-title" class="anchor-heading" aria-labelledby="ask-my-texts-post-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pergunte aos meus textos
+  
+  
+</h2>
+    
+    <p>
+      Faça uma pergunta. O ChatGPT usará os textos publicados neste site como
+      referência para responder.
+    </p>
+  </header>
+
+  <form
+    class="ask-my-texts-form"
+    action="https://chatgpt.com/"
+    method="get"
+    target="_blank"
+    data-ask-my-texts-form
+  >
+    <label for="ask-my-texts-post-question">Sua pergunta</label>
+    <textarea
+      id="ask-my-texts-post-question"
+      name="q"
+      rows="4"
+      placeholder="O que você pensa sobre software agêntico?"
+      required
+      data-ask-my-texts-question
+    ></textarea>
+
+    <div class="ask-my-texts-actions">
+      <button class="btn btn-primary" type="submit" data-ask-my-texts-submit>
+        Perguntar no ChatGPT
+      </button>
+    </div>
+  </form>
+
+  <p class="ask-my-texts-feedback" data-ask-my-texts-feedback aria-live="polite" hidden></p>
+
+  <div class="ask-my-texts-fallback" data-ask-my-texts-fallback hidden>
+    <label for="ask-my-texts-post-prompt">Prompt completo para cópia manual</label>
+    <textarea
+      id="ask-my-texts-post-prompt"
+      rows="10"
+      readonly
+      data-ask-my-texts-prompt
+    ></textarea>
+  </div>
+
+  <p class="ask-my-texts-privacy">
+    Sua pergunta não é enviada para este site. O texto é preparado localmente no
+    navegador e a conversa acontece no ChatGPT.
+  </p>
+
+  <noscript>
+    <p class="ask-my-texts-noscript">
+      Com JavaScript desabilitado, a pergunta será aberta diretamente no ChatGPT
+      sem o contexto preparado.
+    </p>
+  </noscript>
+</section>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#pesquisa" rel="tag">Pesquisa</a>, 
+    
+    <a href="/posts/tags/#youtube" rel="tag">YouTube</a>, 
+    
+    <a href="/posts/tags/#podcasts" rel="tag">Podcasts</a>, 
+    
+    <a href="/posts/tags/#transcrição" rel="tag">Transcrição</a>, 
+    
+    <a href="/posts/tags/#ia-local" rel="tag">IA local</a>, 
+    
+    <a href="/posts/tags/#obsidian" rel="tag">Obsidian</a>, 
+    
+    <a href="/posts/tags/#fastapi" rel="tag">FastAPI</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/limpeza-de-transcricoes-tecnicas-com-qwen-3-5/">Limpando transcrições técnicas com Qwen 3.5</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/qwen-3-5-rtx-5060-ti-7-48-segundos/">Qwen 3.5 em uma RTX 5060 Ti: de minutos para 7,48 segundos</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/okr-obsidian-mapa-pessoal-decidir-o-que-estudar/">OKR e Obsidian: um mapa pessoal para decidir o que estudar</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/meu-obsidian-de-escrita-tem-o-grafo-desligado/">Obsidian para escrever: o que desliguei e o que mantive</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é meu arquivo editorial. Escrevo, reviso e respondo pelo que publico. Para organizar o material e manter o site, uso Obsidian, Jekyll, bibliotecas de software e, quando faz sentido, ferramentas de IA em tarefas como pesquisa, estruturação, revisão e automação.
+</p>
+<p class="text-small mb-0">
+  <a href="/contact/">Contato</a> ·
+  <a href="/privacy/">Privacidade</a>
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/artigos/biblioteca-pessoal-videos-podcasts/" rel="canonical">https://www.gpupo.com/artigos/biblioteca-pessoal-videos-podcasts/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      
+<nav class="sidebar-periods" aria-label="Posts por trimestre">
+  <p class="sidebar-periods-title">Posts por trimestre</p>
+  <ul class="sidebar-period-list">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+</nav>
+
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+
