@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Pipeline da biblioteca pessoal de vídeos e podcasts</title>
+  <desc id="desc">YouTube e podcasts seguem caminhos de ingestão diferentes, convergem em uma transcrição estruturada e passam por cinco análises com Qwen 3.5 local antes de chegar à biblioteca pesquisável.</desc>
+  <rect width="1200" height="760" rx="28" fill="#f2efe7"/>
+  <text x="60" y="72" fill="#2439a8" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">VIDEO DATA PRODUCT · PIPELINE</text>
+  <text x="60" y="132" fill="#171713" font-family="Georgia, serif" font-size="50">Da mídia ao artefato pesquisável.</text>
+  <text x="60" y="170" fill="#65645e" font-family="Arial, sans-serif" font-size="18">Duas formas de ingestão convergem na mesma biblioteca pessoal.</text>
+
+  <g aria-label="Ingestão do YouTube">
+    <rect x="60" y="226" width="220" height="136" rx="18" fill="#2439a8"/>
+    <text x="84" y="260" fill="#d9ff59" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">ORIGEM 01</text>
+    <text x="84" y="306" fill="#fffef9" font-family="Georgia, serif" font-size="29">YouTube</text>
+    <text x="84" y="337" fill="#fffef9" opacity=".78" font-family="Arial, sans-serif" font-size="15">URL · vídeo · canal</text>
+
+    <path d="M280 294H338" fill="none" stroke="#2439a8" stroke-width="4"/>
+    <path d="m328 284 12 10-12 10" fill="none" stroke="#2439a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="350" y="226" width="238" height="136" rx="18" fill="#fffef9" stroke="#d9d5c9" stroke-width="2"/>
+    <text x="374" y="260" fill="#ff5c1a" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">INGESTÃO</text>
+    <text x="374" y="303" fill="#171713" font-family="Arial, sans-serif" font-size="24" font-weight="700">yt-dlp</text>
+    <text x="374" y="333" fill="#65645e" font-family="Arial, sans-serif" font-size="15">metadados + legendas</text>
+  </g>
+
+  <g aria-label="Ingestão de podcasts">
+    <rect x="60" y="414" width="220" height="136" rx="18" fill="#ff5c1a"/>
+    <text x="84" y="448" fill="#171713" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">ORIGEM 02</text>
+    <text x="84" y="494" fill="#171713" font-family="Georgia, serif" font-size="29">Podcast</text>
+    <text x="84" y="525" fill="#171713" opacity=".72" font-family="Arial, sans-serif" font-size="15">RSS · episódio · áudio</text>
+
+    <path d="M280 482H338" fill="none" stroke="#2439a8" stroke-width="4"/>
+    <path d="m328 472 12 10-12 10" fill="none" stroke="#2439a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="350" y="414" width="238" height="136" rx="18" fill="#fffef9" stroke="#d9d5c9" stroke-width="2"/>
+    <text x="374" y="448" fill="#ff5c1a" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">ASR LOCAL</text>
+    <text x="374" y="491" fill="#171713" font-family="Arial, sans-serif" font-size="23" font-weight="700">ffmpeg + Whisper</text>
+    <text x="374" y="521" fill="#65645e" font-family="Arial, sans-serif" font-size="15">áudio normalizado</text>
+  </g>
+
+  <path d="M588 294H606C620 294 620 318 620 336V414" fill="none" stroke="#2439a8" stroke-width="4"/>
+  <path d="M588 482H606C620 482 620 460 620 442V414" fill="none" stroke="#2439a8" stroke-width="4"/>
+  <circle cx="620" cy="414" r="6" fill="#2439a8"/>
+  <path d="M620 414H632" fill="none" stroke="#2439a8" stroke-width="4"/>
+  <path d="m624 406 9 8-9 8" fill="none" stroke="#2439a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g aria-label="Transcrição unificada">
+    <rect x="634" y="344" width="222" height="140" rx="18" fill="#d9ff59"/>
+    <text x="658" y="379" fill="#2439a8" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">BASE COMUM</text>
+    <text x="658" y="421" fill="#171713" font-family="Georgia, serif" font-size="27">Transcrição</text>
+    <text x="658" y="451" fill="#171713" opacity=".76" font-family="Arial, sans-serif" font-size="15">texto · JSON · timestamps</text>
+  </g>
+
+  <path d="M856 414H908" fill="none" stroke="#2439a8" stroke-width="4"/>
+  <path d="m900 404 10 10-10 10" fill="none" stroke="#2439a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g aria-label="Análise semântica local">
+    <rect x="920" y="324" width="220" height="180" rx="18" fill="#2439a8"/>
+    <text x="944" y="359" fill="#d9ff59" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">IA LOCAL</text>
+    <text x="944" y="405" fill="#fffef9" font-family="Georgia, serif" font-size="29">Qwen 3.5</text>
+    <text x="944" y="438" fill="#fffef9" opacity=".78" font-family="Arial, sans-serif" font-size="15">via LiteLLM</text>
+    <text x="944" y="470" fill="#fffef9" opacity=".78" font-family="Arial, sans-serif" font-size="15">prompts versionados</text>
+  </g>
+
+  <path d="M1030 504V578" fill="none" stroke="#2439a8" stroke-width="4"/>
+  <path d="m1020 570 10 10 10-10" fill="none" stroke="#2439a8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g aria-label="Artefatos e destinos">
+    <rect x="60" y="590" width="1080" height="112" rx="18" fill="#171713"/>
+    <text x="84" y="623" fill="#d9ff59" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">BIBLIOTECA PESQUISÁVEL</text>
+    <text x="84" y="664" fill="#fffef9" font-family="Arial, sans-serif" font-size="18" font-weight="700">Resumo</text>
+    <text x="220" y="664" fill="#fffef9" font-family="Arial, sans-serif" font-size="18" font-weight="700">Ideia principal</text>
+    <text x="410" y="664" fill="#fffef9" font-family="Arial, sans-serif" font-size="18" font-weight="700">Bibliografia</text>
+    <text x="572" y="664" fill="#fffef9" font-family="Arial, sans-serif" font-size="18" font-weight="700">Insights</text>
+    <text x="690" y="664" fill="#fffef9" font-family="Arial, sans-serif" font-size="18" font-weight="700">Mapa conceitual</text>
+    <text x="902" y="664" fill="#ff5c1a" font-family="Arial, sans-serif" font-size="16" font-weight="700">S3 · PostgreSQL · UI</text>
+  </g>
+</svg>

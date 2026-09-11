@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Pipeline editorial do Bora Radar</title>
+  <desc id="desc">Diagrama em cinco etapas: fontes da semana, pesquisa e síntese no Gemini, curadoria humana, roteiro e vozes no NotebookLM e publicação multimídia.</desc>
+  <rect width="1200" height="560" rx="28" fill="#2439a8"/>
+  <text x="60" y="76" fill="#d9ff59" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">BORA / RADAR · PIPELINE EDITORIAL</text>
+  <text x="60" y="132" fill="#fffef9" font-family="Georgia, serif" font-size="50">Uma fonte, cinco movimentos.</text>
+  <text x="60" y="168" fill="#fffef9" opacity=".76" font-family="Arial, sans-serif" font-size="18">A automação reduzia o trabalho repetitivo; a curadoria continuava decidindo o que publicar.</text>
+
+  <g aria-label="Etapas do pipeline">
+    <g transform="translate(48 220)">
+      <rect width="194" height="206" rx="18" fill="#fffef9"/>
+      <circle cx="32" cy="34" r="20" fill="#ff5c1a"/>
+      <text x="32" y="41" text-anchor="middle" fill="#fffef9" font-family="Arial, sans-serif" font-size="15" font-weight="700">01</text>
+      <text x="22" y="91" fill="#171713" font-family="Arial, sans-serif" font-size="22" font-weight="700">Fontes</text>
+      <text x="22" y="122" fill="#65645e" font-family="Arial, sans-serif" font-size="15">TLDR · HN · GitHub</text>
+      <text x="22" y="147" fill="#65645e" font-family="Arial, sans-serif" font-size="15">podcasts e anúncios</text>
+      <text x="22" y="181" fill="#2439a8" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">ENTRADA</text>
+    </g>
+
+    <path d="M252 323h36" fill="none" stroke="#d9ff59" stroke-width="4"/>
+    <path d="m280 312 14 11-14 11" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g transform="translate(294 220)">
+      <rect width="194" height="206" rx="18" fill="#d9ff59"/>
+      <circle cx="32" cy="34" r="20" fill="#2439a8"/>
+      <text x="32" y="41" text-anchor="middle" fill="#d9ff59" font-family="Arial, sans-serif" font-size="15" font-weight="700">02</text>
+      <text x="22" y="91" fill="#171713" font-family="Arial, sans-serif" font-size="22" font-weight="700">Gemini</text>
+      <text x="22" y="122" fill="#171713" font-family="Arial, sans-serif" font-size="15">janela temporal</text>
+      <text x="22" y="147" fill="#171713" font-family="Arial, sans-serif" font-size="15">síntese e equilíbrio</text>
+      <text x="22" y="181" fill="#2439a8" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">PESQUISA</text>
+    </g>
+
+    <path d="M498 323h36" fill="none" stroke="#d9ff59" stroke-width="4"/>
+    <path d="m526 312 14 11-14 11" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g transform="translate(540 220)">
+      <rect width="194" height="206" rx="18" fill="#fffef9"/>
+      <circle cx="32" cy="34" r="20" fill="#2439a8"/>
+      <text x="32" y="41" text-anchor="middle" fill="#fffef9" font-family="Arial, sans-serif" font-size="15" font-weight="700">03</text>
+      <text x="22" y="91" fill="#171713" font-family="Arial, sans-serif" font-size="22" font-weight="700">Curadoria</text>
+      <text x="22" y="122" fill="#65645e" font-family="Arial, sans-serif" font-size="15">seleção humana</text>
+      <text x="22" y="147" fill="#65645e" font-family="Arial, sans-serif" font-size="15">revisão e contexto</text>
+      <text x="22" y="181" fill="#2439a8" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">DECISÃO</text>
+    </g>
+
+    <path d="M744 323h36" fill="none" stroke="#d9ff59" stroke-width="4"/>
+    <path d="m772 312 14 11-14 11" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g transform="translate(786 220)">
+      <rect width="194" height="206" rx="18" fill="#ff5c1a"/>
+      <circle cx="32" cy="34" r="20" fill="#171713"/>
+      <text x="32" y="41" text-anchor="middle" fill="#ff5c1a" font-family="Arial, sans-serif" font-size="15" font-weight="700">04</text>
+      <text x="22" y="91" fill="#171713" font-family="Arial, sans-serif" font-size="22" font-weight="700">NotebookLM</text>
+      <text x="22" y="122" fill="#171713" font-family="Arial, sans-serif" font-size="15">roteiro narrado</text>
+      <text x="22" y="147" fill="#171713" font-family="Arial, sans-serif" font-size="15">voz em português</text>
+      <text x="22" y="181" fill="#171713" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">NARRAÇÃO</text>
+    </g>
+
+    <path d="M990 323h36" fill="none" stroke="#d9ff59" stroke-width="4"/>
+    <path d="m1018 312 14 11-14 11" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g transform="translate(1032 220)">
+      <rect width="120" height="206" rx="18" fill="#fffef9"/>
+      <circle cx="32" cy="34" r="20" fill="#171713"/>
+      <text x="32" y="41" text-anchor="middle" fill="#fffef9" font-family="Arial, sans-serif" font-size="15" font-weight="700">05</text>
+      <text x="22" y="91" fill="#171713" font-family="Arial, sans-serif" font-size="20" font-weight="700">Saídas</text>
+      <text x="22" y="122" fill="#65645e" font-family="Arial, sans-serif" font-size="14">texto</text>
+      <text x="22" y="147" fill="#65645e" font-family="Arial, sans-serif" font-size="14">podcast</text>
+      <text x="22" y="172" fill="#65645e" font-family="Arial, sans-serif" font-size="14">vídeo</text>
+      <text x="22" y="194" fill="#2439a8" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">PUBLICAÇÃO</text>
+    </g>
+  </g>
+
+  <rect x="60" y="474" width="1080" height="1" fill="#fffef9" opacity=".25"/>
+  <text x="60" y="515" fill="#d9ff59" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">PLANILHA = CENTRO DE CONTROLE</text>
+  <text x="60" y="540" fill="#fffef9" opacity=".76" font-family="Arial, sans-serif" font-size="15">Edição · data · resumo · links · prompts · roteiro · alerta de validação · fechamento</text>
+</svg>
