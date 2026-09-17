@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitetura de inteligência artificial local do video-data-product</title>
+  <desc id="desc">Dentro do homelab, o backend FastAPI envia texto e áudio ao gateway LiteLLM, que direciona análise semântica para Qwen 3.5 e transcrição para Whisper. Os artefatos retornam à aplicação e são persistidos sem conteúdo sensível na telemetria.</desc>
+  <rect width="1200" height="720" rx="28" fill="#2439a8"/>
+  <text x="60" y="72" fill="#d9ff59" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">VIDEO DATA PRODUCT · IA LOCAL</text>
+  <text x="60" y="132" fill="#fffef9" font-family="Georgia, serif" font-size="50">Modelos desacoplados da aplicação.</text>
+  <text x="60" y="170" fill="#fffef9" opacity=".74" font-family="Arial, sans-serif" font-size="18">O contrato permanece estável enquanto modelos e capacidade de inferência evoluem.</text>
+
+  <rect x="45" y="208" width="1110" height="442" rx="24" fill="none" stroke="#d9ff59" stroke-width="2" stroke-dasharray="10 9" opacity=".8"/>
+  <rect x="76" y="194" width="132" height="28" rx="14" fill="#d9ff59"/>
+  <text x="142" y="213" text-anchor="middle" fill="#171713" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">HOMELAB</text>
+
+  <g aria-label="Aplicação">
+    <rect x="82" y="264" width="270" height="210" rx="20" fill="#fffef9"/>
+    <text x="108" y="302" fill="#ff5c1a" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">APLICAÇÃO</text>
+    <text x="108" y="350" fill="#171713" font-family="Georgia, serif" font-size="29">FastAPI + worker</text>
+    <text x="108" y="386" fill="#65645e" font-family="Arial, sans-serif" font-size="15">pipeline assíncrono</text>
+    <text x="108" y="414" fill="#65645e" font-family="Arial, sans-serif" font-size="15">prompts no Git</text>
+    <text x="108" y="442" fill="#65645e" font-family="Arial, sans-serif" font-size="15">texto e áudio</text>
+  </g>
+
+  <path d="M352 350H450" fill="none" stroke="#d9ff59" stroke-width="4"/>
+  <path d="m442 340 10 10-10 10" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M452 405H354" fill="none" stroke="#d9ff59" stroke-width="4"/>
+  <path d="m362 395-10 10 10 10" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="402" y="335" text-anchor="middle" fill="#fffef9" font-family="Arial, sans-serif" font-size="13">requisição</text>
+  <text x="402" y="430" text-anchor="middle" fill="#fffef9" font-family="Arial, sans-serif" font-size="13">resultado</text>
+
+  <g aria-label="Gateway de modelos">
+    <rect x="462" y="264" width="250" height="210" rx="20" fill="#d9ff59"/>
+    <text x="488" y="302" fill="#2439a8" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">GATEWAY LOCAL</text>
+    <text x="488" y="350" fill="#171713" font-family="Georgia, serif" font-size="32">LiteLLM</text>
+    <text x="488" y="386" fill="#171713" opacity=".76" font-family="Arial, sans-serif" font-size="15">API compatível com OpenAI</text>
+    <text x="488" y="414" fill="#171713" opacity=".76" font-family="Arial, sans-serif" font-size="15">roteamento de modelos</text>
+    <text x="488" y="442" fill="#171713" opacity=".76" font-family="Arial, sans-serif" font-size="15">autenticação central</text>
+  </g>
+
+  <path d="M712 322H810" fill="none" stroke="#d9ff59" stroke-width="4"/>
+  <path d="m802 312 10 10-10 10" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M712 416H810" fill="none" stroke="#d9ff59" stroke-width="4"/>
+  <path d="m802 406 10 10-10 10" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g aria-label="Modelos locais">
+    <rect x="822" y="244" width="280" height="142" rx="20" fill="#ff5c1a"/>
+    <text x="848" y="280" fill="#171713" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">TEXTO</text>
+    <text x="848" y="326" fill="#171713" font-family="Georgia, serif" font-size="31">Qwen 3.5</text>
+    <text x="848" y="356" fill="#171713" opacity=".72" font-family="Arial, sans-serif" font-size="15">cinco artefatos semânticos</text>
+
+    <rect x="822" y="406" width="280" height="142" rx="20" fill="#fffef9"/>
+    <text x="848" y="442" fill="#2439a8" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2">ÁUDIO</text>
+    <text x="848" y="488" fill="#171713" font-family="Georgia, serif" font-size="31">Whisper</text>
+    <text x="848" y="518" fill="#65645e" font-family="Arial, sans-serif" font-size="15">transcrição com timestamps</text>
+  </g>
+
+  <path d="M217 474V548" fill="none" stroke="#d9ff59" stroke-width="4"/>
+  <path d="m207 540 10 10 10-10" fill="none" stroke="#d9ff59" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g aria-label="Persistência e observabilidade">
+    <rect x="82" y="560" width="630" height="62" rx="16" fill="#171713"/>
+    <text x="108" y="587" fill="#d9ff59" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">DESTINOS</text>
+    <text x="108" y="609" fill="#fffef9" font-family="Arial, sans-serif" font-size="15">S3: artefatos · PostgreSQL: índice · UI e Obsidian: consulta</text>
+
+    <rect x="750" y="574" width="352" height="48" rx="16" fill="#2439a8" stroke="#fffef9" stroke-width="1" opacity=".9"/>
+    <text x="926" y="603" text-anchor="middle" fill="#fffef9" font-family="Arial, sans-serif" font-size="14">Telemetria sem prompts, áudio ou transcrições</text>
+  </g>
+
+  <text x="60" y="686" fill="#d9ff59" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2">CONTROLE LOCAL</text>
+  <text x="300" y="686" fill="#fffef9" opacity=".74" font-family="Arial, sans-serif" font-size="15">modelos · prompts · dados · capacidade · custos operacionais</text>
+</svg>
