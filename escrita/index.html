@@ -162,7 +162,7 @@
 
 
 
-<script src="/assets/js/ask-my-texts.js?v=7b6605a" defer></script>
+<script src="/assets/js/ask-my-texts.js?v=b7ab9db" defer></script>
 
 
 <script type="application/ld+json">
@@ -261,7 +261,7 @@
   <nav aria-label="Main" id="site-nav" class="site-nav">
   
   
-    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><a href="/posts/" class="nav-list-link">Posts</a></li><li class="nav-list-item nav-list-item--always-open"><a href="/outros-escritos/" class="nav-list-link">Editorias</a><ul class="nav-list"><li class="nav-list-item"><a href="/escrita/" class="nav-list-link">Escrita</a></li><li class="nav-list-item"><a href="/musica/" class="nav-list-link">Música</a></li><li class="nav-list-item"><a href="/ficcao/" class="nav-list-link">Ficção</a></li></ul>
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><a href="/posts/" class="nav-list-link">Posts</a></li><li class="nav-list-item nav-list-item--always-open"><a href="/cultura/" class="nav-list-link">Cultura</a><ul class="nav-list"><li class="nav-list-item"><a href="/escrita/" class="nav-list-link">Escrita</a></li><li class="nav-list-item"><a href="/musica/" class="nav-list-link">Música</a></li><li class="nav-list-item"><a href="/ficcao/" class="nav-list-link">Ficção</a></li></ul>
 </li><li class="nav-list-item"><a href="/biblioteca/" class="nav-list-link">Biblioteca comentada</a></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
 
   <ul class="nav-list"><li class="nav-list-item external">
@@ -1024,7 +1024,7 @@
     <div class="main-content-wrap">
       <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
-    <li class="breadcrumb-nav-list-item"><a href="/outros-escritos/">Editorias</a></li>
+    <li class="breadcrumb-nav-list-item"><a href="/cultura/">Cultura</a></li>
     <li class="breadcrumb-nav-list-item"><span>Escrita</span></li>
   </ol>
 </nav>
@@ -1038,7 +1038,7 @@
   data-editorial="escrita"
   data-content-type="collection"
   aria-labelledby="editorial-index-title"><header class="editorial-index-header">
-    <p class="eyebrow">Editorias</p>
+    <p class="eyebrow">Cultura</p>
 <h1 id="editorial-index-title">
   
   
@@ -1054,6 +1054,31 @@
 
 <ol class="editorial-list">
 
+  
+  <li>
+    <article class="editorial-list-item">
+      
+      <time datetime="2026-09-28T00:00:00-03:00">
+        
+        28/09/2026
+        
+      </time>
+      
+      <div>
+<h2>
+  
+  
+    <a href="#editorial-index-title" class="anchor-heading" aria-labelledby="editorial-index-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <a href="/escrita/o-sertao-de-rosa-a-nova-york-de-billy-joel-e-os-lugares-que-carregamos/">O sertão de Rosa, a Nova York de Billy Joel e os lugares que carregamos</a>
+  
+  
+</h2>
+    
+        
+        <p>Uma aproximação entre Guimarães Rosa, Billy Joel e Ariano Suassuna: quando um lugar se desprende do mapa e passa a nomear uma forma de ver o mundo.</p>
+        
+      </div>
+    </article>
+  </li>
   
   <li>
     <article class="editorial-list-item">
@@ -1109,6 +1134,102 @@
 </ol>
 
 
+
+    
+    
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<section
+  class="ask-my-texts"
+  data-ask-my-texts
+  data-ask-context="editorial-corpus"
+  
+  data-ask-source-url="https://www.gpupo.com/escrita/index.md"
+  data-ask-source-title="Escrita"
+  
+  
+  
+  data-ask-source-path="/escrita/"
+  
+  aria-labelledby="ask-my-texts-editorial-title"
+><header class="ask-my-texts-header">
+<h2 id="ask-my-texts-editorial-title">
+  
+  
+    <a href="#ask-my-texts-editorial-title" class="anchor-heading" aria-labelledby="ask-my-texts-editorial-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+      Pergunte aos meus textos
+    
+  
+  
+</h2>
+    
+    <p>
+      
+      Faça uma pergunta. O ChatGPT usará somente os textos de
+      Escrita como referência para responder.
+      
+    </p>
+  </header>
+
+  <form
+    class="ask-my-texts-form"
+    action="https://chatgpt.com/"
+    method="get"
+    target="_blank"
+    data-ask-my-texts-form
+  >
+    <label for="ask-my-texts-editorial-question">Sua pergunta</label>
+    <textarea
+      id="ask-my-texts-editorial-question"
+      name="q"
+      rows="4"
+      placeholder="O que esta editoria diz sobre…?"
+      required
+      data-ask-my-texts-question
+    ></textarea>
+
+    <div class="ask-my-texts-actions">
+      <button class="btn btn-primary" type="submit" data-ask-my-texts-submit>
+        Perguntar no ChatGPT
+      </button>
+    </div>
+  </form>
+
+  <p class="ask-my-texts-feedback" data-ask-my-texts-feedback aria-live="polite" hidden></p>
+
+  <div class="ask-my-texts-fallback" data-ask-my-texts-fallback hidden>
+    <label for="ask-my-texts-editorial-prompt">Prompt completo para cópia manual</label>
+    <textarea
+      id="ask-my-texts-editorial-prompt"
+      rows="10"
+      readonly
+      data-ask-my-texts-prompt
+    ></textarea>
+  </div>
+
+  <p class="ask-my-texts-privacy">
+    Sua pergunta não é enviada para este site. O texto é preparado localmente no
+    navegador e a conversa acontece no ChatGPT.
+  </p>
+
+  <noscript>
+    <p class="ask-my-texts-noscript">
+      Com JavaScript desabilitado, a pergunta será aberta diretamente no ChatGPT
+      sem o contexto preparado.
+    </p>
+  </noscript>
+</section>
+
+    
   </div>
 </section>
 

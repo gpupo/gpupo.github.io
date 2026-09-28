@@ -24,6 +24,24 @@ Contos, fragmentos e outras histórias que resolvi escrever.
       </time>
       
       <div>
+        <h2><a href="/ficcao/o-homem-que-nao-terceirizava/">O homem que não terceirizava</a></h2>
+        
+        <p>Marcelo acredita que não terceiriza pensamento, mas passa o dia confiando em sistemas que estacionam, organizam, transcrevem e recalculam por ele.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
+      <time datetime="2026-09-26T00:00:00-03:00">
+        
+        26/09/2026
+        
+      </time>
+      
+      <div>
         <h2><a href="/ficcao/musculatura-emprestada/">Musculatura emprestada</a></h2>
         
         <p>Observando os carros subirem a rua ao lado do Parque Barigui, um homem pensa na força que as máquinas emprestam às pessoas e em por que algumas tecnologias deixam de parecer máquinas.</p>

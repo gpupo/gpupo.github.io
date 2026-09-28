@@ -18,6 +18,24 @@ blues, jazz e algumas descobertas pelo caminho.
   <li>
     <article class="editorial-list-item">
       
+      <time datetime="2026-09-27T00:00:00-03:00">
+        
+        27/09/2026
+        
+      </time>
+      
+      <div>
+        <h2><a href="/musica/o-pianista-morto-apareceu-a-mim-no-japao/">O pianista morto apareceu a mim no Japão</a></h2>
+        
+        <p>Depois de conhecer Tenório Jr. pelo documentário Atiraram no Pianista, encontrei sua música novamente numa homenagem do trio japonês 45trio.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
       <time datetime="2026-09-25T00:00:00-03:00">
         
         25/09/2026

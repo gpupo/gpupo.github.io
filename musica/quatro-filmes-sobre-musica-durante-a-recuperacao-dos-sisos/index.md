@@ -47,6 +47,10 @@ Relacionei-o a *Ainda Estou Aqui* porque, nos dois casos, a busca por uma pessoa
 ausente leva à reconstrução de uma história maior, feita de memória, violência
 política e testemunho.
 
+Mais tarde, reencontrei Tenório Jr. numa composição do trio japonês 45trio e
+registrei essa descoberta em
+[*O pianista morto apareceu a mim no Japão*](/musica/o-pianista-morto-apareceu-a-mim-no-japao/).
+
 ## *Billy Joel: And So It Goes*
 
 Também assisti ao documentário em duas partes sobre Billy Joel. Minha nota se

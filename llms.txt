@@ -32,6 +32,7 @@ Este é um site editorial. Ele não oferece API pública, OAuth, MCP ou webhooks
 ## Editorial boundaries
 
 - `/posts/`: conteúdo principal, profissional e técnico. Os documentos usam `Editorial: tecnologia` e `Content type: article` em suas representações Markdown.
+- `/cultura/`: arquivo cronológico conjunto de Escrita, Música e Ficção, agrupado por mês e ano.
 - `/escrita/`: ensaios autorais sobre leitura, processo criativo e o trabalho de escrever. Os documentos usam `Editorial: escrita` e `Content type: essay`.
 - `/musica/`: ensaios e escritos autorais sobre música. Os documentos usam `Editorial: musica` e `Content type: essay`.
 - `/ficcao/`: obras ficcionais. Os documentos usam `Editorial: ficcao` e `Content type: fiction`.
@@ -57,7 +58,8 @@ Este é um arquivo editorial pessoal e somente para leitura. Ele não executa a�
 - [Home](https://www.gpupo.com/)
 - [Posts](https://www.gpupo.com/posts/)
 - [Notas](https://www.gpupo.com/notas/)
-- [Outros escritos](https://www.gpupo.com/outros-escritos/)
+- [Cultura — HTML](https://www.gpupo.com/cultura/)
+- [Cultura — Markdown](https://www.gpupo.com/cultura/index.md)
 - [Escrita — HTML](https://www.gpupo.com/escrita/)
 - [Escrita — Markdown](https://www.gpupo.com/escrita/index.md)
 - [Música — HTML](https://www.gpupo.com/musica/)
