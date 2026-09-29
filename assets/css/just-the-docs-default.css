@@ -8454,6 +8454,33 @@ img.rounded {
   text-align: center;
 }
 
+.editorial-photo--reference {
+  overflow: hidden;
+  position: relative;
+}
+.editorial-photo--reference img {
+  border: 1px solid #111;
+  box-sizing: border-box;
+}
+.editorial-photo--reference::after {
+  background: rgba(21, 43, 58, 0.94);
+  color: #fff;
+  content: "Apenas referência";
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  padding: 0.45rem 0.5rem;
+  pointer-events: none;
+  position: absolute;
+  right: -3.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  top: 2.1rem;
+  transform: rotate(45deg);
+  width: 14rem;
+}
+
 .editorial-index-header,
 .editorial-index-content > p:first-child {
   max-width: 44rem;
@@ -8471,6 +8498,82 @@ img.rounded {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2.5rem;
+}
+
+.fiction-book {
+  max-width: 44rem;
+}
+
+.fiction-book-header {
+  margin-bottom: 2.5rem;
+}
+.fiction-book-header h1 {
+  margin-top: 0.65rem;
+}
+
+.fiction-book-status {
+  margin: 1rem 0 0;
+}
+.fiction-book-status span {
+  background: #edf4f6;
+  border: 1px solid #d7e4e8;
+  border-radius: 999px;
+  color: #315b7d;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.3rem 0.65rem;
+}
+
+.fiction-book-body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.fiction-book-related {
+  border-top: 1px solid #d7e0e5;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+.fiction-book-related > h2 {
+  margin-top: 0;
+}
+.fiction-book-related > p {
+  color: #425b6b;
+}
+
+.fiction-book-related-list {
+  border-bottom: 1px solid #d7e0e5;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+.fiction-book-related-list > li {
+  border-top: 1px solid #d7e0e5;
+  margin: 0;
+  padding: 1rem 0;
+}
+.fiction-book-related-list h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin: 0.25rem 0;
+}
+.fiction-book-related-list article > p:last-child {
+  color: #425b6b;
+  margin: 0.35rem 0 0;
+}
+
+.fiction-book-related-meta {
+  color: #647782;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.fiction-book-footer {
+  border-top: 1px solid #d7e0e5;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
 }
 
 .culture-index-sections {
@@ -8709,7 +8812,8 @@ img.rounded {
   }
 }
 .post-ai-share,
-.music-ai-conversation {
+.music-ai-conversation,
+.book-proposal {
   background: #f4f8f9;
   border: 1px solid #d7e4e8;
   border-radius: 0.8rem;
@@ -8717,17 +8821,34 @@ img.rounded {
   padding: 1.25rem;
 }
 .post-ai-share h2,
-.music-ai-conversation h2 {
+.music-ai-conversation h2,
+.book-proposal h2 {
   color: #152b3a;
   font-size: 1.15rem;
   margin: 0 0 0.6rem;
 }
 .post-ai-share p,
-.music-ai-conversation p {
+.music-ai-conversation p,
+.book-proposal p {
   color: #425b6b;
   font-size: 0.9rem;
   line-height: 1.55;
   margin: 0 0 1rem;
+}
+
+.book-proposal-email {
+  overflow-wrap: anywhere;
+}
+
+.book-proposal-requirements {
+  color: #425b6b;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: -0.25rem 0 1rem;
+  padding-left: 1.25rem;
+}
+.book-proposal-requirements li + li {
+  margin-top: 0.25rem;
 }
 
 .ask-my-texts {

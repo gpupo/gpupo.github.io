@@ -19,7 +19,39 @@ Escrita, música e ficção — um arquivo do que leio, escuto, estudo e escrevo
 
 <div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-09">
       <h2 id="culture-archive-2026-09">Setembro de 2026</h2>
-      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-09-28" data-editorial="escrita">
+      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-09-29" data-editorial="ficcao">
+          <article>
+            <time datetime="2026-09-29T00:00:00-03:00">29 set</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/ficcao/" aria-label="Ver índice de Ficção">[Ficção]</a>
+              <h3 class="no_anchor"><a href="/ficcao/jeff-mais-leve-que-o-ar/">Jeff mais leve que o ar</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-09-29" data-editorial="musica">
+          <article>
+            <time datetime="2026-09-29T00:00:00-03:00">29 set</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/de-toquio-a-jorge-ben-e-de-jorge-ben-a-rod-stewart/">De Tóquio a Jorge Ben, e de Jorge Ben a Rod Stewart</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-09-29" data-editorial="escrita">
+          <article>
+            <time datetime="2026-09-29T00:00:00-03:00">29 set</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/escrita/" aria-label="Ver índice de Escrita">[Escrita]</a>
+              <h3 class="no_anchor"><a href="/ficcao/jeff-mais-leve-que-o-ar/briefing-de-ilustracao/">O briefing de ilustração de Jeff mais leve que o ar</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-09-29" data-editorial="escrita">
+          <article>
+            <time datetime="2026-09-29T00:00:00-03:00">29 set</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/escrita/" aria-label="Ver índice de Escrita">[Escrita]</a>
+              <h3 class="no_anchor"><a href="/escrita/como-voce-publicaria-um-livro-sem-entregar-a-experiencia-para-outra-pessoa/">Como você publicaria um livro sem entregar a experiência para outra pessoa?</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-09-28" data-editorial="escrita">
           <article>
             <time datetime="2026-09-28T00:00:00-03:00">28 set</time>
             <div class="culture-archive-entry-content">
