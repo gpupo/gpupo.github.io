@@ -45,6 +45,220 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
         
 
         
+        <section class="post-archive-group" aria-labelledby="posts-archive-2026-q4">
+          
+          <h2 id="posts-archive-2026-q4">2026 Q4</h2>
+          
+          <div class="post-archive-group-posts">
+        
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
+              01/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#zettelkasten">Zettelkasten</a>
+              
+              <a class="article-tag" href="/posts/tags/#niklas-luhmann">Niklas Luhmann</a>
+              
+              <a class="article-tag" href="/posts/tags/#obsidian">Obsidian</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/zettelkasten-longa-historia-pensar-com-pedacos-de-papel/">Zettelkasten: a longa história de pensar com pedaços de papel</a></h4>
+          
+          <p class="post-archive-summary">De cadernos renascentistas ao arquivo de 90 mil fichas de Niklas Luhmann: como papéis móveis passaram de suporte de memória a instrumento para relacionar ideias.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
+              01/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#git">Git</a>
+              
+              <a class="article-tag" href="/posts/tags/#versionamento">Versionamento</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/versionar-e-criar-checkpoints/">Versionar é criar checkpoints</a></h4>
+          
+          <p class="post-archive-summary">Uma analogia de videogame para usar Git como memória do projeto, distinguir commits de versões e preservar o conhecimento que um agente precisa entre sessões.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
+              01/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#skills">Skills</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-de-contexto">Gestão de contexto</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/uma-skill-e-muito-menos-magica-do-que-parece/">Uma Skill é muito menos mágica do que parece</a></h4>
+          
+          <p class="post-archive-summary">Como transformar instruções recorrentes em capacidades reutilizáveis, carregadas quando necessário e separadas das regras permanentes do agente.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
+              01/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-de-contexto">Gestão de contexto</a>
+              
+              <a class="article-tag" href="/posts/tags/#agents-md">AGENTS.md</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/todo-agente-acorda-com-amnesia/">Todo agente acorda com amnésia</a></h4>
+          
+          <p class="post-archive-summary">Como tirar regras e decisões da conversa, organizar o projeto como memória persistente e usar handoffs para continuar o trabalho em outra sessão.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
+              01/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#arquitetura-de-software">Arquitetura de software</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-de-contexto">Gestão de contexto</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/nao-crie-um-agente-que-saiba-a-empresa-inteira/">Não crie um agente que saiba a empresa inteira</a></h4>
+          
+          <p class="post-archive-summary">Como definir agentes especializados sem carregar todo o contexto da empresa nem criar uma arquitetura fragmentada demais.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
+              01/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-de-contexto">Gestão de contexto</a>
+              
+              <a class="article-tag" href="/posts/tags/#handoff">Handoff</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/handoff-memoria-simples-para-agentes/">Handoff: uma memória simples para agentes que não precisam lembrar de tudo</a></h4>
+          
+          <p class="post-archive-summary">Como registrar decisões, arquivos, pendências e o próximo passo para continuar um trabalho com agentes em outra sessão.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+        
+          </div>
+        </section>
+        
+
+        
+        
+
+        
         <section class="post-archive-group" aria-labelledby="posts-archive-2026-q3">
           
           <h2 id="posts-archive-2026-q3">2026 Q3</h2>
