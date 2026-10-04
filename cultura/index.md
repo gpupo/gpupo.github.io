@@ -6,18 +6,64 @@ Canonical: https://www.gpupo.com/cultura/
 
 ---
 
-Escrita, música e ficção — um arquivo do que leio, escuto, estudo e escrevo.
+Escrita, música, equipamento musical e ficção — um arquivo do que leio,
+escuto, estudo, uso e escrevo.
 
 <nav class="culture-index-sections" aria-label="Editorias de Cultura">
   <a href="/escrita/">Escrita</a>
   <span aria-hidden="true">·</span>
   <a href="/musica/">Música</a>
   <span aria-hidden="true">·</span>
+  <a href="/equipamento-musical/">Equipamento Musical</a>
+  <span aria-hidden="true">·</span>
   <a href="/ficcao/">Ficção</a>
 </nav>
 
 
-<div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-09">
+<div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-10">
+      <h2 id="culture-archive-2026-10">Outubro de 2026</h2>
+      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-10-04" data-editorial="equipamento">
+          <article>
+            <time datetime="2026-10-04T00:00:00-03:00">4 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/equipamento-musical/" aria-label="Ver índice de Equipamento musical">[Equipamento musical]</a>
+              <h3 class="no_anchor"><a href="/equipamento-musical/o-instrumento-nao-termina-na-regulagem/">O instrumento não termina na regulagem</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-03" data-editorial="equipamento">
+          <article>
+            <time datetime="2026-10-03T00:00:00-03:00">3 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/equipamento-musical/" aria-label="Ver índice de Equipamento musical">[Equipamento musical]</a>
+              <h3 class="no_anchor"><a href="/equipamento-musical/minha-primeira-guitarra-um-cubo-pesado-e-dois-pedais-usados/">Minha primeira guitarra, um cubo pesado e dois pedais usados</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-03" data-editorial="equipamento">
+          <article>
+            <time datetime="2026-10-03T00:00:00-03:00">3 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/equipamento-musical/" aria-label="Ver índice de Equipamento musical">[Equipamento musical]</a>
+              <h3 class="no_anchor"><a href="/equipamento-musical/abri-uma-editoria-para-falar-de-equipamento-musical/">Abri uma editoria para falar de equipamento musical</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-03" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-03T00:00:00-03:00">3 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/impressions-manhattan-e-uma-historia-contada-em-tempos-diferentes/">Impressions e Manhattan: uma história contada em tempos diferentes</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-02" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-02T00:00:00-03:00">2 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/quando-o-cd-barato-comeca-a-virar-objeto-de-colecao/">Quando o CD barato começa a virar objeto de coleção</a></h3>
+            </div>
+          </article>
+        </li></ol>
+    </section><section class="culture-archive-group" aria-labelledby="culture-archive-2026-09">
       <h2 id="culture-archive-2026-09">Setembro de 2026</h2>
       <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-09-29" data-editorial="ficcao">
           <article>

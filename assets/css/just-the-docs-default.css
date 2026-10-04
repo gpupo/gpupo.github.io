@@ -7866,6 +7866,24 @@ blockquote.warning-title > p:last-child {
   width: 1.1rem;
 }
 
+.site-nav .nav-list--social {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0.5rem 1rem;
+}
+.site-nav .nav-list--social .nav-list-item {
+  min-width: 0;
+}
+.site-nav .nav-list--social .nav-list-item .nav-list-link {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  min-height: 2.5rem;
+  padding: 0.5rem;
+}
+
 img.rounded {
   border-radius: 16px;
   display: block;
@@ -8114,7 +8132,7 @@ img.rounded {
   border-bottom: 1px solid #d7e0e5;
   border-top: 1px solid #d7e0e5;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .home-editorial-card {

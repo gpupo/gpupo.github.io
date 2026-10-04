@@ -56,6 +56,72 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-02T00:00:00-03:00">
+              02/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#gestão-do-conhecimento">Gestão do conhecimento</a>
+              
+              <a class="article-tag" href="/posts/tags/#notas">Notas</a>
+              
+              <a class="article-tag" href="/posts/tags/#memória">Memória</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/por-que-anotar/">Por que anotar?</a></h4>
+          
+          <p class="post-archive-summary">Anoto menos para lembrar de tudo e mais para conseguir esquecer com tranquilidade, reencontrar ideias e deixar que elas se relacionem no futuro.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-02T00:00:00-03:00">
+              02/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-do-conhecimento">Gestão do conhecimento</a>
+              
+              <a class="article-tag" href="/posts/tags/#markdown">Markdown</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/como-usar-um-harness-como-assistente-de-anotacao/">Como usar um harness como assistente de anotação</a></h4>
+          
+          <p class="post-archive-summary">Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-10-01T00:00:00-03:00">
               01/10/2026
             </time>

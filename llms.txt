@@ -1,6 +1,6 @@
 # gpupo.com
 
-> Arquivo editorial pessoal de Gilmar Pupo. Tecnologia, inteligência artificial, estratégia, liderança e engenharia de software formam seu eixo principal; Escrita, Música e Ficção são territórios autorais secundários e explicitamente separados.
+> Arquivo editorial pessoal de Gilmar Pupo. Tecnologia, inteligência artificial, estratégia, liderança e engenharia de software formam seu eixo principal; Escrita, Música, Equipamento Musical e Ficção são territórios autorais secundários e explicitamente separados.
 
 ## Authorship
 
@@ -8,7 +8,7 @@ O conteúdo é publicado por Gilmar Pupo. O HTML é a versão canônica para lei
 
 ## Content
 
-Posts, notas, ensaios de Escrita, textos de Música, obras de Ficção e páginas editoriais selecionadas possuem uma representação Markdown estática derivada da mesma fonte usada no build Jekyll. Para documentos com URL terminada em `/`, acrescente `index.md` quando a página anunciar essa alternativa.
+Posts, notas, ensaios de Escrita, textos de Música e Equipamento Musical, obras de Ficção e páginas editoriais selecionadas possuem uma representação Markdown estática derivada da mesma fonte usada no build Jekyll. Para documentos com URL terminada em `/`, acrescente `index.md` quando a página anunciar essa alternativa.
 
 Exemplo:
 
@@ -32,9 +32,10 @@ Este é um site editorial. Ele não oferece API pública, OAuth, MCP ou webhooks
 ## Editorial boundaries
 
 - `/posts/`: conteúdo principal, profissional e técnico. Os documentos usam `Editorial: tecnologia` e `Content type: article` em suas representações Markdown.
-- `/cultura/`: arquivo cronológico conjunto de Escrita, Música e Ficção, agrupado por mês e ano.
+- `/cultura/`: arquivo cronológico conjunto de Escrita, Música, Equipamento Musical e Ficção, agrupado por mês e ano.
 - `/escrita/`: ensaios autorais sobre leitura, processo criativo e o trabalho de escrever. Os documentos usam `Editorial: escrita` e `Content type: essay`.
 - `/musica/`: ensaios e escritos autorais sobre música. Os documentos usam `Editorial: musica` e `Content type: essay`.
+- `/equipamento-musical/`: experiências com instrumentos e equipamentos, incluindo compras, vendas, manutenção, modificações e memória. Os documentos usam `Editorial: equipamento` e `Content type: essay`.
 - `/ficcao/`: obras ficcionais. Os documentos usam `Editorial: ficcao` e `Content type: fiction`.
 - `/biblioteca/`: comentários editoriais de fontes externas. A página HTML de cada item é sua única representação pública canônica e identifica a fonte original; não há transcrição integral, ZIP, corpus raw ou cópia Markdown específica do item. O HTML usa `data-editorial="biblioteca"` e `data-content-type="source-commentary"`.
 - `/trajetoria/`: fonte canônica do histórico profissional de Gilmar Pupo. A versão Markdown preserva experiências, formação, competências, publicações e evidências em conteúdo textual indexável.
@@ -52,6 +53,7 @@ Este é um arquivo editorial pessoal e somente para leitura. Ele não executa a�
 - Inteligência artificial e sistemas de agentes
 - Estratégia, liderança e operação
 - Produtividade e práticas de trabalho
+- Equipamento musical, manutenção, modificações e memória
 
 ## Discovery
 
@@ -64,6 +66,8 @@ Este é um arquivo editorial pessoal e somente para leitura. Ele não executa a�
 - [Escrita — Markdown](https://www.gpupo.com/escrita/index.md)
 - [Música — HTML](https://www.gpupo.com/musica/)
 - [Música — Markdown](https://www.gpupo.com/musica/index.md)
+- [Equipamento Musical — HTML](https://www.gpupo.com/equipamento-musical/)
+- [Equipamento Musical — Markdown](https://www.gpupo.com/equipamento-musical/index.md)
 - [Ficção — HTML](https://www.gpupo.com/ficcao/)
 - [Ficção — Markdown](https://www.gpupo.com/ficcao/index.md)
 - [Biblioteca comentada — HTML](https://www.gpupo.com/biblioteca/)

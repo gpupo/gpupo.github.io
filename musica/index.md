@@ -18,6 +18,42 @@ blues, jazz e algumas descobertas pelo caminho.
   <li>
     <article class="editorial-list-item">
       
+      <time datetime="2026-10-03T00:00:00-03:00">
+        
+        03/10/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/musica/impressions-manhattan-e-uma-historia-contada-em-tempos-diferentes/">Impressions e Manhattan: uma história contada em tempos diferentes</a></h2>
+        
+        <p>Uma indicação de aula, a guitarra de Wes Montgomery e um disco de John Coltrane encontrado no sebo fizeram gravações de 1961, 1962, 1965 e 1996 se encontrarem na mesma escuta.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
+      <time datetime="2026-10-02T00:00:00-03:00">
+        
+        02/10/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/musica/quando-o-cd-barato-comeca-a-virar-objeto-de-colecao/">Quando o CD barato começa a virar objeto de coleção</a></h2>
+        
+        <p>Um vídeo do Skylabs Audio me fez pensar no momento em que uma mídia antiga deixa de ser apenas uma forma simples de ouvir música e passa a ser objeto de desejo.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
       <time datetime="2026-09-29T00:00:00-03:00">
         
         29/09/2026

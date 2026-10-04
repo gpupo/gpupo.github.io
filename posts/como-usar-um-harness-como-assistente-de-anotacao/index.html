@@ -1,0 +1,3733 @@
+
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+    .site-nav ul li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+
+  </style>
+
+  
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7VM0ZXN60"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      
+        gtag('config', 'G-Q7VM0ZXN60', { 'anonymize_ip': true });
+      
+    </script>
+  
+
+  
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315b7d">
+<meta name="theme-color" content="#fbfcfd">
+
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Como usar um harness como assistente de anotação | Gilmar Pupo</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Como usar um harness como assistente de anotação" />
+<meta name="author" content="Gilmar Pupo" />
+<meta property="og:locale" content="pt_BR" />
+<meta name="description" content="Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa." />
+<meta property="og:description" content="Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa." />
+<link rel="canonical" href="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/" />
+<meta property="og:url" content="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/" />
+<meta property="og:site_name" content="Gilmar Pupo" />
+<meta property="og:image" content="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" />
+<meta property="og:image:height" content="1035" />
+<meta property="og:image:width" content="1361" />
+<meta property="og:image:alt" content="Terminal com o Codex verificando links Markdown e criando um mapa de conteúdo num cofre de notas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-02T00:00:00-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" />
+<meta name="twitter:image:alt" content="Terminal com o Codex verificando links Markdown e criando um mapa de conteúdo num cofre de notas" />
+<meta property="twitter:title" content="Como usar um harness como assistente de anotação" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@Gilmar Pupo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gilmar Pupo","url":"https://www.gpupo.com/about/"},"dateModified":"2026-10-02T00:00:00-03:00","datePublished":"2026-10-02T00:00:00-03:00","description":"Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.","headline":"Como usar um harness como assistente de anotação","image":{"alt":"Terminal com o Codex verificando links Markdown e criando um mapa de conteúdo num cofre de notas","width":1361,"height":1035,"url":"https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/"},"url":"https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+
+<link rel="alternate" type="text/markdown" href="/posts/como-usar-um-harness-como-assistente-de-anotacao/index.md">
+
+
+
+
+
+<meta name="gpupo:editorial" content="tecnologia">
+
+
+<meta name="gpupo:content_type" content="article">
+
+
+
+<meta property="article:section" content="tecnologia">
+
+
+
+
+
+
+<script src="/assets/js/ask-my-texts.js?v=9d88b25" defer></script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.gpupo.com/#person",
+  "name": "Gilmar Pupo",
+  "url": "https://www.gpupo.com/about/",
+  "description": "Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.",
+  "image": "https://www.gpupo.com/assets/profile.jpeg",
+  "sameAs": ["https://github.com/gpupo","https://www.linkedin.com/in/gpupo/","https://mastodon.social/@gpupo","https://www.threads.com/@g1mar","https://bsky.app/profile/g1mar.bsky.social"]
+}
+</script>
+
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/" class="site-title lh-tight"><span aria-hidden="true">gil://</span><span class="sr-only">Gilmar Pupo</span>
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Início</a></li><li class="nav-list-item"><a href="/posts/" class="nav-list-link">Posts</a></li><li class="nav-list-item nav-list-item--always-open"><a href="/cultura/" class="nav-list-link">Cultura</a><ul class="nav-list"><li class="nav-list-item"><a href="/escrita/" class="nav-list-link">Escrita</a></li><li class="nav-list-item"><a href="/musica/" class="nav-list-link">Música</a></li><li class="nav-list-item"><a href="/equipamento-musical/" class="nav-list-link">Equipamento Musical</a></li><li class="nav-list-item"><a href="/ficcao/" class="nav-list-link">Ficção</a></li></ul>
+</li><li class="nav-list-item"><a href="/biblioteca/" class="nav-list-link">Biblioteca comentada</a></li><li class="nav-list-item"><a href="/about/" class="nav-list-link">Sobre</a></li></ul>
+
+  <ul class="nav-list nav-list--social" aria-label="Redes sociais e assinaturas"><li class="nav-list-item external">
+          <a href="https://github.com/gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="noopener noreferrer"
+            
+          >
+            
+              
+<svg class="github-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.776.417-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.293-1.552 3.297-1.23 3.297-1.23.647 1.653.24 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.624-5.373-12-12-12"></path></svg>
+
+
+              <span class="sr-only">GitHub</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/in/gpupo/" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="linkedin-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V8.75h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.536zM5.337 7.189a2.062 2.062 0 1 1 0-4.123 2.062 2.062 0 0 1 0 4.123zM7.119 20.452H3.554V8.75h3.565v11.702zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+
+
+              <span class="sr-only">LinkedIn</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://mastodon.social/@gpupo" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Font Awesome Free 5.15.4 by @fontawesome: https://fontawesome.com/license/free -->
+<svg class="mastodon-icon social-nav-icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+
+
+              <span class="sr-only">Mastodon</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.threads.com/@g1mar" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="threads-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z"></path></svg>
+
+
+              <span class="sr-only">Threads</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://bsky.app/profile/g1mar.bsky.social" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<!-- Simple Icons: https://simpleicons.org/ (CC0-1.0) -->
+<svg class="bluesky-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026"></path></svg>
+
+
+              <span class="sr-only">Bluesky</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.gpupo.com/feed.xml" class="nav-list-link external"
+            
+            
+          >
+            
+              
+<svg class="rss-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none"></circle><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+
+
+              <span class="sr-only">RSS</span>
+            
+          </a>
+        </li><li class="nav-list-item external">
+          <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7039318039770640384" class="nav-list-link external"
+            
+              target="_blank"
+            
+            
+              rel="nofollow noopener noreferrer"
+            
+          >
+            
+              
+<svg class="newsletter-icon social-nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"></path></svg>
+
+
+              <span class="sr-only">Subscribe my newsletter on LinkedIn</span>
+            
+          </a>
+        </li></ul>
+    
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+      
+      
+      
+      
+    
+  
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    <nav class="sidebar-periods" aria-label="Arquivo">
+  <p class="sidebar-periods-title">Arquivo</p>
+  <ul class="sidebar-period-list">
+    <li>
+      <a href="/notas/">Notas</a>
+    </li>
+  </ul>
+  
+  <p class="sidebar-periods-subtitle">Posts por trimestre</p>
+  <ul class="sidebar-period-list sidebar-period-list--nested">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q4">2026 Q4</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+  
+</nav>
+
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Gilmar Pupo" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search Gilmar Pupo</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+</div>
+
+    <div class="main-content-wrap">
+      
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <article class="post" itemscope itemtype="https://schema.org/BlogPosting"><header class="post-header">
+    <p class="eyebrow">Post</p>
+<h1 itemprop="headline">
+  
+  
+    Como usar um harness como assistente de anotação
+  
+  
+</h1>
+    
+    
+    <p class="post-meta">
+      <time datetime="2026-10-02T00:00:00-03:00" itemprop="datePublished">
+        02/10/2026
+      </time>
+      
+      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+        · <span itemprop="name">Gilmar Pupo</span>
+      </span>
+      
+    </p>
+    
+    
+
+
+<div class="post-tldr">
+  <em>
+    Se preferir começar por um resumo, peça um TL;DR ao
+    
+
+
+
+
+
+<a href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fcomo-usar-um-harness-como-assistente-de-anotacao%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">ChatGPT</a> ou ao <a href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fcomo-usar-um-harness-como-assistente-de-anotacao%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%3A%0A1%29+Resuma+os+cinco+pontos+mais+importantes+e+a+conclus%C3%A3o.%0A2%29+Explique+quais+detalhes%2C+dados+e+insights+o+leitor+perde+por+n%C3%A3o+ler+o+artigo+completo.%0A3%29+Sugira+uma+boa+pergunta+de+follow-up+para+continuar+a+conversa+sobre+o+artigo." target="_blank" rel="noopener noreferrer">Claude</a>
+
+.
+  </em>
+</div>
+
+    
+    <p class="post-deck">Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.</p>
+    
+  </header>
+
+  
+  
+  
+  <nav class="post-toc" aria-labelledby="post-toc-title">
+<h2 id="post-toc-title">
+  
+  
+    <a href="#post-toc-title" class="anchor-heading" aria-labelledby="post-toc-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Neste post
+  
+  
+</h2>
+    
+    <ul><li><a href="#o-modelo-sozinho-não-é-o-assistente">O modelo sozinho não é o assistente</a></li><li><a href="#em-vez-de-abrir-o-sistema-podemos-dizer-anote">Em vez de abrir o sistema, podemos dizer: anote</a></li><li><a href="#arquivos-que-continuam-sendo-nossos">Arquivos que continuam sendo nossos</a></li><li><a href="#o-agentsmd-funciona-como-manual-de-trabalho">O AGENTS.md funciona como manual de trabalho</a></li><li><a href="#a-estrutura-pode-crescer-com-o-uso">A estrutura pode crescer com o uso</a></li><li><a href="#um-exemplo-estou-pensando-em-comprar-alguma-coisa">Um exemplo: estou pensando em comprar alguma coisa</a></li><li><a href="#outro-exemplo-uma-leitura">Outro exemplo: uma leitura</a></li><li><a href="#o-agente-também-pode-pesquisar">O agente também pode pesquisar</a></li><li><a href="#local-não-significa-automaticamente-privado">Local não significa automaticamente privado</a></li><li><a href="#anotar-deixa-de-ser-administrar-arquivos">Anotar deixa de ser administrar arquivos</a></li></ul>
+  </nav>
+  
+  
+
+  <div class="post-body post-body--editorial-code" itemprop="articleBody">
+    <p>Durante muito tempo, anotar significava escolher onde guardar alguma coisa.</p>
+
+<p>Abrimos um aplicativo, criamos uma nota, pensamos num título, escolhemos uma
+pasta, talvez acrescentamos algumas tags, fazemos links com outras notas e
+seguimos em frente.</p>
+
+<p>Funciona.</p>
+
+<p>Mas existe um custo escondido: além de ter a ideia, precisamos administrar o
+sistema que guarda a ideia.</p>
+
+<p>É justamente nessa parte que um <em>harness</em> começa a ficar interessante.</p>
+<h2 id="o-modelo-sozinho-não-é-o-assistente">
+  
+  
+    <a href="#o-modelo-sozinho-não-é-o-assistente" class="anchor-heading" aria-labelledby="o-modelo-sozinho-não-é-o-assistente"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O modelo sozinho não é o assistente
+  
+  
+</h2>
+    
+
+<p>Neste texto, uso <em>harness</em> como nome para o ambiente que coloca o modelo para
+trabalhar: instruções, ferramentas, permissões e o fluxo que transforma uma
+resposta em ação.</p>
+
+<p>O termo não identifica uma arquitetura única. Dependendo do produto, esse
+ambiente pode ter capacidades e limites bastante diferentes.</p>
+
+<p>Quando conversamos com um modelo de linguagem numa janela de chat, ele consegue
+escrever, resumir, classificar e sugerir. Isso não significa, por si só, que
+consiga cuidar das nossas notas.</p>
+
+<p>Para isso, o sistema precisa oferecer acesso ao lugar onde elas existem e às
+operações necessárias para trabalhar ali. Pode incluir ferramentas para:</p>
+
+<ul>
+  <li>ler e escrever arquivos;</li>
+  <li>navegar em diretórios;</li>
+  <li>executar comandos;</li>
+  <li>pesquisar na web;</li>
+  <li>consultar serviços externos.</li>
+</ul>
+
+<p>O modelo interpreta o pedido e propõe o que fazer. O harness disponibiliza as
+ferramentas, aplica permissões e executa as operações autorizadas.</p>
+
+<p>Essa distinção importa. A capacidade não está apenas no modelo. Depende também
+do que o ambiente permite que ele leia, altere e consulte.</p>
+<h2 id="em-vez-de-abrir-o-sistema-podemos-dizer-anote">
+  
+  
+    <a href="#em-vez-de-abrir-o-sistema-podemos-dizer-anote" class="anchor-heading" aria-labelledby="em-vez-de-abrir-o-sistema-podemos-dizer-anote"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Em vez de abrir o sistema, podemos dizer: anote
+  
+  
+</h2>
+    
+
+<p>Imagine que nossas notas sejam arquivos Markdown dentro de um diretório. Essa
+mesma pasta pode ser aberta pelo Obsidian para navegação e edição, mas também
+pode ser entregue a um agente por meio de um harness.</p>
+
+<p>A partir daí, em vez de fazer todo o trabalho manual, podemos dizer:</p>
+
+<blockquote>
+  <p>Anote esta indicação de filme.</p>
+</blockquote>
+
+<p>Num ambiente configurado para isso, o agente pode criar a nota, registrar a
+data e a fonte da indicação e procurar relações com pessoas, diretores ou
+assuntos já presentes no arquivo.</p>
+
+<p>Depois podemos perguntar:</p>
+
+<blockquote>
+  <p>Qual era mesmo aquele filme que registrei algum tempo atrás?</p>
+</blockquote>
+
+<p>O agente tem onde procurar.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/codex-vault-assistente-anotacao.webp" alt="Terminal com o Codex verificando links Markdown e criando um mapa de conteúdo num cofre de notas." width="1361" height="1035" loading="lazy" decoding="async" />
+  <figcaption>O Codex trabalhando diretamente no meu cofre de notas: criação do mapa de conteúdo dos projetos e conferência dos links Markdown.</figcaption>
+</figure>
+
+<p>Isso é diferente de usar um chatbot como bloco de notas. O conhecimento não
+fica apenas na conversa. Ele é persistido num sistema que continua disponível
+para outras sessões, ferramentas e modelos.</p>
+<h2 id="arquivos-que-continuam-sendo-nossos">
+  
+  
+    <a href="#arquivos-que-continuam-sendo-nossos" class="anchor-heading" aria-labelledby="arquivos-que-continuam-sendo-nossos"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Arquivos que continuam sendo nossos
+  
+  
+</h2>
+    
+
+<p>Não é necessário começar com um banco de dados criado especialmente para a IA.
+Podemos trabalhar com elementos simples:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>meu-caderno/
+├── AGENTS.md
+├── inbox/
+├── notes/
+├── attachments/
+└── templates/
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>As notas podem continuar em Markdown. Imagens, PDFs e outros anexos podem ficar
+ao lado delas.</p>
+
+<p>Estar no diretório, porém, não torna todo anexo automaticamente pesquisável. O
+harness ainda precisa de ferramentas capazes de extrair texto, ler metadados ou
+aplicar OCR quando o conteúdo estiver apenas numa imagem.</p>
+
+<p>Se amanhã trocarmos o agente, o modelo ou o harness, os arquivos continuam ali.
+O Obsidian continua abrindo o diretório. Um editor de texto continua abrindo as
+notas. O Git continua capaz de versionar as alterações.</p>
+
+<p>Essa portabilidade, porém, não acontece automaticamente. Ela depende de manter
+os dados em formatos legíveis, documentar as convenções e evitar que uma parte
+essencial do sistema exista apenas dentro de um serviço proprietário.</p>
+
+<p>Arquivos simples também não resolvem todos os cenários. Se o volume crescer
+muito, várias pessoas precisarem editar ao mesmo tempo ou as consultas exigirem
+estrutura rígida, um índice ou banco de dados pode se tornar necessário. O
+ponto é que não precisamos começar por ele para experimentar o fluxo.</p>
+
+<p>A inteligência pode mudar. A base de conhecimento não precisa mudar com ela.</p>
+<h2 id="o-agentsmd-funciona-como-manual-de-trabalho">
+  
+  
+    <a href="#o-agentsmd-funciona-como-manual-de-trabalho" class="anchor-heading" aria-labelledby="o-agentsmd-funciona-como-manual-de-trabalho"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O <code class="language-plaintext highlighter-rouge">AGENTS.md</code> funciona como manual de trabalho
+  
+  
+</h2>
+    
+
+<p>Se o agente vai alterar nossas notas, precisa saber como queremos que isso seja
+feito.</p>
+
+<p>É aí que um arquivo como <code class="language-plaintext highlighter-rouge">AGENTS.md</code> se torna útil. Ele pode explicar:</p>
+
+<ul>
+  <li>que aquele diretório é um cofre de notas;</li>
+  <li>como nomear os arquivos;</li>
+  <li>quando criar uma nota e quando atualizar uma existente;</li>
+  <li>como representar pessoas, empresas, obras e decisões;</li>
+  <li>como guardar fontes e datas de consulta;</li>
+  <li>como relacionar assuntos;</li>
+  <li>quais informações não podem ser alteradas;</li>
+  <li>quais mudanças exigem revisão humana.</li>
+</ul>
+
+<p>Essa convenção não pertence a todos os harnesses. No Codex, especificamente, a
+<a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">documentação oficial sobre <code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>
+explica que os arquivos são lidos no início da execução e combinados do escopo
+global até o diretório de trabalho. Instruções mais próximas do arquivo em que
+o agente trabalha podem especializar as regras mais gerais.</p>
+
+<p>Isso reduz a necessidade de repetir o mesmo contexto em toda sessão. Uma regra
+como esta pode ficar no próprio ambiente:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>Quando uma nova nota mencionar uma pessoa, livro ou empresa já existente,
+adicione o link correspondente.
+
+Não invente relações apenas porque duas notas usam palavras parecidas.
+
+Registre a origem e a data de consulta de toda informação trazida da web.
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O agente não precisa lembrar da conversa anterior. Precisa conseguir reler as
+instruções e reencontrar os arquivos.</p>
+<h2 id="a-estrutura-pode-crescer-com-o-uso">
+  
+  
+    <a href="#a-estrutura-pode-crescer-com-o-uso" class="anchor-heading" aria-labelledby="a-estrutura-pode-crescer-com-o-uso"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> A estrutura pode crescer com o uso
+  
+  
+</h2>
+    
+
+<p>Também não é necessário desenhar toda a taxonomia antes de começar.</p>
+
+<p>Há um risco em criar uma grande árvore de diretórios quando ainda não existe
+material suficiente para mostrar quais divisões serão úteis. Podemos começar
+com uma caixa de entrada e algumas notas:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>um livro
+uma reunião
+um produto em avaliação
+uma ideia
+uma decisão
+uma empresa
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Conforme o material aparece, padrões começam a surgir. Talvez faça sentido
+separar empresas. Talvez apareçam projetos, equipamentos, livros, decisões ou
+pesquisas.</p>
+
+<p>O sistema pode ganhar estrutura em resposta ao uso real. O harness diminui o
+trabalho mecânico de renomear, mover e atualizar links, mas não deveria
+reorganizar tudo silenciosamente. Mudanças amplas precisam ser revisáveis e,
+quando possível, versionadas.</p>
+<h2 id="um-exemplo-estou-pensando-em-comprar-alguma-coisa">
+  
+  
+    <a href="#um-exemplo-estou-pensando-em-comprar-alguma-coisa" class="anchor-heading" aria-labelledby="um-exemplo-estou-pensando-em-comprar-alguma-coisa"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Um exemplo: estou pensando em comprar alguma coisa
+  
+  
+</h2>
+    
+
+<p>Estamos navegando pela web e encontramos um equipamento interessante. Copiamos
+o endereço e dizemos:</p>
+
+<blockquote>
+  <p>Estou considerando comprar isto. Anote.</p>
+</blockquote>
+
+<p>O agente pode registrar o produto, a URL, o preço encontrado e o motivo do
+interesse. Como preços mudam, vale preservar também a moeda, a loja e a data da
+consulta:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="gh"># Interface de áudio — modelo X</span>
+<span class="p">
+-</span> Estado: considerando
+<span class="p">-</span> Fonte: https://exemplo.com/produto
+<span class="p">-</span> Preço observado: R$ 999
+<span class="p">-</span> Consultado em: 2026-10-02
+<span class="p">-</span> Motivo: usar nas gravações em casa
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Alguns dias depois encontramos um concorrente:</p>
+
+<blockquote>
+  <p>Compare com aquele que eu estava considerando e registre.</p>
+</blockquote>
+
+<p>Agora pode existir uma relação entre os dois. Depois compramos um deles:</p>
+
+<blockquote>
+  <p>Comprei este.</p>
+</blockquote>
+
+<p>O agente pode atualizar o estado ou criar o registro da compra e ligá-lo à
+pesquisa anterior.</p>
+
+<p>Meses depois, aquela pequena sequência conta uma história:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>pesquisa → comparação → decisão → compra
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Não foi necessário projetar um banco de dados completo antes de começar. A
+estrutura apareceu durante o uso.</p>
+<h2 id="outro-exemplo-uma-leitura">
+  
+  
+    <a href="#outro-exemplo-uma-leitura" class="anchor-heading" aria-labelledby="outro-exemplo-uma-leitura"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Outro exemplo: uma leitura
+  
+  
+</h2>
+    
+
+<p>Durante a leitura de um livro surge uma ideia:</p>
+
+<blockquote>
+  <p>Anote esta ideia e relacione com o livro.</p>
+</blockquote>
+
+<p>Mais tarde aparece outra reflexão sobre o mesmo assunto. O agente pode sugerir
+uma ligação com a primeira nota. Depois encontramos outro livro que trata do
+tema e o sistema começa a formar uma pequena rede de conhecimento.</p>
+
+<p>Meses depois, ao pesquisar o assunto, podemos reencontrar ideias que já haviam
+saído da memória.</p>
+
+<p>É a mesma possibilidade que me interessa na história do
+<a href="/posts/zettelkasten-longa-historia-pensar-com-pedacos-de-papel/">Zettelkasten</a>:
+o valor não está apenas nas notas individuais, mas nos caminhos que conseguimos
+percorrer entre elas.</p>
+
+<p>O agente pode ajudar a encontrar candidatos a conexão. A decisão de que duas
+ideias realmente têm uma relação continua merecendo julgamento. Coincidência
+de palavras não é o mesmo que relação de significado.</p>
+<h2 id="o-agente-também-pode-pesquisar">
+  
+  
+    <a href="#o-agente-também-pode-pesquisar" class="anchor-heading" aria-labelledby="o-agente-também-pode-pesquisar"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> O agente também pode pesquisar
+  
+  
+</h2>
+    
+
+<p>Um harness pode oferecer ferramentas além do sistema de arquivos. Se houver
+acesso à web, podemos pedir ao agente que consulte o site de uma empresa,
+recupere a ficha técnica de um equipamento ou busque dados bibliográficos de um
+livro.</p>
+
+<p>Nesse ponto, ele deixa de ser apenas um arquivista e passa a ajudar na pesquisa
+do próprio arquivo.</p>
+
+<p>Mas informações externas precisam entrar com procedência. Eu manteria pelo
+menos três distinções visíveis:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>o que eu escrevi
+o que veio de uma fonte
+o que o agente inferiu
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>Sem essa separação, uma síntese produzida pelo modelo pode parecer uma anotação
+pessoal antiga, e uma inferência pode reaparecer meses depois como se fosse um
+fato confirmado.</p>
+
+<p>Também evitaria permitir que uma pesquisa na web sobrescrevesse silenciosamente
+o conteúdo original. É mais seguro acrescentar a fonte, a data e o resultado
+em uma seção identificada ou propor uma alteração para revisão.</p>
+<h2 id="local-não-significa-automaticamente-privado">
+  
+  
+    <a href="#local-não-significa-automaticamente-privado" class="anchor-heading" aria-labelledby="local-não-significa-automaticamente-privado"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Local não significa automaticamente privado
+  
+  
+</h2>
+    
+
+<p>Não precisamos transformar esse sistema imediatamente em servidor, aplicativo
+ou serviço acessível pelo celular.</p>
+
+<p>Se o agente tem acesso a notas pessoais, arquivos e outras ferramentas do
+computador, expô-lo na internet aumenta a superfície de risco. Em muitos
+cenários, faz sentido manter o harness restrito à máquina e conceder apenas as
+permissões necessárias para o trabalho.</p>
+
+<p>Ainda assim, “local” não garante que todos os dados permaneçam no computador.
+Isso depende do modelo utilizado, dos serviços conectados, das ferramentas e
+da configuração de rede. Um agente executado localmente pode enviar conteúdo a
+uma API remota.</p>
+
+<p>Antes de apontá-lo para um cofre pessoal, eu verificaria:</p>
+
+<ul>
+  <li>quais diretórios ele consegue ler e escrever;</li>
+  <li>para quais serviços o conteúdo pode ser enviado;</li>
+  <li>quais operações exigem aprovação;</li>
+  <li>como revisar e reverter alterações;</li>
+  <li>onde ficam logs, backups e histórico;</li>
+  <li>quais notas contêm dados que não deveriam ser expostos.</li>
+</ul>
+
+<p>Durante o dia, uma alternativa simples é anotar no papel ou numa caixa de
+entrada limitada. Depois transferimos aquilo que vale a pena para o sistema.
+Essa etapa parece menos conveniente, mas funciona também como triagem: nem tudo
+precisa entrar no arquivo permanente.</p>
+<h2 id="anotar-deixa-de-ser-administrar-arquivos">
+  
+  
+    <a href="#anotar-deixa-de-ser-administrar-arquivos" class="anchor-heading" aria-labelledby="anotar-deixa-de-ser-administrar-arquivos"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Anotar deixa de ser administrar arquivos
+  
+  
+</h2>
+    
+
+<p>Com um assistente trabalhando sobre o sistema, a preocupação muda.</p>
+
+<p>Antes perguntávamos:</p>
+
+<blockquote>
+  <p>Onde devo guardar isso?</p>
+</blockquote>
+
+<p>Agora podemos perguntar:</p>
+
+<blockquote>
+  <p>Vale a pena guardar isso?</p>
+</blockquote>
+
+<p>A primeira pergunta é sobre administração de arquivos. A segunda é sobre
+conhecimento.</p>
+
+<p>Se decidirmos registrar algo, podemos delegar parte do trabalho mecânico:
+criar, nomear, estruturar, relacionar e, quando autorizado, enriquecer a nota.</p>
+
+<p>Isso não significa registrar automaticamente tudo o que acontece. Um sistema
+que captura tudo pode produzir apenas um grande depósito de ruído.</p>
+
+<p>A escolha humana continua essencial:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>isto foi interessante
+isto foi uma decisão
+quero lembrar desta conversa
+esta ideia talvez volte a ser útil
+esta informação merece sobreviver ao momento
+</pre></td></tr></tbody></table></div></code></pre></div></div>
+
+<p>O agente não precisa decidir sozinho tudo o que importa. Ele precisa tornar
+mais barato preservar, encontrar e revisar aquilo que decidimos guardar.</p>
+
+<p>Continuamos fazendo o que fazemos há séculos: anotando para não depender
+exclusivamente da memória.</p>
+
+<p>Só que agora o caderno pode ter um assistente.</p>
+
+  </div>
+
+  
+
+
+
+<aside class="post-ai-share" aria-labelledby="post-ai-share-title">
+<h2 id="post-ai-share-title">
+  
+  
+    <a href="#post-ai-share-title" class="anchor-heading" aria-labelledby="post-ai-share-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gostou? Compartilhe com suas palavras — com uma pequena ajuda da IA.
+  
+  
+</h2>
+    
+  <p>
+    Peça ao <strong>ChatGPT</strong> ou ao <strong>Claude</strong> três sugestões de texto prontas para compartilhar este post nas suas redes. O modelo lê o artigo, cria variações com abordagens diferentes e já inclui o link para esta página.
+  </p>
+  
+
+
+
+
+
+<div class="ai-prompt-actions">
+  <a class="btn" href="https://chatgpt.com/?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fcomo-usar-um-harness-como-assistente-de-anotacao%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com ChatGPT
+  </a>
+  <a class="btn" href="https://claude.ai/new?q=Por+favor%2C+abra+esta+URL+com+busca+na+web+e+leia+o+artigo+completo%3A%0A%0Ahttps%3A%2F%2Fwww.gpupo.com%2Fposts%2Fcomo-usar-um-harness-como-assistente-de-anotacao%2F%0A%0ADepois+de+ler+o+conte%C3%BAdo+real+do+artigo%2C+crie+3+op%C3%A7%C3%B5es+diferentes+de+texto+para+eu+compartilhar+este+post+em+redes+digitais.%0A%0AAs+tr%C3%AAs+op%C3%A7%C3%B5es+devem%3A%0A-+parecer+escritas+por+uma+pessoa+que+realmente+leu+o+artigo%3B%0A-+destacar+uma+ideia+interessante+do+texto+sem+inventar+informa%C3%A7%C3%B5es%3B%0A-+ter+abordagens+diferentes+entre+si%3B%0A-+ser+concisas+e+naturais%3B%0A-+evitar+tom+promocional+ou+exagerado%3B%0A-+incluir+a+URL+original+do+artigo+ao+final.%0A%0AFa%C3%A7a%3A%0A1%29+uma+vers%C3%A3o+direta%3B%0A2%29+uma+vers%C3%A3o+mais+pessoal+e+conversacional%3B%0A3%29+uma+vers%C3%A3o+que+provoque+reflex%C3%A3o.%0A%0AEntregue+apenas+os+tr%C3%AAs+textos+prontos+para+copiar+e+publicar." target="_blank" rel="noopener noreferrer">
+    Criar 3 opções com Claude
+  </a>
+</div>
+
+
+</aside>
+
+
+  
+
+
+
+
+
+
+<section
+  class="ask-my-texts"
+  data-ask-my-texts
+  data-ask-context="site-corpus"
+  
+  
+  
+  aria-labelledby="ask-my-texts-post-title"
+><header class="ask-my-texts-header">
+<h2 id="ask-my-texts-post-title">
+  
+  
+    <a href="#ask-my-texts-post-title" class="anchor-heading" aria-labelledby="ask-my-texts-post-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 
+      Pergunte aos meus textos
+    
+  
+  
+</h2>
+    
+    <p>
+      
+      Faça uma pergunta. O ChatGPT usará os textos publicados neste site como
+      referência para responder.
+      
+    </p>
+  </header>
+
+  <form
+    class="ask-my-texts-form"
+    action="https://chatgpt.com/"
+    method="get"
+    target="_blank"
+    data-ask-my-texts-form
+  >
+    <label for="ask-my-texts-post-question">Sua pergunta</label>
+    <textarea
+      id="ask-my-texts-post-question"
+      name="q"
+      rows="4"
+      placeholder="O que você pensa sobre software agêntico?"
+      required
+      data-ask-my-texts-question
+    ></textarea>
+
+    <div class="ask-my-texts-actions">
+      <button class="btn btn-primary" type="submit" data-ask-my-texts-submit>
+        Perguntar no ChatGPT
+      </button>
+    </div>
+  </form>
+
+  <p class="ask-my-texts-feedback" data-ask-my-texts-feedback aria-live="polite" hidden></p>
+
+  <div class="ask-my-texts-fallback" data-ask-my-texts-fallback hidden>
+    <label for="ask-my-texts-post-prompt">Prompt completo para cópia manual</label>
+    <textarea
+      id="ask-my-texts-post-prompt"
+      rows="10"
+      readonly
+      data-ask-my-texts-prompt
+    ></textarea>
+  </div>
+
+  <p class="ask-my-texts-privacy">
+    Sua pergunta não é enviada para este site. O texto é preparado localmente no
+    navegador e a conversa acontece no ChatGPT.
+  </p>
+
+  <noscript>
+    <p class="ask-my-texts-noscript">
+      Com JavaScript desabilitado, a pergunta será aberta diretamente no ChatGPT
+      sem o contexto preparado.
+    </p>
+  </noscript>
+</section>
+
+
+  
+  <footer class="post-tags" aria-label="Tags do post">
+    <span>Tags:</span>
+    
+    <a href="/posts/tags/#agentes-de-ia" rel="tag">Agentes de IA</a>, 
+    
+    <a href="/posts/tags/#gestão-do-conhecimento" rel="tag">Gestão do conhecimento</a>, 
+    
+    <a href="/posts/tags/#markdown" rel="tag">Markdown</a>, 
+    
+    <a href="/posts/tags/#obsidian" rel="tag">Obsidian</a>, 
+    
+    <a href="/posts/tags/#agents-md" rel="tag">AGENTS.md</a>
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  
+  <aside class="related-posts" aria-labelledby="related-posts-title">
+<h2 id="related-posts-title">
+  
+  
+    <a href="#related-posts-title" class="anchor-heading" aria-labelledby="related-posts-title"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Posts relacionados
+  
+  
+</h2>
+    
+    <ul>
+      
+    
+      
+        
+          
+          
+            <li><a href="/posts/por-que-anotar/">Por que anotar?</a></li>
+            
+            
+          
+        
+      
+        
+          
+          
+        
+      
+        
+      
+        
+          
+          
+            <li><a href="/posts/versionar-e-criar-checkpoints/">Versionar é criar checkpoints</a></li>
+            
+            
+          
+        
+      
+        
+          
+          
+            <li><a href="/posts/uma-skill-e-muito-menos-magica-do-que-parece/">Uma Skill é muito menos mágica do que parece</a></li>
+            
+            
+          
+        
+      
+        
+          
+          
+            <li><a href="/posts/todo-agente-acorda-com-amnesia/">Todo agente acorda com amnésia</a></li>
+            
+            
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+  
+    </ul>
+  </aside>
+  
+  
+</article>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  
+
+
+<p class="editorial-transparency">
+  Este site é meu arquivo editorial. Escrevo, reviso e respondo pelo que publico. Para organizar o material e manter o site, uso Obsidian, Jekyll, bibliotecas de software e, quando faz sentido, ferramentas de IA em tarefas como pesquisa, estruturação, revisão e automação.
+</p>
+<p class="text-small mb-0">
+  <a href="/contact/">Contato</a> ·
+  <a href="/privacy/">Privacidade</a>
+</p>
+<span class="canonical-link">
+  <a href="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/" rel="canonical">https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/</a>
+</span>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      <nav class="sidebar-periods" aria-label="Arquivo">
+  <p class="sidebar-periods-title">Arquivo</p>
+  <ul class="sidebar-period-list">
+    <li>
+      <a href="/notas/">Notas</a>
+    </li>
+  </ul>
+  
+  <p class="sidebar-periods-subtitle">Posts por trimestre</p>
+  <ul class="sidebar-period-list sidebar-period-list--nested">
+    
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q4">2026 Q4</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q3">2026 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q2">2026 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2026-q1">2026 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q3">2025 Q3</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2025-q2">2025 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2024-q2">2024 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q2">2023 Q2</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2023-q1">2023 Q1</a>
+      </li>
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+      <li>
+        <a href="/posts/#posts-archive-2015-q3">2015 Q3</a>
+      </li>
+      
+      
+    
+  </ul>
+  
+</nav>
+
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

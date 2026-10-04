@@ -1,4 +1,570 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-01T17:16:23-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Handoff: uma memória simples para agentes que não precisam lembrar de tudo</title><link href="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/" rel="alternate" type="text/html" title="Handoff: uma memória simples para agentes que não precisam lembrar de tudo" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes</id><content type="html" xml:base="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/"><![CDATA[<p>Existe uma tentação comum quando começamos a trabalhar com agentes de IA:
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-04T09:38:11-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Como usar um harness como assistente de anotação</title><link href="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/" rel="alternate" type="text/html" title="Como usar um harness como assistente de anotação" /><published>2026-10-02T00:00:00-03:00</published><updated>2026-10-02T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao</id><content type="html" xml:base="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/"><![CDATA[<p>Durante muito tempo, anotar significava escolher onde guardar alguma coisa.</p>
+
+<p>Abrimos um aplicativo, criamos uma nota, pensamos num título, escolhemos uma
+pasta, talvez acrescentamos algumas tags, fazemos links com outras notas e
+seguimos em frente.</p>
+
+<p>Funciona.</p>
+
+<p>Mas existe um custo escondido: além de ter a ideia, precisamos administrar o
+sistema que guarda a ideia.</p>
+
+<p>É justamente nessa parte que um <em>harness</em> começa a ficar interessante.</p>
+
+<h2 id="o-modelo-sozinho-não-é-o-assistente">O modelo sozinho não é o assistente</h2>
+
+<p>Neste texto, uso <em>harness</em> como nome para o ambiente que coloca o modelo para
+trabalhar: instruções, ferramentas, permissões e o fluxo que transforma uma
+resposta em ação.</p>
+
+<p>O termo não identifica uma arquitetura única. Dependendo do produto, esse
+ambiente pode ter capacidades e limites bastante diferentes.</p>
+
+<p>Quando conversamos com um modelo de linguagem numa janela de chat, ele consegue
+escrever, resumir, classificar e sugerir. Isso não significa, por si só, que
+consiga cuidar das nossas notas.</p>
+
+<p>Para isso, o sistema precisa oferecer acesso ao lugar onde elas existem e às
+operações necessárias para trabalhar ali. Pode incluir ferramentas para:</p>
+
+<ul>
+  <li>ler e escrever arquivos;</li>
+  <li>navegar em diretórios;</li>
+  <li>executar comandos;</li>
+  <li>pesquisar na web;</li>
+  <li>consultar serviços externos.</li>
+</ul>
+
+<p>O modelo interpreta o pedido e propõe o que fazer. O harness disponibiliza as
+ferramentas, aplica permissões e executa as operações autorizadas.</p>
+
+<p>Essa distinção importa. A capacidade não está apenas no modelo. Depende também
+do que o ambiente permite que ele leia, altere e consulte.</p>
+
+<h2 id="em-vez-de-abrir-o-sistema-podemos-dizer-anote">Em vez de abrir o sistema, podemos dizer: anote</h2>
+
+<p>Imagine que nossas notas sejam arquivos Markdown dentro de um diretório. Essa
+mesma pasta pode ser aberta pelo Obsidian para navegação e edição, mas também
+pode ser entregue a um agente por meio de um harness.</p>
+
+<p>A partir daí, em vez de fazer todo o trabalho manual, podemos dizer:</p>
+
+<blockquote>
+  <p>Anote esta indicação de filme.</p>
+</blockquote>
+
+<p>Num ambiente configurado para isso, o agente pode criar a nota, registrar a
+data e a fonte da indicação e procurar relações com pessoas, diretores ou
+assuntos já presentes no arquivo.</p>
+
+<p>Depois podemos perguntar:</p>
+
+<blockquote>
+  <p>Qual era mesmo aquele filme que registrei algum tempo atrás?</p>
+</blockquote>
+
+<p>O agente tem onde procurar.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/codex-vault-assistente-anotacao.webp" alt="Terminal com o Codex verificando links Markdown e criando um mapa de conteúdo num cofre de notas." width="1361" height="1035" loading="lazy" decoding="async" />
+  <figcaption>O Codex trabalhando diretamente no meu cofre de notas: criação do mapa de conteúdo dos projetos e conferência dos links Markdown.</figcaption>
+</figure>
+
+<p>Isso é diferente de usar um chatbot como bloco de notas. O conhecimento não
+fica apenas na conversa. Ele é persistido num sistema que continua disponível
+para outras sessões, ferramentas e modelos.</p>
+
+<h2 id="arquivos-que-continuam-sendo-nossos">Arquivos que continuam sendo nossos</h2>
+
+<p>Não é necessário começar com um banco de dados criado especialmente para a IA.
+Podemos trabalhar com elementos simples:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>meu-caderno/
+├── AGENTS.md
+├── inbox/
+├── notes/
+├── attachments/
+└── templates/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>As notas podem continuar em Markdown. Imagens, PDFs e outros anexos podem ficar
+ao lado delas.</p>
+
+<p>Estar no diretório, porém, não torna todo anexo automaticamente pesquisável. O
+harness ainda precisa de ferramentas capazes de extrair texto, ler metadados ou
+aplicar OCR quando o conteúdo estiver apenas numa imagem.</p>
+
+<p>Se amanhã trocarmos o agente, o modelo ou o harness, os arquivos continuam ali.
+O Obsidian continua abrindo o diretório. Um editor de texto continua abrindo as
+notas. O Git continua capaz de versionar as alterações.</p>
+
+<p>Essa portabilidade, porém, não acontece automaticamente. Ela depende de manter
+os dados em formatos legíveis, documentar as convenções e evitar que uma parte
+essencial do sistema exista apenas dentro de um serviço proprietário.</p>
+
+<p>Arquivos simples também não resolvem todos os cenários. Se o volume crescer
+muito, várias pessoas precisarem editar ao mesmo tempo ou as consultas exigirem
+estrutura rígida, um índice ou banco de dados pode se tornar necessário. O
+ponto é que não precisamos começar por ele para experimentar o fluxo.</p>
+
+<p>A inteligência pode mudar. A base de conhecimento não precisa mudar com ela.</p>
+
+<h2 id="o-agentsmd-funciona-como-manual-de-trabalho">O <code class="language-plaintext highlighter-rouge">AGENTS.md</code> funciona como manual de trabalho</h2>
+
+<p>Se o agente vai alterar nossas notas, precisa saber como queremos que isso seja
+feito.</p>
+
+<p>É aí que um arquivo como <code class="language-plaintext highlighter-rouge">AGENTS.md</code> se torna útil. Ele pode explicar:</p>
+
+<ul>
+  <li>que aquele diretório é um cofre de notas;</li>
+  <li>como nomear os arquivos;</li>
+  <li>quando criar uma nota e quando atualizar uma existente;</li>
+  <li>como representar pessoas, empresas, obras e decisões;</li>
+  <li>como guardar fontes e datas de consulta;</li>
+  <li>como relacionar assuntos;</li>
+  <li>quais informações não podem ser alteradas;</li>
+  <li>quais mudanças exigem revisão humana.</li>
+</ul>
+
+<p>Essa convenção não pertence a todos os harnesses. No Codex, especificamente, a
+<a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">documentação oficial sobre <code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>
+explica que os arquivos são lidos no início da execução e combinados do escopo
+global até o diretório de trabalho. Instruções mais próximas do arquivo em que
+o agente trabalha podem especializar as regras mais gerais.</p>
+
+<p>Isso reduz a necessidade de repetir o mesmo contexto em toda sessão. Uma regra
+como esta pode ficar no próprio ambiente:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>Quando uma nova nota mencionar uma pessoa, livro ou empresa já existente,
+adicione o link correspondente.
+
+Não invente relações apenas porque duas notas usam palavras parecidas.
+
+Registre a origem e a data de consulta de toda informação trazida da web.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>O agente não precisa lembrar da conversa anterior. Precisa conseguir reler as
+instruções e reencontrar os arquivos.</p>
+
+<h2 id="a-estrutura-pode-crescer-com-o-uso">A estrutura pode crescer com o uso</h2>
+
+<p>Também não é necessário desenhar toda a taxonomia antes de começar.</p>
+
+<p>Há um risco em criar uma grande árvore de diretórios quando ainda não existe
+material suficiente para mostrar quais divisões serão úteis. Podemos começar
+com uma caixa de entrada e algumas notas:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>um livro
+uma reunião
+um produto em avaliação
+uma ideia
+uma decisão
+uma empresa
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Conforme o material aparece, padrões começam a surgir. Talvez faça sentido
+separar empresas. Talvez apareçam projetos, equipamentos, livros, decisões ou
+pesquisas.</p>
+
+<p>O sistema pode ganhar estrutura em resposta ao uso real. O harness diminui o
+trabalho mecânico de renomear, mover e atualizar links, mas não deveria
+reorganizar tudo silenciosamente. Mudanças amplas precisam ser revisáveis e,
+quando possível, versionadas.</p>
+
+<h2 id="um-exemplo-estou-pensando-em-comprar-alguma-coisa">Um exemplo: estou pensando em comprar alguma coisa</h2>
+
+<p>Estamos navegando pela web e encontramos um equipamento interessante. Copiamos
+o endereço e dizemos:</p>
+
+<blockquote>
+  <p>Estou considerando comprar isto. Anote.</p>
+</blockquote>
+
+<p>O agente pode registrar o produto, a URL, o preço encontrado e o motivo do
+interesse. Como preços mudam, vale preservar também a moeda, a loja e a data da
+consulta:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="gh"># Interface de áudio — modelo X</span>
+<span class="p">
+-</span> Estado: considerando
+<span class="p">-</span> Fonte: https://exemplo.com/produto
+<span class="p">-</span> Preço observado: R$ 999
+<span class="p">-</span> Consultado em: 2026-10-02
+<span class="p">-</span> Motivo: usar nas gravações em casa
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Alguns dias depois encontramos um concorrente:</p>
+
+<blockquote>
+  <p>Compare com aquele que eu estava considerando e registre.</p>
+</blockquote>
+
+<p>Agora pode existir uma relação entre os dois. Depois compramos um deles:</p>
+
+<blockquote>
+  <p>Comprei este.</p>
+</blockquote>
+
+<p>O agente pode atualizar o estado ou criar o registro da compra e ligá-lo à
+pesquisa anterior.</p>
+
+<p>Meses depois, aquela pequena sequência conta uma história:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>pesquisa → comparação → decisão → compra
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Não foi necessário projetar um banco de dados completo antes de começar. A
+estrutura apareceu durante o uso.</p>
+
+<h2 id="outro-exemplo-uma-leitura">Outro exemplo: uma leitura</h2>
+
+<p>Durante a leitura de um livro surge uma ideia:</p>
+
+<blockquote>
+  <p>Anote esta ideia e relacione com o livro.</p>
+</blockquote>
+
+<p>Mais tarde aparece outra reflexão sobre o mesmo assunto. O agente pode sugerir
+uma ligação com a primeira nota. Depois encontramos outro livro que trata do
+tema e o sistema começa a formar uma pequena rede de conhecimento.</p>
+
+<p>Meses depois, ao pesquisar o assunto, podemos reencontrar ideias que já haviam
+saído da memória.</p>
+
+<p>É a mesma possibilidade que me interessa na história do
+<a href="/posts/zettelkasten-longa-historia-pensar-com-pedacos-de-papel/">Zettelkasten</a>:
+o valor não está apenas nas notas individuais, mas nos caminhos que conseguimos
+percorrer entre elas.</p>
+
+<p>O agente pode ajudar a encontrar candidatos a conexão. A decisão de que duas
+ideias realmente têm uma relação continua merecendo julgamento. Coincidência
+de palavras não é o mesmo que relação de significado.</p>
+
+<h2 id="o-agente-também-pode-pesquisar">O agente também pode pesquisar</h2>
+
+<p>Um harness pode oferecer ferramentas além do sistema de arquivos. Se houver
+acesso à web, podemos pedir ao agente que consulte o site de uma empresa,
+recupere a ficha técnica de um equipamento ou busque dados bibliográficos de um
+livro.</p>
+
+<p>Nesse ponto, ele deixa de ser apenas um arquivista e passa a ajudar na pesquisa
+do próprio arquivo.</p>
+
+<p>Mas informações externas precisam entrar com procedência. Eu manteria pelo
+menos três distinções visíveis:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>o que eu escrevi
+o que veio de uma fonte
+o que o agente inferiu
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Sem essa separação, uma síntese produzida pelo modelo pode parecer uma anotação
+pessoal antiga, e uma inferência pode reaparecer meses depois como se fosse um
+fato confirmado.</p>
+
+<p>Também evitaria permitir que uma pesquisa na web sobrescrevesse silenciosamente
+o conteúdo original. É mais seguro acrescentar a fonte, a data e o resultado
+em uma seção identificada ou propor uma alteração para revisão.</p>
+
+<h2 id="local-não-significa-automaticamente-privado">Local não significa automaticamente privado</h2>
+
+<p>Não precisamos transformar esse sistema imediatamente em servidor, aplicativo
+ou serviço acessível pelo celular.</p>
+
+<p>Se o agente tem acesso a notas pessoais, arquivos e outras ferramentas do
+computador, expô-lo na internet aumenta a superfície de risco. Em muitos
+cenários, faz sentido manter o harness restrito à máquina e conceder apenas as
+permissões necessárias para o trabalho.</p>
+
+<p>Ainda assim, “local” não garante que todos os dados permaneçam no computador.
+Isso depende do modelo utilizado, dos serviços conectados, das ferramentas e
+da configuração de rede. Um agente executado localmente pode enviar conteúdo a
+uma API remota.</p>
+
+<p>Antes de apontá-lo para um cofre pessoal, eu verificaria:</p>
+
+<ul>
+  <li>quais diretórios ele consegue ler e escrever;</li>
+  <li>para quais serviços o conteúdo pode ser enviado;</li>
+  <li>quais operações exigem aprovação;</li>
+  <li>como revisar e reverter alterações;</li>
+  <li>onde ficam logs, backups e histórico;</li>
+  <li>quais notas contêm dados que não deveriam ser expostos.</li>
+</ul>
+
+<p>Durante o dia, uma alternativa simples é anotar no papel ou numa caixa de
+entrada limitada. Depois transferimos aquilo que vale a pena para o sistema.
+Essa etapa parece menos conveniente, mas funciona também como triagem: nem tudo
+precisa entrar no arquivo permanente.</p>
+
+<h2 id="anotar-deixa-de-ser-administrar-arquivos">Anotar deixa de ser administrar arquivos</h2>
+
+<p>Com um assistente trabalhando sobre o sistema, a preocupação muda.</p>
+
+<p>Antes perguntávamos:</p>
+
+<blockquote>
+  <p>Onde devo guardar isso?</p>
+</blockquote>
+
+<p>Agora podemos perguntar:</p>
+
+<blockquote>
+  <p>Vale a pena guardar isso?</p>
+</blockquote>
+
+<p>A primeira pergunta é sobre administração de arquivos. A segunda é sobre
+conhecimento.</p>
+
+<p>Se decidirmos registrar algo, podemos delegar parte do trabalho mecânico:
+criar, nomear, estruturar, relacionar e, quando autorizado, enriquecer a nota.</p>
+
+<p>Isso não significa registrar automaticamente tudo o que acontece. Um sistema
+que captura tudo pode produzir apenas um grande depósito de ruído.</p>
+
+<p>A escolha humana continua essencial:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>isto foi interessante
+isto foi uma decisão
+quero lembrar desta conversa
+esta ideia talvez volte a ser útil
+esta informação merece sobreviver ao momento
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>O agente não precisa decidir sozinho tudo o que importa. Ele precisa tornar
+mais barato preservar, encontrar e revisar aquilo que decidimos guardar.</p>
+
+<p>Continuamos fazendo o que fazemos há séculos: anotando para não depender
+exclusivamente da memória.</p>
+
+<p>Só que agora o caderno pode ter um assistente.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão do conhecimento" /><category term="Markdown" /><category term="Obsidian" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Por que anotar?</title><link href="https://www.gpupo.com/posts/por-que-anotar/" rel="alternate" type="text/html" title="Por que anotar?" /><published>2026-10-02T00:00:00-03:00</published><updated>2026-10-02T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/por-que-anotar</id><content type="html" xml:base="https://www.gpupo.com/posts/por-que-anotar/"><![CDATA[<p>Eu anoto porque não confio na minha memória.</p>
+
+<p>Não no sentido de achar que tenho uma memória particularmente ruim. Apenas não
+quero usá-la como arquivo.</p>
+
+<p>Uma ideia aparece enquanto leio um livro. Outra surge numa conversa. Alguém me
+indica um filme. Vejo um equipamento que talvez queira comprar. Descubro uma
+relação interessante entre duas coisas que, naquele momento, parecem não ter
+nada a ver.</p>
+
+<p>Se decido que preciso me lembrar de tudo isso, crio um problema.</p>
+
+<p>A cabeça começa a manter as coisas vivas:</p>
+
+<blockquote>
+  <p>Não esquece daquele negócio.</p>
+</blockquote>
+
+<blockquote>
+  <p>Depois procura aquilo.</p>
+</blockquote>
+
+<blockquote>
+  <p>Você precisa responder fulano.</p>
+</blockquote>
+
+<blockquote>
+  <p>Lembra daquela ideia.</p>
+</blockquote>
+
+<p>Existe uma diferença grande entre <strong>lembrar de alguma coisa</strong> e <strong>saber que
+alguma coisa está guardada</strong>.</p>
+
+<p>Quando confio no lugar onde anoto, posso esquecer.</p>
+
+<p>Essa é uma das maiores utilidades da anotação para mim.</p>
+
+<h2 id="a-nota-não-precisa-ser-importante-agora">A nota não precisa ser importante agora</h2>
+
+<p>Durante muito tempo associei anotação a coisas importantes.</p>
+
+<p>Hoje penso quase ao contrário. Muitas coisas que anoto ainda não sei se são
+importantes.</p>
+
+<p>Às vezes estou lendo um livro e alguma frase provoca uma ideia. Anoto.</p>
+
+<p>Meses depois encontro aquela nota relacionada a outro assunto que estou
+estudando e penso:</p>
+
+<blockquote>
+  <p>Puxa, isso aqui era bom.</p>
+</blockquote>
+
+<p>Eu já havia esquecido completamente.</p>
+
+<p>A ideia continuou existindo porque eu não dependia mais da memória para
+mantê-la viva.</p>
+
+<p>Esse talvez seja o ponto que mais me interessa. Não quero apenas criar um
+arquivo daquilo que já sei. Quero permitir que meu eu do futuro encontre coisas
+que meu eu do presente ainda não sabe para que servirão.</p>
+
+<h2 id="anotar-também-cria-conexões">Anotar também cria conexões</h2>
+
+<p>Uma nota isolada tem algum valor. Duas notas relacionadas começam a ter outro.</p>
+
+<p>Se alguém me indicou um filme, posso registrar o filme e a pessoa. Se depois eu
+quiser lembrar “qual era mesmo aquele filme que o Guido indicou?”, não preciso
+procurar pelo filme. Posso chegar até ele pelo Guido.</p>
+
+<p>Um livro pode estar ligado às ideias que tive durante a leitura.</p>
+
+<p>Uma empresa pode estar ligada a uma conversa, uma proposta, uma pessoa e uma
+decisão.</p>
+
+<p>Um equipamento pode estar ligado à época em que o comprei, à banda em que
+tocava e às músicas que tentei tocar com ele.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/nota-negociacao-contrabaixo.webp" alt="Nota exibida no navegador com a foto de um contrabaixo rosa e um checklist de verificações antes da compra." width="1237" height="987" loading="lazy" decoding="async" />
+  <figcaption>Uma nota que comecei durante a negociação de um contrabaixo, reunindo a foto do instrumento e o checklist antes de fechar.</figcaption>
+</figure>
+
+<p>Pouco a pouco, aquilo deixa de ser uma coleção de documentos e passa a parecer
+uma pequena Wikipédia pessoal.</p>
+
+<p>O interessante não são apenas as páginas. São os links entre elas.</p>
+
+<p>Foi também o que me chamou atenção ao pesquisar a
+<a href="/posts/zettelkasten-longa-historia-pensar-com-pedacos-de-papel/">história do Zettelkasten</a>.
+Uma ficha guarda uma ideia. As referências entre fichas permitem reencontrá-la
+por caminhos que talvez não estivessem claros quando ela foi escrita.</p>
+
+<h2 id="registrar-não-significa-decidir-fazer">Registrar não significa decidir fazer</h2>
+
+<p>Existe um perigo nisso tudo.</p>
+
+<p>Quando começamos a anotar, podemos transformar qualquer coisa em obrigação.</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>Vi um produto interessante → tarefa
+Pensei em ler um livro       → tarefa
+Imaginei um projeto          → tarefa
+Descobri um lugar            → tarefa
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Em pouco tempo, criamos uma máquina especializada em produzir culpa.</p>
+
+<p>Por isso tento separar duas coisas:</p>
+
+<blockquote>
+  <p><strong>Registrar não significa decidir fazer.</strong></p>
+</blockquote>
+
+<p>Posso querer guardar uma ideia sem assumir compromisso algum com ela. Posso
+registrar um livro que talvez leia algum dia. Posso colocar uma possibilidade
+numa espécie de “um dia, talvez”.</p>
+
+<p>Ela está segura. Não preciso executá-la agora e também não preciso continuar me
+lembrando dela.</p>
+
+<p>Uma tarefa carrega um compromisso. Uma nota pode apenas preservar uma
+possibilidade.</p>
+
+<h2 id="papel-ainda-funciona-muito-bem">Papel ainda funciona muito bem</h2>
+
+<p>Nem toda nota precisa nascer digital.</p>
+
+<p>Quando estou lendo alguma coisa que considero importante, gosto de ter papel e
+caneta por perto.</p>
+
+<p>Pegar o celular para registrar uma ideia parece mais eficiente. O problema é
+que o celular contém também mensagens, e-mail, notificações, navegador e todo o
+resto. Eu entro para escrever três palavras e posso sair vinte minutos depois
+sem lembrar direito por que peguei o telefone.</p>
+
+<p>Por isso o papel continua sendo uma boa caixa de entrada.</p>
+
+<p>Depois posso transferir aquilo que vale a pena para meu sistema. Essa
+transferência, inclusive, tem valor: é um pequeno momento de revisão.</p>
+
+<p>Nem tudo precisa sobreviver.</p>
+
+<h2 id="a-ia-mudou-um-pouco-essa-conta">A IA mudou um pouco essa conta</h2>
+
+<p>Antes, havia também um custo para organizar.</p>
+
+<p>Se eu criasse notas demais, depois teria que classificar, renomear, relacionar
+e procurar tudo aquilo.</p>
+
+<p>Hoje um agente com acesso ao sistema de notas pode ajudar nesse trabalho. Posso
+dizer “anote isso”, e ele pode propor um título, criar o arquivo, relacioná-lo a
+uma pessoa já existente e encontrar outra nota sobre o mesmo assunto.</p>
+
+<p>Expliquei esse arranjo em
+<a href="/posts/como-usar-um-harness-como-assistente-de-anotacao/"><em>Como usar um harness como assistente de anotação</em></a>.
+A capacidade depende das ferramentas, permissões e instruções oferecidas ao
+agente. As relações sugeridas também precisam de revisão: palavras parecidas
+não garantem que duas ideias estejam realmente conectadas.</p>
+
+<p>Isso torna o registro relativamente barato, mas não elimina a escolha.</p>
+
+<p>Continuo achando que vale perguntar:</p>
+
+<blockquote>
+  <p><strong>Isto merece ocupar espaço no meu sistema?</strong></p>
+</blockquote>
+
+<p>A diferença é que agora não preciso gastar tanta energia decidindo onde
+exatamente colocar nem executando todas as operações mecânicas.</p>
+
+<h2 id="o-objetivo-não-é-lembrar-mais">O objetivo não é lembrar mais</h2>
+
+<p>Quanto mais uso notas, menos acho que o objetivo seja melhorar minha memória.</p>
+
+<p>Talvez seja justamente o contrário.</p>
+
+<p>Quero poder esquecer tranquilamente. Quero saber que uma ideia, uma indicação,
+uma decisão ou uma lembrança está em algum lugar onde consigo encontrá-la de
+novo.</p>
+
+<p>E quero que, eventualmente, coisas registradas em momentos diferentes voltem a
+se encontrar.</p>
+
+<p>Anotar, para mim, é isso.</p>
+
+<p>Não é tentar guardar tudo.</p>
+
+<p>É não obrigar minha cabeça a continuar carregando aquilo que pode ficar em
+outro lugar.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Gestão do conhecimento" /><category term="Notas" /><category term="Memória" /><category term="Zettelkasten" /><category term="Agentes de IA" /><summary type="html"><![CDATA[Anoto menos para lembrar de tudo e mais para conseguir esquecer com tranquilidade, reencontrar ideias e deixar que elas se relacionem no futuro.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Handoff: uma memória simples para agentes que não precisam lembrar de tudo</title><link href="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/" rel="alternate" type="text/html" title="Handoff: uma memória simples para agentes que não precisam lembrar de tudo" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes</id><content type="html" xml:base="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/"><![CDATA[<p>Existe uma tentação comum quando começamos a trabalhar com agentes de IA:
 tentar fazer com que eles <strong>lembrem de tudo</strong>.</p>
 
 <p>A conversa inteira. Todas as decisões. Todos os detalhes. Tudo o que aconteceu
@@ -1962,323 +2528,4 @@ revisão pequena, específica e eficaz.</p>
 entrei com o conhecimento do instrumento, das minhas preferências e do padrão
 que quero manter. Uma frase foi suficiente para corrigir a direção porque o
 trabalho estava legível — e porque eu consegui reconhecer o critério que ainda
-estava apenas na minha cabeça.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Supervisão humana" /><category term="Documentação" /><category term="MuseScore" /><category term="Automação" /><category term="Música" /><summary type="html"><![CDATA[Uma clave plausível, mas errada para minha biblioteca de partituras, mostrou como convenções explícitas e revisão humana transformam a energia de um agente em trabalho confiável.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Uma ferramenta menor que a conta</title><link href="https://www.gpupo.com/posts/uma-ferramenta-menor-que-a-conta/" rel="alternate" type="text/html" title="Uma ferramenta menor que a conta" /><published>2026-09-20T00:00:00-03:00</published><updated>2026-09-20T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/uma-ferramenta-menor-que-a-conta</id><content type="html" xml:base="https://www.gpupo.com/posts/uma-ferramenta-menor-que-a-conta/"><![CDATA[<h2 id="o-que-tenho-amanhã">O que tenho amanhã?</h2>
-
-<p>Eu queria poder fazer essa pergunta ao meu agente. Também queria perguntar
-quais reuniões estavam na minha agenda em determinado mês. O calendário já
-estava sincronizado no Thunderbird, mas o agente não tinha uma forma confiável
-de consultá-lo.</p>
-
-<p>Dar acesso direto à minha conta Google resolveria a pergunta e criaria outra
-integração para manter, com credenciais e permissões além do necessário. Era
-uma solução desproporcional: entregar uma conta inteira para responder a uma
-consulta temporal.</p>
-
-<p>Escolhi uma operação menor. Transformei o cache local do Thunderbird numa
-ferramenta de linha de comando. O agente informa um intervalo; o comando
-devolve eventos normalizados em JSON. O Thunderbird continua responsável pela
-sincronização.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="rouge-code"><pre>Google Calendar
-      ↕
- Thunderbird
-      ↓
- cache local
-      ↓
- tb-calendar
-      ↓
-    JSON
-      ↓
-   agente
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O agente não precisava necessariamente de uma integração com o sistema.
-Precisava de uma operação suficientemente estreita para responder à pergunta.</p>
-
-<h2 id="o-cache-era-a-api-que-eu-precisava">O cache era a API que eu precisava</h2>
-
-<p>O calendário já chegava ao Thunderbird por CalDAV. Eu não precisava reproduzir
-essa sincronização, administrar OAuth ou fazer o agente conhecer a conta
-remota. Precisava encontrar no computador uma representação que já estivesse
-disponível.</p>
-
-<p>O primeiro candidato foi <code class="language-plaintext highlighter-rouge">local.sqlite</code>. Parecia o lugar óbvio para começar.
-Antes de escrever o parser, consultei o schema e contei os registros por
-calendário. O banco tinha as tabelas esperadas, mas nenhum evento. Os dados do
-calendário sincronizado estavam em outro arquivo: <code class="language-plaintext highlighter-rouge">cache.sqlite</code>.</p>
-
-<p>Essa contagem evitou que eu construísse a ferramenta sobre uma suposição. O
-nome do arquivo e a presença das tabelas não eram evidência de que os eventos
-estavam ali.</p>
-
-<h2 id="o-wal-fazia-parte-da-agenda">O WAL fazia parte da agenda</h2>
-
-<p>O segundo problema apareceu quando comparei duas leituras. O arquivo principal
-de <code class="language-plaintext highlighter-rouge">cache.sqlite</code> mostrava 511 eventos do calendário escolhido. A leitura que
-incluía o WAL mostrava 579. Parte do estado mais recente estava no
-<em>write-ahead log</em>, separado do arquivo principal.</p>
-
-<p>Consultar apenas o SQLite principal deixaria 68 registros de fora. Com o
-Thunderbird aberto, porém, a conexão usual em modo somente leitura retornava
-<code class="language-plaintext highlighter-rouge">database is locked</code>. Uma abertura com <code class="language-plaintext highlighter-rouge">immutable=1</code> lia o arquivo principal,
-mas não refletia os dados do WAL.</p>
-
-<p>A solução foi copiar <code class="language-plaintext highlighter-rouge">cache.sqlite</code> e seu WAL como arquivos comuns para um
-diretório temporário privado. O <code class="language-plaintext highlighter-rouge">tb-calendar</code> confere se as origens mudaram
-durante a cópia e tenta novamente quando isso acontece. Depois abre a cópia com
-SQLite em <code class="language-plaintext highlighter-rouge">mode=ro</code> e <code class="language-plaintext highlighter-rouge">query_only=ON</code>. O diretório temporário desaparece ao fim
-da consulta; o banco original não recebe comandos SQL.</p>
-
-<p>Ler as linhas também não bastava. O cache armazenava horários e timezones
-separadamente, representava eventos de dia inteiro de forma própria e
-distribuía recorrências, exclusões e ocorrências alteradas por estruturas
-diferentes. O CLI precisou reconstruir uma agenda, não apenas executar um
-<code class="language-plaintext highlighter-rouge">SELECT</code>.</p>
-
-<p>Usei Python e <code class="language-plaintext highlighter-rouge">python-dateutil</code> para fazer essa tradução. Testei uma série
-semanal, uma data excluída, uma ocorrência movida e um evento de dia inteiro.
-Num intervalo amplo do cache real, as 36 exceções existentes apareceram uma
-vez cada. Os testes automatizados usam dados fictícios e também verificam WAL,
-somente leitura e janelas livres.</p>
-
-<h2 id="da-agenda-para-uma-interface-de-agente">Da agenda para uma interface de agente</h2>
-
-<p>O resultado é um comando com consultas para hoje, amanhã, semana, intervalos
-arbitrários e horários livres. Para agosto de 2026, por exemplo, o agente pode
-executar:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>tb-calendar query <span class="se">\</span>
-  <span class="nt">--from</span> 2026-08-01T00:00:00-03:00 <span class="se">\</span>
-  <span class="nt">--to</span> 2026-09-01T00:00:00-03:00 <span class="se">\</span>
-  <span class="nt">--json</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O fim do intervalo é exclusivo. A saída apresenta os horários em
-<code class="language-plaintext highlighter-rouge">America/Sao_Paulo</code> e contém campos como <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">start</code>, <code class="language-plaintext highlighter-rouge">end</code>, <code class="language-plaintext highlighter-rouge">all_day</code>,
-<code class="language-plaintext highlighter-rouge">location</code>, <code class="language-plaintext highlighter-rouge">busy</code> e <code class="language-plaintext highlighter-rouge">recurrence_id</code>. Descrição, convidados, credenciais e
-propriedades internas não fazem parte da resposta.</p>
-
-<p>Um trecho simplificado, com dados fictícios, fica assim:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
-  </span><span class="nl">"events"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reunião de planejamento"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-11T10:00:00-03:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-11T10:30:00-03:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"all_day"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-  </span><span class="p">}]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Esta é a interface do agente. Não o SQLite, não o Thunderbird e não a conta
-Google.</p>
-
-<h2 id="o-que-a-ferramenta-pode--e-não-pode--afirmar">O que a ferramenta pode — e não pode — afirmar</h2>
-
-<p>Depois usei a mesma interface para produzir retrospectivas mensais no
-<a href="/posts/como-eu-lido-com-minhas-notas-pessoais-em-2026q3/">meu vault do Obsidian</a>.
-Em junho, por exemplo, 36 registros permitiram detectar uma duplicação
-aparente, dois compromissos no mesmo horário e títulos genéricos demais para
-recuperar o assunto apenas pelo calendário.</p>
-
-<p>Essa experiência expôs um limite que não pertence ao parser. O calendário
-registra intenção de tempo, não presença ou realização. Um espaço vazio não
-prova descanso. Um evento não prova comparecimento. A ferramenta torna a fonte
-consultável; o agente ainda precisa interpretar o que ela pode sustentar.</p>
-
-<p>O <code class="language-plaintext highlighter-rouge">tb-calendar</code> consulta apenas um calendário autorizado e somente o que o
-Thunderbird já sincronizou para o cache local. Se a sincronização estiver
-atrasada, a resposta também estará. A ferramenta não cria, edita ou exclui
-eventos. Timezones personalizados e recorrências de dia inteiro ainda precisam
-de mais exemplos reais para validação.</p>
-
-<h2 id="exponha-a-operação-não-o-sistema">Exponha a operação, não o sistema</h2>
-
-<p>O CLI funciona para mim e para o agente. Posso executar
-<code class="language-plaintext highlighter-rouge">tb-calendar tomorrow</code> no terminal; um assistente pode chamar o mesmo comando
-com <code class="language-plaintext highlighter-rouge">--json</code>. Um <code class="language-plaintext highlighter-rouge">AGENTS.md</code> registra o caminho do executável, um exemplo de
-intervalo e a instrução de usar a ferramenta em vez de abrir o perfil do
-Thunderbird.</p>
-
-<p>Não precisei criar um servidor, um daemon ou um servidor MCP. Para um agente na
-mesma máquina, parâmetros previsíveis e JSON estável foram suficientes. O
-calendário é apenas um caso de um padrão que posso repetir com outras fontes.</p>
-
-<p>Se consigo consultar legitimamente uma informação por uma API, um banco local,
-um arquivo ou um comando, provavelmente consigo construir uma ferramenta para
-o assistente fazer uma consulta equivalente. Isso depende das permissões, do
-formato e da possibilidade de automatizar o acesso sem contornar controles.
-Ter acesso não significa automaticamente ter autorização para delegá-lo.</p>
-
-<p>Antes de oferecer uma nova ferramenta a um agente, eu verificaria:</p>
-
-<ol>
-  <li>Tenho autorização para delegar esse acesso?</li>
-  <li>Qual é a menor operação capaz de responder à pergunta?</li>
-  <li>Ela pode ser somente de leitura?</li>
-  <li>Quais dados podem ficar fora da resposta?</li>
-  <li>Como a ferramenta informa origem, intervalo e limitações?</li>
-  <li>Consigo testar a saída sem alterar a fonte?</li>
-</ol>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre>sistema inteiro  ✗
-
-operação autorizada
-       ↓
-  dados mínimos
-       ↓
-interface estável
-       ↓
-     agente
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O Thunderbird cuida da sincronização.
-A ferramenta cuida da tradução.
-O agente cuida da pergunta.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Thunderbird" /><category term="CLI" /><category term="SQLite" /><category term="Automação" /><category term="Privacidade" /><summary type="html"><![CDATA[Eu queria que meu agente respondesse “o que tenho amanhã?” sem entregar a ele uma conta Google inteira. A solução foi transformar o cache local do Thunderbird numa pequena interface somente de leitura.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Por que desisti de publicar as transcrições dos vídeos que uso como fonte</title><link href="https://www.gpupo.com/posts/por-que-desisti-de-publicar-as-transcricoes-dos-videos-que-uso-como-fonte/" rel="alternate" type="text/html" title="Por que desisti de publicar as transcrições dos vídeos que uso como fonte" /><published>2026-09-17T00:00:00-03:00</published><updated>2026-09-17T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/por-que-desisti-de-publicar-as-transcricoes-dos-videos-que-uso-como-fonte</id><content type="html" xml:base="https://www.gpupo.com/posts/por-que-desisti-de-publicar-as-transcricoes-dos-videos-que-uso-como-fonte/"><![CDATA[<p>Nos últimos dias, eu estava preparando a
-<a href="/biblioteca/">Biblioteca comentada</a> do gpupo.com para receber materiais que
-uso como fonte. Cada item teria sua página editorial, mas eu também pretendia
-publicar os arquivos produzidos durante o processamento: transcrição,
-metadados, documentos Markdown e JSON e um ZIP reunindo o corpus.</p>
-
-<p>A ideia parecia especialmente útil para agentes de IA. Em vez de depender da
-página, um agente poderia consultar a transcrição completa e os arquivos que
-deram origem ao resumo, aos insights e à bibliografia.</p>
-
-<p>Cheguei a implementar parte disso.</p>
-
-<p>Então um amigo me contou sobre um caso envolvendo direito autoral. O caso não
-era exatamente sobre o que eu estava fazendo e não tirei dele uma conclusão
-jurídica sobre a Biblioteca. Ainda assim, a conversa revelou uma pergunta que
-eu não tinha tratado com cuidado suficiente: ao facilitar o acesso para
-máquinas, eu poderia acabar redistribuindo um conteúdo que não era meu?</p>
-
-<p>Fui revisar o que estava prestes a publicar. A transcrição integral era o ponto
-mais difícil de justificar.</p>
-
-<h2 id="a-atribuição-não-eliminava-a-dúvida">A atribuição não eliminava a dúvida</h2>
-
-<p>Quando uso um vídeo como fonte, quero estudá-lo, identificar conceitos e
-produzir uma contribuição editorial a partir dele. Não quero substituir o
-vídeo nem oferecer outra forma de consumir a obra inteira.</p>
-
-<p>Uma transcrição integral fica perto demais desse segundo papel. Ela preserva
-em texto uma parte substancial do conteúdo original. Informar a autoria,
-apontar para o vídeo e explicar a procedência continuam sendo cuidados
-necessários, mas não respondem sozinhos se eu deveria hospedar aquele material.</p>
-
-<p>Também não preciso resolver aqui a classificação jurídica de cada transcrição
-para tomar uma decisão editorial mais restritiva. Bastou perceber que a
-publicação integral não era necessária para a Biblioteca cumprir sua função.</p>
-
-<p>A pergunta deixou de ser:</p>
-
-<blockquote>
-  <p>Como posso publicar todo o material que usei para produzir esta página?</p>
-</blockquote>
-
-<p>E passou a ser:</p>
-
-<blockquote>
-  <p>O que realmente precisa ser publicado para que esta página cumpra sua função?</p>
-</blockquote>
-
-<p>A resposta era: muito menos coisa.</p>
-
-<h2 id="usar-uma-transcrição-não-exige-publicá-la">Usar uma transcrição não exige publicá-la</h2>
-
-<p>A transcrição continua sendo útil durante a pesquisa. Posso usá-la para
-localizar assuntos, conferir uma afirmação, produzir um resumo ou compreender
-melhor a fonte.</p>
-
-<p>Isso não obriga a transformar o mesmo arquivo em parte permanente do site.
-Usar um artefato durante o processamento e publicá-lo são decisões diferentes.</p>
-
-<p>Essa distinção também evita uma aparente contradição com a
-<a href="/artigos/biblioteca-pessoal-videos-podcasts/">biblioteca pessoal de pesquisa que descrevi anteriormente</a>.
-Uma ferramenta privada pode manter materiais necessários à pesquisa e ao
-reprocessamento. A decisão deste texto trata daquilo que coloco publicamente no
-gpupo.com.</p>
-
-<p>No site, a transcrição pode ser obtida, consultada e descartada depois de
-cumprir sua função. Se algum material precisar ser preservado por uma razão
-específica, essa retenção deverá ser uma decisão separada, fora da publicação
-pública.</p>
-
-<h2 id="a-página-concentra-a-contribuição-editorial">A página concentra a contribuição editorial</h2>
-
-<p>A fonte pública de cada item da Biblioteca passa a ser a própria página. É
-nela que apresento a origem do material, o link para a obra, o contexto, o
-resumo, os insights e as referências que ajudam a entender o que encontrei.</p>
-
-<p>Esses elementos não substituem a fonte original. Eles registram minha seleção,
-minha organização e os caminhos que considero úteis para voltar a ela.</p>
-
-<p>Por isso, retirei as transcrições integrais, os ZIPs e os diretórios de arquivos
-brutos que havia começado a publicar. A página preserva o que tem função
-editorial. Os documentos usados para produzi-la não precisam formar uma
-segunda publicação ao lado dela.</p>
-
-<h2 id="os-agentes-também-podem-começar-pela-página">Os agentes também podem começar pela página</h2>
-
-<p>A preocupação com agentes de IA não desapareceu. O que mudou foi a premissa de
-que eles precisariam receber uma cópia especial e mais extensa da fonte.</p>
-
-<p>Se a página tem título, contexto, estrutura semântica, referências e um endereço
-canônico, ela já oferece um ponto de partida para pessoas e máquinas. Quando o
-conteúdo editorial não for suficiente, a obra original continua identificada.</p>
-
-<p>Prefiro melhorar essa página compartilhada a publicar transcrições e pacotes
-específicos para agentes. A conveniência de uma máquina não é, por si só, motivo
-para ampliar o que o site redistribui.</p>
-
-<h2 id="o-critério-que-ficou">O critério que ficou</h2>
-
-<p>Adotei uma regra simples para a Biblioteca:</p>
-
-<blockquote>
-  <p><strong>O site só deve guardar aquilo que realmente publica.</strong></p>
-</blockquote>
-
-<p>Isso não transforma uma decisão editorial em parecer jurídico nem elimina
-todos os riscos possíveis. O que ela faz é reduzir o material exposto e manter
-o site alinhado ao objetivo que motivou a Biblioteca: referenciar fontes,
-registrar o que aprendi e acrescentar uma camada própria de interpretação.</p>
-
-<p>A fonte continua onde foi publicada por seu autor. No gpupo.com, fica a minha
-contribuição e o caminho de volta até ela.</p>
-
-<p><strong>Processamento é transitório. Publicação é deliberada. Retenção é mínima.</strong></p>]]></content><author><name>Gilmar Pupo</name></author><category term="Biblioteca" /><category term="Transcrição" /><category term="Direito autoral" /><category term="Agentes de IA" /><category term="Publicação digital" /><summary type="html"><![CDATA[A dúvida sobre direito autoral que me levou a separar os materiais usados durante a pesquisa daquilo que realmente publico no gpupo.com.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+estava apenas na minha cabeça.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Supervisão humana" /><category term="Documentação" /><category term="MuseScore" /><category term="Automação" /><category term="Música" /><summary type="html"><![CDATA[Uma clave plausível, mas errada para minha biblioteca de partituras, mostrou como convenções explícitas e revisão humana transformam a energia de um agente em trabalho confiável.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
