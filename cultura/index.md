@@ -22,7 +22,39 @@ escuto, estudo, uso e escrevo.
 
 <div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-10">
       <h2 id="culture-archive-2026-10">Outubro de 2026</h2>
-      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-10-04" data-editorial="equipamento">
+      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-10-14" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-14T00:00:00-03:00">14 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/a-setima-menor-tambem-vai-a-igreja-o-modo-mixolidio-e-a-musica-gospel/">A sétima menor também vai à igreja: o modo mixolídio e a música gospel</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-11" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-11T00:00:00-03:00">11 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/o-dawless-de-mccartney-e-o-meu/">O DAWless de McCartney e o meu</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-11" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-11T00:00:00-03:00">11 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/linhas-botoes-ovelhas-e-a-vida-comum/">Linhas, botões, ovelhas e a vida comum</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-07" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-07T00:00:00-03:00">7 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/a-vassoura-de-jimi-hendrix-e-woodstock-as-nove-da-manha/">A vassoura de Jimi Hendrix e Woodstock às nove da manhã</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-04" data-editorial="equipamento">
           <article>
             <time datetime="2026-10-04T00:00:00-03:00">4 out</time>
             <div class="culture-archive-entry-content">

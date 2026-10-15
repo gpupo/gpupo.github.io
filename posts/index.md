@@ -56,6 +56,105 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-09T00:00:00-03:00">
+              09/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#remotion">Remotion</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/remotion-agente-local-video-como-codigo/">Eu queria fazer um vídeo explicando como a empresa funciona. E queria usar IA.</a></h4>
+          
+          <p class="post-archive-summary">Uma conversa sobre vídeo com IA levou à sugestão de combinar Remotion, um agente de programação local e vídeo como código para representar processos revisáveis.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-09T00:00:00-03:00">
+              09/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#codex">Codex</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/agente-ia-anuncios-usados/">Coloquei um agente de IA para cuidar dos meus anúncios de usados</a></h4>
+          
+          <p class="post-archive-summary">Sete anúncios de equipamentos musicais, um catálogo no Obsidian e artes revisáveis: como usei Codex e Markdown mantendo as decisões comerciais comigo.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-04T00:00:00-03:00">
+              04/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#arquitetura-de-software">Arquitetura de software</a>
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência artificial</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/modelos-de-decisao/">Jev e Clef: quando usar modelos de decisão em agentes de IA</a></h4>
+          
+          <p class="post-archive-summary">Nove aplicações, exemplos de arquitetura e critérios para comparar regras, modelos de decisão e LLMs, considerando latência, custo e erros.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-10-02T00:00:00-03:00">
               02/10/2026
             </time>
