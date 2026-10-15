@@ -7986,10 +7986,13 @@ img.rounded {
 }
 
 .home-avatar {
-  border-radius: 50%;
-  height: 8rem;
+  aspect-ratio: 4/5;
+  border-radius: 16px;
+  display: block;
+  height: auto;
+  max-width: 100%;
   object-fit: cover;
-  width: 8rem;
+  width: 12rem;
 }
 
 .home-intro {
@@ -9239,12 +9242,14 @@ img.rounded {
 }
 
 .avatar_profile {
-  border-radius: 50%;
+  aspect-ratio: 4/5;
+  border-radius: 16px;
   float: left;
-  height: 5rem;
+  height: auto;
   margin: 0 1rem 0.5rem 0;
+  max-width: 100%;
   object-fit: cover;
-  width: 5rem;
+  width: 8rem;
 }
 
 .article-list-item {
@@ -9266,8 +9271,7 @@ img.rounded {
     grid-template-columns: 1fr;
   }
   .home-avatar {
-    height: 6rem;
-    width: 6rem;
+    width: 9rem;
   }
   .article-grid {
     grid-template-columns: 1fr;

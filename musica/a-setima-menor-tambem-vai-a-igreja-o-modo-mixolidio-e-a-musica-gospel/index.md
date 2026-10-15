@@ -35,6 +35,11 @@ Não se trata simplesmente de dizer que o gospel copiou o blues ou vice-versa, m
 
 Um exemplo que me interessa nessa proximidade é **Sister Rosetta Tharpe**.
 
+<figure class="editorial-photo">
+  <img src="/assets/images/sister-rosetta-tharpe-terry-cryer.jpg" alt="Sister Rosetta Tharpe canta diante de um microfone, com os braços erguidos e uma guitarra a tiracolo, em fotografia em preto e branco" width="700" height="563" loading="lazy" decoding="async">
+  <figcaption>Sister Rosetta Tharpe em apresentação, 1957. Fotografia: Terry Cryer. Acervo do Smithsonian National Museum of African American History and Culture, doação de Gayle Wald, objeto <a href="https://nmaahc.si.edu/object/nmaahc_2014.98.22">2014.98.22</a>. © Terry Cryer Estate.</figcaption>
+</figure>
+
 O [Smithsonian destaca sua combinação de gospel e guitarra elétrica](https://www.si.edu/collections/snapshot/sister-rosetta-tharpe-gospel-electric-guitar-driven-rock-n-roll) e sua influência sobre músicos associados à formação do rock and roll.
 
 Quando escuto Rosetta, as frases de guitarra me aproximam de uma linguagem que também reconheço no blues. Isso não basta para identificar um modo em cada passagem, mas me faz querer investigar o que está acontecendo.

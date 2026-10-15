@@ -5,7 +5,7 @@ Canonical: https://www.gpupo.com/about/
 
 ---
 
-![Gilmar Pupo](/assets/profile.jpeg){: .avatar_profile }
+<img src="/assets/images/gilmar-pupo-caneta-azul-vertical.webp" alt="Retrato de Gilmar Pupo desenhado em caneta azul sobre papel de caderno" class="avatar_profile" width="384" height="480">
 
 Sou Gilmar Pupo, executivo de tecnologia com mais de 25 anos de experiência.
 Minha trajetória começou em web design e desenvolvimento de sistemas e passou

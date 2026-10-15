@@ -41,8 +41,8 @@ O [site oficial de Hendrix](https://www.jimihendrix.com/editorial/jimi-hendrix-l
 Quarenta mil pessoas continuam sendo uma plateia imensa. O contraste está entre a apresentação real e a multidão total que, por associação, acabo colocando diante dele. O show também não foi apenas o trecho de “The Star-Spangled Banner” que costuma representar Woodstock: a programação registrada por Bethel Woods vai das **9h às 11h15**.
 
 <figure class="editorial-photo">
-  <img src="/assets/images/a-vassoura-de-jimi-hendrix-e-woodstock-as-nove-da-manha.webp" alt="Ilustração em duas cenas: um menino imita uma guitarra com uma vassoura em um quarto; à direita, Jimi Hendrix toca uma guitarra branca diante do público de Woodstock" width="1536" height="1024" loading="lazy" decoding="async">
-  <figcaption>Ilustração das duas cenas: a vassoura na infância e a guitarra branca em Woodstock.</figcaption>
+  <img src="/assets/images/a-vassoura-de-jimi-hendrix-e-woodstock-caneta-azul.webp" alt="Desenho em caneta azul sobre papel de caderno: um menino toca uma vassoura como guitarra; ao lado, Jimi Hendrix toca uma guitarra branca como canhoto em Woodstock" width="1536" height="1024" loading="lazy" decoding="async">
+  <figcaption>Desenho em caneta azul sobre papel de caderno: a vassoura na infância e Hendrix canhoto com a guitarra branca em Woodstock.</figcaption>
 </figure>
 
 Não há uma linha reta a traçar da vassoura até aquele palco. Entre as duas cenas há anos de música que estas notas mal começam a mostrar. Ainda assim, elas ficaram lado a lado para mim depois da leitura: uma antes de Hendrix ter uma guitarra de verdade; outra quando já era o nome de encerramento, tocando para uma fração do público que passou pelo festival.
