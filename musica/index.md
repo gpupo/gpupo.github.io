@@ -18,6 +18,24 @@ blues, jazz e algumas descobertas pelo caminho.
   <li>
     <article class="editorial-list-item">
       
+      <time datetime="2026-10-21T00:00:00-03:00">
+        
+        21/10/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/musica/de-mateus-asato-a-tori-kelly-hiding-place/">De Mateus Asato a Tori Kelly: outra entrada para o gospel</a></h2>
+        
+        <p>Uma entrevista de Mateus Asato me levou a Hiding Place, de Tori Kelly. Never Alone e Psalm 42 chamaram minha atenção para as progressões harmônicas e a composição.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
       <time datetime="2026-10-14T00:00:00-03:00">
         
         14/10/2026

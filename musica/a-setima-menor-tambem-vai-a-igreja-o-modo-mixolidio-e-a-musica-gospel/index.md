@@ -21,7 +21,7 @@ Em Dó mixolídio:
 
 Trocamos o Si pelo Si bemol. Essa comparação entre os modos paralelos aparece no capítulo sobre [modos diatônicos do Open Music Theory](https://viva.pressbooks.pub/openmusictheory/chapter/diatonic-modes/).
 
-A terça continua maior, mas o sétimo grau deixa de estar a um semitom da tônica: o Si bemol está um tom abaixo de Dó. Para mim, a mudança enfraquece aquela sensação de que a sétima precisa subir imediatamente para a tônica. Não significa que a música fique sem tensão ou movimento; depende também das frases e da harmonia.
+A terça continua maior, mas o sétimo grau deixa de estar a um semitom da tônica: o Si bemol está um tom abaixo de Dó. A mudança enfraquece aquela sensação de que a sétima precisa subir imediatamente para a tônica.
 
 O resultado me lembra sonoridades do blues, do rock, do soul e de algumas vertentes da música gospel. A questão que me interessa é como essa nota atravessa músicas que costumo colocar em categorias bastante diferentes. Para continuar essa comparação, reuni também dez faixas de rock e as análises que quero usar como ponto de partida para o estudo.
 

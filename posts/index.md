@@ -56,6 +56,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-15T00:00:00-03:00">
+              15/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#baixo">Baixo</a>
+              
+              <a class="article-tag" href="/posts/tags/#guitarra">Guitarra</a>
+              
+              <a class="article-tag" href="/posts/tags/#gravação-musical">Gravação Musical</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</a></h4>
+          
+          <p class="post-archive-summary">Um agente e um script para separar minhas gravações de estudo em frases identificadas, preservar os originais e facilitar a volta às ideias de baixo e guitarra.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-10-09T00:00:00-03:00">
               09/10/2026
             </time>

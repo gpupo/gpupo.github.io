@@ -22,7 +22,23 @@ escuto, estudo, uso e escrevo.
 
 <div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-10">
       <h2 id="culture-archive-2026-10">Outubro de 2026</h2>
-      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-10-14" data-editorial="musica">
+      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-10-21" data-editorial="equipamento">
+          <article>
+            <time datetime="2026-10-21T00:00:00-03:00">21 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/equipamento-musical/" aria-label="Ver índice de Equipamento musical">[Equipamento musical]</a>
+              <h3 class="no_anchor"><a href="/equipamento-musical/tocando-em-linha-amp-cab-ir-ou-modelagem-pura/">Tocando em linha com a Ampero One: quando usar AMP e CAB/IR?</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-21" data-editorial="musica">
+          <article>
+            <time datetime="2026-10-21T00:00:00-03:00">21 out</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/de-mateus-asato-a-tori-kelly-hiding-place/">De Mateus Asato a Tori Kelly: outra entrada para o gospel</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-10-14" data-editorial="musica">
           <article>
             <time datetime="2026-10-14T00:00:00-03:00">14 out</time>
             <div class="culture-archive-entry-content">

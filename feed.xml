@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-15T11:36:23-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Coloquei um agente de IA para cuidar dos meus anúncios de usados</title><link href="https://www.gpupo.com/posts/agente-ia-anuncios-usados/" rel="alternate" type="text/html" title="Coloquei um agente de IA para cuidar dos meus anúncios de usados" /><published>2026-10-09T00:00:00-03:00</published><updated>2026-10-09T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/agente-ia-anuncios-usados</id><content type="html" xml:base="https://www.gpupo.com/posts/agente-ia-anuncios-usados/"><![CDATA[<p>Vender um pedal usado envolve uma sequência de tarefas pequenas: encontrar as fotos, conferir o modelo, definir o preço, escrever o anúncio, preparar uma imagem e lembrar onde aquilo foi publicado. Quando são vários equipamentos, essas tarefas começam a disputar espaço com a própria negociação.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-21T15:25:32-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
+
+<p>Foi para resolver essa parte que criei um agente para organizar e cortar minhas gravações pessoais de frases de baixo e guitarra. Entram os arquivos do gravador e saem pequenos trechos identificados, prontos para ouvir, comparar e desenvolver.</p>
+
+<p>No <a href="/musica/o-dawless-de-mccartney-e-o-meu/">texto sobre o DAWless de McCartney e o meu</a>, a pergunta era como explorar melhor o gravador que já tenho. Aqui, o problema aparece depois da gravação: como voltar às ideias sem precisar procurar cada uma dentro de uma sessão inteira.</p>
+
+<p>O agente organiza esse trabalho com um script em Python, que usa o FFmpeg para localizar pausas no áudio. Os cortes seguem critérios de duração e nível do sinal; não há uma avaliação automática da qualidade musical das frases.</p>
+
+<h2 id="a-pausa-como-marcador">A pausa como marcador</h2>
+
+<p>Durante o estudo, já existe uma forma bastante natural de separar as ideias: tocar e parar.</p>
+
+<p>Uma pausa de um ou dois segundos costuma marcar o fim de uma tentativa, o momento de pensar na próxima frase ou simplesmente o intervalo para reposicionar a mão. O projeto aproveita esse comportamento para localizar possíveis divisões na gravação.</p>
+
+<p>O processamento procura essas pausas e exporta as regiões entre elas como arquivos WAV individuais. No ajuste atual, uma pausa de pelo menos <strong>1,2 segundo</strong>, abaixo do limiar configurado de <strong>−40 dB</strong>, pode indicar um corte. A sensibilidade pode ser ajustada conforme o nível da gravação e o ruído do equipamento. Silêncio, aqui, significa sinal abaixo desse limiar, não necessariamente ausência completa de som.</p>
+
+<p>Isso permite continuar gravando sem interromper o fluxo para criar um arquivo a cada ideia. A organização acontece depois.</p>
+
+<p>Há, claro, uma decisão musical envolvida. Uma nota longa, um harmônico ou uma guitarra com bastante sustain exigem cuidado: o som pode estar baixo e ainda fazer parte da frase. Por isso, os parâmetros de detecção precisam respeitar o material, e ouvir os limites dos cortes continua sendo a melhor forma de confirmar o resultado.</p>
+
+<h2 id="cada-frase-ganha-um-endereço">Cada frase ganha um endereço</h2>
+
+<p>Arquivos com nomes como <code class="language-plaintext highlighter-rouge">ZOOM0015_TrLR.WAV</code> funcionam bem dentro do gravador. Algumas semanas depois, dizem pouco sobre o que está ali.</p>
+
+<p>Os trechos gerados recebem nomes com data, horário, instrumento e número da parte:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>2026-10-14-17h10-bass-part02.wav
+2026-10-12-12h46-guitar-part03.wav
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Assim, fica mais fácil localizar uma sessão e distinguir as ideias de baixo das de guitarra. Nesta versão, a referência de data e horário vem da modificação do arquivo original, no horário local. É um critério de organização: se essa data tiver sido alterada ao copiar ou editar o arquivo, o nome não comprova o momento em que toquei.</p>
+
+<p>O projeto também aceita gravações dentro de subpastas. Posso copiar as pastas criadas pelo gravador para uma área de entrada chamada <code class="language-plaintext highlighter-rouge">INBOX</code>, mantendo a organização que veio do cartão.</p>
+
+<p>A identificação do instrumento pode vir do nome da pasta ou ser atribuída durante o processamento. Para os arquivos que chegaram sem essa informação, usei uma análise das frequências, executada separadamente, para inferir se eram baixo ou guitarra. Passei então essa classificação ao script. Nesse material, a diferença entre os timbres ficou bem marcada: os baixos concentravam mais energia nos graves.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Baixo" /><category term="Guitarra" /><category term="Gravação Musical" /><category term="Estudo musical" /><category term="Agentes" /><category term="Python" /><category term="FFmpeg" /><summary type="html"><![CDATA[Um agente e um script para separar minhas gravações de estudo em frases identificadas, preservar os originais e facilitar a volta às ideias de baixo e guitarra.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Coloquei um agente de IA para cuidar dos meus anúncios de usados</title><link href="https://www.gpupo.com/posts/agente-ia-anuncios-usados/" rel="alternate" type="text/html" title="Coloquei um agente de IA para cuidar dos meus anúncios de usados" /><published>2026-10-09T00:00:00-03:00</published><updated>2026-10-09T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/agente-ia-anuncios-usados</id><content type="html" xml:base="https://www.gpupo.com/posts/agente-ia-anuncios-usados/"><![CDATA[<p>Vender um pedal usado envolve uma sequência de tarefas pequenas: encontrar as fotos, conferir o modelo, definir o preço, escrever o anúncio, preparar uma imagem e lembrar onde aquilo foi publicado. Quando são vários equipamentos, essas tarefas começam a disputar espaço com a própria negociação.</p>
 
 <p>Eu já tinha as fichas dos meus equipamentos musicais no Obsidian. Nesse aplicativo, o <em>vault</em> é a pasta que reúne minhas notas e anexos. Em 8 de outubro de 2026, usei esse material para montar um assistente de anúncios com IA. Queria apontar para uma nota existente e receber um anúncio organizado, com texto curto, imagens e histórico.</p>
 
@@ -2793,215 +2829,4 @@ uma descrição menos emocionante:</p>
 </blockquote>
 
 <p>É justamente quando o conceito parece menos mágico que ele começa a ficar mais
-útil.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Skills" /><category term="Gestão de contexto" /><category term="Documentação" /><summary type="html"><![CDATA[Como transformar instruções recorrentes em capacidades reutilizáveis, carregadas quando necessário e separadas das regras permanentes do agente.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Versionar é criar checkpoints</title><link href="https://www.gpupo.com/posts/versionar-e-criar-checkpoints/" rel="alternate" type="text/html" title="Versionar é criar checkpoints" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/versionar-e-criar-checkpoints</id><content type="html" xml:base="https://www.gpupo.com/posts/versionar-e-criar-checkpoints/"><![CDATA[<p>Quando comecei a explicar versionamento para uma equipe que está construindo
-seus primeiros agentes de IA, usei uma analogia simples: <strong>checkpoint de
-videogame</strong>.</p>
-
-<p>Você chegou a um ponto importante, salva e continua. Se algo der errado depois,
-existe um estado conhecido para onde voltar.</p>
-
-<p>Versionamento cumpre esse papel. A analogia tem um limite importante: no Git, o
-checkpoint não aparece sozinho. Alguém precisa escolher o que será registrado e
-criar um commit.</p>
-
-<p>Com agentes de IA, esse hábito ficou ainda mais importante. Um agente
-consegue alterar prompts, <code class="language-plaintext highlighter-rouge">AGENTS.md</code>, templates, scripts e vários outros
-arquivos rapidamente. Isso acelera o trabalho, mas também torna fácil perder um
-estado que estava funcionando.</p>
-
-<p>A pergunta aparece cedo:</p>
-
-<blockquote>
-  <p><strong>Ontem funcionava. O que mudou?</strong></p>
-</blockquote>
-
-<p>Sem uma versão anterior registrada, começa uma investigação. Com ela, podemos
-comparar o estado atual com um ponto que já havia sido validado.</p>
-
-<figure>
-  <img src="/assets/images/versionar-e-criar-checkpoints.png" alt="Esquema desenhado à mão mostra versões dos pacotes A e B compondo um estado conhecido de uma stack." width="802" height="593" loading="lazy" decoding="async" />
-  <figcaption>Um checkpoint pode registrar quais versões dos componentes formavam um estado conhecido do projeto.</figcaption>
-</figure>
-
-<h2 id="git-registra-os-checkpoints">Git registra os checkpoints</h2>
-
-<p>A principal ferramenta para isso é o <a href="https://git-scm.com/">Git</a>. Ele é um
-sistema de controle de versão que registra
-alterações em arquivos. Git não é GitHub: o
-<a href="https://docs.github.com/pt/get-started/start-your-journey/what-is-github">GitHub é uma plataforma baseada em Git</a>,
-capaz de hospedar repositórios e acrescentar recursos de colaboração. É
-possível usar Git localmente sem publicar o projeto no GitHub.</p>
-
-<p>Na analogia, cada <strong>commit</strong> é um checkpoint. Depois de preparar o repositório,
-um ciclo mínimo pode ser:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>git status
-git add AGENTS.md templates/ scripts/
-git commit <span class="nt">-m</span> <span class="s2">"Preserva primeiro fluxo funcional do agente"</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O <code class="language-plaintext highlighter-rouge">git status</code> mostra o que mudou. O <code class="language-plaintext highlighter-rouge">git add</code> seleciona os arquivos que farão
-parte do checkpoint. O <code class="language-plaintext highlighter-rouge">git commit</code> registra aquele conjunto de mudanças no
-histórico.</p>
-
-<p>Assim se forma uma linha do tempo:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre>checkpoint validado
-   ↓
-mudanças
-   ↓
-checkpoint validado
-   ↓
-mudanças
-   ↓
-checkpoint validado
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Se algum resultado piorar, posso inspecionar a diferença e recuperar um estado
-anterior. O Git não decide se o checkpoint era bom; ele preserva o que foi
-registrado. Por isso, vale anotar no commit o que funcionava e como foi
-verificado.</p>
-
-<h2 id="não-é-só-para-código">Não é só para código</h2>
-
-<p>Em projetos com agentes, podemos versionar:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">AGENTS.md</code>;</li>
-  <li>prompts;</li>
-  <li>skills;</li>
-  <li>templates;</li>
-  <li>regras;</li>
-  <li>documentação;</li>
-  <li>HTML;</li>
-  <li>scripts e configurações.</li>
-</ul>
-
-<p>São arquivos que transformam um modelo genérico em um agente adaptado ao
-projeto. Quando mudam, o comportamento também pode mudar. Mantê-los no mesmo
-histórico ajuda a comparar não apenas o código, mas o contexto que orientou cada
-execução.</p>
-
-<h2 id="commit-e-versão-não-são-a-mesma-coisa">Commit e versão não são a mesma coisa</h2>
-
-<p>Todo estado que vale preservar pode virar um commit. Isso não significa que
-todo commit precise receber um número de versão.</p>
-
-<p>Quando um checkpoint será distribuído, implantado ou usado por outro projeto,
-podemos marcá-lo como uma versão. Se existe um contrato de compatibilidade
-claro, uma convenção possível é o
-<a href="https://semver.org/lang/pt-BR/">Versionamento Semântico</a>:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>MAJOR.MINOR.PATCH
-
-2.4.1
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p><strong>PATCH</strong> indica uma correção compatível:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>2.4.0 → 2.4.1
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p><strong>MINOR</strong> adiciona uma capacidade mantendo compatibilidade com o contrato
-existente:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>2.4.1 → 2.5.0
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p><strong>MAJOR</strong> indica uma mudança incompatível nesse contrato:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>2.5.0 → 3.0.0
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Para um agente, esse contrato pode incluir o formato de entrada e saída, os
-comandos disponíveis, a estrutura de um template ou um comportamento do qual
-outros componentes dependem. Sem definir o que precisa permanecer compatível,
-os números comunicam pouco.</p>
-
-<p>Durante o desenvolvimento inicial, o Versionamento Semântico reserva a série
-<code class="language-plaintext highlighter-rouge">0.y.z</code> para uma API ainda instável:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>0.1.0
-0.2.0
-0.2.1
-...
-1.0.0
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Nesse sistema, <code class="language-plaintext highlighter-rouge">1.0.0</code> define a primeira API pública. Não quer dizer que o
-projeto ficou livre de erros; quer dizer que existe um contrato que as próximas
-versões devem considerar.</p>
-
-<h2 id="sessão-é-temporária-projeto-é-persistente">Sessão é temporária, projeto é persistente</h2>
-
-<p>Há ainda uma consequência importante para o trabalho com agentes de IA.</p>
-
-<p>A sessão é temporária. Ela termina, pode ser resumida e não deveria ser a única
-guardiã de uma decisão importante. Se uma regra precisa orientar o próximo
-trabalho, ela precisa sair da conversa e chegar ao projeto.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>AGENTS.md
-skills/
-templates/
-docs/
-output/
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Nem todo resultado gerado precisa entrar no Git, e segredos não devem ser
-registrados. Mas regras, decisões e saídas que precisam de auditoria podem virar
-arquivos e fazer parte do histórico.</p>
-
-<p>A distinção fica simples:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>sessão → temporária
-
-projeto versionado → fonte persistente
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="o-primeiro-hábito">O primeiro hábito</h2>
-
-<p>Não é necessário aprender o Git inteiro para começar. O primeiro hábito já
-reduz bastante o risco:</p>
-
-<blockquote>
-  <p><strong>Quando eu chegar a um estado que vale a pena preservar, faço um
-checkpoint.</strong></p>
-</blockquote>
-
-<p>Um checkpoint fica mais útil quando sua mensagem ajuda a reconhecer o que
-funcionava naquele momento e como isso foi verificado.</p>
-
-<p>A IA tornou muito barato mudar as coisas. O Git torna barato comparar essas
-mudanças e recuperar um ponto conhecido. O que nunca foi registrado, porém, não
-tem checkpoint para onde voltar.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Git" /><category term="Versionamento" /><category term="Documentação" /><summary type="html"><![CDATA[Uma analogia de videogame para usar Git como memória do projeto, distinguir commits de versões e preservar o conhecimento que um agente precisa entre sessões.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/versionar-e-criar-checkpoints.png" /><media:content medium="image" url="https://www.gpupo.com/assets/images/versionar-e-criar-checkpoints.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+útil.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Skills" /><category term="Gestão de contexto" /><category term="Documentação" /><summary type="html"><![CDATA[Como transformar instruções recorrentes em capacidades reutilizáveis, carregadas quando necessário e separadas das regras permanentes do agente.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

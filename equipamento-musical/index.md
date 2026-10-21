@@ -28,6 +28,24 @@ essas coisas.
   <li>
     <article class="editorial-list-item">
       
+      <time datetime="2026-10-21T00:00:00-03:00">
+        
+        21/10/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/equipamento-musical/tocando-em-linha-amp-cab-ir-ou-modelagem-pura/">Tocando em linha com a Ampero One: quando usar AMP e CAB/IR?</a></h2>
+        
+        <p>Minha dúvida ao tocar em linha com a Ampero One: quando usar AMP e CAB/IR no baixo e na guitarra, e como a caixa participa do timbre ao ligar a pedaleira à mesa.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
       <time datetime="2026-10-04T00:00:00-03:00">
         
         04/10/2026
