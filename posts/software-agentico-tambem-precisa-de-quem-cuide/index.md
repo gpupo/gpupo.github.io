@@ -101,3 +101,78 @@ Antes de mais um **next**, alguém ainda precisa cuidar.
 ## Referência
 
 - TANIGUCHI, Jiro. *O Diário do Meu Pai*. Pipoca & Nanquim, 2024.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="software-agentico-cuidado-title">
+  <h2 id="software-agentico-cuidado-title">Antes do próximo next, em quatro quadros</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="software-agentico-cuidado-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/software-agentico-cuidado/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/software-agentico-cuidado/01.webp" alt="Software agêntico também precisa de quem cuide. Agentes aceleram a produção de código. Coerência, complexidade e direção ainda pedem atenção. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Software agêntico também precisa de quem cuide</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/software-agentico-cuidado/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/software-agentico-cuidado/02.webp" alt="O próximo passo pode esconder o acúmulo. Uma dependência aqui. Uma duplicação ali. Cada mudança parece aceitável, mas o conjunto pode perder coerência. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · O próximo passo pode esconder o acúmulo</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/software-agentico-cuidado/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/software-agentico-cuidado/03.webp" alt="A engenharia muda de lugar. Menos tempo digitando implementação. Mais tempo avaliando, testando e corrigindo a direção. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · A engenharia muda de lugar</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/software-agentico-cuidado/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/software-agentico-cuidado/04.webp" alt="Antes do próximo next. Confira o comportamento, a complexidade, os limites e a direção.  Alguém ainda precisa cuidar.  Leia em gpupo.com. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · Antes do próximo next</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="software-agentico-cuidado-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="software-agentico-cuidado-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Software agêntico também precisa de quem cuide<br />
+<br />
+Agentes aceleram a produção de código. Coerência, complexidade e direção ainda pedem atenção.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>O próximo passo pode esconder o acúmulo<br />
+<br />
+Uma dependência aqui. Uma duplicação ali. Cada mudança parece aceitável, mas o conjunto pode perder coerência.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A engenharia muda de lugar<br />
+<br />
+Menos tempo digitando implementação. Mais tempo avaliando, testando e corrigindo a direção.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Antes do próximo next<br />
+<br />
+Confira o comportamento, a complexidade, os limites e a direção.<br />
+<br />
+Alguém ainda precisa cuidar.<br />
+<br />
+Leia em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

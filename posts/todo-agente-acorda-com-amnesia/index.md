@@ -184,3 +184,78 @@ Todo agente pode acordar com amnésia.
 
 O problema começa quando deixamos o conhecimento importante dormir apenas
 dentro da sessão.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="todo-agente-acorda-com-amnesia-title">
+  <h2 id="todo-agente-acorda-com-amnesia-title">O que fica para a próxima sessão</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="todo-agente-acorda-com-amnesia-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/todo-agente-acorda-com-amnesia/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/todo-agente-acorda-com-amnesia/01.webp" alt="Todo agente acorda com amnésia. Pense nisso como uma regra de arquitetura: o trabalho importante precisa continuar compreensível fora da conversa. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Todo agente acorda com amnésia</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/todo-agente-acorda-com-amnesia/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/todo-agente-acorda-com-amnesia/02.webp" alt="A sessão acaba. O projeto continua.. Uma sessão pode ser encerrada, resumida ou substituída. Regras e decisões precisam de um lugar durável. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · A sessão acaba. O projeto continua.</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/todo-agente-acorda-com-amnesia/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/todo-agente-acorda-com-amnesia/03.webp" alt="Registre onde faz sentido. Regras no AGENTS.md. Procedimentos em skills. Decisões na documentação.  O agente precisa reencontrar o que importa. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Registre onde faz sentido</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/todo-agente-acorda-com-amnesia/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/todo-agente-acorda-com-amnesia/04.webp" alt="O que ele precisa encontrar amanhã?. Um handoff atualizado: o que foi feito, decisões, arquivos, verificações, pendências e próxima ação.  Leia em gpupo.com. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · O que ele precisa encontrar amanhã?</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="todo-agente-acorda-com-amnesia-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="todo-agente-acorda-com-amnesia-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Todo agente acorda com amnésia<br />
+<br />
+Pense nisso como uma regra de arquitetura: o trabalho importante precisa continuar compreensível fora da conversa.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A sessão acaba. O projeto continua.<br />
+<br />
+Uma sessão pode ser encerrada, resumida ou substituída. Regras e decisões precisam de um lugar durável.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Registre onde faz sentido<br />
+<br />
+Regras no AGENTS.md. Procedimentos em skills. Decisões na documentação.<br />
+<br />
+O agente precisa reencontrar o que importa.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>O que ele precisa encontrar amanhã?<br />
+<br />
+Um handoff atualizado: o que foi feito, decisões, arquivos, verificações, pendências e próxima ação.<br />
+<br />
+Leia em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

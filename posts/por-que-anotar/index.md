@@ -185,3 +185,78 @@ Não é tentar guardar tudo.
 
 É não obrigar minha cabeça a continuar carregando aquilo que pode ficar em
 outro lugar.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="por-que-anotar-title">
+  <h2 id="por-que-anotar-title">Papel, notas e possibilidades</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="por-que-anotar-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/01.webp" alt="Papel e caneta por perto. Às vezes anoto uma frase, uma ideia ou alguma coisa que talvez nunca use. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Papel e caneta por perto</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/02.webp" alt="Meses depois, outras relações. Reencontrar uma anotação pode revelar conexões que eu não tinha percebido quando a escrevi. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · Meses depois, outras relações</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/03.webp" alt="Nem toda ideia precisa virar tarefa. Anotar não significa assumir um compromisso.  Uma nota pode apenas preservar uma possibilidade. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Nem toda ideia precisa virar tarefa</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/04.webp" alt="A IA ajuda. A escolha continua.. Ela pode ajudar a organizar e relacionar notas. Eu ainda preciso revisar as conexões e escolher o que guardar.  Leia Por que anotar? em gpupo.com. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · A IA ajuda. A escolha continua.</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="por-que-anotar-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="por-que-anotar-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Papel e caneta por perto<br />
+<br />
+Às vezes anoto uma frase, uma ideia ou alguma coisa que talvez nunca use.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Meses depois, outras relações<br />
+<br />
+Reencontrar uma anotação pode revelar conexões que eu não tinha percebido quando a escrevi.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Nem toda ideia precisa virar tarefa<br />
+<br />
+Anotar não significa assumir um compromisso.<br />
+<br />
+Uma nota pode apenas preservar uma possibilidade.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A IA ajuda. A escolha continua.<br />
+<br />
+Ela pode ajudar a organizar e relacionar notas. Eu ainda preciso revisar as conexões e escolher o que guardar.<br />
+<br />
+Leia Por que anotar? em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

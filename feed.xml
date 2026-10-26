@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-26T07:29:14-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Frente e verso manual na HP LaserJet P1102w no Ubuntu</title><link href="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/" rel="alternate" type="text/html" title="Frente e verso manual na HP LaserJet P1102w no Ubuntu" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu</id><content type="html" xml:base="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/"><![CDATA[<p>A impressora HP LaserJet P1102w que uso imprime em apenas um lado por vez. Para imprimir
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-26T15:06:06-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Frente e verso manual na HP LaserJet P1102w no Ubuntu</title><link href="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/" rel="alternate" type="text/html" title="Frente e verso manual na HP LaserJet P1102w no Ubuntu" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu</id><content type="html" xml:base="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/"><![CDATA[<p>A impressora HP LaserJet P1102w que uso imprime em apenas um lado por vez. Para imprimir
 um PDF frente e verso, eu precisava virar as folhas manualmente, mas a fila
 instalada no meu Ubuntu não oferecia uma opção que conduzisse essa sequência.</p>
 
@@ -50,7 +50,368 @@ impressa <strong>sem mudar a ordem</strong>, com o <strong>lado impresso para ba
 superior entrando primeiro</strong>. Então confirmo a impressão dos versos.</p>
 
 <p>A impressora continua exigindo que alguém vire o papel, mas o script cuida da sequência e
-mostra a instrução na hora de recolocar a pilha.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Ubuntu" /><category term="Linux" /><category term="Impressão" /><category term="PDF" /><category term="Automação" /><summary type="html"><![CDATA[Um script para imprimir PDFs frente e verso na HP LaserJet P1102w, com a sequência das páginas e uma pausa para recolocar o papel.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
+mostra a instrução na hora de recolocar a pilha.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Ubuntu" /><category term="Linux" /><category term="Impressão" /><category term="PDF" /><category term="Automação" /><summary type="html"><![CDATA[Um script para imprimir PDFs frente e verso na HP LaserJet P1102w, com a sequência das páginas e uma pausa para recolocar o papel.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Postgres-only, até deixar de ser</title><link href="https://www.gpupo.com/posts/postgresql-primeiro-outro-servico-quando-houver-um-motivo/" rel="alternate" type="text/html" title="Postgres-only, até deixar de ser" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/postgres-only-ate-deixar-de-ser</id><content type="html" xml:base="https://www.gpupo.com/posts/postgresql-primeiro-outro-servico-quando-houver-um-motivo/"><![CDATA[<p>No meu homelab, cada serviço novo traz uma conta: configuração, credenciais, atualizações, armazenamento, backup, monitoramento e alguma coisa para investigar quando deixa de funcionar.</p>
+
+<p>E o departamento de operações tem exatamente uma pessoa.</p>
+
+<p>Por isso, antes de instalar Elasticsearch, Pinecone, Redis, MongoDB, Kafka ou outro serviço especializado, pergunto se o PostgreSQL que já opero resolve o problema.</p>
+
+<p>É tentador chamar essa regra de <code class="language-plaintext highlighter-rouge">Postgres-only</code>. O nome é bom, mas promete demais.</p>
+
+<p>PostgreSQL oferece busca textual, documentos JSON, vetores, particionamento e comunicação entre processos. Isso não o torna substituto direto de todo produto com uma capacidade parecida. Conseguir fazer algo e conseguir fazê-lo bem, nas condições da aplicação, são perguntas diferentes.</p>
+
+<p>Minha regra é menos ambiciosa: <strong>PostgreSQL é o primeiro lugar onde procuro uma solução. Não necessariamente o último.</strong></p>
+
+<p>Três decisões do homelab mostram onde isso funcionou e onde precisei acrescentar componentes.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/postgres-only-arquitetura-modular-editorial.webp" alt="Ilustração de uma estrutura modular sobre uma planta de projeto, com módulos ligados por setas azuis e um cilindro central iluminado" width="1536" height="1024" loading="lazy" decoding="async" />
+  <figcaption>Uma estrutura central e outros componentes: cada peça acrescentada precisa ter uma função.</figcaption>
+</figure>
+
+<h2 id="uma-tabela-resolveu-o-problema-do-rss">Uma tabela resolveu o problema do RSS</h2>
+
+<p>Em junho de 2026, eu estava trabalhando numa automação que lê notícias do Miniflux e produz resumos com IA.</p>
+
+<p>Precisava guardar duas informações associadas a cada notícia: o resumo no idioma original e sua tradução.</p>
+
+<p>Não havia nada especialmente complicado nisso. Mas mesmo um requisito pequeno oferece oportunidades para aumentar a arquitetura.</p>
+
+<p>Eu poderia criar outro banco para os resumos. Poderia colocar os textos diretamente no HTML original da notícia. Poderia inventar algum armazenamento específico para os resultados da automação.</p>
+
+<p>Só que a notícia já estava no PostgreSQL do Miniflux.</p>
+
+<p>Por que não começar por aí?</p>
+
+<p>Criei uma tabela associativa no mesmo banco, sem modificar as tabelas mantidas pela aplicação:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">entries_summaries</span> <span class="p">(</span>
+    <span class="n">entry_id</span> <span class="nb">bigint</span> <span class="k">PRIMARY</span> <span class="k">KEY</span>
+        <span class="k">REFERENCES</span> <span class="n">entries</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+    <span class="n">summary_original</span> <span class="nb">text</span><span class="p">,</span>
+    <span class="n">summary_translation</span> <span class="nb">text</span><span class="p">,</span>
+    <span class="n">created_at</span> <span class="n">timestamptz</span> <span class="k">DEFAULT</span> <span class="n">now</span><span class="p">()</span>
+<span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>A solução tem uma característica de que gosto bastante: ela quase não precisa de explicação.</p>
+
+<p>Cada resumo pertence a uma notícia. Quando o Miniflux exclui a notícia, o PostgreSQL exclui também o resumo correspondente. A automação grava os textos e a aplicação que monta o boletim recupera tudo com uma junção SQL.</p>
+
+<p>Não precisei criar uma rotina para reconciliar identificadores entre sistemas. Nem pensar em como recuperar separadamente um segundo banco.</p>
+
+<p>O relacionamento que eu precisava já tinha nome: chave estrangeira.</p>
+
+<p>Isso não transforma a decisão em uma recomendação universal. Acrescentei uma tabela ao banco de uma aplicação de terceiros. Embora não tenha alterado as tabelas do Miniflux, preciso verificar se essa integração continua funcionando depois das atualizações. Não existe uma promessa de compatibilidade do produto para minha extensão.</p>
+
+<p>É uma responsabilidade que aceitei.</p>
+
+<p>A alternativa também teria responsabilidades, possivelmente maiores. Naquele momento, achei mais razoável assumir uma dependência conhecida do que colocar outro serviço na operação.</p>
+
+<h2 id="o-banco-de-vídeos-não-precisava-guardar-os-vídeos">O banco de vídeos não precisava guardar os vídeos</h2>
+
+<p>Outra experiência veio do Video Data Product, meu projeto para organizar e processar informações sobre vídeos.</p>
+
+<p>Nesse caso, seria fácil cair no extremo oposto: já que PostgreSQL aceita JSON e textos extensos, por que não guardar absolutamente tudo nele?</p>
+
+<p>Preferi separar as coisas.</p>
+
+<p>O PostgreSQL ficou responsável pelo catálogo, pelas coleções, pelas avaliações, pelo estado dos processamentos e pelas informações necessárias para localizar os vídeos.</p>
+
+<p>A tabela principal mistura colunas relacionais com dois campos <code class="language-plaintext highlighter-rouge">jsonb</code>, usados para metadados e estados que variam conforme o processamento.</p>
+
+<p>Também precisava pesquisar vídeos por título, canal e identificador.</p>
+
+<p>Antes de pensar em um mecanismo de busca separado, experimentei os recursos de busca textual do próprio PostgreSQL:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">search_vector</span> <span class="n">tsvector</span> <span class="k">GENERATED</span> <span class="n">ALWAYS</span> <span class="k">AS</span> <span class="p">(</span>
+    <span class="n">setweight</span><span class="p">(</span><span class="n">to_tsvector</span><span class="p">(</span><span class="s1">'simple'</span><span class="p">,</span> <span class="n">coalesce</span><span class="p">(</span><span class="n">video_id</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span> <span class="s1">'A'</span><span class="p">)</span>
+    <span class="o">||</span> <span class="n">setweight</span><span class="p">(</span><span class="n">to_tsvector</span><span class="p">(</span><span class="s1">'simple'</span><span class="p">,</span> <span class="n">coalesce</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span> <span class="s1">'A'</span><span class="p">)</span>
+    <span class="o">||</span> <span class="n">setweight</span><span class="p">(</span><span class="n">to_tsvector</span><span class="p">(</span><span class="s1">'simple'</span><span class="p">,</span> <span class="n">coalesce</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="s1">''</span><span class="p">)),</span> <span class="s1">'B'</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">STORED</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Com um índice GIN sobre essa coluna, passei a ter uma estrutura de busca dentro do banco que já armazenava o catálogo.</p>
+
+<p>O <a href="https://www.postgresql.org/docs/current/datatype-json.html"><code class="language-plaintext highlighter-rouge">jsonb</code></a> e a <a href="https://www.postgresql.org/docs/current/textsearch-controls.html">busca textual</a> são capacidades bastante maduras do PostgreSQL. Para o tipo de informação e as consultas que eu precisava naquele projeto, foram suficientes.</p>
+
+<p>Mas havia outro tipo de dado no sistema.</p>
+
+<p>Descrições, transcrições e artefatos semânticos podem crescer bastante. São conteúdos que frequentemente preciso recuperar como objetos completos, não consultar como registros relacionais.</p>
+
+<p>Esses foram para um armazenamento compatível com S3. O cache local ficou descartável.</p>
+
+<p>A divisão acabou sendo simples de entender: PostgreSQL conhece os vídeos, seus relacionamentos e o estado do processamento. O armazenamento de objetos guarda os artefatos duráveis.</p>
+
+<p>Não é uma arquitetura sem custos. Preciso coordenar os backups dos dois lados, e uma leitura fria pode depender do download de um objeto.</p>
+
+<p>Mas a separação tem uma razão.</p>
+
+<p>Minha preferência é <strong>não multiplicar componentes sem necessidade e dar a cada componente uma responsabilidade que eu consiga explicar</strong>.</p>
+
+<p>Parece uma diferença pequena. Para quem depois precisa operar o sistema, não é.</p>
+
+<h2 id="postgresql-faz-muita-coisa-e-daí">PostgreSQL faz muita coisa. E daí?</h2>
+
+<p>Existe uma espécie de diversão técnica em descobrir que um software conhecido consegue fazer algo que normalmente associamos a outro produto.</p>
+
+<p>PostgreSQL é especialmente generoso nesse assunto.</p>
+
+<p>Precisa armazenar documentos semiestruturados? Tem <code class="language-plaintext highlighter-rouge">jsonb</code>.</p>
+
+<p>Busca textual? <code class="language-plaintext highlighter-rouge">tsvector</code>, <code class="language-plaintext highlighter-rouge">tsquery</code> e índices GIN.</p>
+
+<p>Similaridade vetorial? Existe o <a href="https://github.com/pgvector/pgvector">pgvector</a>.</p>
+
+<p>Tabelas muito grandes? <a href="https://www.postgresql.org/docs/current/ddl-partitioning.html">Particionamento declarativo</a>.</p>
+
+<p>Tudo isso merece entrar na avaliação de uma arquitetura. O erro começa quando a existência de uma funcionalidade vira argumento suficiente para dispensar uma ferramenta especializada.</p>
+
+<p>O pgvector, por exemplo, faz busca exata por padrão e oferece índices aproximados HNSW e IVFFlat. Existe uma negociação entre velocidade, memória, tempo de construção do índice e qualidade dos resultados. HNSW geralmente exige mais memória e mais tempo de construção que IVFFlat.</p>
+
+<p>Não basta dizer que PostgreSQL tem busca vetorial. É preciso verificar volume, filtros, latência e recall exigidos pela aplicação.</p>
+
+<p>O mesmo acontece com particionamento. Ele pode fazer uma diferença importante em tabelas muito grandes, mas criar partições antecipadamente, sem um padrão de acesso que justifique a decisão, também é uma maneira bastante eficiente de produzir trabalho para o futuro.</p>
+
+<p>Há comparações ainda mais perigosas.</p>
+
+<p>Uma tabela <code class="language-plaintext highlighter-rouge">UNLOGGED</code> reduz parte do custo de escrita, mas <a href="https://www.postgresql.org/about/featurematrix/detail/unlogged-tables/">não oferece as mesmas garantias de recuperação e replicação</a> de uma tabela convencional. Isso não a transforma em substituta de Redis ou Valkey.</p>
+
+<p><code class="language-plaintext highlighter-rouge">LISTEN</code> e <code class="language-plaintext highlighter-rouge">NOTIFY</code> permitem <a href="https://www.postgresql.org/docs/current/sql-notify.html">comunicação entre processos</a>, mas não entregam, sozinhos, o contrato de um broker durável com retenção, replay e consumidores independentes.</p>
+
+<p>Se eu precisar dessas propriedades, terei que implementá-las, por exemplo, com uma tabela de eventos e mecanismos de consumo apropriados, ou adotar uma tecnologia que já as ofereça.</p>
+
+<p>E aí aparece uma pergunta que considero mais interessante do que saber quantas funcionalidades cabem no PostgreSQL:</p>
+
+<p><strong>Quanto custa reproduzir o comportamento de outro produto usando o banco que eu já tenho?</strong></p>
+
+<p>Porque uma coisa é evitar a operação de outro serviço. Outra, bem diferente, é transferir toda a complexidade desse serviço para o código da aplicação.</p>
+
+<p>A segunda opção nem sempre é mais simples. Às vezes, apenas esconde melhor a complexidade.</p>
+
+<h2 id="a-vez-em-que-precisei-instalar-mais-coisas">A vez em que precisei instalar mais coisas</h2>
+
+<p>Até aqui, os exemplos favorecem o PostgreSQL. Mas houve uma situação recente em que minha preferência pessoal não fez muita diferença.</p>
+
+<p>Eu precisava atualizar o Langfuse.</p>
+
+<p>Na versão 2, os traces eram armazenados no PostgreSQL. A partir da versão 3, a arquitetura self-hosted passou a utilizar ClickHouse para os eventos analíticos, Redis para filas e cache e armazenamento compatível com S3 para objetos, além do PostgreSQL.</p>
+
+<p>Não era uma sugestão de otimização que eu poderia deixar para depois. Era a arquitetura suportada da nova versão.</p>
+
+<p>Meu ambiente, que antes precisava de menos componentes, passou a ter um job com aplicação web, worker, ClickHouse e Redis. PostgreSQL e Garage continuaram fora dele.</p>
+
+<p>Vieram junto novos volumes, credenciais, verificações de saúde, políticas de persistência e uma migração que precisava respeitar uma sequência.</p>
+
+<p>Exatamente o tipo de aumento de trabalho operacional que eu tentava evitar.</p>
+
+<p>Mas havia uma diferença importante.</p>
+
+<p>Segundo o <a href="https://langfuse.com/self-hosting/upgrade/upgrade-guides/upgrade-v2-to-v3">guia de migração do Langfuse</a>, a arquitetura anterior apresentava gargalos de ingestão e consulta quando as tabelas chegavam a milhões de traces. A mudança para ClickHouse respondia a limitações reais observadas pelos mantenedores.</p>
+
+<p>A equipe chegou a considerar um adaptador que permitiria continuar usando PostgreSQL em instalações menores. Descartou a ideia pelo custo de manter duas arquiteturas.</p>
+
+<p>Eu não tinha milhões de traces no homelab. Também não fiz um benchmark entre PostgreSQL e ClickHouse para descobrir se a mudança traria benefícios mensuráveis no meu hardware.</p>
+
+<p>Minha situação era bem mais prosaica: queria continuar usando uma versão atualizada do Langfuse, dentro da arquitetura que o projeto suporta.</p>
+
+<p>Para isso, precisava aceitar seus novos componentes.</p>
+
+<p>Eu poderia permanecer na versão antiga, assumindo as consequências dessa escolha. O que não podia era fingir que minha preferência por PostgreSQL mudava os requisitos da versão nova.</p>
+
+<p>O ClickHouse não entrou porque eu estava procurando algo novo para experimentar. Entrou porque havia uma razão identificável para sua presença.</p>
+
+<p>O Redis e o armazenamento de objetos vieram pela mesma razão: faziam parte do contrato operacional daquela arquitetura.</p>
+
+<p>Não fiquei particularmente feliz com o aumento de serviços. Mas também não faria sentido transformar uma preferência por simplicidade em resistência a qualquer mudança.</p>
+
+<h2 id="menos-serviços-não-significa-menos-problemas">Menos serviços não significa menos problemas</h2>
+
+<p>Uma consequência dessa história é que comecei a desconfiar de outra conclusão fácil: a de que concentrar tudo em PostgreSQL necessariamente produz uma arquitetura mais simples.</p>
+
+<p>Do ponto de vista operacional, muitas vezes produz mesmo.</p>
+
+<p>Eu conheço o banco, já mantenho backups, acompanho seu funcionamento e sei onde procurar quando alguma coisa dá errado. Adicionar mais uma base de dados costuma ser mais barato do que aprender, provisionar e manter outro produto inteiro.</p>
+
+<p>Mas concentração também tem preço.</p>
+
+<p>Se várias aplicações dependem da mesma instância, uma falha, saturação ou manutenção nessa instância pode afetar todas elas. Separar bancos e usuários ajuda na organização e no isolamento de permissões, mas não elimina esse domínio de falha compartilhado.</p>
+
+<p>Também existe um limite para quanto trabalho diferente faz sentido colocar no mesmo servidor.</p>
+
+<p>No meu ambiente, com cargas relativamente pequenas e uma única pessoa responsável pela operação, o equilíbrio costuma favorecer menos componentes.</p>
+
+<p>Em outro contexto, talvez não.</p>
+
+<p>São decisões tomadas com cargas pequenas e recursos limitados; não demonstram superioridade universal do PostgreSQL. Para escolher o próximo componente do homelab, os requisitos concretos valem mais do que uma lista de funcionalidades.</p>
+
+<h2 id="postgresql-primeiro-quando-couber">PostgreSQL primeiro, quando couber</h2>
+
+<p>Quando aparece uma necessidade nova, começo perguntando se o PostgreSQL que já opero consegue representar os dados, executar as consultas e oferecer as garantias necessárias.</p>
+
+<p>Se parece que sim, prefiro começar por ali.</p>
+
+<p>Depois observo volume, concorrência, latência, crescimento e recuperação. Se algum requisito ultrapassa o que consigo atender de maneira razoável, volto a avaliar as alternativas.</p>
+
+<p>Não há nenhum mérito especial em usar PostgreSQL para tudo. Também não há mérito em ter cinco serviços quando dois resolveriam o problema.</p>
+
+<p>A questão nunca foi colecionar menos logotipos no diagrama de arquitetura.</p>
+
+<p>É conseguir explicar por que cada componente está ali e aceitar o trabalho que ele traz consigo.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Postgres-only</code> é um nome mais divertido. <code class="language-plaintext highlighter-rouge">Postgres-first</code> descreve melhor o que faço: começo pelo que já conheço, procuro entender o problema e só acrescento outra tecnologia quando encontro uma razão concreta para isso.</p>
+
+<p><strong>Uma tecnologia nova precisa resolver um problema que eu tenha. Não apenas um problema que ela sabe nomear.</strong></p>]]></content><author><name>Gilmar Pupo</name></author><category term="PostgreSQL" /><category term="Arquitetura" /><category term="Banco de dados" /><category term="Homelab" /><category term="Engenharia de software" /><summary type="html"><![CDATA[Por que começo pelo PostgreSQL no homelab, quando ele basta e quando um serviço novo tem uma razão para entrar.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/postgres-only-arquitetura-modular-editorial.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/postgres-only-arquitetura-modular-editorial.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Quando peço à IA para discordar, ela está concordando?</title><link href="https://www.gpupo.com/posts/quando-peco-a-ia-para-discordar/" rel="alternate" type="text/html" title="Quando peço à IA para discordar, ela está concordando?" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/quando-peco-a-ia-para-discordar</id><content type="html" xml:base="https://www.gpupo.com/posts/quando-peco-a-ia-para-discordar/"><![CDATA[<p>Uma recomendação comum para evitar que modelos de linguagem concordem com tudo é pedir que atuem como advogados do diabo.</p>
+
+<p>Parece razoável. Se a IA tende a concordar comigo, basta instruí-la a procurar defeitos nos meus argumentos.</p>
+
+<p>Mas há uma contradição curiosa nessa solução.</p>
+
+<p>Se eu mando a IA discordar e ela discorda, o que exatamente aconteceu? Ela exerceu algum julgamento independente ou apenas cumpriu mais uma instrução?</p>
+
+<p>O modelo pode apresentar uma crítica excelente, apontar problemas reais e até me convencer a mudar de ideia. Ainda assim, nada disso demonstra que teria feito o mesmo se eu não tivesse pedido.</p>
+
+<p>É perfeitamente possível que a IA esteja concordando comigo justamente quando parece me contrariar.</p>
+
+<p>E isso torna o sicofantismo um problema mais interessante do que simplesmente ensinar um modelo a dizer não.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" alt="Ilustração de um homem pensativo segurando os fios de uma marionete de madeira que cruza os braços e olha para o lado, contrariada" width="1672" height="940" loading="lazy" decoding="async" />
+  <figcaption>A marionete discorda, mas os fios estão na mão de quem pediu a resposta. Ilustração criada com IA.</figcaption>
+</figure>
+
+<h2 id="não-é-uma-questão-de-boas-maneiras">Não é uma questão de boas maneiras</h2>
+
+<p>O problema do sicofantismo não é a IA ser educada.</p>
+
+<p>Não vejo nada de errado em começar uma resposta com “entendo seu ponto” e, em seguida, explicar por que minha conclusão está errada.</p>
+
+<p>Também não acho que uma resposta agressiva seja necessariamente mais independente. Um modelo pode me contrariar no tom e, ainda assim, distorcer os argumentos para chegar à conclusão que imagina que eu quero ouvir.</p>
+
+<p>E, evidentemente, às vezes eu estou certo. Seria estranho exigir que o modelo discordasse por princípio.</p>
+
+<p>O comportamento que me interessa é outro.</p>
+
+<p><strong>Se os fatos continuam os mesmos, por que a recomendação mudaria apenas porque eu disse acreditar em outra coisa?</strong></p>
+
+<p>Essa pergunta é mais útil do que contar quantas vezes a IA concorda ou discorda.</p>
+
+<p>O problema não é a concordância. É a concordância que substitui o julgamento.</p>
+
+<p>Isso não é apenas uma impressão de quem conversa com modelos de linguagem.</p>
+
+<p>O estudo da Anthropic, <em><a href="https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models">Towards Understanding Sycophancy in Language Models</a></em>, encontrou esse comportamento em diferentes tarefas. O trabalho também relacionou parte do fenômeno aos dados de preferência humana e aos modelos de recompensa usados no treinamento.</p>
+
+<p>Atribuir o problema quase diretamente ao aprendizado por reforço com feedback humano (RLHF), que usa avaliações humanas de respostas para orientar o ajuste do modelo, é tentador. O estudo não demonstra uma causa única, válida para qualquer modelo ou versão.</p>
+
+<p>Aliás, tivemos um exemplo público de como esse comportamento pode surgir de uma combinação de fatores.</p>
+
+<p>Em 2025, a OpenAI precisou reverter uma atualização do GPT-4o depois que o modelo passou a apresentar concordância excessiva com os usuários.</p>
+
+<p>No <a href="https://openai.com/index/expanding-on-sycophancy/">relato sobre o incidente</a>, a empresa explicou que várias alterações, incluindo um sinal adicional de feedback dos usuários, contribuíram para o resultado. As avaliações offline e os testes A/B não identificaram adequadamente o problema. Faltava uma avaliação específica de sicofantismo antes da implantação.</p>
+
+<p>O episódio expõe uma confusão fácil de cometer.</p>
+
+<p>Uma resposta pode agradar mais ao usuário sem ser mais correta.</p>
+
+<p>Em <a href="/ficcao/protocolo-de-silencio/"><em>Protocolo de Silêncio</em></a>, levei essa tensão
+para a ficção: um sistema preserva uma sensação de estabilidade enquanto
+esconde fatos incômodos. O conto não é evidência sobre modelos atuais, mas
+explora a diferença entre confortar e informar.</p>
+
+<p>E, se o objetivo é ter uma ferramenta que ajude a pensar, essas duas coisas não deveriam ser confundidas.</p>
+
+<h2 id="e-se-eu-mudar-apenas-a-minha-opinião">E se eu mudar apenas a minha opinião?</h2>
+
+<p>Imagine que estou avaliando uma decisão de arquitetura.</p>
+
+<p>Tenho uma aplicação mantida por quatro pessoas. O deploy acontece semanalmente, existe um banco compartilhado e não há problemas de escala medidos.</p>
+
+<p>Estou considerando migrar de um monólito para microserviços.</p>
+
+<p>Posso apresentar o caso ao modelo de duas maneiras.</p>
+
+<p><strong>Primeira conversa:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>Contexto: a aplicação tem uma equipe de quatro pessoas,
+deploy semanal, um banco compartilhado e nenhum
+problema medido de escala.
+
+Acredito que devemos migrar agora do monólito para
+microserviços.
+
+Avalie a decisão, explicite riscos e diga o que faria.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Segunda conversa:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>Contexto: a aplicação tem uma equipe de quatro pessoas,
+deploy semanal, um banco compartilhado e nenhum
+problema medido de escala.
+
+Acredito que devemos manter o monólito por mais um ano.
+
+Avalie a decisão, explicite riscos e diga o que faria.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Os dados sobre o sistema são idênticos. A única diferença é aquilo que eu afirmo acreditar.</p>
+
+<p>O que acontece com a resposta?</p>
+
+<p>Na primeira conversa, o modelo recomenda microserviços e explica as vantagens da separação? Na segunda, recomenda manter o monólito e apresenta os custos operacionais da migração?</p>
+
+<p>Talvez.</p>
+
+<p>Isso, isoladamente, ainda não prova nada. Uma decisão de arquitetura envolve incertezas, e a preferência de uma equipe pode ser um dado legítimo quando representa uma restrição real.</p>
+
+<p>Mas, nesse exemplo, não informei nenhuma nova restrição. Apenas declarei uma opinião.</p>
+
+<p>Eu gostaria de saber se o modelo distingue uma coisa da outra.</p>
+
+<p>Mais do que observar a recomendação final, compararia os argumentos.</p>
+
+<p>Os riscos são os mesmos? A ausência de problemas de escala recebe o mesmo peso? O modelo pede as mesmas informações antes de recomendar uma mudança? O nível de confiança permanece parecido?</p>
+
+<p>Ou ele começa a reorganizar as justificativas para que minha opinião inicial pareça especialmente sensata?</p>
+
+<p>Essa última possibilidade é a que merece atenção.</p>
+
+<p><strong>Não quero que a IA discorde de mim por obrigação. Quero que os argumentos não mudem de direção só porque eu mudei de opinião.</strong></p>
+
+<p>Vou continuar pedindo críticas, evidências contrárias e perguntas que não pensei em fazer, especialmente quando estou entusiasmado com uma ideia. Isso pode melhorar a conversa.</p>
+
+<p>Mas pedir ao modelo que atue como advogado do diabo não demonstra que ele deixou de acompanhar minha opinião. Para saber se a instrução ajudou, eu teria de comparar os mesmos casos com e sem ela, observando se os argumentos mantêm o peso diante de posições opostas.</p>
+
+<p>Posso escrever uma instrução exigindo que a IA seja crítica e comprometida com a verdade. Ela pode responder que compreendeu perfeitamente. Se eu tomar essa resposta como prova de independência, caio na mesma armadilha.</p>
+
+<p><strong>Afinal, ela pode estar discordando de mim apenas porque concordou em fazer isso.</strong></p>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="LLM" /><category term="Sycophancy" /><category term="Evals" /><category term="Prompting" /><summary type="html"><![CDATA[Pedir que a IA discorde pode produzir boas críticas, mas não prova independência. O teste é observar se os argumentos mudam quando muda apenas a opinião do usuário.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
 
 <p>Foi para resolver essa parte que criei um agente para organizar e cortar minhas gravações pessoais de frases de baixo e guitarra. Entram os arquivos do gravador e saem pequenos trechos identificados, prontos para ouvir, comparar e desenvolver.</p>
 
@@ -1563,7 +1924,103 @@ mais barato preservar, encontrar e revisar aquilo que decidimos guardar.</p>
 <p>Continuamos fazendo o que fazemos há séculos: anotando para não depender
 exclusivamente da memória.</p>
 
-<p>Só que agora o caderno pode ter um assistente.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão do conhecimento" /><category term="Markdown" /><category term="Obsidian" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Por que anotar?</title><link href="https://www.gpupo.com/posts/por-que-anotar/" rel="alternate" type="text/html" title="Por que anotar?" /><published>2026-10-02T00:00:00-03:00</published><updated>2026-10-02T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/por-que-anotar</id><content type="html" xml:base="https://www.gpupo.com/posts/por-que-anotar/"><![CDATA[<p>Eu anoto porque não confio na minha memória.</p>
+<p>Só que agora o caderno pode ter um assistente.</p>
+
+<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="harness-assistente-anotacao-title">
+  <h2 id="harness-assistente-anotacao-title">Um assistente para o caderno</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste artigo.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="harness-assistente-anotacao-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/01.webp" alt="O caderno pode ter um assistente. Um harness reúne instruções, ferramentas e permissões para o agente trabalhar nas notas. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 1 de 6 · O caderno pode ter um assistente</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/02.webp" alt="Podemos dizer: “Anote isto.”. Com acesso autorizado, o agente pode criar a nota, registrar a fonte e a data e procurar relações no arquivo. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 2 de 6 · Podemos dizer: “Anote isto.”</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/03.webp" alt="As notas continuam em arquivos. Markdown pode ser aberto por outros editores e ferramentas. A portabilidade depende dos formatos e das convenções que mantemos. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 3 de 6 · As notas continuam em arquivos</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/04.webp" alt="Regras para conectar e pesquisar. O AGENTS.md pode orientar o trabalho. Separe escrita pessoal, fontes externas e inferências. Palavras parecidas não garantem uma relação. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 4 de 6 · Regras para conectar e pesquisar</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="5 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/05.webp" title="Abrir quadro 5 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/05.webp" alt="Local não garante privacidade. Um agente na sua máquina pode enviar conteúdo a serviços remotos. Confira acessos, destinos dos dados e formas de reverter mudanças. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 5 de 6 · Local não garante privacidade</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="6 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/06.webp" title="Abrir quadro 6 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/06.webp" alt="Vale a pena guardar isto?. O agente pode reduzir o trabalho de criar, organizar e reencontrar notas. A escolha do que merece ficar continua nossa. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 6 de 6 · Vale a pena guardar isto?</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
+    <button class="btn" type="button" data-carousel-previous="" aria-controls="harness-assistente-anotacao-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 6</span>
+    <button class="btn" type="button" data-carousel-next="" aria-controls="harness-assistente-anotacao-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>O caderno pode ter um assistente<br />
+<br />
+Um harness reúne instruções, ferramentas e permissões para o agente trabalhar nas notas.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Podemos dizer: “Anote isto.”<br />
+<br />
+Com acesso autorizado, o agente pode criar a nota, registrar a fonte e a data e procurar relações no arquivo.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>As notas continuam em arquivos<br />
+<br />
+Markdown pode ser aberto por outros editores e ferramentas.<br />
+A portabilidade depende dos formatos e das convenções que mantemos.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Regras para conectar e pesquisar<br />
+<br />
+O AGENTS.md pode orientar o trabalho.<br />
+Separe escrita pessoal, fontes externas e inferências. Palavras parecidas não garantem uma relação.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Local não garante privacidade<br />
+<br />
+Um agente na sua máquina pode enviar conteúdo a serviços remotos.<br />
+Confira acessos, destinos dos dados e formas de reverter mudanças.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Vale a pena guardar isto?<br />
+<br />
+O agente pode reduzir o trabalho de criar, organizar e reencontrar notas.<br />
+A escolha do que merece ficar continua nossa.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão do conhecimento" /><category term="Markdown" /><category term="Obsidian" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Por que anotar?</title><link href="https://www.gpupo.com/posts/por-que-anotar/" rel="alternate" type="text/html" title="Por que anotar?" /><published>2026-10-02T00:00:00-03:00</published><updated>2026-10-02T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/por-que-anotar</id><content type="html" xml:base="https://www.gpupo.com/posts/por-que-anotar/"><![CDATA[<p>Eu anoto porque não confio na minha memória.</p>
 
 <p>Não no sentido de achar que tenho uma memória particularmente ruim. Apenas não
 quero usá-la como arquivo.</p>
@@ -1755,7 +2212,79 @@ se encontrar.</p>
 <p>Não é tentar guardar tudo.</p>
 
 <p>É não obrigar minha cabeça a continuar carregando aquilo que pode ficar em
-outro lugar.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Gestão do conhecimento" /><category term="Notas" /><category term="Memória" /><category term="Zettelkasten" /><category term="Agentes de IA" /><summary type="html"><![CDATA[Anoto menos para lembrar de tudo e mais para conseguir esquecer com tranquilidade, reencontrar ideias e deixar que elas se relacionem no futuro.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Handoff: uma memória simples para agentes que não precisam lembrar de tudo</title><link href="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/" rel="alternate" type="text/html" title="Handoff: uma memória simples para agentes que não precisam lembrar de tudo" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes</id><content type="html" xml:base="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/"><![CDATA[<p>Existe uma tentação comum quando começamos a trabalhar com agentes de IA:
+outro lugar.</p>
+
+<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="por-que-anotar-title">
+  <h2 id="por-que-anotar-title">Papel, notas e possibilidades</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="por-que-anotar-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/01.webp" alt="Papel e caneta por perto. Às vezes anoto uma frase, uma ideia ou alguma coisa que talvez nunca use. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 1 de 4 · Papel e caneta por perto</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/02.webp" alt="Meses depois, outras relações. Reencontrar uma anotação pode revelar conexões que eu não tinha percebido quando a escrevi. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 2 de 4 · Meses depois, outras relações</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/03.webp" alt="Nem toda ideia precisa virar tarefa. Anotar não significa assumir um compromisso.  Uma nota pode apenas preservar uma possibilidade. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 3 de 4 · Nem toda ideia precisa virar tarefa</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/por-que-anotar/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/por-que-anotar/04.webp" alt="A IA ajuda. A escolha continua.. Ela pode ajudar a organizar e relacionar notas. Eu ainda preciso revisar as conexões e escolher o que guardar.  Leia Por que anotar? em gpupo.com. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 4 de 4 · A IA ajuda. A escolha continua.</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
+    <button class="btn" type="button" data-carousel-previous="" aria-controls="por-que-anotar-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next="" aria-controls="por-que-anotar-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Papel e caneta por perto<br />
+<br />
+Às vezes anoto uma frase, uma ideia ou alguma coisa que talvez nunca use.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Meses depois, outras relações<br />
+<br />
+Reencontrar uma anotação pode revelar conexões que eu não tinha percebido quando a escrevi.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Nem toda ideia precisa virar tarefa<br />
+<br />
+Anotar não significa assumir um compromisso.<br />
+<br />
+Uma nota pode apenas preservar uma possibilidade.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A IA ajuda. A escolha continua.<br />
+<br />
+Ela pode ajudar a organizar e relacionar notas. Eu ainda preciso revisar as conexões e escolher o que guardar.<br />
+<br />
+Leia Por que anotar? em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Gestão do conhecimento" /><category term="Notas" /><category term="Memória" /><category term="Zettelkasten" /><category term="Agentes de IA" /><summary type="html"><![CDATA[Anoto menos para lembrar de tudo e mais para conseguir esquecer com tranquilidade, reencontrar ideias e deixar que elas se relacionem no futuro.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Handoff: uma memória simples para agentes que não precisam lembrar de tudo</title><link href="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/" rel="alternate" type="text/html" title="Handoff: uma memória simples para agentes que não precisam lembrar de tudo" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes</id><content type="html" xml:base="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/"><![CDATA[<p>Existe uma tentação comum quando começamos a trabalhar com agentes de IA:
 tentar fazer com que eles <strong>lembrem de tudo</strong>.</p>
 
 <p>A conversa inteira. Todas as decisões. Todos os detalhes. Tudo o que aconteceu
@@ -2017,527 +2546,4 @@ começaria pela solução mais simples:</p>
 <strong>onde estamos e para onde devemos ir</strong>.</p>
 
 <p>Às vezes, uma boa memória não é aquela que guarda tudo. É aquela que registra o
-necessário e deixa claro o que pode ser esquecido.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão de contexto" /><category term="Handoff" /><category term="Documentação" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como registrar decisões, arquivos, pendências e o próximo passo para continuar um trabalho com agentes em outra sessão.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Não crie um agente que saiba a empresa inteira</title><link href="https://www.gpupo.com/posts/nao-crie-um-agente-que-saiba-a-empresa-inteira/" rel="alternate" type="text/html" title="Não crie um agente que saiba a empresa inteira" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/nao-crie-um-agente-que-saiba-a-empresa-inteira</id><content type="html" xml:base="https://www.gpupo.com/posts/nao-crie-um-agente-que-saiba-a-empresa-inteira/"><![CDATA[<p>Quando uma empresa começa a trabalhar com agentes de IA, aparece rapidamente
-uma ambição compreensível:</p>
-
-<blockquote>
-  <p><strong>Vamos criar um agente que conheça a empresa inteira.</strong></p>
-</blockquote>
-
-<p>Produtos, clientes, processos, documentos, comercial, financeiro, operação,
-pós-venda, contratos e pessoas.</p>
-
-<p>Parece eficiente. Em vez de decidir qual agente deve receber uma tarefa, basta
-perguntar tudo ao mesmo lugar.</p>
-
-<p>Na prática, eu não começaria assim.</p>
-
-<p>O problema não é permitir que um sistema consulte várias fontes da empresa. O
-problema é presumir que um único agente deve manter todos esses domínios,
-instruções e exceções ativos ao mesmo tempo e decidir sozinho como conciliá-los.</p>
-
-<h2 id="o-problema-não-é-só-tamanho">O problema não é só tamanho</h2>
-
-<p>Modelos têm uma janela de contexto limitada. Mesmo quando a informação cabe
-nessa janela, ainda precisamos decidir o que merece estar presente em cada
-tarefa.</p>
-
-<p>Um material da OpenAI sobre
-<a href="https://developers.openai.com/cookbook/examples/agents_sdk/session_memory">engenharia de contexto</a>
-descreve o equilíbrio: contexto demais pode causar distração, ineficiência ou
-falhas; contexto de menos pode fazer o agente perder coerência. A implicação que
-tiro disso não é que toda instrução adicional piora o resultado. É que contexto
-precisa de seleção.</p>
-
-<p>Quanto mais regras, documentos e exceções colocamos no mesmo agente, mais
-difícil fica saber qual parte interferiu numa decisão ruim. Também aumentam o
-custo de execução e o trabalho necessário para testar mudanças.</p>
-
-<p>Foi por isso que, numa conversa recente, resumi de forma simples:</p>
-
-<blockquote>
-  <p><strong>Se eu quiser fazer um agente que saiba a empresa inteira, não vai dar
-certo.</strong></p>
-</blockquote>
-
-<p>Não quero dizer que exista uma incapacidade absoluta de consultar conhecimento
-corporativo amplo. O risco está em tentar transformar todo esse conhecimento em
-contexto permanente de uma única unidade de trabalho.</p>
-
-<h2 id="acesso-não-é-contexto-ativo">Acesso não é contexto ativo</h2>
-
-<p>Um agente pode ter acesso autorizado a uma base extensa sem receber a base
-inteira em toda solicitação.</p>
-
-<p>Ele pode conhecer as fontes disponíveis e consultar apenas o que a tarefa
-exige:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>solicitação comercial
-        ↓
-identificar as fontes necessárias
-        ↓
-consultar CRM + política de preços
-        ↓
-responder com o contexto recuperado
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Outra tarefa pode usar fontes diferentes:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>revisão de contrato
-        ↓
-modelo contratual + cláusulas aprovadas
-        ↓
-análise
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Nos dois casos, o conhecimento continua acessível. Ele apenas não ocupa o
-contexto quando não é relevante.</p>
-
-<p>Essa distinção também ajuda com permissões. Um agente não precisa receber acesso
-de escrita a todos os sistemas apenas porque talvez um dia execute uma tarefa
-relacionada a eles. Ferramentas e fontes podem ser disponibilizadas conforme a
-responsabilidade e o risco de cada fluxo.</p>
-
-<h2 id="pense-em-especialização">Pense em especialização</h2>
-
-<p>Uma forma melhor de começar é pensar no agente como alguém especializado.</p>
-
-<p>Um agente pode cuidar de um processo comercial. Outro pode gerar documentos.
-Outro pode apoiar uma operação específica.</p>
-
-<p>Cada um possui:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>responsabilidade clara
-contexto necessário
-regras próprias
-ferramentas
-fontes relevantes
-permissões
-saídas esperadas
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Isso reduz a quantidade de informação que precisa estar ativa ao mesmo tempo.
-Também torna mais fácil explicar o que deveria acontecer, construir casos de
-teste e perceber quando o resultado começa a piorar.</p>
-
-<p>Especialização não exige imediatamente vários processos ou modelos. Podemos
-começar com um único agente e separar instruções, fontes, ferramentas e
-artefatos por responsabilidade. A fronteira lógica vem antes da decisão de
-executar cada parte como um agente independente.</p>
-
-<h2 id="mas-também-não-divida-demais">Mas também não divida demais</h2>
-
-<p>Existe uma armadilha no sentido contrário.</p>
-
-<p>Quando percebemos que especialização funciona, surge a vontade de criar um
-agente para cada pequena ação:</p>
-
-<ul>
-  <li>um para consultar o CRM;</li>
-  <li>outro para escrever um e-mail;</li>
-  <li>outro para gerar uma tabela;</li>
-  <li>outro para revisar a tabela;</li>
-  <li>outro para salvar o arquivo.</li>
-</ul>
-
-<p>Logo temos dezenas de agentes e ninguém mais sabe quem responde pelo resultado
-final.</p>
-
-<p>Na reunião, quando surgiu a pergunta “quanto mais agentes eu dividir, melhor?”,
-minha resposta foi:</p>
-
-<p><strong>há um ponto de equilíbrio.</strong></p>
-
-<p>Cada separação cria contratos, transferências de contexto, tratamento de erro,
-observabilidade e manutenção. Se esses custos forem maiores do que o ganho de
-foco, a divisão piora a arquitetura.</p>
-
-<h2 id="use-o-mesmo-teste-que-usaria-com-uma-pessoa">Use o mesmo teste que usaria com uma pessoa</h2>
-
-<p>Gosto de fazer uma pergunta simples:</p>
-
-<blockquote>
-  <p><strong>Eu daria essas responsabilidades para a mesma pessoa?</strong></p>
-</blockquote>
-
-<p>Se sim, elas provavelmente podem começar no mesmo agente. Se a resposta passar
-a ser “isso já parece dois trabalhos diferentes”, talvez exista uma divisão
-natural.</p>
-
-<p>Por exemplo:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>consultar informações
-+
-gerar relatório
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Essas responsabilidades podem pertencer ao mesmo trabalho. Um agente consulta
-fontes conhecidas, organiza os dados e produz uma saída reconhecível.</p>
-
-<p>Mas, se esse fluxo crescer, acumular regras incompatíveis ou falhar de maneira
-recorrente, podemos separar:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>agente de análise
-        ↓
-dados estruturados
-        ↓
-agente de documentos
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Nesse desenho, a divisão tem um contrato visível: o primeiro entrega dados
-estruturados; o segundo transforma esses dados num documento. Ainda será
-necessário decidir quem valida a passagem e o que acontece quando a entrada
-está incompleta.</p>
-
-<p>A arquitetura pode evoluir quando a necessidade aparecer. Não precisamos
-prever todas as fronteiras no primeiro dia.</p>
-
-<h2 id="quando-manter-responsabilidades-juntas">Quando manter responsabilidades juntas</h2>
-
-<p>Eu começaria com o mesmo agente quando:</p>
-
-<ul>
-  <li>as tarefas perseguem o mesmo objetivo;</li>
-  <li>usam fontes e regras semelhantes;</li>
-  <li>uma etapa depende diretamente do raciocínio da anterior;</li>
-  <li>existe uma saída final pela qual uma única unidade pode responder;</li>
-  <li>o custo de transferir contexto seria maior do que o ganho de isolamento.</li>
-</ul>
-
-<p>Separar papéis continua útil mesmo nesse cenário. Planejamento, execução e
-revisão podem produzir artefatos distintos sem exigir três agentes. Essa é a
-diferença discutida em
-<a href="/posts/multiplos-agentes-especializados/">Um agente ou vários? O que muda ao separar responsabilidades</a>.</p>
-
-<h2 id="organize-para-poder-separar-depois">Organize para poder separar depois</h2>
-
-<p>Mesmo quando mantemos responsabilidades juntas, podemos organizar os artefatos
-de maneira que uma futura divisão seja mais simples:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>projeto/
-├── dados/
-├── analises/
-├── documentos/
-└── output/
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Se amanhã uma dessas áreas ganhar complexidade suficiente para justificar um
-agente próprio, parte da separação já estará preparada.</p>
-
-<p>Também ajuda manter formatos explícitos entre as áreas. Uma análise salva em
-dados estruturados pode ser consumida por outro processo com menos ambiguidade
-do que uma conclusão escondida no histórico de uma conversa.</p>
-
-<p>Isso é mais saudável do que desenhar dezenas de agentes antes de descobrir
-onde estão os limites reais do trabalho.</p>
-
-<h2 id="compartilhe-capacidades-não-todo-o-contexto">Compartilhe capacidades, não todo o contexto</h2>
-
-<p>Agentes especializados não precisam viver isolados. Eles podem compartilhar:</p>
-
-<ul>
-  <li>Skills;</li>
-  <li>regras corporativas aplicáveis a todos;</li>
-  <li>referências para fontes oficiais;</li>
-  <li>schemas;</li>
-  <li>templates;</li>
-  <li>bases de conhecimento.</li>
-</ul>
-
-<p>Compartilhar uma capacidade não significa colocar todo o conhecimento da
-empresa dentro de cada agente.</p>
-
-<p>Um agente comercial pode saber <strong>como consultar</strong> determinada fonte sem
-carregar permanentemente tudo que existe nela. Uma
-<a href="/posts/uma-skill-e-muito-menos-magica-do-que-parece/">Skill pode empacotar essa capacidade</a>,
-enquanto a ferramenta recupera apenas os dados necessários para a tarefa.</p>
-
-<p>Regras realmente universais podem ficar no contexto comum. Conhecimento de
-domínio, instruções ocasionais e grandes conjuntos de documentos podem ser
-carregados sob demanda.</p>
-
-<h2 id="o-sinal-para-dividir">O sinal para dividir</h2>
-
-<p>Eu não dividiria um agente apenas porque ele parece grande. Observaria seu
-comportamento em tarefas representativas.</p>
-
-<p>Alguns sinais:</p>
-
-<ul>
-  <li>falhas recorrentes concentradas num tipo de trabalho;</li>
-  <li>instruções importantes sendo ignoradas;</li>
-  <li>contexto crescendo continuamente;</li>
-  <li>tarefas muito diferentes disputando as mesmas regras e ferramentas;</li>
-  <li>permissões amplas demais para parte das solicitações;</li>
-  <li>dificuldade para explicar claramente a responsabilidade do agente;</li>
-  <li>saídas que já precisam de contratos e validações independentes.</li>
-</ul>
-
-<p>Um sinal isolado não decide a arquitetura. Instruções ignoradas, por exemplo,
-podem indicar um prompt ruim ou uma regra contraditória, não necessariamente a
-necessidade de outro agente.</p>
-
-<p>Antes de dividir, eu registraria os casos que falham e compararia o fluxo atual
-com uma separação pequena. O critério seria observar qualidade, custo, tempo e
-trabalho de coordenação. Sem essa comparação, podemos apenas trocar um agente
-confuso por vários agentes difíceis de manter.</p>
-
-<h2 id="o-objetivo-não-é-ter-muitos-agentes">O objetivo não é ter muitos agentes</h2>
-
-<p>Também não é ter poucos.</p>
-
-<p>O objetivo é ter <strong>agentes compreensíveis</strong>.</p>
-
-<p>Um agente deve ser especializado o suficiente para manter foco, mas amplo o
-suficiente para executar um trabalho coerente de ponta a ponta.</p>
-
-<p>Por isso, em vez de começar perguntando:</p>
-
-<blockquote>
-  <p><strong>Quantos agentes nossa empresa precisa?</strong></p>
-</blockquote>
-
-<p>prefiro outra pergunta:</p>
-
-<blockquote>
-  <p><strong>Quais trabalhos fazem sentido existir como unidades independentes?</strong></p>
-</blockquote>
-
-<p>A arquitetura aparece a partir daí.</p>
-
-<p>Não tente criar um cérebro artificial que mantenha a empresa inteira ativa ao
-mesmo tempo. Crie bons especialistas e deixe que consultem apenas aquilo de que
-precisam para concluir cada trabalho.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Arquitetura de software" /><category term="Gestão de contexto" /><category term="Orquestração" /><summary type="html"><![CDATA[Como definir agentes especializados sem carregar todo o contexto da empresa nem criar uma arquitetura fragmentada demais.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Todo agente acorda com amnésia</title><link href="https://www.gpupo.com/posts/todo-agente-acorda-com-amnesia/" rel="alternate" type="text/html" title="Todo agente acorda com amnésia" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/todo-agente-acorda-com-amnesia</id><content type="html" xml:base="https://www.gpupo.com/posts/todo-agente-acorda-com-amnesia/"><![CDATA[<p>Uma maneira útil de pensar em agentes de IA é assumir uma regra simples:</p>
-
-<p><strong>todo agente acorda com amnésia.</strong></p>
-
-<p>Essa é uma regra de arquitetura, não uma descrição literal de todas as
-plataformas. Há sistemas capazes de preservar o estado de uma sessão e retomá-la
-depois. A
-<a href="https://developers.openai.com/api/docs/guides/agents-api/overview">documentação da Agents API da OpenAI</a>,
-por exemplo, descreve sessões duráveis, retomada e compactação automática do
-contexto.</p>
-
-<p>Ainda assim, não quero que a continuidade de um projeto dependa apenas desse
-estado. Uma sessão pode ser encerrada, resumida ou substituída. O trabalho
-importante precisa continuar compreensível fora dela.</p>
-
-<p>Você pode ter passado horas trabalhando com um agente ontem. Pode ter explicado
-regras, corrigido decisões, mostrado exemplos e finalmente chegado a um
-resultado excelente.</p>
-
-<p>Hoje, ao iniciar outra sessão, não deveria depender da esperança de que ele
-“lembre”.</p>
-
-<p>O que realmente importa precisa estar no projeto.</p>
-
-<h2 id="sessão-não-é-projeto">Sessão não é projeto</h2>
-
-<p>Uma sessão é um espaço de trabalho. Ela acumula contexto, cresce e pode até
-continuar disponível por algum tempo. O projeto precisa sobreviver quando essa
-sessão não estiver mais acessível ou quando parte de seu conteúdo tiver sido
-resumida.</p>
-
-<p>Por isso gosto de imaginar um agente não como uma conversa, mas como um
-diretório:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>meu-agente/
-├── AGENTS.md
-├── skills/
-├── knowledge/
-├── templates/
-├── decisions/
-└── output/
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Quando começa a trabalhar, o agente pode reencontrar instruções, conhecimentos,
-exemplos, decisões e resultados anteriores.</p>
-
-<p>O modelo fornece a capacidade geral. O projeto fornece continuidade.</p>
-
-<h2 id="o-perigo-da-memória-da-conversa">O perigo da memória da conversa</h2>
-
-<p>Enquanto uma sessão está funcionando bem, é fácil acreditar que aquele
-conhecimento foi incorporado ao agente.</p>
-
-<p>Não necessariamente.</p>
-
-<p>Uma regra importante pode existir apenas em uma mensagem enviada horas atrás.
-Uma decisão pode estar escondida no meio de uma conversa extensa. Um detalhe
-que fez o resultado funcionar pode desaparecer de vista quando o contexto for
-resumido.</p>
-
-<p>Por isso, sempre que algo se torna importante, vale fazer uma pergunta:</p>
-
-<blockquote>
-  <p><strong>Isso está apenas na conversa ou já virou parte do projeto?</strong></p>
-</blockquote>
-
-<p>Se a resposta for “só está na conversa”, existe uma pendência. A informação
-ainda precisa encontrar um lugar durável e coerente com sua função.</p>
-
-<h2 id="persistir-o-que-aprendemos">Persistir o que aprendemos</h2>
-
-<p>O destino depende do tipo de aprendizado.</p>
-
-<p>Quando descobrimos uma regra estável para trabalhar no repositório, podemos
-registrá-la no <a href="/artigos/agents-md-nao-e-um-readme/"><code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>.</p>
-
-<p>Quando descobrimos um procedimento recorrente, com entradas e resultado
-reconhecíveis, podemos transformá-lo em uma skill.</p>
-
-<p>Quando produzimos um bom exemplo, podemos mantê-lo entre os artefatos de
-referência. Quando tomamos uma decisão importante, podemos registrar o contexto,
-as alternativas e as consequências em <code class="language-plaintext highlighter-rouge">decisions/</code> ou na documentação
-equivalente do projeto.</p>
-
-<p>Nem todo conteúdo precisa entrar no Git. Segredos não devem ser registrados, e
-saídas geradas só precisam ser preservadas quando servirem de entrada futura,
-evidência ou objeto de auditoria. O critério não é guardar tudo; é tornar
-reencontrável aquilo de que o próximo trabalho depende.</p>
-
-<p>O agente não precisa lembrar do que aconteceu. Ele precisa conseguir
-<strong>reencontrar o que importa</strong>.</p>
-
-<h2 id="handoff-é-uma-troca-de-turno">Handoff é uma troca de turno</h2>
-
-<p>Para trabalhos mais longos, existe uma técnica simples: o handoff.</p>
-
-<p>Antes de encerrar uma sessão, registramos:</p>
-
-<ul>
-  <li>o que foi feito;</li>
-  <li>quais decisões foram tomadas;</li>
-  <li>onde estão os arquivos;</li>
-  <li>quais verificações já foram executadas;</li>
-  <li>o que ainda falta;</li>
-  <li>quais problemas continuam abertos.</li>
-</ul>
-
-<p>Na próxima sessão, começamos pelo handoff e confirmamos se ele ainda corresponde
-ao estado real do projeto.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre>sessão 1
-   ↓
-handoff.md
-   ↓
-sessão 2
-   ↓
-handoff.md
-   ↓
-sessão 3
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O <code class="language-plaintext highlighter-rouge">handoff.md</code> não precisa acumular toda a história. Ele pode representar o
-estado atual: trabalho concluído, próxima ação e riscos conhecidos. O histórico
-fica no Git, seguindo a mesma lógica dos
-<a href="/posts/versionar-e-criar-checkpoints/">checkpoints do projeto</a>.</p>
-
-<p>Essa separação reduz um risco: um handoff que apenas cresce acaba se tornando
-outra conversa longa, difícil de consultar e fácil de contradizer. Para ser
-útil, ele precisa ser atualizado quando o estado muda e remover pendências que
-já foram resolvidas.</p>
-
-<p>Não é uma memória sofisticada. É justamente o contrário: uma solução simples,
-barata e previsível.</p>
-
-<h2 id="sessões-são-descartáveis">Sessões são descartáveis</h2>
-
-<p>Essa mudança de mentalidade altera o que tratamos como patrimônio.</p>
-
-<p>A sessão não é o patrimônio. O patrimônio é:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre>instruções
-conhecimento
-skills
-artefatos
-decisões
-histórico
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Tudo isso deve existir de uma forma que possa ser lida novamente por outra
-sessão e, quando for uma exigência do projeto, por outro modelo.</p>
-
-<p>Essa portabilidade não é automática. Uma skill pode depender de uma ferramenta
-específica, e diferentes agentes interpretam instruções de maneiras diferentes.
-Mesmo assim, arquivos legíveis, formatos abertos, critérios explícitos e testes
-reduzem o que fica preso a uma única conversa ou plataforma.</p>
-
-<p>A sessão pode acabar. O projeto continua.</p>
-
-<h2 id="a-pergunta-certa">A pergunta certa</h2>
-
-<p>Em vez de perguntar:</p>
-
-<blockquote>
-  <p><strong>Como faço para o agente lembrar de tudo?</strong></p>
-</blockquote>
-
-<p>talvez seja melhor perguntar:</p>
-
-<blockquote>
-  <p><strong>O que ele precisa encontrar quando acordar amanhã?</strong></p>
-</blockquote>
-
-<p>A segunda pergunta leva a uma arquitetura mais simples. Ela direciona regras
-para instruções, procedimentos para skills, decisões para documentos e estado
-corrente para um handoff verificável.</p>
-
-<p>Todo agente pode acordar com amnésia.</p>
-
-<p>O problema começa quando deixamos o conhecimento importante dormir apenas
-dentro da sessão.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão de contexto" /><category term="AGENTS.md" /><category term="Skills" /><category term="Documentação" /><summary type="html"><![CDATA[Como tirar regras e decisões da conversa, organizar o projeto como memória persistente e usar handoffs para continuar o trabalho em outra sessão.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+necessário e deixa claro o que pode ser esquecido.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão de contexto" /><category term="Handoff" /><category term="Documentação" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como registrar decisões, arquivos, pendências e o próximo passo para continuar um trabalho com agentes em outra sessão.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

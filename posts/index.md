@@ -62,6 +62,72 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
             
             <div class="article-tags" aria-label="Tags do post">
               
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#llm">LLM</a>
+              
+              <a class="article-tag" href="/posts/tags/#sycophancy">Sycophancy</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/quando-peco-a-ia-para-discordar/">Quando peço à IA para discordar, ela está concordando?</a></h4>
+          
+          <p class="post-archive-summary">Pedir que a IA discorde pode produzir boas críticas, mas não prova independência. O teste é observar se os argumentos mudam quando muda apenas a opinião do usuário.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-26T00:00:00-03:00">
+              26/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#postgresql">PostgreSQL</a>
+              
+              <a class="article-tag" href="/posts/tags/#arquitetura">Arquitetura</a>
+              
+              <a class="article-tag" href="/posts/tags/#banco-de-dados">Banco de dados</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/postgresql-primeiro-outro-servico-quando-houver-um-motivo/">Postgres-only, até deixar de ser</a></h4>
+          
+          <p class="post-archive-summary">Por que começo pelo PostgreSQL no homelab, quando ele basta e quando um serviço novo tem uma razão para entrar.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-26T00:00:00-03:00">
+              26/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
               <a class="article-tag" href="/posts/tags/#ubuntu">Ubuntu</a>
               
               <a class="article-tag" href="/posts/tags/#linux">Linux</a>

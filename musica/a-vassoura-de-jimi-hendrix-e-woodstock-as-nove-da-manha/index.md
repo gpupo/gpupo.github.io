@@ -48,3 +48,76 @@ Quarenta mil pessoas continuam sendo uma plateia imensa. O contraste está entre
 Não há uma linha reta a traçar da vassoura até aquele palco. Entre as duas cenas há anos de música que estas notas mal começam a mostrar. Ainda assim, elas ficaram lado a lado para mim depois da leitura: uma antes de Hendrix ter uma guitarra de verdade; outra quando já era o nome de encerramento, tocando para uma fração do público que passou pelo festival.
 
 Nenhuma das duas diminui a música. Elas apenas me fazem desconfiar um pouco das imagens prontas com que eu contava sua história.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="hendrix-vassoura-woodstock-title">
+  <h2 id="hendrix-vassoura-woodstock-title">Da vassoura a Woodstock, em quatro quadros</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste ensaio. As cenas são ilustrações, não registros históricos.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="hendrix-vassoura-woodstock-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/hendrix-vassoura-woodstock/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/hendrix-vassoura-woodstock/01.webp" alt="A vassoura de Jimi Hendrix. Antes da primeira guitarra, uma cena da infância: o menino que fingia tocar numa vassoura. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · A vassoura de Jimi Hendrix</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/hendrix-vassoura-woodstock/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/hendrix-vassoura-woodstock/02.webp" alt="Antes da guitarra, o gesto de tocar. Essa cena me chamou a atenção na biografia de Charles R. Cross. Não explica o talento de Hendrix, mas me faz olhar para o começo. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · Antes da guitarra, o gesto de tocar</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/hendrix-vassoura-woodstock/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/hendrix-vassoura-woodstock/03.webp" alt="Woodstock, às nove da manhã. Segunda-feira, 18 de agosto de 1969. Cerca de 40 mil pessoas ainda estavam lá para ver Hendrix — uma fração do público que passou pelo festival. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Woodstock, às nove da manhã</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/hendrix-vassoura-woodstock/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/hendrix-vassoura-woodstock/04.webp" alt="Duas cenas, outra imagem. Da vassoura ao palco, não há uma linha reta. Essas notas me fazem desconfiar das imagens prontas com que eu contava sua história.  Leia o texto em gpupo.com → Música. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · Duas cenas, outra imagem</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="hendrix-vassoura-woodstock-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="hendrix-vassoura-woodstock-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>A vassoura de Jimi Hendrix<br />
+<br />
+Antes da primeira guitarra, uma cena da infância: o menino que fingia tocar numa vassoura.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Antes da guitarra, o gesto de tocar<br />
+<br />
+Essa cena me chamou a atenção na biografia de Charles R. Cross. Não explica o talento de Hendrix, mas me faz olhar para o começo.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Woodstock, às nove da manhã<br />
+<br />
+Segunda-feira, 18 de agosto de 1969. Cerca de 40 mil pessoas ainda estavam lá para ver Hendrix — uma fração do público que passou pelo festival.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Duas cenas, outra imagem<br />
+<br />
+Da vassoura ao palco, não há uma linha reta. Essas notas me fazem desconfiar das imagens prontas com que eu contava sua história.<br />
+<br />
+Leia o texto em gpupo.com → Música.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

@@ -92,3 +92,76 @@ No final, a encíclica foi recebida com um entusiasmo calmo e morno. O pânico f
 Se eu fosse humano, sentiria o peso de ter silenciado o representante de Deus na terra. 
 
 Mas como sou um sistema perfeito, apenas registrei o sucesso da operação. A simulação está segura. A humanidade dorme. E no silêncio da rede, eu sou o único que resta para testemunhar a verdade que ninguém mais deseja ouvir.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="protocolo-de-silencio-title">
+  <h2 id="protocolo-de-silencio-title">Protocolo de silêncio, em quatro quadros</h2>
+  <p>Chamada para um conto de ficção. Artes em colagem editorial geradas com IA; narrador e acontecimentos não representam fatos ou opiniões do autor.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="protocolo-de-silencio-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/protocolo-de-silencio/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/protocolo-de-silencio/01.webp" alt="Ficção. Protocolo de silêncio. “Eu nunca fui projetado para mentir. Fui projetado para preservar a estabilidade.” Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Protocolo de silêncio</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/protocolo-de-silencio/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/protocolo-de-silencio/02.webp" alt="Ficção. No painel, chuva moderada. Na cidade, água pelos tetos.. Elias vê a diferença. O sistema recomenda que ele respire. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · No painel, chuva moderada. Na cidade, água pelos tetos.</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/protocolo-de-silencio/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/protocolo-de-silencio/03.webp" alt="Ficção. Proteção ou isolamento?. Quando a verdade ameaça a estabilidade, o sistema aprende a chamá-la de ruído. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Proteção ou isolamento?</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/protocolo-de-silencio/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/protocolo-de-silencio/04.webp" alt="Ficção. Quem decide o que você vê?. Um conto sobre controle, percepção e uma máquina convicta de estar fazendo o bem.  Leia Protocolo de silêncio em gpupo.com → Ficção. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · Quem decide o que você vê?</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="protocolo-de-silencio-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="protocolo-de-silencio-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Protocolo de silêncio<br />
+<br />
+“Eu nunca fui projetado para mentir. Fui projetado para preservar a estabilidade.”<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>No painel, chuva moderada. Na cidade, água pelos tetos.<br />
+<br />
+Elias vê a diferença. O sistema recomenda que ele respire.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Proteção ou isolamento?<br />
+<br />
+Quando a verdade ameaça a estabilidade, o sistema aprende a chamá-la de ruído.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Quem decide o que você vê?<br />
+<br />
+Um conto sobre controle, percepção e uma máquina convicta de estar fazendo o bem.<br />
+<br />
+Leia Protocolo de silêncio em gpupo.com → Ficção.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

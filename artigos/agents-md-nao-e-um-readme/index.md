@@ -388,3 +388,93 @@ O outro prepara o agente para colaborar com ele.
 E talvez a parte mais interessante esteja justamente aí: não estamos apenas
 ensinando agentes a escrever código. Estamos aprendendo a projetar ambientes em
 que humanos e agentes consigam trabalhar melhor juntos.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="agents-md-nao-e-um-readme-title">
+  <h2 id="agents-md-nao-e-um-readme-title">Como o AGENTS.md orienta o trabalho</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste artigo.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="agents-md-nao-e-um-readme-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 5">
+      <a href="/assets/images/carousels/agents-md-nao-e-um-readme/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/agents-md-nao-e-um-readme/01.webp" alt="README explica. AGENTS orienta.. O README apresenta o projeto. O AGENTS.md orienta como o agente deve trabalhar nele. Ilustração em colagem editorial de papel azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 5 · README explica. AGENTS orienta.</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 5">
+      <a href="/assets/images/carousels/agents-md-nao-e-um-readme/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/agents-md-nao-e-um-readme/02.webp" alt="Um roteador de contexto. O AGENTS.md pode indicar o que ler e quando. Arquitetura, governança e regras de domínio continuam nas suas fontes. Ilustração em colagem editorial de papel azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 5 · Um roteador de contexto</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 5">
+      <a href="/assets/images/carousels/agents-md-nao-e-um-readme/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/agents-md-nao-e-um-readme/03.webp" alt="Autonomia com limites. Defina o que o agente pode modificar e quando precisa pedir aprovação. Instruções não substituem permissões reais. Ilustração em colagem editorial de papel azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 5 · Autonomia com limites</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 5">
+      <a href="/assets/images/carousels/agents-md-nao-e-um-readme/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/agents-md-nao-e-um-readme/04.webp" alt="O que significa terminado?. Implementar, validar, revisar e limpar. Testes relevantes, arquitetura respeitada e riscos reportados fazem parte da entrega. Ilustração em colagem editorial de papel azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 5 · O que significa terminado?</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="5 de 5">
+      <a href="/assets/images/carousels/agents-md-nao-e-um-readme/05.webp" title="Abrir quadro 5 em tamanho original">
+        <img src="/assets/images/carousels/agents-md-nao-e-um-readme/05.webp" alt="Cada camada tem seu papel. As instruções orientam. As ferramentas validam. As permissões limitam. A revisão humana supervisiona. Ilustração em colagem editorial de papel azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 5 de 5 · Cada camada tem seu papel</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="agents-md-nao-e-um-readme-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 5</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="agents-md-nao-e-um-readme-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>README explica. AGENTS orienta.<br />
+<br />
+O README apresenta o projeto.<br />
+O AGENTS.md orienta como o agente deve trabalhar nele.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Um roteador de contexto<br />
+<br />
+O AGENTS.md pode indicar o que ler e quando.<br />
+Arquitetura, governança e regras de domínio continuam nas suas fontes.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Autonomia com limites<br />
+<br />
+Defina o que o agente pode modificar e quando precisa pedir aprovação.<br />
+Instruções não substituem permissões reais.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>O que significa terminado?<br />
+<br />
+Implementar, validar, revisar e limpar.<br />
+Testes relevantes, arquitetura respeitada e riscos reportados fazem parte da entrega.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Cada camada tem seu papel<br />
+<br />
+As instruções orientam.<br />
+As ferramentas validam.<br />
+As permissões limitam.<br />
+A revisão humana supervisiona.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

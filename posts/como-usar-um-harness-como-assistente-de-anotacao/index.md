@@ -335,3 +335,102 @@ Continuamos fazendo o que fazemos há séculos: anotando para não depender
 exclusivamente da memória.
 
 Só que agora o caderno pode ter um assistente.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="harness-assistente-anotacao-title">
+  <h2 id="harness-assistente-anotacao-title">Um assistente para o caderno</h2>
+  <p>Artes em colagem editorial geradas com IA a partir deste artigo.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="harness-assistente-anotacao-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/01.webp" alt="O caderno pode ter um assistente. Um harness reúne instruções, ferramentas e permissões para o agente trabalhar nas notas. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 6 · O caderno pode ter um assistente</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/02.webp" alt="Podemos dizer: “Anote isto.”. Com acesso autorizado, o agente pode criar a nota, registrar a fonte e a data e procurar relações no arquivo. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 6 · Podemos dizer: “Anote isto.”</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/03.webp" alt="As notas continuam em arquivos. Markdown pode ser aberto por outros editores e ferramentas. A portabilidade depende dos formatos e das convenções que mantemos. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 6 · As notas continuam em arquivos</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/04.webp" alt="Regras para conectar e pesquisar. O AGENTS.md pode orientar o trabalho. Separe escrita pessoal, fontes externas e inferências. Palavras parecidas não garantem uma relação. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 6 · Regras para conectar e pesquisar</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="5 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/05.webp" title="Abrir quadro 5 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/05.webp" alt="Local não garante privacidade. Um agente na sua máquina pode enviar conteúdo a serviços remotos. Confira acessos, destinos dos dados e formas de reverter mudanças. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 5 de 6 · Local não garante privacidade</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="6 de 6">
+      <a href="/assets/images/carousels/harness-assistente-anotacao/06.webp" title="Abrir quadro 6 em tamanho original">
+        <img src="/assets/images/carousels/harness-assistente-anotacao/06.webp" alt="Vale a pena guardar isto?. O agente pode reduzir o trabalho de criar, organizar e reencontrar notas. A escolha do que merece ficar continua nossa. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 6 de 6 · Vale a pena guardar isto?</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="harness-assistente-anotacao-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 6</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="harness-assistente-anotacao-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>O caderno pode ter um assistente<br />
+<br />
+Um harness reúne instruções, ferramentas e permissões para o agente trabalhar nas notas.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Podemos dizer: “Anote isto.”<br />
+<br />
+Com acesso autorizado, o agente pode criar a nota, registrar a fonte e a data e procurar relações no arquivo.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>As notas continuam em arquivos<br />
+<br />
+Markdown pode ser aberto por outros editores e ferramentas.<br />
+A portabilidade depende dos formatos e das convenções que mantemos.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Regras para conectar e pesquisar<br />
+<br />
+O AGENTS.md pode orientar o trabalho.<br />
+Separe escrita pessoal, fontes externas e inferências. Palavras parecidas não garantem uma relação.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Local não garante privacidade<br />
+<br />
+Um agente na sua máquina pode enviar conteúdo a serviços remotos.<br />
+Confira acessos, destinos dos dados e formas de reverter mudanças.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Vale a pena guardar isto?<br />
+<br />
+O agente pode reduzir o trabalho de criar, organizar e reencontrar notas.<br />
+A escolha do que merece ficar continua nossa.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

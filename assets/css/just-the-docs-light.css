@@ -7564,6 +7564,101 @@ blockquote.warning-title > p:last-child {
   margin-bottom: 0;
 }
 
+.editorial-carousel {
+  margin: 3rem 0;
+}
+.editorial-carousel__hint, .editorial-carousel__status,
+.editorial-carousel figcaption {
+  color: #425b6b;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.editorial-carousel__viewport {
+  display: flex;
+  margin: 1.25rem auto 0;
+  max-width: 34rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+}
+.editorial-carousel__viewport:focus-visible {
+  outline: 2px solid #315b7d;
+  outline-offset: 4px;
+}
+.editorial-carousel__slide {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  margin: 0;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+.editorial-carousel__slide a {
+  display: block;
+}
+.editorial-carousel__slide img {
+  border: 1px solid #eeebee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+.editorial-carousel__slide figcaption {
+  margin: 0.75rem 0;
+  padding: 0 0.25rem;
+  text-align: center;
+}
+.editorial-carousel__controls {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin: 1rem auto;
+  max-width: 34rem;
+}
+.editorial-carousel__controls[hidden] {
+  display: none;
+}
+.editorial-carousel__controls .btn {
+  margin: 0;
+  min-height: 44px;
+}
+.editorial-carousel__controls .btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+.editorial-carousel__status {
+  white-space: nowrap;
+}
+.editorial-carousel__transcript {
+  border-top: 1px solid #eeebee;
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+}
+.editorial-carousel__transcript summary {
+  color: #315b7d;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+@media print {
+  .editorial-carousel__viewport {
+    display: block;
+    max-width: 100%;
+    overflow: visible;
+  }
+  .editorial-carousel__slide {
+    break-inside: avoid;
+    margin: 1rem auto;
+    max-width: 28rem;
+  }
+  .editorial-carousel__controls,
+  .editorial-carousel__hint {
+    display: none;
+  }
+}
 .site-title {
   font-weight: 700;
   letter-spacing: -0.02em;
