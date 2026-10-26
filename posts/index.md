@@ -56,6 +56,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-26T00:00:00-03:00">
+              26/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#ubuntu">Ubuntu</a>
+              
+              <a class="article-tag" href="/posts/tags/#linux">Linux</a>
+              
+              <a class="article-tag" href="/posts/tags/#impressão">Impressão</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/">Frente e verso manual na HP LaserJet P1102w no Ubuntu</a></h4>
+          
+          <p class="post-archive-summary">Um script para imprimir PDFs frente e verso na HP LaserJet P1102w, com a sequência das páginas e uma pausa para recolocar o papel.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-10-15T00:00:00-03:00">
               15/10/2026
             </time>

@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-21T15:25:32-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-26T07:29:14-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Frente e verso manual na HP LaserJet P1102w no Ubuntu</title><link href="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/" rel="alternate" type="text/html" title="Frente e verso manual na HP LaserJet P1102w no Ubuntu" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu</id><content type="html" xml:base="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/"><![CDATA[<p>A impressora HP LaserJet P1102w que uso imprime em apenas um lado por vez. Para imprimir
+um PDF frente e verso, eu precisava virar as folhas manualmente, mas a fila
+instalada no meu Ubuntu não oferecia uma opção que conduzisse essa sequência.</p>
+
+<p>Criei um script para isso e o registrei no menu <strong>Abrir com</strong> como <strong>Frente e
+verso manual (HP1102)</strong>. Ele envia as páginas da frente, para e mostra como
+recolocar a pilha. Depois da minha confirmação, envia os versos. Se o PDF tiver
+um número ímpar de páginas, a última é impressa separadamente.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" alt="Ilustração de uma impressora HP LaserJet P1102w preta com papel na bandeja de entrada e uma folha na saída" width="1536" height="1024" loading="lazy" decoding="async" />
+  <figcaption>A HP LaserJet P1102w na tarefa que ainda exige recolocar o papel manualmente.</figcaption>
+</figure>
+
+<p>O trecho abaixo mostra como o script monta a ordem das páginas. <code class="language-plaintext highlighter-rouge">pair_pages</code>
+desconsidera a última página quando ela não tem par:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="nv">pair_pages</span><span class="o">=</span><span class="k">$((</span> pages <span class="o">-</span> pages <span class="o">%</span> <span class="m">2</span> <span class="k">))</span>
+
+<span class="nv">fronts</span><span class="o">=()</span>
+<span class="k">for</span> <span class="o">((</span> <span class="nv">i</span><span class="o">=</span>1<span class="p">;</span> i&lt;<span class="o">=</span>pair_pages<span class="p">;</span> i+<span class="o">=</span>2 <span class="o">))</span><span class="p">;</span> <span class="k">do
+  </span>fronts+<span class="o">=(</span><span class="s2">"</span><span class="nv">$tmpdir</span><span class="s2">/p-</span><span class="nv">$i</span><span class="s2">.pdf"</span><span class="o">)</span>
+<span class="k">done
+
+</span><span class="nv">backs</span><span class="o">=()</span>
+<span class="k">for</span> <span class="o">((</span> <span class="nv">i</span><span class="o">=</span>pair_pages<span class="p">;</span> i&gt;<span class="o">=</span>2<span class="p">;</span> i-<span class="o">=</span>2 <span class="o">))</span><span class="p">;</span> <span class="k">do
+  </span>backs+<span class="o">=(</span><span class="s2">"</span><span class="nv">$tmpdir</span><span class="s2">/p-</span><span class="nv">$i</span><span class="s2">.pdf"</span><span class="o">)</span>
+<span class="k">done</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>O script separa o PDF em páginas, reúne as frentes em ordem crescente e os
+versos em ordem decrescente, e envia cada grupo para a fila com <code class="language-plaintext highlighter-rouge">lp</code>. Uma
+janela do <code class="language-plaintext highlighter-rouge">zenity</code> faz a pausa entre os dois envios. Esse é apenas o trecho que
+monta as listas de páginas; ele depende do restante do script.</p>
+
+<p>Para usar, abro o PDF com <strong>Frente e verso manual (HP1102)</strong> e espero todas as
+frentes terminarem. Retiro o papel em branco da bandeja e recoloco a pilha
+impressa <strong>sem mudar a ordem</strong>, com o <strong>lado impresso para baixo</strong> e a <strong>borda
+superior entrando primeiro</strong>. Então confirmo a impressão dos versos.</p>
+
+<p>A impressora continua exigindo que alguém vire o papel, mas o script cuida da sequência e
+mostra a instrução na hora de recolocar a pilha.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Ubuntu" /><category term="Linux" /><category term="Impressão" /><category term="PDF" /><category term="Automação" /><summary type="html"><![CDATA[Um script para imprimir PDFs frente e verso na HP LaserJet P1102w, com a sequência das páginas e uma pausa para recolocar o papel.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/frente-e-verso-manual-hp-laserjet-p1102w.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
 
 <p>Foi para resolver essa parte que criei um agente para organizar e cortar minhas gravações pessoais de frases de baixo e guitarra. Entram os arquivos do gravador e saem pequenos trechos identificados, prontos para ouvir, comparar e desenvolver.</p>
 
@@ -2488,345 +2540,4 @@ corrente para um handoff verificável.</p>
 <p>Todo agente pode acordar com amnésia.</p>
 
 <p>O problema começa quando deixamos o conhecimento importante dormir apenas
-dentro da sessão.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão de contexto" /><category term="AGENTS.md" /><category term="Skills" /><category term="Documentação" /><summary type="html"><![CDATA[Como tirar regras e decisões da conversa, organizar o projeto como memória persistente e usar handoffs para continuar o trabalho em outra sessão.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Uma Skill é muito menos mágica do que parece</title><link href="https://www.gpupo.com/posts/uma-skill-e-muito-menos-magica-do-que-parece/" rel="alternate" type="text/html" title="Uma Skill é muito menos mágica do que parece" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/uma-skill-e-muito-menos-magica-do-que-parece</id><content type="html" xml:base="https://www.gpupo.com/posts/uma-skill-e-muito-menos-magica-do-que-parece/"><![CDATA[<p>Quando começamos a trabalhar com agentes de IA, rapidamente aparece uma palavra
-nova: <strong>Skill</strong>.</p>
-
-<p>Há repositórios, catálogos e pacotes com dezenas delas. A linguagem ao redor do
-conceito pode fazer parecer que estamos diante de algum componente muito
-sofisticado.</p>
-
-<p>Vale tirar um pouco da fumaça.</p>
-
-<p>Como modelo mental, uma Skill é algo simples:</p>
-
-<p><strong>uma instrução organizada para poder ser reutilizada.</strong></p>
-
-<p>Na implementação descrita pela
-<a href="https://developers.openai.com/api/docs/guides/tools-skills">documentação oficial da OpenAI</a>,
-uma Skill é um diretório ancorado por um arquivo <code class="language-plaintext highlighter-rouge">SKILL.md</code>. Esse diretório pode
-conter apenas instruções, mas também pode incluir referências, scripts e
-templates. Portanto, ela pode ser maior do que um prompt, embora continue sendo
-menos misteriosa do que o nome sugere.</p>
-
-<h2 id="um-exemplo-simples">Um exemplo simples</h2>
-
-<p>Imagine que vários agentes de uma empresa precisam consultar o mesmo CRM.</p>
-
-<p>Todos precisam saber:</p>
-
-<ul>
-  <li>onde procurar;</li>
-  <li>quais campos importam;</li>
-  <li>como interpretar determinadas informações;</li>
-  <li>quais regras devem respeitar;</li>
-  <li>o que podem ou não alterar.</li>
-</ul>
-
-<p>Uma opção seria repetir essas instruções dentro de cada <code class="language-plaintext highlighter-rouge">AGENTS.md</code>:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>agente-comercial
-    └── instruções para consultar CRM
-
-agente-documentos
-    └── instruções para consultar CRM
-
-agente-pos-venda
-    └── instruções para consultar CRM
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Funciona. Mas agora temos três cópias da mesma coisa. Quando a regra mudar,
-precisamos lembrar de alterar as três.</p>
-
-<p>É aí que uma Skill começa a fazer sentido:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>skills/
-└── consultar-crm/
-    ├── SKILL.md
-    ├── references/
-    │   └── campos-do-crm.md
-    └── scripts/
-        └── consultar-cliente.sh
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Nem toda Skill precisa dessas pastas adicionais. Se a instrução for suficiente,
-o diretório pode conter apenas <code class="language-plaintext highlighter-rouge">SKILL.md</code>:</p>
-
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-</pre></td><td class="rouge-code"><pre><span class="nn">---</span>
-<span class="na">name</span><span class="pi">:</span> <span class="s">consultar-crm</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s">Consulte dados comerciais no CRM quando a tarefa depender do histórico de um cliente.</span>
-<span class="nn">---</span>
-
-Use o identificador do cliente informado na tarefa.
-
-Consulte apenas os campos necessários para responder à solicitação.
-
-Não altere registros sem autorização explícita.
-
-Informe quando um dado não estiver disponível ou estiver desatualizado.
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Nome e descrição ajudam o agente a reconhecer <strong>o que a capacidade faz e quando
-deve considerá-la</strong>. O corpo contém as instruções completas.</p>
-
-<p>Os agentes que precisam dessa capacidade passam a reutilizar a mesma fonte.
-Isso é composição.</p>
-
-<h2 id="skill-não-é-a-ferramenta">Skill não é a ferramenta</h2>
-
-<p>No exemplo do CRM, a Skill não cria acesso ao sistema. O agente ainda precisa de
-uma ferramenta, API ou conexão que consiga consultar os dados, além das
-credenciais e permissões adequadas.</p>
-
-<p>A separação fica assim:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>Skill
-→ quando e como executar o trabalho
-
-ferramenta ou API
-→ consultar ou alterar o sistema
-
-permissões
-→ limitar aquilo que pode ser feito
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Essa distinção importa especialmente para operações de escrita. Uma frase como
-“não altere registros sem autorização” ajuda a orientar o agente, mas uma
-operação crítica também deveria ser protegida pela própria ferramenta ou por um
-fluxo de aprovação. Instrução não substitui controle de acesso.</p>
-
-<p>Uma Skill também não é um agente independente. Ela oferece uma capacidade que
-o agente pode usar dentro de um trabalho maior. Essa diferença é discutida com
-mais detalhes em
-<a href="/posts/ai-skills-como-capacidades-configuradas/">AI Skills são fluxos reutilizáveis, não agentes</a>.</p>
-
-<h2 id="skill-é-uma-forma-de-reaproveitar-conhecimento">Skill é uma forma de reaproveitar conhecimento</h2>
-
-<p>Podemos ter Skills como:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre>consultar-crm
-gerar-documento
-validar-documento
-versionar-projeto
-fazer-handoff
-comparar-propostas
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Uma capacidade pode ser usada por vários agentes sem que cada um mantenha uma
-cópia independente das instruções.</p>
-
-<p>Isso se parece com algo que fazemos há décadas em software: encontramos uma
-responsabilidade coerente, damos um nome, definimos sua interface e passamos a
-compor coisas maiores a partir dela.</p>
-
-<p>A analogia tem limite. Skills não são necessariamente funções determinísticas.
-O modelo ainda interpreta as instruções, e o resultado pode variar. Reutilizar
-uma Skill reduz duplicação; não garante, por si só, que todas as execuções serão
-iguais.</p>
-
-<h2 id="carregar-quando-necessário">Carregar quando necessário</h2>
-
-<p>Skills também ajudam a controlar contexto.</p>
-
-<p>Imagine um <code class="language-plaintext highlighter-rouge">AGENTS.md</code> contendo absolutamente tudo que um agente talvez precise
-saber:</p>
-
-<ul>
-  <li>gerar documentos;</li>
-  <li>consultar CRM;</li>
-  <li>analisar planilhas;</li>
-  <li>escrever atas;</li>
-  <li>produzir PDFs;</li>
-  <li>versionar arquivos;</li>
-  <li>verificar contratos;</li>
-  <li>fazer pesquisas.</li>
-</ul>
-
-<p>Numa tarefa específica, talvez ele precise apenas consultar o CRM. Colocar todas
-as instruções detalhadas no contexto principal aumenta o volume que precisa ser
-considerado mesmo quando a maior parte não se aplica.</p>
-
-<p>Na implementação documentada pela OpenAI, o agente vê primeiro o nome, a
-descrição e o caminho das Skills disponíveis. Quando escolhe uma delas, lê o
-<code class="language-plaintext highlighter-rouge">SKILL.md</code> e os arquivos de apoio necessários. É uma forma de revelar detalhes
-progressivamente:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>consultar-crm
-→ use quando a tarefa exigir o histórico comercial de um cliente
-→ carregue as instruções completas quando a capacidade for necessária
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Esse mecanismo pode melhorar duas coisas ao mesmo tempo: <strong>reuso e foco</strong>.</p>
-
-<p>Isso não significa que menos contexto seja sempre melhor. Pouco contexto pode
-omitir uma regra decisiva. O objetivo é manter no contexto permanente aquilo
-que vale para todo o trabalho e carregar detalhes especializados quando eles
-passarem a ser relevantes.</p>
-
-<h2 id="quando-transformar-algo-em-skill">Quando transformar algo em Skill?</h2>
-
-<p>Uma boa pergunta é:</p>
-
-<blockquote>
-  <p><strong>Estou ensinando isso novamente?</strong></p>
-</blockquote>
-
-<p>Se a resposta for sim, talvez exista uma Skill esperando para ser criada.</p>
-
-<p>Eu procuraria também outros sinais:</p>
-
-<ul>
-  <li>existe uma situação reconhecível que deve ativar a capacidade;</li>
-  <li>as instruções produzem um resultado identificável;</li>
-  <li>há regras, exemplos ou templates que precisam permanecer juntos;</li>
-  <li>mais de um agente ou projeto pode reutilizar o procedimento;</li>
-  <li>a capacidade muda num ritmo diferente das regras gerais do agente.</li>
-</ul>
-
-<p>Outra situação aparece quando o <code class="language-plaintext highlighter-rouge">AGENTS.md</code> começa a crescer demais. Há trechos
-fundamentais para qualquer tarefa daquele projeto. Esses provavelmente devem
-continuar ali. Outros só importam ocasionalmente e podem ser extraídos.</p>
-
-<p>Uma separação possível:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>AGENTS.md
-→ responsabilidade, limites e regras permanentes do projeto
-
-skills/
-→ capacidades específicas usadas quando necessário
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Essa fronteira não é universal. Se uma regra precisa ser obedecida em toda
-tarefa, escondê-la numa Skill opcional aumenta o risco de ela não ser carregada.
-Nesse caso, o
-<a href="/artigos/agents-md-nao-e-um-readme/"><code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>
-continua sendo um lugar mais adequado.</p>
-
-<h2 id="skills-também-podem-evoluir">Skills também podem evoluir</h2>
-
-<p>Depois que uma capacidade foi separada, ela deixa de pertencer exclusivamente a
-um agente. Pode ser melhorada uma vez e reutilizada em vários lugares.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>              consultar-crm
-              /     |     \
-             /      |      \
-       comercial documentos pós-venda
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O aprendizado deixa de ficar preso ao lugar onde aconteceu e vira uma peça
-reutilizável. Essa vantagem também cria uma responsabilidade: uma mudança na
-Skill pode afetar vários consumidores.</p>
-
-<p>Por isso, eu versionaria essas mudanças e testaria os fluxos que dependem dela.
-Uma alteração centralizada é mais fácil de distribuir, mas também centraliza o
-risco de regressão.</p>
-
-<h2 id="uma-skill-precisa-ser-revisada">Uma Skill precisa ser revisada</h2>
-
-<p>O formato simples não torna uma Skill inofensiva. Suas instruções podem
-influenciar planejamento, uso de ferramentas e execução de comandos. Se houver
-scripts, eles podem executar código no ambiente quando forem acionados.</p>
-
-<p>A documentação da OpenAI recomenda tratar Skills como instruções privilegiadas
-e revisar pacotes de terceiros antes de disponibilizá-los ao agente. Eu
-aplicaria o mesmo cuidado usado para uma dependência:</p>
-
-<ul>
-  <li>entender de onde veio;</li>
-  <li>ler o <code class="language-plaintext highlighter-rouge">SKILL.md</code>;</li>
-  <li>inspecionar scripts e referências;</li>
-  <li>verificar quais ferramentas e dados ela pode alcançar;</li>
-  <li>limitar ações destrutivas ou de escrita;</li>
-  <li>testar com entradas representativas.</li>
-</ul>
-
-<p>Um catálogo grande não é automaticamente uma vantagem. A procedência e a
-qualidade das capacidades importam mais do que a quantidade instalada.</p>
-
-<h2 id="não-transforme-tudo-em-skill">Não transforme tudo em Skill</h2>
-
-<p>Também existe o exagero contrário.</p>
-
-<p>Se criarmos uma Skill para cada pequena instrução, apenas substituímos um
-arquivo grande por centenas de diretórios difíceis de entender, descobrir e
-manter.</p>
-
-<p>O objetivo não é maximizar o número de Skills. É encontrar capacidades com
-<strong>coerência, um gatilho reconhecível e potencial de reutilização</strong>.</p>
-
-<p>Depois dessa separação, ainda resta decidir quanto detalhe colocar nas
-instruções. Em
-<a href="/artigos/ai-skills-para-gpt-5-6-sol-menos-instrucao-mais-contrato/">AI Skills para GPT-5.6 Sol: menos instrução, mais contrato</a>,
-mostro como tenho revisado Skills antigas para preservar restrições e critérios
-de conclusão sem microgerenciar cada passo.</p>
-
-<h2 id="menos-mágica-mais-engenharia">Menos mágica, mais engenharia</h2>
-
-<p>A parte interessante das Skills não está em alguma inteligência escondida
-dentro delas. Está na organização.</p>
-
-<p>Pegamos uma instrução que funcionou. Damos um nome. Explicamos quando deve ser
-usada. Juntamos os recursos necessários. Separamos do restante do contexto. E
-passamos a reutilizá-la.</p>
-
-<p>Em vez de imaginar Skills como poderes especiais instalados no agente, prefiro
-uma descrição menos emocionante:</p>
-
-<blockquote>
-  <p><strong>Skills são conhecimento operacional empacotado para reutilização.</strong></p>
-</blockquote>
-
-<p>É justamente quando o conceito parece menos mágico que ele começa a ficar mais
-útil.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Skills" /><category term="Gestão de contexto" /><category term="Documentação" /><summary type="html"><![CDATA[Como transformar instruções recorrentes em capacidades reutilizáveis, carregadas quando necessário e separadas das regras permanentes do agente.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+dentro da sessão.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão de contexto" /><category term="AGENTS.md" /><category term="Skills" /><category term="Documentação" /><summary type="html"><![CDATA[Como tirar regras e decisões da conversa, organizar o projeto como memória persistente e usar handoffs para continuar o trabalho em outra sessão.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
