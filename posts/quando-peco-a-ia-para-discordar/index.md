@@ -135,3 +135,76 @@ Mas pedir ao modelo que atue como advogado do diabo não demonstra que ele deixo
 Posso escrever uma instrução exigindo que a IA seja crítica e comprometida com a verdade. Ela pode responder que compreendeu perfeitamente. Se eu tomar essa resposta como prova de independência, caio na mesma armadilha.
 
 **Afinal, ela pode estar discordando de mim apenas porque concordou em fazer isso.**
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="quando-peco-a-ia-para-discordar-title">
+  <h2 id="quando-peco-a-ia-para-discordar-title">Quando discordar ainda é concordar</h2>
+  <p>Quatro quadros em colagem editorial criados com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="quando-peco-a-ia-para-discordar-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/01.webp" alt="Quando peço à IA para discordar, ela está concordando? Se eu mando discordar e ela discorda, o que isso prova? Homem pensativo segura os fios de uma marionete contrariada em uma colagem de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Quando peço à IA para discordar, ela está concordando?</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/02.webp" alt="Discordar não basta. Uma crítica pode ser excelente. Ainda assim, talvez só tenha seguido a instrução. Marionete de braços cruzados continua presa aos fios em uma colagem de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · Discordar não basta</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/03.webp" alt="Mude só a opinião. Mesmo problema. Mesmos fatos. Duas posições opostas. Os argumentos mudam junto? Homem segura cartões com setas opostas diante da mesma pilha de documentos." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Mude só a opinião</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/04.webp" alt="O teste está nos argumentos. Quero que as evidências mantenham o peso, mesmo quando mudo de opinião. Leia o texto em gpupo.com. Balança de madeira compara papéis com evidências e cartões com opiniões." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · O teste está nos argumentos</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="quando-peco-a-ia-para-discordar-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="quando-peco-a-ia-para-discordar-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Quando peço à IA para discordar, ela está concordando?<br />
+<br />
+Se eu mando discordar e ela discorda, o que isso prova?<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Discordar não basta<br />
+<br />
+Uma crítica pode ser excelente. Ainda assim, talvez só tenha seguido a instrução.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Mude só a opinião<br />
+<br />
+Mesmo problema. Mesmos fatos. Duas posições opostas. Os argumentos mudam junto?<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>O teste está nos argumentos<br />
+<br />
+Quero que as evidências mantenham o peso, mesmo quando mudo de opinião.<br />
+<br />
+Leia o texto em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

@@ -1,4 +1,912 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-10-26T15:06:06-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Frente e verso manual na HP LaserJet P1102w no Ubuntu</title><link href="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/" rel="alternate" type="text/html" title="Frente e verso manual na HP LaserJet P1102w no Ubuntu" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu</id><content type="html" xml:base="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/"><![CDATA[<p>A impressora HP LaserJet P1102w que uso imprime em apenas um lado por vez. Para imprimir
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-11-06T10:17:09-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo</title><link href="https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026/" rel="alternate" type="text/html" title="Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo" /><published>2026-11-06T00:00:00-03:00</published><updated>2026-11-06T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026</id><content type="html" xml:base="https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026/"><![CDATA[<figure class="editorial-photo">
+  <img src="/assets/images/plugins-obsidian-2026.webp" alt="Caderno aberto com notas interligadas e módulos de busca, templates, desenho e cartões iluminados; outros módulos estão desconectados sobre a mesa." width="1536" height="1024" loading="eager" decoding="async" />
+  <figcaption>Ilustração conceitual gerada por IA: módulos ativos e desativados em um caderno de notas.</figcaption>
+</figure>
+
+<p>Meu cofre do Obsidian reúne notas de estudo, referências, textos e inventários.
+Para trabalhar com esse material, mantenho recursos nativos de busca, navegação
+e propriedades, além de extensões para templates, desenhos, exportação e estudo.</p>
+
+<p>Em 6 de novembro de 2026, a configuração tem <strong>sete plugins comunitários
+habilitados e oito instalados, mas desligados</strong>. No arquivo dos nativos, há 13
+entradas ligadas e 18 desligadas.</p>
+
+<p>Este inventário cruza a configuração com os arquivos do cofre. Estar habilitado
+não mede frequência de uso, e uma desativação não explica, sozinha, o motivo da
+escolha. Há inclusive consultas e atalhos que permaneceram depois que seus
+plugins foram desligados.</p>
+
+<h2 id="os-sete-comunitários-que-mantenho-habilitados">Os sete comunitários que mantenho habilitados</h2>
+
+<p>As versões abaixo são as instaladas no meu cofre. Os nomes e as funções vêm dos
+manifestos locais; os links levam aos projetos correspondentes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Versão instalada</th>
+      <th>Função</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/obsidian-community/obsidian-kanban">Kanban</a></td>
+      <td>2.0.51</td>
+      <td>Criar quadros apoiados em arquivos Markdown.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/silentvoid13/Templater">Templater</a></td>
+      <td>2.18.1</td>
+      <td>Criar e usar templates.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/oliverbalfour/obsidian-pandoc">Pandoc Plugin</a></td>
+      <td>0.4.1</td>
+      <td>Oferecer comandos de exportação para formatos como DOCX, ePub e PDF.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/sergei-korneev/obsidian-local-images-plus">Local Images Plus</a></td>
+      <td>0.16.4</td>
+      <td>Baixar mídias externas e ajustar os links das notas para arquivos locais.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/scambier/obsidian-omnisearch">Omnisearch</a></td>
+      <td>1.28.2</td>
+      <td>Acrescentar um mecanismo de busca ao cofre.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/zsviczian/obsidian-excalidraw-plugin">Excalidraw</a></td>
+      <td>2.20.6</td>
+      <td>Editar e visualizar desenhos do Excalidraw.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/st3v3nmw/obsidian-spaced-repetition">Spaced Repetition</a></td>
+      <td>1.13.8</td>
+      <td>Revisar flashcards e notas com repetição espaçada.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="templates-busca-e-exportação">Templates, busca e exportação</h3>
+
+<p>O Templater aponta para a pasta <code class="language-plaintext highlighter-rouge">Templates</code> e está configurado para disparar na
+criação de arquivos. Há um atalho associado ao template de nota efêmera e um
+arquivo com sintaxe do Templater nessa pasta. O recurso nativo de templates
+também está ligado e usa o mesmo diretório.</p>
+
+<p>Na busca, o Omnisearch tem o atalho <code class="language-plaintext highlighter-rouge">Mod+Shift+F</code>. Nesse arquivo de configuração,
+<code class="language-plaintext highlighter-rouge">Mod</code> representa <code class="language-plaintext highlighter-rouge">Ctrl</code> no Linux e <code class="language-plaintext highlighter-rouge">Cmd</code> no macOS, conforme a
+<a href="https://github.com/obsidianmd/obsidian-api/blob/master/obsidian.d.ts">definição da API</a>.
+A busca nativa permanece habilitada, mas seu comando de abertura está sem
+atalho personalizado. Os dois mecanismos coexistem.</p>
+
+<p>O Pandoc tem um atalho para exportação em PDF. É um caminho preparado para
+exportar, embora este levantamento não tenha testado a execução do Pandoc nem
+suas dependências externas.</p>
+
+<h3 id="imagens-desenhos-cartões-e-quadros">Imagens, desenhos, cartões e quadros</h3>
+
+<p>O Local Images Plus está configurado para processar arquivos criados, com a
+atualização em tempo real desligada. O próprio Obsidian envia novos anexos para
+<code class="language-plaintext highlighter-rouge">assets</code>. São configurações coerentes com manter mídia junto das notas, sem que
+isso permita atribuir ao plugin a origem de cada imagem armazenada.</p>
+
+<p>Na pasta <code class="language-plaintext highlighter-rouge">notes</code>, três arquivos contêm a propriedade <code class="language-plaintext highlighter-rouge">excalidraw-plugin</code>, que
+identifica material no formato do Excalidraw.</p>
+
+<p>O Spaced Repetition deixa um registro mais específico: cinco arquivos dessa
+pasta contêm comentários de agendamento de revisão <code class="language-plaintext highlighter-rouge">&lt;!--SR:...--&gt;</code>. A
+configuração reconhece <code class="language-plaintext highlighter-rouge">#flashcards</code>, usa <code class="language-plaintext highlighter-rouge">#review</code> para revisão de notas e
+permite lacunas com chaves. Já descrevi esse arranjo no post sobre
+<a href="/posts/usando-flashcards-e-repeticao-espacada-no-obsidian/">flashcards e repetição espaçada</a>.</p>
+
+<p>O Kanban também tem material no cofre: quatro arquivos, fora de <code class="language-plaintext highlighter-rouge">notes</code>, têm a
+propriedade <code class="language-plaintext highlighter-rouge">kanban-plugin: board</code>. Procurar apenas na pasta principal de notas
+teria deixado esses quadros fora do levantamento.</p>
+
+<h2 id="os-oito-comunitários-instalados-que-estão-desligados">Os oito comunitários instalados que estão desligados</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Plugin</th>
+      <th>Versão instalada</th>
+      <th>Função</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Auto Rename from ID</td>
+      <td>0.1.0</td>
+      <td>Renomear notas ao salvar, a partir da propriedade <code class="language-plaintext highlighter-rouge">id</code>.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/frankolson/obsidian-bujo-bullets">BuJo Bullets</a></td>
+      <td>1.2.1</td>
+      <td>Acrescentar tipos de checkbox para marcadores de Bullet Journal.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/blacksmithgu/obsidian-dataview">Dataview</a></td>
+      <td>0.5.68</td>
+      <td>Criar consultas e visualizações de dados.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/chetachiezikeuzor/Highlightr-Plugin">Highlightr</a></td>
+      <td>1.2.2</td>
+      <td>Oferecer um menu de marcação com cores configuráveis.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/dartungar/obsidian-mermaid">Mermaid Tools</a></td>
+      <td>1.3.0</td>
+      <td>Acrescentar ferramentas visuais para diagramas Mermaid.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/taitava/obsidian-shellcommands">Shell commands</a></td>
+      <td>0.23.0</td>
+      <td>Definir comandos do sistema e associá-los a atalhos ou automações.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/handcartcactus/obsidian-remove-newlines">Remove Newlines</a></td>
+      <td>1.0.7</td>
+      <td>Remover quebras de linha ou linhas vazias de texto selecionado ou colado.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/coignard/obsidian-typographer">Typographer</a></td>
+      <td>1.0.1</td>
+      <td>Aplicar ajustes tipográficos, substituições e pareamento de caracteres.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O Dataview é o caso que mais chama atenção. No
+<a href="/posts/meu-obsidian-de-escrita-tem-o-grafo-desligado/">retrato de agosto</a>, ele
+aparecia entre os habilitados. Agora está desligado, mas 103 arquivos Markdown
+diretamente em <code class="language-plaintext highlighter-rouge">notes</code> ainda contêm a abertura de bloco <code class="language-plaintext highlighter-rouge">dataview</code>.</p>
+
+<p>As consultas continuam guardadas, embora o plugin que as executa esteja
+desativado. Bases está ligado e há 19 arquivos <code class="language-plaintext highlighter-rouge">.base</code> fora da lixeira do cofre.
+A coexistência desses arquivos não comprova uma migração completa do Dataview
+para Bases.</p>
+
+<p>Também ficaram atalhos para Highlightr, BuJo Bullets e Remove Newlines. No
+celular, a barra de ferramentas ainda referencia um comando do BuJo Bullets.
+Por isso, a lista de atalhos não serve, sozinha, como inventário de plugins
+ativos.</p>
+
+<p>Há ainda 19 arquivos diretamente em <code class="language-plaintext highlighter-rouge">notes</code> com blocos <code class="language-plaintext highlighter-rouge">mermaid</code>, embora
+Mermaid Tools esteja desligado. Desativar uma extensão não apaga o material
+associado a ela.</p>
+
+<h2 id="os-plugins-nativos-que-ficam-ligados">Os plugins nativos que ficam ligados</h2>
+
+<p>Os <a href="https://obsidian.md/help/plugins">plugins nativos</a> são os recursos incluídos
+no Obsidian. No meu <code class="language-plaintext highlighter-rouge">core-plugins.json</code>, as entradas habilitadas são estas:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grupo</th>
+      <th>Entradas ligadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Encontrar e abrir arquivos</td>
+      <td>Explorador de arquivos, busca e seletor rápido.</td>
+    </tr>
+    <tr>
+      <td>Percorrer relações</td>
+      <td>Backlinks, links de saída e painel de tags.</td>
+    </tr>
+    <tr>
+      <td>Consultar metadados</td>
+      <td>Propriedades e Bases.</td>
+    </tr>
+    <tr>
+      <td>Criar notas</td>
+      <td>Templates e criador de notas únicas.</td>
+    </tr>
+    <tr>
+      <td>Acessar comandos e acompanhar a edição</td>
+      <td>Paleta de comandos, status do editor e sumário (Outline).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>O criador de notas únicas aponta para <code class="language-plaintext highlighter-rouge">notes</code>, usa um template padrão e tem o
+formato <code class="language-plaintext highlighter-rouge">0.YYYYMMDD.HHmm</code>. O <code class="language-plaintext highlighter-rouge">app.json</code> também direciona novas notas para <code class="language-plaintext highlighter-rouge">notes</code>
+e anexos para <code class="language-plaintext highlighter-rouge">assets</code>.</p>
+
+<p>Minha leitura desse conjunto é que o ambiente privilegia abrir arquivos,
+escrever, seguir relações e trabalhar com propriedades. Essa interpretação
+descreve a configuração; não é uma medição de produtividade.</p>
+
+<h2 id="os-nativos-que-deixo-desligados">Os nativos que deixo desligados</h2>
+
+<p>A lista completa das entradas desabilitadas é:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grupo</th>
+      <th>Entradas desligadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Exploração e organização visual</td>
+      <td>Grafo, Canvas, favoritos e espaços de trabalho.</td>
+    </tr>
+    <tr>
+      <td>Captura e rotina</td>
+      <td>Notas diárias, nota aleatória e gravador de áudio.</td>
+    </tr>
+    <tr>
+      <td>Apoio à edição e leitura</td>
+      <td>Painel de notas de rodapé, prévia de página, compositor de notas, comandos com <code class="language-plaintext highlighter-rouge">/</code> e contador de palavras.</td>
+    </tr>
+    <tr>
+      <td>Apresentação e navegação web</td>
+      <td>Slides e visualizador web.</td>
+    </tr>
+    <tr>
+      <td>Serviços e recuperação</td>
+      <td>Publish, Sync e recuperação de arquivos.</td>
+    </tr>
+    <tr>
+      <td>Outra entrada do arquivo</td>
+      <td><code class="language-plaintext highlighter-rouge">markdown-importer</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As contagens deste post correspondem às entradas salvas no JSON. Mantive o
+identificador técnico <code class="language-plaintext highlighter-rouge">markdown-importer</code> para registrar exatamente o que está
+no arquivo.</p>
+
+<p>Notas diárias continuam com atalhos cadastrados, apesar de o recurso estar
+desligado. O grafo e o Canvas também permanecem desativados, como no post de
+agosto. Ainda assim, há uma ferramenta de desenho habilitada: o Excalidraw.</p>
+
+<p>A recuperação de arquivos merece uma avaliação separada. A
+<a href="https://obsidian.md/help/plugins/file-recovery">documentação do recurso</a> descreve
+a recuperação por snapshots periódicos, cópias do conteúdo das notas. Como essa opção está
+desligada aqui, ela não deve ser contada como uma proteção ativa deste cofre.
+Publish e Sync também estão desabilitados; esse estado não informa quais
+processos de publicação ou sincronização existem fora do aplicativo.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Obsidian" /><category term="Configuração" /><category term="Gestão do conhecimento" /><summary type="html"><![CDATA[Um retrato do meu cofre em novembro: sete plugins comunitários habilitados, oito instalados e desligados, e a configuração dos recursos nativos.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/plugins-obsidian-2026.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/plugins-obsidian-2026.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dar ferramentas à IA não é dar autorização</title><link href="https://www.gpupo.com/posts/dar-ferramentas-a-ia-nao-e-dar-autorizacao/" rel="alternate" type="text/html" title="Dar ferramentas à IA não é dar autorização" /><published>2026-10-29T00:00:00-03:00</published><updated>2026-10-29T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/dar-ferramentas-a-ia-nao-e-dar-autorizacao</id><content type="html" xml:base="https://www.gpupo.com/posts/dar-ferramentas-a-ia-nao-e-dar-autorizacao/"><![CDATA[<p>Imagine um assistente conectado ao sistema financeiro de uma empresa.</p>
+
+<p>O usuário pergunta quanto vendeu no mês. O assistente consulta os dados e apresenta o resultado.</p>
+
+<p>Depois, pergunta quais clientes estão inadimplentes. O assistente faz outra consulta, organiza as informações e responde.</p>
+
+<p>Até aqui, estamos usando um modelo de linguagem como interface para consultar um sistema.</p>
+
+<p>Mas então vem um terceiro pedido:</p>
+
+<p>“Envie uma cobrança para todos esses clientes.”</p>
+
+<p>A conversa continua acontecendo na mesma interface. Para o usuário, parece apenas mais uma instrução.</p>
+
+<p>Do ponto de vista da arquitetura, porém, alguma coisa importante mudou.</p>
+
+<p>O assistente deixou de apenas consultar informações e passou a solicitar uma operação que produz efeitos fora da conversa.</p>
+
+<p><strong>É nessa passagem, da resposta para a ação, que considero estar uma das decisões mais importantes da arquitetura de agentes.</strong></p>
+
+<h2 id="uma-api-disponível-não-é-uma-autorização">Uma API disponível não é uma autorização</h2>
+
+<p>Durante muito tempo, projetamos interfaces para pessoas operarem sistemas. Construímos telas, formulários, botões e fluxos de confirmação.</p>
+
+<p>Agora podemos oferecer essas mesmas capacidades diretamente a agentes de IA.</p>
+
+<p>Protocolos como o <a href="/artigos/mcp/">MCP</a> facilitam essa integração. Um agente pode descobrir ferramentas, consultar informações e solicitar operações sem precisar navegar pela interface gráfica.</p>
+
+<p>Mas disponibilizar uma ferramenta não resolve a questão de quem está autorizado a utilizá-la.</p>
+
+<p>No exemplo financeiro, consultar inadimplência e enviar cobranças são capacidades diferentes.</p>
+
+<p>A primeira exige acesso a informações. A segunda pode produzir consequências comerciais, financeiras e até jurídicas.</p>
+
+<p>Não gostaria que essa distinção dependesse apenas de uma instrução dizendo ao modelo para tomar cuidado.</p>
+
+<p>Se um agente não tem autorização para enviar cobranças, a ferramenta responsável pelo envio deve impedir a operação.</p>
+
+<p>O modelo pode decidir solicitar uma ação. O sistema precisa decidir se aceita executá-la.</p>
+
+<p>Essa separação é importante porque modelos de linguagem não são mecanismos de controle de acesso.</p>
+
+<p>Eles interpretam instruções, trabalham com contexto e podem cometer erros. Permissões e regras de negócio precisam continuar sendo verificadas por componentes que ofereçam garantias mais previsíveis.</p>
+
+<h2 id="nem-toda-decisão-precisa-de-um-agente">Nem toda decisão precisa de um agente</h2>
+
+<p>Há também uma tendência de transformar qualquer automação em uma solução agêntica.</p>
+
+<p>Se o sistema precisa calcular o total vendido no mês, uma consulta SQL resolve o problema.</p>
+
+<p>Se precisa identificar títulos vencidos, regras convencionais conseguem fazer isso.</p>
+
+<p>Não vejo vantagem em entregar essas operações a um modelo de linguagem para que ele descubra, a cada execução, como realizar cálculos que já são conhecidos.</p>
+
+<p>O agente começa a acrescentar valor quando precisa interpretar uma solicitação, escolher entre capacidades disponíveis ou lidar com situações que não cabem facilmente num fluxo predefinido.</p>
+
+<p>Mesmo nesses casos, prefiro que a execução continue apoiada em operações explícitas.</p>
+
+<p>O agente pode interpretar o pedido “quero entender por que a inadimplência aumentou” e decidir quais consultas realizar.</p>
+
+<p>Mas <a href="/posts/o-llm-pode-decidir-o-calculo-nao-deveria-ser-a-calculadora/">os cálculos, os filtros e as regras de acesso continuam pertencendo ao sistema</a>.</p>
+
+<p>Essa divisão evita que a IA precise reconstruir regras de negócio dentro do prompt.</p>
+
+<p>Também facilita os testes. Posso verificar separadamente se a consulta produz o resultado correto e se o agente escolhe a consulta adequada.</p>
+
+<p><strong>Nem tudo que o agente consegue fazer precisa ser delegado ao modelo.</strong></p>
+
+<h2 id="a-informação-pode-estar-errada">A informação pode estar errada</h2>
+
+<p>Outro problema aparece quando o agente utiliza informações para decidir o próximo passo.</p>
+
+<p>Suponha que ele encontre uma cobrança vencida e recomende entrar em contato com o cliente.</p>
+
+<p>E se o pagamento tiver sido realizado há poucos minutos, mas ainda não estiver conciliado?</p>
+
+<p>O agente pode ter consultado corretamente o sistema e chegado a uma conclusão inadequada porque os dados disponíveis estavam desatualizados.</p>
+
+<p>Não basta saber qual informação foi recuperada. É importante conhecer sua origem, seu momento de atualização e as condições em que pode ser considerada válida.</p>
+
+<p>Esse cuidado ganha importância quando a informação deixa de sustentar apenas uma resposta e passa a justificar uma operação.</p>
+
+<p>Antes de enviar a cobrança, por exemplo, o sistema poderia verificar novamente a situação do título.</p>
+
+<p>A checagem não precisa ser feita pelo modelo. Pode ser uma regra convencional executada no momento da operação.</p>
+
+<p>Isso reduz a dependência da capacidade do agente de perceber sozinho que uma informação merece confirmação.</p>
+
+<p>Também ajuda a separar duas responsabilidades: interpretar o que deve ser feito e garantir que as condições para fazer aquilo continuam válidas.</p>
+
+<h2 id="autonomia-precisa-ter-limites-diferentes-para-ações-diferentes">Autonomia precisa ter limites diferentes para ações diferentes</h2>
+
+<p>Não acredito que a autonomia de um agente deva ser tratada como uma configuração única: ligado ou desligado, autônomo ou supervisionado.</p>
+
+<p>Ela depende do que está sendo executado.</p>
+
+<p>No exemplo financeiro, eu permitiria que o agente consultasse informações dentro das permissões concedidas e preparasse propostas de cobrança.</p>
+
+<p>O envio efetivo poderia exigir aprovação.</p>
+
+<p>Em outro cenário, a empresa poderia autorizar cobranças automáticas de determinados tipos, respeitando limites e regras previamente definidos.</p>
+
+<p>O importante é que a autorização pertença à operação, não à confiança que alguém deposita no modelo.</p>
+
+<p>Também considero o impacto de uma decisão e a dificuldade de desfazê-la.</p>
+
+<p>Uma consulta equivocada pode produzir uma resposta incorreta. Uma cobrança enviada indevidamente já alcançou outra pessoa. Cancelar a operação no sistema não faz o destinatário deixar de ter recebido a mensagem.</p>
+
+<p>Isso significa que interromper, reverter e compensar são problemas diferentes.</p>
+
+<p>Um agente pode ser interrompido antes da próxima ação. Uma operação concluída talvez possa ser revertida. Outras exigirão uma medida compensatória.</p>
+
+<p>Essas possibilidades precisam fazer parte do desenho do sistema.</p>
+
+<h2 id="executar-não-é-concluir">Executar não é concluir</h2>
+
+<p>Existe uma diferença que considero especialmente importante nas integrações: a diferença entre solicitar uma operação e confirmar seu resultado.</p>
+
+<p>Uma API pode responder que aceitou o envio de uma mensagem.</p>
+
+<p>Isso não significa necessariamente que a mensagem foi entregue.</p>
+
+<p>Da mesma forma, registrar uma solicitação de pagamento não significa que o pagamento foi realizado.</p>
+
+<p>Um agente que recebe uma resposta de sucesso e imediatamente comunica ao usuário que a operação terminou pode estar antecipando uma conclusão.</p>
+
+<p>Por isso, prefiro tratar operações com efeitos externos como processos cujo estado precisa ser acompanhado.</p>
+
+<p>A solicitação foi recebida? Foi executada? Houve confirmação? Pode ser repetida sem gerar duplicidade?</p>
+
+<p>Essas perguntas são familiares na engenharia de sistemas distribuídos.</p>
+
+<p>Agentes não eliminam esses problemas. Na verdade, podem torná-los mais frequentes, porque passam a decidir quando solicitar operações e quando tentar novamente.</p>
+
+<p>Uma integração confiável precisa oferecer ao agente maneiras de verificar o resultado sem depender de uma interpretação otimista da resposta anterior.</p>
+
+<h2 id="quem-responde-pelo-que-o-agente-faz">Quem responde pelo que o agente faz?</h2>
+
+<p>Quando um agente recebe uma ferramenta, estamos criando uma nova maneira de acionar uma capacidade que já possui regras, responsabilidades e consequências.</p>
+
+<p>Não deveríamos enfraquecer essas regras apenas porque a solicitação agora chega por linguagem natural.</p>
+
+<p>Também não precisamos colocar uma pessoa aprovando cada pequena operação. Isso eliminaria parte do benefício da automação.</p>
+
+<p>O que precisamos é decidir antecipadamente quais operações podem acontecer automaticamente, quais exigem confirmação e quais não devem estar disponíveis.</p>
+
+<p>E registrar o suficiente para compreender o que aconteceu.</p>
+
+<p>Quem solicitou a ação? Quais dados foram utilizados? Qual operação foi executada? O que o sistema confirmou?</p>
+
+<p>Sem essas respostas, fica difícil investigar erros e ampliar a autonomia com segurança.</p>
+
+<p>Acredito que boa parte da engenharia de agentes será menos sobre criar prompts capazes de tomar decisões e mais sobre construir ambientes nos quais essas decisões possam ser executadas, verificadas e limitadas.</p>
+
+<p>A interface pode continuar sendo uma conversa. Mas, atrás dela, continuam existindo sistemas com estados, permissões, transações e responsabilidades.</p>
+
+<p><strong>Um agente pode decidir o que solicitar. A arquitetura determina o que ele realmente consegue fazer.</strong></p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="MCP" /><category term="Segurança" /><category term="Arquitetura de software" /><category term="Autorização" /><summary type="html"><![CDATA[Por que agentes precisam de permissões por operação, verificação de dados e confirmação de resultados antes de agir fora da conversa.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">O custo de fazer a IA entender seu software</title><link href="https://www.gpupo.com/posts/o-custo-de-fazer-a-ia-entender-seu-software/" rel="alternate" type="text/html" title="O custo de fazer a IA entender seu software" /><published>2026-10-29T00:00:00-03:00</published><updated>2026-10-29T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/o-custo-de-fazer-a-ia-entender-seu-software</id><content type="html" xml:base="https://www.gpupo.com/posts/o-custo-de-fazer-a-ia-entender-seu-software/"><![CDATA[<p>Peça a um agente de IA para fazer uma pequena alteração numa aplicação. Talvez mudar uma regra de validação, acrescentar um campo ou corrigir um comportamento.</p>
+
+<p>A alteração pode exigir poucas linhas de código. Mesmo assim, o agente começa lendo arquivos, procurando referências, investigando dependências e tentando descobrir como o sistema funciona.</p>
+
+<p>Às vezes, depois de consumir milhares de tokens, finalmente encontra o lugar certo para fazer a mudança.</p>
+
+<p>Na sessão seguinte, diante de outra tarefa, parte desse trabalho começa novamente.</p>
+
+<p>É fácil olhar para esse processo e concluir que estamos gastando tokens demais. Mas a pergunta que me interessa é outra: <strong>por que foi necessário tanto trabalho para entender uma alteração tão pequena?</strong></p>
+
+<p>Talvez estejamos pagando para a IA descobrir relações que a própria arquitetura deveria tornar evidentes.</p>
+
+<h2 id="o-código-não-se-explica-sozinho">O código não se explica sozinho</h2>
+
+<p>Uma das promessas dos agentes de programação é que podemos entregar uma tarefa e deixar que eles investiguem o repositório, encontrem os arquivos necessários e implementem a solução.</p>
+
+<p>Isso funciona. Mas investigar um sistema tem custo.</p>
+
+<p>Imagine uma regra de negócio distribuída entre o backend, o frontend e alguns processos auxiliares. Para um desenvolvedor familiarizado com o projeto, essas relações podem fazer parte do conhecimento acumulado ao longo dos meses.</p>
+
+<p>Para um agente iniciado numa sessão nova, elas precisam ser descobertas.</p>
+
+<p>Ele procura referências, lê implementações e tenta reconstruir as dependências entre os componentes. Quando as responsabilidades estão misturadas ou dependem de convenções não documentadas, essa investigação cresce.</p>
+
+<p>Não estamos diante de um problema novo. Desenvolvedores também gastam tempo compreendendo sistemas.</p>
+
+<p>A diferença é que uma pessoa preserva parte desse conhecimento entre tarefas, enquanto um agente frequentemente precisa receber ou recuperar o contexto novamente.</p>
+
+<p>Com IA, parte desse esforço passa a aparecer como consumo de tokens.</p>
+
+<p>Se uma mudança exige menos contexto para ser compreendida, isso pode indicar uma arquitetura mais fácil de modificar. É uma hipótese interessante, mas eu teria cuidado ao transformar o consumo de tokens numa métrica direta de qualidade.</p>
+
+<h2 id="tokens-não-medem-arquitetura">Tokens não medem arquitetura</h2>
+
+<p>O consumo de tokens depende de muitas coisas além do código.</p>
+
+<p>O modelo escolhido, a maneira como utiliza ferramentas, o histórico da conversa e a quantidade de tentativas podem alterar bastante o resultado.</p>
+
+<p>Um agente pode consumir menos tokens simplesmente porque recebeu menos informações. Isso não significa que tenha compreendido melhor o problema. Talvez tenha deixado de examinar uma dependência importante.</p>
+
+<p>Também posso reduzir o consumo impedindo que execute verificações adicionais. A conta diminui, mas o risco pode aumentar.</p>
+
+<p>Para mim, o indicador mais interessante seria o <strong>custo para concluir uma mudança corretamente</strong>.</p>
+
+<p>Isso inclui investigação, implementação, testes, correções e revisão.</p>
+
+<p>Um agente que consome mais tokens porque executou testes relevantes pode ser mais econômico do que outro que produziu uma resposta curta e deixou um defeito para alguém encontrar depois.</p>
+
+<p>O consumo continua sendo útil. Só precisa ser interpretado junto com o resultado.</p>
+
+<h2 id="o-agente-não-precisa-conhecer-a-empresa-inteira">O agente não precisa conhecer a empresa inteira</h2>
+
+<p>Nos meus trabalhos com agentes, tenho dado bastante atenção a arquivos de instrução, como <a href="/artigos/agents-md-nao-e-um-readme/"><code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>, e a maneiras de preservar decisões entre sessões.</p>
+
+<p>A ideia não é criar uma enciclopédia sobre o projeto e entregá-la inteira ao modelo.</p>
+
+<p>É justamente o contrário.</p>
+
+<p>Um agente precisa entender qual tarefa deve executar, quais restrições deve respeitar, onde procurar informações relevantes e como verificar se terminou.</p>
+
+<p>Isso exige selecionar contexto.</p>
+
+<p>Um arquivo <code class="language-plaintext highlighter-rouge">AGENTS.md</code> pode apresentar a organização do repositório, os comandos de teste e as regras fundamentais de desenvolvimento. Documentações específicas permanecem separadas, disponíveis quando necessárias.</p>
+
+<p>O mesmo vale para decisões arquiteturais. Se uma equipe decidiu não adicionar determinada dependência, não é necessário reconstruir toda a discussão a cada nova sessão.</p>
+
+<p><strong>Guardar conhecimento não significa colocar todo o conhecimento na janela de contexto.</strong></p>
+
+<p>A informação pode estar no repositório, numa base de conhecimento ou em outro armazenamento persistente. O importante é conseguir recuperá-la quando se tornar relevante.</p>
+
+<p>Essa distinção muda a responsabilidade de quem desenvolve sistemas com agentes.</p>
+
+<p>Não basta escolher um bom modelo. É preciso projetar o ambiente em que ele trabalha.</p>
+
+<h2 id="o-custo-de-começar-novamente">O custo de começar novamente</h2>
+
+<p>Uma característica dos agentes é que suas sessões podem ser temporárias. O contexto usado para resolver um problema hoje talvez não esteja disponível amanhã.</p>
+
+<p>Esse comportamento me levou a valorizar algo bastante simples: <a href="/posts/versionar-e-criar-checkpoints/">checkpoints</a>.</p>
+
+<p>Quando uma tarefa exige várias etapas, algumas informações deveriam sobreviver à conversa.</p>
+
+<p>O que foi decidido? O que já foi implementado? Quais testes foram executados? O que falta verificar?</p>
+
+<p>Essas informações podem ser preservadas em arquivos versionados, planos de execução ou outros mecanismos persistentes.</p>
+
+<p>Na sessão seguinte, o agente recupera o estado necessário e continua a partir dele.</p>
+
+<p>O objetivo não é eliminar a investigação, mas evitar que ela precise recomeçar continuamente.</p>
+
+<p>Isso também vale para as ferramentas utilizadas pelo agente.</p>
+
+<p>Se uma consulta retorna centenas de informações, mas a decisão depende de apenas três, por que enviar tudo ao modelo?</p>
+
+<p>Filtros, consultas e transformações convencionais podem preparar os dados antes de entregá-los à IA.</p>
+
+<p>Há uma diferença importante entre <strong>dar acesso à informação e colocar toda a informação dentro do prompt</strong>.</p>
+
+<p>Menos dados irrelevantes podem significar menor consumo, mas também menos distrações durante a execução.</p>
+
+<h2 id="a-arquitetura-continua-importando">A arquitetura continua importando</h2>
+
+<p>É tentador imaginar que modelos cada vez mais capazes tornarão desnecessários alguns cuidados tradicionais de engenharia.</p>
+
+<p>Se a IA consegue compreender um sistema complexo, por que dedicar tanto esforço à organização do código?</p>
+
+<p>Porque compreender não é a mesma coisa que modificar com segurança.</p>
+
+<p>Um agente pode identificar que uma regra está espalhada por vários componentes. Isso não elimina as dependências entre eles.</p>
+
+<p>Uma arquitetura com responsabilidades claras ajuda tanto quem escreve código manualmente quanto quem delega tarefas a agentes.</p>
+
+<p>E o ganho não vem simplesmente de ter menos arquivos ou menos linhas.</p>
+
+<p>Às vezes, separar responsabilidades aumenta a quantidade de código, mas reduz o conhecimento necessário para modificar uma parte específica do sistema.</p>
+
+<p>Um módulo com dependências explícitas e testes próprios pode ser mais fácil de compreender do que uma função curta que depende de comportamentos espalhados pela aplicação.</p>
+
+<p>O mesmo problema aparece quando um desenvolvedor novo entra no projeto.</p>
+
+<p><strong>A IA não elimina o custo da complexidade. Em muitos casos, apenas muda a maneira como pagamos por ela.</strong></p>
+
+<h2 id="o-custo-que-realmente-me-preocupa">O custo que realmente me preocupa</h2>
+
+<p>Quando penso no uso de IA em desenvolvimento, não quero apenas saber quanto custa uma chamada ao modelo.</p>
+
+<p>Quero entender quanto trabalho é necessário para transformar uma intenção em uma mudança confiável.</p>
+
+<p>Uma tarefa pode parecer barata porque o modelo gerou código rapidamente. Mas talvez ainda exija uma revisão extensa ou várias correções.</p>
+
+<p>Outra pode consumir mais tokens e entregar uma implementação acompanhada de testes e evidências suficientes para facilitar a revisão.</p>
+
+<p>Comparar apenas a fatura dessas tarefas seria pouco informativo.</p>
+
+<p>Também não atribuiria automaticamente um consumo elevado a problemas de arquitetura.</p>
+
+<p>Às vezes, a tarefa é difícil. Às vezes, o agente está mal configurado. Às vezes, as ferramentas devolvem informações demais. E, em outras situações, o código é realmente complicado de alterar.</p>
+
+<p>Antes de propor uma refatoração para reduzir tokens, eu procuraria entender onde o esforço está sendo gasto.</p>
+
+<p>O agente está relendo os mesmos arquivos? Está repetindo investigações anteriores? Precisa atravessar muitos módulos para executar uma alteração localizada?</p>
+
+<p>Cada resposta aponta para uma intervenção diferente.</p>
+
+<p>Algumas envolvem arquitetura de software. Outras envolvem organização do conhecimento, ferramentas ou o próprio ambiente de execução do agente.</p>
+
+<p>O objetivo não é produzir software que consuma o menor número possível de tokens.</p>
+
+<p>É construir sistemas em que pessoas e agentes consigam trabalhar sem precisar redescobrir continuamente o que já deveria estar claro.</p>
+
+<p><strong>Se a IA precisa reaprender o projeto a cada mudança, talvez o problema não seja quanto custa a inteligência. Seja quanto custa a falta de organização do conhecimento.</strong></p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Arquitetura de software" /><category term="Custos" /><category term="Contexto" /><category term="Engenharia de software" /><summary type="html"><![CDATA[Por que uma pequena alteração pode exigir tanto contexto de um agente de IA — e como distinguir custo de tokens, arquitetura e organização do conhecimento.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Um chatbot em 1960: a mesa, o arquivo e as etiquetas</title><link href="https://www.gpupo.com/posts/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/" rel="alternate" type="text/html" title="Um chatbot em 1960: a mesa, o arquivo e as etiquetas" /><published>2026-10-28T00:00:00-03:00</published><updated>2026-10-28T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas</id><content type="html" xml:base="https://www.gpupo.com/posts/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/"><![CDATA[<p>Uma conversa com um agente pode mudar de assunto e voltar a uma pergunta antiga sem começar de novo. O cliente espera que o atendimento acompanhe esse movimento. Para enxergar o que precisa ser guardado e recuperado, imagino um escritório em 1960.</p>
+
+<p>Há um contador sentado à mesa, um telefone, papel, lápis e fichários. Vamos deixar o computador fora da cena.</p>
+
+<p>O telefone toca. Do outro lado, um cliente pergunta pelo saldo dos seus investimentos. O contador identifica quem está falando, procura os registros necessários e os traz para a mesa. Talvez consulte também uma anotação da ligação anterior: quais contas foram consideradas, o que ficou pendente, alguma orientação que o cliente deu.</p>
+
+<p>Ele reúne o material, confere e responde.</p>
+
+<p>A mesa é a parte importante dessa imagem. Ela tem um tamanho. Há um limite para a quantidade de papéis que consigo colocar ali e ainda trabalhar direito. O arquivo pode ocupar uma sala inteira; sobre a mesa, preciso escolher o que será útil naquele atendimento.</p>
+
+<p>No chatbot, essa mesa representa o <a href="/posts/custo-da-janela-de-contexto/">contexto disponível ao modelo</a> para produzir a resposta. O arquivo representa a informação persistida que pode ser consultada. As últimas anotações ajudam a continuar a conversa; os registros mais antigos permitem retomar o que aconteceu antes.</p>
+
+<p>Guardar tudo e ter tudo à mão são coisas diferentes.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/um-chatbot-em-1960-mesa-arquivo-etiquetas.webp" alt="Contador ao telefone em escritório dos anos 1960 toca uma de três fotografias da mesa com diferentes conjuntos de papéis; fichários etiquetados ocupam o fundo" width="1672" height="941" loading="lazy" decoding="async" />
+  <figcaption>A mesa recebe os documentos escolhidos; o arquivo guarda o restante e as fotografias ajudam a retomar uma seleção anterior. Ilustração criada com IA.</figcaption>
+</figure>
+
+<p>Durante a ligação, o cliente pode perguntar pelo saldo, depois pelas vendas mensais e, em seguida, pela inadimplência. A conversa continua sendo uma só, mas o material necessário muda. Algumas informações permanecem úteis, como a identificação da empresa. Outras pertencem à análise de um assunto específico, como o período das vendas ou o critério usado para medir os atrasos.</p>
+
+<p>Se o cliente voltar ao saldo, o contador precisa saber o que consultou. Se disser “aquele aumento”, talvez seja necessário esclarecer a qual indicador está se referindo. Organizar o atendimento inclui manter esses assuntos disponíveis sem misturar seus critérios.</p>
+
+<p>Na analogia, ao terminar uma ligação, o contador registra o que importa, devolve os documentos ao arquivo e descarta os rascunhos que perderam a utilidade. Quando o telefone toca novamente, ele prepara a mesa para o próximo atendimento.</p>
+
+<p>É uma forma de pensar na montagem de contexto a cada chamada ao modelo. Isso não significa refazer toda a investigação. O estado salvo, os resultados ainda válidos e os trechos pertinentes da conversa podem ser reaproveitados.</p>
+
+<p>E foi aí que me ocorreu outra imagem: uma fotografia da mesa.</p>
+
+<p>Imagine uma análise trabalhosa. O contador precisou procurar em vários fichários, selecionar documentos e organizar um conjunto de informações. Se o cliente retomar o mesmo assunto logo depois, repetir esse trabalho inteiro pode custar tempo sem acrescentar nada.</p>
+
+<p>E se fosse possível guardar, temporariamente, uma fotografia daquela mesa já organizada?</p>
+
+<p>Em software, a ideia corresponde a um cache do contexto preparado: um registro reutilizável do material selecionado e dos parâmetros daquela análise. A fotografia é uma metáfora para esse conjunto, não uma imagem literal dos documentos.</p>
+
+<p>Posso ter algumas dessas fotografias associadas ao mesmo cliente: uma para a análise de vendas, outra para os recebíveis, outra para uma consulta específica. Quando o assunto volta, verifico se alguma delas ainda serve. Se servir, reaproveito o trabalho. Se não servir, busco o material e preparo outro contexto.</p>
+
+<p>Essa fotografia tem prazo e condições de uso. Uma correção do cliente pode torná-la inadequada. Uma mudança de período pode exigir outra consulta. E o saldo que informei ontem não responde automaticamente à pergunta sobre o saldo de hoje.</p>
+
+<p>Também há um limite para a economia: reaproveitar a seleção dos documentos pode reduzir buscas e processamento da aplicação, mas o conteúdo ainda precisa ser disponibilizado ao modelo. É uma otimização a avaliar, não uma promessa de custo eliminado.</p>
+
+<p>Só que as fotografias criam uma pergunta parecida com a dos fichários: como encontrar a certa?</p>
+
+<p>Se eu guardar papéis sem identificação, depois vou perder tempo procurando. Se guardar contextos preparados sem saber a que cliente, assunto e período pertencem, terei o mesmo problema em formato digital.</p>
+
+<p>Preciso etiquetar.</p>
+
+<p>Uma informação pode ter mais de uma etiqueta. Uma conversa sobre vendas ainda não recebidas pode interessar tanto à análise comercial quanto à cobrança. Além do assunto, posso distinguir o tipo de registro: uma pergunta, uma informação, uma correção ou uma decisão. Isso ajuda a preservar o significado do que foi dito.</p>
+
+<p>Penso nisso também quando tento encontrar alguma coisa no meu próprio blog. Sei que escrevi sobre o assunto, mas em qual publicação? Uma categoria me aproxima. Uma tag reduz o caminho. O conteúdo confirma se encontrei o que procurava.</p>
+
+<p>O fichário digital precisa oferecer caminhos semelhantes. As etiquetas ajudam na recuperação, enquanto a leitura do conteúdo permite avaliar a pertinência do registro. Ter a palavra certa na ficha não garante que aquele seja o documento necessário.</p>
+
+<p>É por isso que eu começaria pela organização da informação. Antes de construir uma automação completa, pegaria uma amostra do histórico, proporia categorias e usaria um agente para ajudar a etiquetar. Depois revisaria o resultado: quais rótulos se repetem com nomes diferentes, quais são amplos demais, quais realmente ajudam a encontrar uma conversa?</p>
+
+<p>Tag demais também vira bagunça. A classificação precisa de curadoria e de exemplos que mostrem como usá-la. Esse trabalho pode começar fora do fluxo de atendimento e orientar a automação posterior.</p>
+
+<p>Frameworks oferecem mecanismos para guardar estado, recuperar registros e coordenar etapas. A aplicação ainda precisa definir como representar os assuntos, quais informações merecem persistir e quando um contexto preparado deixou de ser válido.</p>
+
+<p>No começo, manter apenas as últimas mensagens pode ser suficiente para um uso restrito. Na nossa imagem, é deixar os papéis recentes sobre a mesa. O limite aparece quando a informação necessária está em uma pasta antiga ou quando a pilha recente começa a atrapalhar. São situações que precisam ser observadas e testadas.</p>
+
+<p>A analogia me ajuda a formular as perguntas antes de escolher a implementação: o que fica sobre a mesa, o que vai para o arquivo, o que merece uma fotografia temporária e quais etiquetas permitirão encontrar tudo isso depois?</p>
+
+<p>Quando o cliente disser “vamos voltar àquele assunto”, quero que o atendimento tenha um caminho para recuperar os documentos certos. Essa continuidade começa na maneira como organizamos o que vale a pena guardar.</p>
+
+<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas-title">
+  <h2 id="um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas-title">Um chatbot em 1960: a mesa, o arquivo e as etiquetas</h2>
+  <p>Cinco quadros em colagem editorial criados com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 5">
+      <a href="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/01.webp" alt="Um chatbot em 1960. O arquivo guarda muito. O que entra na mesa? Contador dos anos 1960 trabalha com poucos documentos à mesa; um grande arquivo de gavetas ocupa o fundo." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 1 de 5 · Um chatbot em 1960</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 5">
+      <a href="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/02.webp" alt="A mesa tem limite. Só os documentos úteis para responder agora. Mesa de madeira com poucos papéis selecionados diante de uma parede de fichários." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 2 de 5 · A mesa tem limite</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 5">
+      <a href="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/03.webp" alt="A conversa muda. Saldo, vendas, inadimplência: mesmo cliente, outros papéis. Contador atende ao telefone de disco, escreve em papéis e mantém conjuntos de documentos separados sobre a mesa." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 3 de 5 · A conversa muda</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 5">
+      <a href="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/04.webp" alt="A fotografia retoma. Reaproveito a seleção anterior enquanto ela ainda serve. Mão seleciona uma entre três fotografias impressas da mesma mesa com arranjos diferentes de documentos." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 4 de 5 · A fotografia retoma</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="5 de 5">
+      <a href="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/05.webp" title="Abrir quadro 5 em tamanho original">
+        <img src="/assets/images/carousels/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/05.webp" alt="Etiquetas ajudam a encontrar. Cliente, assunto e período apontam o caminho. O conteúdo confirma. Mão retira uma pasta etiquetada de uma gaveta de arquivo enquanto outra confere um documento na mesa." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 5 de 5 · Etiquetas ajudam a encontrar</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
+    <button class="btn" type="button" data-carousel-previous="" aria-controls="um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 5</span>
+    <button class="btn" type="button" data-carousel-next="" aria-controls="um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Um chatbot em 1960<br />
+<br />
+O arquivo guarda muito. O que entra na mesa?<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A mesa tem limite<br />
+<br />
+Só os documentos úteis para responder agora.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A conversa muda<br />
+<br />
+Saldo, vendas, inadimplência: mesmo cliente, outros papéis.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>A fotografia retoma<br />
+<br />
+Reaproveito a seleção anterior enquanto ela ainda serve.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Etiquetas ajudam a encontrar<br />
+<br />
+Cliente, assunto e período apontam o caminho. O conteúdo confirma.<br />
+<br />
+Leia o texto em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Tecnologia" /><category term="Inteligência artificial" /><category term="Agentes de IA" /><category term="Memória" /><category term="Contexto" /><category term="Gestão da informação" /><summary type="html"><![CDATA[Uma mesa de escritório, um fichário e fotografias temporárias ajudam a explicar contexto, memória e reaproveitamento em chatbots.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/um-chatbot-em-1960-mesa-arquivo-etiquetas.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/um-chatbot-em-1960-mesa-arquivo-etiquetas.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Conversar sobre um livro sem estragar o próximo capítulo</title><link href="https://www.gpupo.com/posts/conversar-sobre-um-livro-sem-estragar-o-proximo-capitulo/" rel="alternate" type="text/html" title="Conversar sobre um livro sem estragar o próximo capítulo" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/conversar-sobre-um-livro-sem-estragar-o-proximo-capitulo</id><content type="html" xml:base="https://www.gpupo.com/posts/conversar-sobre-um-livro-sem-estragar-o-proximo-capitulo/"><![CDATA[<p>Existe um tipo de spoiler particularmente irritante: aquele que não conta o que vai acontecer, mas faz questão de avisar que alguma coisa vai acontecer.</p>
+
+<p>“Preste atenção nesse personagem.”</p>
+
+<p>“Essa passagem vai fazer sentido mais adiante.”</p>
+
+<p>“Você ainda vai mudar de opinião sobre isso.”</p>
+
+<p>Pronto. Ninguém revelou o final, mas alguma coisa mudou. Agora estou esperando um acontecimento, desconfiando de um personagem ou procurando uma importância que talvez nem tivesse percebido sozinho.</p>
+
+<p>Gosto de conversar sobre os livros que estou lendo. Discutir uma passagem, entender melhor uma referência, conferir se interpretei corretamente determinado diálogo. São coisas que ajudam a aproveitar a leitura.</p>
+
+<p>Modelos de linguagem parecem ótimos companheiros para isso. Conhecem muitas obras, conseguem explicar contextos e estão sempre disponíveis para conversar.</p>
+
+<p>O problema é justamente esse: eles podem saber demais.</p>
+
+<p>Quando estou na metade de um romance, não quero conversar com alguém que já conhece o final e fica distribuindo pequenas pistas. Quero conversar sobre o que li até agora.</p>
+
+<p>Foi para estabelecer essa fronteira que escrevi um pequeno prompt.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/conversar-sobre-um-livro-sem-spoilers.webp" alt="Leitora observa um livro aberto; um marcador azul separa as páginas iluminadas das páginas ainda fechadas, enquanto um pequeno assistente ilumina apenas o trecho lido" width="1672" height="941" loading="lazy" decoding="async" />
+  <figcaption>O marcador indica até onde a conversa pode ir. Ilustração criada com IA.</figcaption>
+</figure>
+
+<h2 id="um-assistente-que-não-pode-virar-a-página">Um assistente que não pode virar a página</h2>
+
+<p>A ideia é simples: informar qual livro estou lendo e até onde cheguei, estabelecendo que a conversa não pode ultrapassar esse ponto.</p>
+
+<p>O prompt original é curto:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>Você atuará como um assistente de leitura da obra indicada abaixo.
+
+Considere que o leitor ainda não teve contato com nenhuma
+informação além do ponto de leitura informado.
+
+Não antecipe eventos, não faça alusões futuras e não utilize
+conhecimento externo à obra até esse ponto.
+
+Obra: &lt;TÍTULO DA OBRA&gt;
+Ponto atual de leitura: &lt;ONDE ESTOU&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Também deixei essa versão disponível em um <a href="https://gist.github.com/gpupo/89d2ba0669109dcc5344f185b17ef887">Gist público</a>.</p>
+
+<p>A intenção não é pedir um resumo do livro. É estabelecer uma espécie de acordo entre leitor e assistente: podemos conversar livremente sobre o que já aconteceu, mas o restante da história continua fora da conversa.</p>
+
+<p>Parece suficiente. Até percebermos que nem sempre é tão simples determinar onde termina o conhecimento permitido.</p>
+
+<h2 id="onde-exatamente-eu-parei">Onde exatamente eu parei?</h2>
+
+<p>Imagine que estou lendo <em>Crime e Castigo</em>, de Dostoiévski, e informo ao assistente que cheguei ao capítulo 4.</p>
+
+<p>Quarto capítulo de qual parte? Terminei o capítulo ou estou começando? Qual edição estou usando?</p>
+
+<p>Dependendo da obra, traduções e edições podem apresentar divisões diferentes.</p>
+
+<p>Se o objetivo é evitar informações posteriores, vale a pena ser um pouco mais específico:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>Obra: Crime e Castigo
+Edição: &lt;editora, ano ou tradução&gt;
+
+Ponto atual: terminei a Parte 1, capítulo 4.
+
+Último acontecimento que posso discutir:
+&lt;breve descrição escrita por mim&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>O último campo é particularmente útil.</p>
+
+<p>Em vez de confiar que o modelo identifique sozinho minha posição na narrativa, forneço uma referência que eu mesmo conheço. Não é um convite para ele continuar a história, mas uma maneira de delimitar o assunto.</p>
+
+<p>Em livros de não ficção, posso fazer algo semelhante indicando o capítulo, a seção ou o argumento que acabei de estudar.</p>
+
+<p>A página também ajuda, desde que a edição esteja identificada. Caso contrário, página 120 pode significar coisas bastante diferentes.</p>
+
+<p>Há ainda outra particularidade dos livros: nem tudo que sabemos sobre uma obra vem de seus capítulos.</p>
+
+<p>Prefácios, introduções, notas editoriais e até textos de quarta capa podem antecipar informações importantes.</p>
+
+<p>Se não li esses materiais, também não quero que o assistente os utilize para interpretar o que estou lendo.</p>
+
+<p>Não basta conhecer o título. É preciso saber qual é o território permitido para aquela conversa.</p>
+
+<h2 id="o-spoiler-que-se-disfarça-de-comentário">O spoiler que se disfarça de comentário</h2>
+
+<p>Há uma diferença entre não revelar acontecimentos e não sugerir acontecimentos.</p>
+
+<p>Suponha que eu pergunte sobre uma personagem apresentada nos primeiros capítulos.</p>
+
+<p>O assistente poderia responder:</p>
+
+<p>“Por enquanto, ela parece ter pouca importância, mas você entenderá melhor seu papel adiante.”</p>
+
+<p>Talvez isso não pareça um spoiler no sentido tradicional. Nenhum acontecimento foi revelado.</p>
+
+<p>Mas agora sei que aquela personagem terá alguma importância futura.</p>
+
+<p>A informação altera minha expectativa.</p>
+
+<p>O mesmo acontece quando uma IA tenta ser prestativa demais:</p>
+
+<p>“Não posso responder sem dar spoilers, mas essa é uma excelente pergunta.”</p>
+
+<p>Dependendo do contexto, até essa resposta pode sugerir que existe algo importante escondido.</p>
+
+<p>Por isso, acrescentaria uma regra ao prompt:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>Se minha pergunta só puder ser respondida com informações
+posteriores ao ponto de leitura informado, diga apenas:
+
+"Essa pergunta ultrapassa seu ponto atual de leitura."
+
+Não explique o motivo, não indique quando a resposta
+aparecerá e não ofereça pistas.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>É uma resposta pouco empolgante, eu sei.</p>
+
+<p>Mas, nesse caso, prefiro um assistente sem assunto a um assistente que estrague a descoberta.</p>
+
+<p>Outra situação delicada acontece quando a própria pergunta contém uma informação que talvez eu ainda não devesse conhecer.</p>
+
+<p>Posso perguntar, por engano, sobre um acontecimento que li em algum comentário na internet.</p>
+
+<p>O assistente não deveria confirmar que aquilo acontece, muito menos explicar suas consequências.</p>
+
+<p>A pergunta não autoriza uma mudança no limite de leitura.</p>
+
+<h2 id="o-modelo-não-esquece-o-final">O modelo não esquece o final</h2>
+
+<p>Existe uma limitação importante nessa ideia.</p>
+
+<p>Quando peço a um modelo que considere apenas os primeiros capítulos, ele não apaga o restante do livro de sua memória.</p>
+
+<p>O conhecimento pode estar presente no treinamento, no histórico da conversa ou em alguma fonte externa consultada pelo sistema.</p>
+
+<p>O prompt apenas estabelece uma instrução sobre como esse conhecimento deve ser utilizado.</p>
+
+<p>E modelos de linguagem podem falhar ao seguir instruções.</p>
+
+<p>Isso significa que não existe uma garantia absoluta contra spoilers apenas porque pedi educadamente para evitá-los.</p>
+
+<p>Ainda assim, posso melhorar as condições da conversa.</p>
+
+<p>Uma prática que considero razoável é manter uma sessão separada para cada livro, atualizando o ponto de leitura conforme avanço.</p>
+
+<p>Também deixaria explícito que o assistente deve perguntar quando não conseguir determinar se uma informação pertence ao trecho já lido.</p>
+
+<p>O importante é não presumir que avancei na história.</p>
+
+<p>Dentro desses limites, há bastante coisa para discutir: personagens apresentados, diálogos, referências históricas, escolhas narrativas e interpretações de passagens que já conheço.</p>
+
+<p>Não preciso que a IA antecipe a obra para que a conversa seja interessante.</p>
+
+<p>Na verdade, parte do prazer está justamente em discutir uma interpretação sem saber ainda se ela sobreviverá aos capítulos seguintes.</p>
+
+<p>Às vezes, uma conversa durante a leitura ajuda a perceber detalhes, organizar ideias e formular perguntas que talvez desapareçam quando a história terminar.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Leitura" /><category term="Prompt engineering" /><category term="Inteligência artificial" /><category term="Livros" /><summary type="html"><![CDATA[Um prompt para discutir com a IA apenas o trecho já lido de um livro, evitar até alusões ao futuro e reconhecer o limite dessa proteção.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/conversar-sobre-um-livro-sem-spoilers.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/conversar-sobre-um-livro-sem-spoilers.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Frente e verso manual na HP LaserJet P1102w no Ubuntu</title><link href="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/" rel="alternate" type="text/html" title="Frente e verso manual na HP LaserJet P1102w no Ubuntu" /><published>2026-10-26T00:00:00-03:00</published><updated>2026-10-26T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu</id><content type="html" xml:base="https://www.gpupo.com/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/"><![CDATA[<p>A <a href="/posts/nao-arrumo-mais-impressora-agora-delego-para-o-agente/">impressora HP LaserJet P1102w que uso</a> imprime em apenas um lado por vez. Para imprimir
 um PDF frente e verso, eu precisava virar as folhas manualmente, mas a fila
 instalada no meu Ubuntu não oferecia uma opção que conduzisse essa sequência.</p>
 
@@ -117,7 +1025,7 @@ mostra a instrução na hora de recolocar a pilha.</p>]]></content><author><name
 
 <h2 id="o-banco-de-vídeos-não-precisava-guardar-os-vídeos">O banco de vídeos não precisava guardar os vídeos</h2>
 
-<p>Outra experiência veio do Video Data Product, meu projeto para organizar e processar informações sobre vídeos.</p>
+<p>Outra experiência veio do <a href="/artigos/biblioteca-pessoal-videos-podcasts/">Video Data Product</a>, meu projeto para organizar e processar informações sobre vídeos.</p>
 
 <p>Nesse caso, seria fácil cair no extremo oposto: já que PostgreSQL aceita JSON e textos extensos, por que não guardar absolutamente tudo nele?</p>
 
@@ -205,7 +1113,7 @@ mostra a instrução na hora de recolocar a pilha.</p>]]></content><author><name
 
 <p>Até aqui, os exemplos favorecem o PostgreSQL. Mas houve uma situação recente em que minha preferência pessoal não fez muita diferença.</p>
 
-<p>Eu precisava atualizar o Langfuse.</p>
+<p>Eu precisava atualizar o <a href="/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/">Langfuse</a>.</p>
 
 <p>Na versão 2, os traces eram armazenados no PostgreSQL. A partir da versão 3, a arquitetura self-hosted passou a utilizar ClickHouse para os eventos analíticos, Redis para filas e cache e armazenamento compatível com S3 para objetos, além do PostgreSQL.</p>
 
@@ -411,7 +1319,77 @@ Avalie a decisão, explicite riscos e diga o que faria.
 
 <p>Posso escrever uma instrução exigindo que a IA seja crítica e comprometida com a verdade. Ela pode responder que compreendeu perfeitamente. Se eu tomar essa resposta como prova de independência, caio na mesma armadilha.</p>
 
-<p><strong>Afinal, ela pode estar discordando de mim apenas porque concordou em fazer isso.</strong></p>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="LLM" /><category term="Sycophancy" /><category term="Evals" /><category term="Prompting" /><summary type="html"><![CDATA[Pedir que a IA discorde pode produzir boas críticas, mas não prova independência. O teste é observar se os argumentos mudam quando muda apenas a opinião do usuário.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
+<p><strong>Afinal, ela pode estar discordando de mim apenas porque concordou em fazer isso.</strong></p>
+
+<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="quando-peco-a-ia-para-discordar-title">
+  <h2 id="quando-peco-a-ia-para-discordar-title">Quando discordar ainda é concordar</h2>
+  <p>Quatro quadros em colagem editorial criados com IA a partir deste ensaio.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="quando-peco-a-ia-para-discordar-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/01.webp" alt="Quando peço à IA para discordar, ela está concordando? Se eu mando discordar e ela discorda, o que isso prova? Homem pensativo segura os fios de uma marionete contrariada em uma colagem de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 1 de 4 · Quando peço à IA para discordar, ela está concordando?</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/02.webp" alt="Discordar não basta. Uma crítica pode ser excelente. Ainda assim, talvez só tenha seguido a instrução. Marionete de braços cruzados continua presa aos fios em uma colagem de papel." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 2 de 4 · Discordar não basta</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/03.webp" alt="Mude só a opinião. Mesmo problema. Mesmos fatos. Duas posições opostas. Os argumentos mudam junto? Homem segura cartões com setas opostas diante da mesma pilha de documentos." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 3 de 4 · Mude só a opinião</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/quando-peco-a-ia-para-discordar/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/quando-peco-a-ia-para-discordar/04.webp" alt="O teste está nos argumentos. Quero que as evidências mantenham o peso, mesmo quando mudo de opinião. Leia o texto em gpupo.com. Balança de madeira compara papéis com evidências e cartões com opiniões." width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 4 de 4 · O teste está nos argumentos</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
+    <button class="btn" type="button" data-carousel-previous="" aria-controls="quando-peco-a-ia-para-discordar-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next="" aria-controls="quando-peco-a-ia-para-discordar-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Quando peço à IA para discordar, ela está concordando?<br />
+<br />
+Se eu mando discordar e ela discorda, o que isso prova?<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Discordar não basta<br />
+<br />
+Uma crítica pode ser excelente. Ainda assim, talvez só tenha seguido a instrução.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>Mude só a opinião<br />
+<br />
+Mesmo problema. Mesmos fatos. Duas posições opostas. Os argumentos mudam junto?<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+      <li><p>O teste está nos argumentos<br />
+<br />
+Quero que as evidências mantenham o peso, mesmo quando mudo de opinião.<br />
+<br />
+Leia o texto em gpupo.com.<br />
+<br />
+Gilmar Pupo · gpupo.com</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="LLM" /><category term="Sycophancy" /><category term="Evals" /><category term="Prompting" /><summary type="html"><![CDATA[Pedir que a IA discorde pode produzir boas críticas, mas não prova independência. O teste é observar se os argumentos mudam quando muda apenas a opinião do usuário.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/quando-peco-a-ia-para-discordar-marionete.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra</title><link href="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/" rel="alternate" type="text/html" title="Do improviso ao acervo: um agente para organizar minhas frases de baixo e guitarra" /><published>2026-10-15T00:00:00-03:00</published><updated>2026-10-15T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra</id><content type="html" xml:base="https://www.gpupo.com/posts/do-improviso-ao-acervo-um-agente-para-organizar-minhas-frases-de-baixo-e-guitarra/"><![CDATA[<p>Durante meu estudo de musica, toco uma frase, repito com outra intenção, troco o timbre, pego o baixo e volto para a guitarra. No meio desse processo aparece uma ideia que merece ser guardada. Depois outra. Quando percebo, há vários minutos de gravação. E depois pra encontrar aqueles poucos segundos que interessam?</p>
 
 <p>Foi para resolver essa parte que criei um agente para organizar e cortar minhas gravações pessoais de frases de baixo e guitarra. Entram os arquivos do gravador e saem pequenos trechos identificados, prontos para ouvir, comparar e desenvolver.</p>
 
@@ -681,1869 +1659,4 @@ complemento Pix = 900 × (1.050 / 1.400) = R$ 675
 
 <p>O Markdown fica como versão editável; o HTML independente é destinado à impressão em A4. Os modelos não reaproveitam automaticamente dados pessoais dos exemplos, e um recibo depende da confirmação de recebimento.</p>
 
-<p>Hoje consigo pedir a preparação de um anúncio apontando para sua ficha e confirmar os dados que faltam. O agente transforma essas informações em arquivos que posso ler, revisar e manter. Eu continuo fotografando os equipamentos, decidindo as condições e conversando com os interessados.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="Agentes de IA" /><category term="Codex" /><category term="Obsidian" /><category term="Markdown" /><category term="Automação" /><category term="Marketplace" /><summary type="html"><![CDATA[Sete anúncios de equipamentos musicais, um catálogo no Obsidian e artes revisáveis: como usei Codex e Markdown mantendo as decisões comerciais comigo.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Eu queria fazer um vídeo explicando como a empresa funciona. E queria usar IA.</title><link href="https://www.gpupo.com/posts/remotion-agente-local-video-como-codigo/" rel="alternate" type="text/html" title="Eu queria fazer um vídeo explicando como a empresa funciona. E queria usar IA." /><published>2026-10-09T00:00:00-03:00</published><updated>2026-10-09T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/remotion-agente-local-video-como-codigo</id><content type="html" xml:base="https://www.gpupo.com/posts/remotion-agente-local-video-como-codigo/"><![CDATA[<p>Recentemente, surgiu uma necessidade bastante comum:</p>
-
-<blockquote>
-  <p>Eu queria fazer um vídeo explicando como a empresa funciona. Mostrar os
-processos, como as coisas se conectam, quem faz o quê. E queria usar
-inteligência artificial para produzir esse vídeo.</p>
-</blockquote>
-
-<p>Diante desse pedido, é tentador procurar uma ferramenta de geração de vídeo
-por IA: escrever um prompt, descrever algumas cenas e receber um vídeo.</p>
-
-<p>Mas explicar o funcionamento de uma empresa exige representar corretamente
-processos, regras, responsabilidades, sistemas e relações. Se a intenção é
-mostrar como um pedido entra, por quais áreas passa e como chega ao cliente,
-imagens de pessoas trabalhando em um escritório não explicam essas conexões.</p>
-
-<p>É preciso contar uma história que corresponda à realidade.</p>
-
-<p>Minha sugestão foi usar <strong>Remotion combinado com um agente de programação
-executado localmente</strong>.</p>
-
-<figure class="editorial-photo">
-  <img src="/assets/images/remotion-agente-local-video-como-codigo.webp" alt="Ilustração em preto e branco de uma pessoa planejando um vídeo sobre o fluxo entre cliente, comercial, operações, financeiro e entrega, usando Remotion e um agente local" width="1536" height="1024" loading="lazy" decoding="async" />
-  <figcaption>Remotion e um agente local como proposta para representar e revisar um processo da empresa.</figcaption>
-</figure>
-
-<h2 id="em-vez-de-gerar-um-vídeo-programar-um-vídeo">Em vez de gerar um vídeo, programar um vídeo</h2>
-
-<p>O <a href="https://www.remotion.dev/docs/the-fundamentals">Remotion</a> permite criar vídeos
-programaticamente usando React e JavaScript. As cenas são descritas em código:
-um componente recebe o número do quadro atual e define o que deve aparecer
-naquele momento.</p>
-
-<p>Textos, gráficos, diagramas, transições e imagens podem ser organizados em
-componentes. O avanço dos quadros determina quando cada elemento aparece, se
-movimenta ou desaparece.</p>
-
-<p>O resultado continua sendo um vídeo convencional. O projeto pode ser
-<a href="https://www.remotion.dev/docs/render">renderizado pelo Remotion Studio ou por linha de comando</a>
-e distribuído em formatos como
-<a href="https://www.remotion.dev/docs/miscellaneous/video-formats">MP4</a>. <strong>O que muda é a representação do projeto:
-o vídeo passa a ser descrito por código.</strong></p>
-
-<p>Imagine uma animação explicando um processo da empresa. A primeira cena
-apresenta o cliente. A segunda mostra a entrada de um pedido. Depois aparecem
-os departamentos envolvidos, os sistemas utilizados e as etapas até a entrega.</p>
-
-<p>Cada departamento pode ser um componente visual. As conexões podem ser
-animadas, e as responsabilidades aparecem acompanhando o fluxo. Se uma etapa
-mudar, podemos modificar aquela parte da composição, embora ainda seja
-necessário renderizar e revisar o resultado.</p>
-
-<p>O Remotion também permite
-<a href="https://www.remotion.dev/docs/parameterized-rendering">parametrizar vídeos com dados</a>.
-Isso abre a possibilidade de reutilizar uma composição com outros textos,
-indicadores ou informações, em vez de manter um projeto separado para cada
-variação.</p>
-
-<p>A <a href="https://www.remotion.dev/docs/ai/coding-agents">documentação do Remotion para agentes</a>
-apresenta esse fluxo com ferramentas como Codex e Claude Code. Conforme as
-ferramentas e permissões disponíveis, o agente pode ler arquivos, criar
-componentes, modificar código e executar comandos no ambiente de
-desenvolvimento.</p>
-
-<p>O Remotion também mantém
-<a href="https://www.remotion.dev/docs/ai/skills">Agent Skills</a>, com orientações para
-composições, animação, áudio, fontes, temporização e renderização. Elas ajudam
-a orientar o trabalho, mas não substituem a revisão do código e do resultado
-visual. É o papel de instruções reutilizáveis que discuto em
-<a href="/posts/uma-skill-e-muito-menos-magica-do-que-parece/">Uma Skill é muito menos mágica do que parece</a>.</p>
-
-<p>Um pedido inicial poderia ser:</p>
-
-<blockquote>
-  <p>Quero explicar como a empresa funciona em aproximadamente três minutos.</p>
-
-  <p>Comece apresentando o cliente e depois mostre como uma solicitação percorre
-as áreas comercial, operacional e financeira.</p>
-
-  <p>Utilize diagramas animados, textos curtos e uma linguagem visual simples.</p>
-
-  <p>Quero revisar cada cena antes de produzir a versão final.</p>
-</blockquote>
-
-<p>O agente pode ajudar a transformar essa descrição em componentes e cenas.
-Depois, os pedidos de revisão ficam mais específicos:</p>
-
-<ul>
-  <li>“Essa transição está rápida demais.”</li>
-  <li>“Quero destacar a passagem entre essas duas áreas.”</li>
-  <li>“Essa parte precisa mostrar que existem duas possibilidades.”</li>
-  <li>“Vamos substituir esse texto por um diagrama.”</li>
-</ul>
-
-<p>Estamos modificando um projeto. A alteração pode ficar concentrada no código
-da cena correspondente, sem pedir uma nova geração de todas as imagens.</p>
-
-<p><strong>A IA ajuda a construir o vídeo; a animação pode ser executada pelo software
-sem uma nova chamada ao modelo para cada renderização.</strong> Isso pressupõe que
-os materiais necessários já estejam disponíveis e que o projeto não dependa
-de geração externa durante a renderização.</p>
-
-<p>O agente ainda pode produzir código errado ou uma animação inadequada. A
-previsibilidade da execução não garante que a cena explique o processo
-corretamente.</p>
-
-<h2 id="por-que-um-agente-local">Por que um agente local?</h2>
-
-<p>Tenho preferência por soluções nas quais os arquivos de trabalho ficam sob
-nosso controle. Nesse cenário, o agente trabalha em um diretório do computador,
-com o código, as imagens, os textos e os demais materiais da produção.</p>
-
-<p>Podemos versionar o roteiro e o código com Git, comparar alterações e recuperar
-uma composição anterior. É a ideia de
-<a href="/posts/versionar-e-criar-checkpoints/">criar checkpoints do projeto</a>:
-preservar um estado que já foi revisado antes de continuar modificando-o.</p>
-
-<p>Também manteria disponíveis as fontes, imagens, áudios e versões das
-dependências necessárias para reproduzir esse estado. Salvar apenas o código
-não preserva um arquivo externo que foi substituído ou deixou de existir.</p>
-
-<p>O uso de um agente local permite aproveitar ferramentas de desenvolvimento,
-como Node.js, editores de código e scripts de automação. A
-<a href="/posts/como-usar-um-harness-como-assistente-de-anotacao/">separação entre modelo, ferramentas e permissões</a>
-continua relevante: o agente só consegue operar o projeto conforme o acesso
-que o ambiente oferece.</p>
-
-<p>Executar o agente localmente não significa necessariamente que o modelo de IA
-também seja local. Dependendo da ferramenta, solicitações e trechos dos
-arquivos podem ser enviados a serviços externos. Eu verificaria esse fluxo
-antes de trabalhar com informações internas ou confidenciais.</p>
-
-<p>O ganho que procuro aqui é manter um projeto acessível e revisável, com os
-materiais necessários para continuar a produção em outras sessões e
-ferramentas.</p>
-
-<h2 id="o-roteiro-continua-sendo-o-principal-problema">O roteiro continua sendo o principal problema</h2>
-
-<p>Antes de produzir qualquer animação, precisamos descobrir <strong>o que realmente
-queremos explicar</strong>.</p>
-
-<p>O funcionamento de uma empresa pode incluir exceções, caminhos alternativos,
-atividades manuais, responsabilidades compartilhadas e processos que ninguém
-documentou completamente. Um fluxograma bonito pode ocultar justamente essas
-particularidades.</p>
-
-<p>Uma IA não as conhece apenas porque recebeu o nome da empresa. Ela pode ajudar
-a organizar as informações, identificar inconsistências no roteiro e propor
-visualizações. Alguém precisa fornecer e validar o conhecimento sobre a
-operação.</p>
-
-<p>Eu começaria com um documento simples descrevendo um processo importante e as
-relações entre suas etapas. Depois, organizaria uma sequência de cenas.</p>
-
-<p>O primeiro vídeo não precisaria mostrar a empresa inteira. Esse recorte
-serviria para validar a linguagem visual, o nível de detalhe e o esforço
-necessário para produzir novas animações. Quem executa o processo deveria
-conferir se o percurso e as responsabilidades estão representados corretamente.</p>
-
-<p>Uma vez estabelecida uma estrutura, outros vídeos poderiam aproveitar os
-mesmos componentes. Um treinamento de integração de funcionários, por exemplo,
-poderia reutilizar as representações dos departamentos e sistemas de uma
-apresentação institucional.</p>
-
-<h2 id="nem-toda-cena-precisa-ser-gerada-por-ia">Nem toda cena precisa ser gerada por IA</h2>
-
-<p>Essa abordagem permite escolher como produzir cada parte do material.</p>
-
-<p>Para mostrar a fachada, podemos usar uma fotografia real. Para representar o
-fluxo de informações entre dois sistemas, eu começaria por um diagrama animado.
-Para apresentar indicadores, usaria gráficos construídos a partir dos dados
-que queremos explicar.</p>
-
-<p>Quando fizer sentido, imagens, narração ou outros materiais produzidos com IA
-podem entrar na composição. Não existe obrigação de gerar tudo dessa maneira.</p>
-
-<p>Para esse tipo de vídeo, eu reservaria a geração de imagens para cenas em que a
-ilustração não precise reproduzir um detalhe operacional. Um diagrama com uma
-seta errada ou uma responsabilidade atribuída à área errada pode ensinar um
-processo que a empresa não executa.</p>
-
-<p>O critério é fazer alguém compreender o funcionamento apresentado.</p>
-
-<h2 id="uma-produção-que-pode-continuar-evoluindo">Uma produção que pode continuar evoluindo</h2>
-
-<p>O aspecto que mais me interessa nessa combinação é manter o material
-audiovisual como um projeto que pode evoluir.</p>
-
-<p>Processos são reorganizados, sistemas são substituídos e departamentos assumem
-novas responsabilidades. Quando esses elementos estão em componentes
-reutilizáveis, uma alteração pode ser incorporada em um ponto conhecido do
-projeto.</p>
-
-<p>Isso não elimina edição, revisão e validação. Uma mudança num componente
-compartilhado também pode afetar várias cenas; eu revisaria as composições que
-reutilizam esse elemento.</p>
-
-<p>O Remotion exige um ambiente de desenvolvimento e tem sua curva de
-aprendizado. Um agente pode reduzir o trabalho de escrever cada componente,
-mas ainda será necessário lidar com falhas de execução, ritmo, legibilidade,
-áudio e coerência visual.</p>
-
-<p>Também avaliaria as
-<a href="https://www.remotion.dev/license">condições de licenciamento</a> para a utilização
-pretendida. A licença prevê situações de uso gratuito e de licença empresarial;
-manter os arquivos localmente não determina qual delas se aplica.</p>
-
-<p>Para uma produção pontual, uma ferramenta de edição já conhecida pela equipe
-pode exigir menos preparação. Eu consideraria Remotion principalmente quando
-revisar processos, reaproveitar componentes e gerar variações forem partes
-recorrentes do trabalho.</p>
-
-<h2 id="a-ferramenta-não-precisa-fazer-tudo">A ferramenta não precisa fazer tudo</h2>
-
-<p>Essa proposta segue a divisão de responsabilidades que discuto no texto sobre
-<a href="/posts/modelos-de-decisao/">Jev, Clef e modelos de decisão em agentes</a>:
-examinar o trabalho de cada etapa antes de entregá-la a uma LLM.</p>
-
-<p>Aqui, o agente interpreta instruções e modifica o projeto. O Remotion renderiza
-as composições definidas em código. Uma pessoa continua responsável pela
-narrativa e pela correção das informações.</p>
-
-<p>Foi por isso que minha sugestão para aquela conversa foi um agente local e o
-Remotion. Para um vídeo explicativo que precisa ser preciso, revisável e
-reutilizável, eu começaria com um processo, algumas cenas e uma revisão de quem
-conhece a operação.</p>
-
-<h3 id="referências">Referências</h3>
-
-<ul>
-  <li><a href="https://www.remotion.dev/docs/the-fundamentals">Remotion — The fundamentals</a></li>
-  <li><a href="https://www.remotion.dev/docs/render">Remotion — Render your video</a></li>
-  <li><a href="https://www.remotion.dev/docs/miscellaneous/video-formats">Remotion — Video formats</a></li>
-  <li><a href="https://www.remotion.dev/docs/parameterized-rendering">Remotion — Parameterized videos</a></li>
-  <li><a href="https://www.remotion.dev/docs/ai/coding-agents">Remotion — Prompting videos with coding agents</a></li>
-  <li><a href="https://www.remotion.dev/docs/ai/skills">Remotion — Agent Skills</a></li>
-  <li><a href="https://www.remotion.dev/license">Remotion — License</a></li>
-</ul>
-
-<p>Fontes consultadas em 9 de outubro de 2026.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="Agentes de IA" /><category term="Remotion" /><category term="Vídeo como código" /><category term="Automação" /><category term="Codex" /><summary type="html"><![CDATA[Uma conversa sobre vídeo com IA levou à sugestão de combinar Remotion, um agente de programação local e vídeo como código para representar processos revisáveis.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/remotion-agente-local-video-como-codigo.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/remotion-agente-local-video-como-codigo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Jev e Clef: quando usar modelos de decisão em agentes de IA</title><link href="https://www.gpupo.com/posts/modelos-de-decisao/" rel="alternate" type="text/html" title="Jev e Clef: quando usar modelos de decisão em agentes de IA" /><published>2026-10-04T00:00:00-03:00</published><updated>2026-10-04T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/modelos-de-decisao</id><content type="html" xml:base="https://www.gpupo.com/posts/modelos-de-decisao/"><![CDATA[<p>Um agente que recebe uma mensagem pode precisar escolher uma fila, selecionar
-uma ferramenta e decidir se a operação exige aprovação antes de redigir uma
-resposta. Essas etapas têm responsabilidades diferentes. Quantas delas estamos
-delegando a uma LLM mesmo quando não exigem geração de texto ou raciocínio
-aberto?</p>
-
-<p>A <a href="https://blog.bytebytego.com/p/ep227-top-9-places-to-use-jev">edição 227 da ByteByteGo</a>,
-publicada em 26 de setembro de 2026, trouxe o Jev, da TypeSafe AI, como exemplo
-dessa discussão.
-Minha leitura é que a oportunidade vai além do produto: separar a geração de
-conteúdo das decisões operacionais que organizam o trabalho de um agente.</p>
-
-<p>Modelos como Jev e Clef são especializados em classificação, pontuação e
-escolha entre alternativas definidas pelo programa. A proposta é devolver
-diretamente valores que o código possa consumir:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>contexto → modelo de decisão → escolha tipada + probabilidades
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Para usar esse tipo de recurso, eu procuraria uma decisão frequente, limitada e mensurável em que essa troca
-pudesse reduzir custo ou latência sem aumentar erros.</p>
-
-<figure class="editorial-photo">
-  <img src="/assets/images/jev-clef-modelos-de-decisao.webp" alt="Ilustração de uma pessoa planejando um agente diante de um quadro que relaciona regras, Jev e Clef, geração de conteúdo, aprovação humana e execução pelo sistema" width="1536" height="1024" loading="lazy" decoding="async" />
-  <figcaption>Regras, modelos de decisão e LLMs no fluxo de um agente. Ilustração criada pelo ChatGPT 6.1 Sol.</figcaption>
-</figure>
-
-<h2 id="começar-pela-decisão-não-pelo-modelo">Começar pela decisão, não pelo modelo</h2>
-
-<p>Imagine um fluxo de suporte.</p>
-
-<p>Uma mensagem precisa ser classificada por área, urgência e risco. Hoje talvez
-ela seja enviada a uma LLM, que lê o texto, explica o que entendeu e devolve um
-JSON. Funciona, mas estamos usando uma tecnologia generativa para uma escolha
-que o sistema já conhece:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>área: cobrança | suporte | vendas
-urgência: sim | não
-risco: baixo | médio | alto
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Esse é um possível caso para um modelo de decisão. A explicação ao cliente, a
-investigação de uma cobrança duplicada e a negociação de uma exceção continuam
-sendo problemas diferentes.</p>
-
-<p>Podemos separar  o fluxo assim:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>trabalho</th>
-      <th>componente mais provável</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>validar contrato, saldo ou permissão</td>
-      <td>regra ou consulta determinística</td>
-    </tr>
-    <tr>
-      <td>classificar área, urgência e risco</td>
-      <td>modelo de decisão</td>
-    </tr>
-    <tr>
-      <td>resumir o caso e propor uma resposta</td>
-      <td>LLM</td>
-    </tr>
-    <tr>
-      <td>aprovar uma exceção de alto impacto</td>
-      <td>pessoa responsável</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Consideramos usar o componente quando várias destas condições estiverem presentes:</p>
-
-<ul>
-  <li>a saída pertence a um conjunto conhecido de alternativas;</li>
-  <li>a decisão acontece em volume suficiente para custo ou latência importarem;</li>
-  <li>as categorias podem mudar e seria caro manter um classificador para cada
-nova taxonomia;</li>
-  <li>existem exemplos históricos ou outra forma confiável de medir acertos e
-erros;</li>
-  <li>uma escolha errada pode ser bloqueada, revertida ou encaminhada;</li>
-  <li>o sistema já sabe o que fazer quando a confiança é baixa;</li>
-  <li>a chamada fica no caminho crítico e alguns segundos fazem diferença.</li>
-</ul>
-
-<p><strong>Evitamos</strong> começar por:</p>
-
-<ul>
-  <li>obrigações que possam ser expressas como regras exatas;</li>
-  <li>decisões raras, nas quais a economia operacional seria irrelevante;</li>
-  <li>problemas abertos que exigem investigação ou produção de conteúdo;</li>
-  <li>situações sem resultado observável para avaliar o modelo;</li>
-  <li>ações irreversíveis ou de alto impacto sem outra barreira de controle.</li>
-</ul>
-
-<p>Também verificaria onde está o gargalo real. Em um exemplo hipotético, reduzir
-uma inferência de 500 para 40 milissegundos pode ter pouco efeito se o fluxo
-ainda espera quinze minutos por uma aprovação humana.</p>
-
-<h2 id="o-que-jev-e-clef-oferecem">O que Jev e Clef oferecem</h2>
-
-<p>Em 15 de setembro de 2026, a TypeSafe AI anunciou o
-<a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Jev</a>, seu
-primeiro produto da categoria que chama de <strong>System One Model</strong>. Segundo a
-empresa, ele usa uma arquitetura própria e um método de treinamento chamado
-<strong>RLCD — Reinforcement Learning for Calibrated Decisions</strong>.</p>
-
-<p>A <a href="https://docs.typesafe.ai/introduction">documentação do Jev</a> descreve uma API
-que recebe o estado da aplicação e perguntas de três tipos:</p>
-
-<ul>
-  <li><code>noul</code>: a probabilidade de uma afirmação ser verdadeira, entre 0 e 1;</li>
-  <li><code>choice</code>: uma escolha entre alternativas definidas pelo programa;</li>
-  <li><code>score</code>: uma pontuação segundo critérios em uma escala ordenada.</li>
-</ul>
-
-<p>As respostas de <code>choice</code> e <code>score</code> incluem distribuições de
-probabilidade e um campo de confiança. O código usa esses valores para
-encaminhar o trabalho, aplicar limites ou pedir revisão.</p>
-
-<p>Em 1º de outubro de 2026, a
-<a href="https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/">Cloudflare anunciou Clef e Clef-flash</a>,
-com 27 e 9 bilhões de parâmetros, respectivamente. Os dois têm janela de
-contexto de 64 mil tokens. Segundo a empresa, os pesos foram publicados sob
-licença Apache 2.0 e os modelos também estão disponíveis no Workers AI.</p>
-
-<p>Um modelo de decisão tenta mudar também o trabalho executado. Em vez de gerar
-tokens até formar uma resposta válida, ele é otimizado para avaliar as opções
-permitidas e atribuir probabilidades a elas.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre>LLM + Structured Output
-        ↓
-modelo generativo restrito a um formato
-
-modelo de decisão
-        ↓
-modelo especializado em avaliar opções predefinidas
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<h2 id="zero-alucinações-não-significa-zero-decisões-erradas">“Zero alucinações” não significa zero decisões erradas</h2>
-
-<p>A <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">TypeSafe usa a expressão “Zero Hallucinations”</a>
-ao apresentar o Jev. A
-garantia técnica descrita pela empresa é mais estreita: como o esquema e as
-alternativas são definidos antes da execução, o modelo não produz uma saída
-fora desse espaço.</p>
-
-<p>Segurança de tipo evita respostas impossíveis de processar. Não elimina erro de
-julgamento, viés, contexto insuficiente, ataque ao conteúdo de entrada ou
-mudança no comportamento dos dados.</p>
-
-<h2 id="nove-lugares-para-examinar-o-uso-de-uma-llm">Nove lugares para examinar o uso de uma LLM</h2>
-
-<h3 id="1-roteamento-entre-modelos">1. Roteamento entre modelos</h3>
-
-<p>Um agente pode classificar uma solicitação antes de selecionar o componente
-que vai atendê-la: um modelo pequeno, uma LLM com maior capacidade de
-raciocínio ou uma função já implementada.</p>
-
-<p>Eu compararia o custo do roteamento com a economia no restante do fluxo.
-Encaminhar uma tarefa difícil para um modelo insuficiente pode aumentar as
-tentativas e o custo final.</p>
-
-<h3 id="2-guardrails-e-identificação-de-riscos">2. Guardrails e identificação de riscos</h3>
-
-<p>Um classificador pode ajudar a identificar riscos conhecidos em solicitações
-ou documentos externos, incluindo possíveis tentativas de <em>prompt injection</em>.</p>
-
-<p>Isso seria uma camada adicional de proteção. Conteúdo que passou pela análise
-ainda deve ser tratado como entrada não confiável; permissões e restrições de
-execução continuam sendo aplicadas pelo sistema.</p>
-
-<h3 id="3-controle-de-chamadas-a-ferramentas">3. Controle de chamadas a ferramentas</h3>
-
-<p>Uma chamada pode ser classificada como leitura, escrita, alteração sensível ou
-operação que exige confirmação. Consultar um arquivo e excluí-lo, por exemplo,
-podem seguir políticas diferentes.</p>
-
-<p>A classificação ajuda a interpretar a intenção. A autorização efetiva deve ser
-determinada por regras e permissões explícitas, considerando a ferramenta, os
-argumentos e o recurso afetado.</p>
-
-<h3 id="4-triagem-de-informações">4. Triagem de informações</h3>
-
-<p>Uma caixa de entrada pode separar mensagens urgentes, comerciais, informativas
-ou destinadas ao arquivamento. O mesmo princípio serve para chamados e
-documentos.</p>
-
-<p>Eu começaria por categorias com critérios claros e um caminho de correção.
-Arquivar uma mensagem urgente tem uma consequência diferente de encaminhá-la
-para a fila errada.</p>
-
-<h3 id="5-reranking-e-seleção-de-contexto">5. Reranking e seleção de contexto</h3>
-
-<p>Em um fluxo de RAG, que recupera documentos para apoiar uma resposta, um
-componente pode pontuar a relevância dos resultados. Se a busca retornar vinte
-documentos candidatos, o agente poderia selecionar cinco antes da geração.</p>
-
-<p>Selecionar contexto pode evitar o envio de material apenas relacionado ao
-assunto. É a distinção que discuto em
-<a href="/posts/nao-crie-um-agente-que-saiba-a-empresa-inteira/">Não crie um agente que saiba a empresa inteira</a>:
-ter acesso a uma base não exige mantê-la inteira no contexto. Eu verificaria
-se o recorte preserva as evidências necessárias e informações que contradizem
-a resposta esperada.</p>
-
-<h3 id="6-avaliação-de-respostas-de-llms">6. Avaliação de respostas de LLMs</h3>
-
-<p>Em determinadas tarefas, um avaliador especializado pode pontuar a resposta de
-uma LLM e substituir uma segunda chamada generativa usada como juiz, prática
-conhecida como <em>LLM-as-a-Judge</em>.</p>
-
-<p>Um resumo poderia ser avaliado quanto à pertinência e à aderência a critérios
-previamente definidos.</p>
-
-<h3 id="7-classificação-em-lote">7. Classificação em lote</h3>
-
-<p>Categorizar produtos, identificar tipos de documentos ou etiquetar milhares
-de eventos são candidatos quando o conjunto de categorias é conhecido.</p>
-
-<p>Além do custo por registro, eu observaria erros recorrentes por categoria.
-Uma classificação equivocada repetida em lote pode exigir uma correção maior
-do que a economia inicial.</p>
-
-<h3 id="8-decisões-em-tempo-real">8. Decisões em tempo real</h3>
-
-<p>Um sistema de monitoramento pode classificar eventos e selecionar rotas de
-processamento conforme sua natureza e urgência, reservando análises generativas
-para ocorrências selecionadas.</p>
-
-<p>Baixa latência só ajuda se a qualidade atender ao fluxo. Em operações de alto
-impacto, a velocidade não elimina controles, validação e fallback.</p>
-
-<h3 id="9-encaminhamento-conforme-a-confiança">9. Encaminhamento conforme a confiança</h3>
-
-<p>Uma classificação com confiança suficiente pode seguir para processamento;
-casos ambíguos podem ser encaminhados a uma LLM ou a uma pessoa. Esse mecanismo
-é chamado de <em>confidence gate</em>.</p>
-
-<p>Eu definiria os limites por tipo de decisão e custo do erro. Uma estimativa
-alta, isoladamente, não garante acerto: os limites precisam ser testados nos
-dados da aplicação, como discuto adiante.</p>
-
-<h2 id="onde-eu-aplicaria-isso-na-prática">Onde eu aplicaria isso na prática</h2>
-
-<p>Os nove casos também podem ser combinados em um mesmo fluxo. Estes são alguns
-projetos em que eu examinaria essa separação.</p>
-
-<h3 id="markdown-e-obsidian">Markdown e Obsidian</h3>
-
-<p>Imagine um agente responsável por organizar informações em um cofre de notas
-do Obsidian, como no exemplo de
-<a href="/posts/como-usar-um-harness-como-assistente-de-anotacao/">harness como assistente de anotação</a>.
-Antes de escrever, ele precisa selecionar notas, carregar instruções
-aplicáveis e consultar as permissões de alteração dos arquivos.</p>
-
-<p>Um classificador poderia identificar a natureza da solicitação, enquanto um
-mecanismo de relevância selecionaria notas. O carregamento das instruções e as
-permissões de escrita seguiriam regras explícitas, sem depender da classificação
-para serem respeitados.</p>
-
-<p>A LLM entraria para interpretar informações, sintetizar conteúdo ou produzir
-um documento. Eu mediria se a seleção reduz chamadas sem omitir contexto
-necessário.</p>
-
-<h3 id="geração-de-anúncios">Geração de anúncios</h3>
-
-<p>Um agente que produz anúncios de equipamentos usados pode receber tipo,
-fabricante, modelo, estado de conservação e preço como dados estruturados.
-Antes da redação, o sistema pode:</p>
-
-<ul>
-  <li>verificar campos obrigatórios;</li>
-  <li>usar a categoria cadastrada ou classificar uma descrição ambígua;</li>
-  <li>identificar venda ou troca a partir dos dados recebidos;</li>
-  <li>selecionar o modelo de anúncio;</li>
-  <li>encaminhar inconsistências para revisão.</li>
-</ul>
-
-<p>Validação de campos e seleção por categoria explícita podem ser feitas em
-código. Um modelo de decisão só teria função quando houver ambiguidade. Depois,
-a LLM receberia os dados para propor a redação do anúncio. Os atributos críticos
-continuariam vindo da fonte estruturada, e o texto gerado precisaria ser
-comparado com ela antes de publicar. É a separação explorada em
-<a href="/lessons/uso-de-um-llm-pequeno-para-melhoria-de-descricao-de-produto/">LLM local para descrição de produto: gerar texto sem inventar atributos</a>.</p>
-
-<h3 id="documentação-técnica">Documentação técnica</h3>
-
-<p>Eu separaria identificação do documento, seleção do template, validação dos
-dados e geração do conteúdo.</p>
-
-<p>Se existem três templates bem definidos e a categoria já está cadastrada,
-o código pode selecionar o layout e verificar os campos obrigatórios. Um
-modelo de decisão pode ajudar a classificar uma entrada ambígua; a LLM fica
-responsável pelas partes que exigem elaboração em linguagem natural.</p>
-
-<p>Essa divisão permite testar seleção e validação separadamente da qualidade do
-texto gerado.</p>
-
-<h3 id="observabilidade-e-operação">Observabilidade e operação</h3>
-
-<p>Um fluxo de observabilidade pode combinar regras para condições conhecidas,
-classificadores para categorizar eventos e LLMs para analisar ocorrências
-selecionadas.</p>
-
-<p>Eu começaria pelo encaminhamento, preservando os eventos originais e os alertas
-determinísticos. Antes de permitir descarte automático, verificaria se o
-classificador deixa passar ocorrências relevantes e como recuperar uma decisão
-errada.</p>
-
-<h2 id="nem-toda-decisão-precisa-de-inteligência-artificial">Nem toda decisão precisa de inteligência artificial</h2>
-
-<p>O primeiro filtro é verificar se há algo a inferir. Um campo obrigatório pode
-ser validado em código; uma categoria explícita pode selecionar um template.</p>
-
-<p>Essa divisão segue o critério discutido em
-<a href="/posts/agent-crew-flow-nao-sao-a-mesma-coisa/">Agent decide, Crew colabora e Flow orquestra sistemas com IA</a>:
-identificar a responsabilidade antes de escolher a abstração.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>responsabilidade</th>
-      <th>quando utilizar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>código e regras</td>
-      <td>decisão conhecida, objetiva e determinística</td>
-    </tr>
-    <tr>
-      <td>modelos de decisão</td>
-      <td>classificação, pontuação ou escolha limitada com ambiguidade</td>
-    </tr>
-    <tr>
-      <td>LLMs generativas</td>
-      <td>interpretação de problemas abertos, planejamento, síntese ou produção de conteúdo</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>O Jev não precisa ser o centro da arquitetura. Classificadores tradicionais,
-modelos menores e mecanismos de pontuação também são alternativas. Eu
-compararia cada componente com a solução mais simples que atende aos
-requisitos, incluindo integração, avaliação, observabilidade e manutenção.</p>
-
-<p>Uma arquitetura com vários modelos pode custar menos por execução e exigir
-mais trabalho para operar. A escolha depende de volume, latência, precisão e
-custo total, não apenas do preço da inferência.</p>
-
-<h2 id="o-modelo-participa-do-fluxo-o-código-mantém-o-controle">O modelo participa do fluxo; o código mantém o controle</h2>
-
-<p>Eu não colocaria o modelo de decisão no lugar das regras de negócio. Ele
-entraria depois das regras exatas e antes dos componentes mais caros ou mais
-abertos.</p>
-
-<p>“Alta confiança” não deveria ser uma autorização universal. A política também
-precisa considerar impacto, reversibilidade, identidade de quem pediu a ação e
-estado atual do sistema.</p>
-
-<p>O pseudocódigo abaixo ilustra uma política de encaminhamento. As funções e os
-campos são abstrações da aplicação, não uma reprodução da API do Jev:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-</pre></td><td class="rouge-code"><pre><span class="n">decision</span> <span class="o">=</span> <span class="n">decision_model</span><span class="p">.</span><span class="nf">evaluate</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">choices</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">decision</span><span class="p">.</span><span class="n">timed_out</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">decision</span><span class="p">.</span><span class="n">valid</span><span class="p">:</span>
-    <span class="n">action</span> <span class="o">=</span> <span class="nf">use_safe_fallback</span><span class="p">()</span>
-
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">policy</span> <span class="o">=</span> <span class="n">policies</span><span class="p">[</span><span class="n">decision</span><span class="p">.</span><span class="n">choice</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">permissions</span><span class="p">.</span><span class="nf">allow</span><span class="p">(</span><span class="n">actor</span><span class="p">,</span> <span class="n">decision</span><span class="p">.</span><span class="n">choice</span><span class="p">,</span> <span class="n">resource</span><span class="p">):</span>
-        <span class="n">action</span> <span class="o">=</span> <span class="nf">deny_action</span><span class="p">()</span>
-
-    <span class="nf">elif </span><span class="p">(</span>
-        <span class="n">decision</span><span class="p">.</span><span class="n">confidence</span> <span class="o">&gt;=</span> <span class="n">policy</span><span class="p">.</span><span class="n">auto_threshold</span>
-        <span class="ow">and</span> <span class="n">policy</span><span class="p">.</span><span class="n">reversible</span>
-        <span class="ow">and</span> <span class="n">policy</span><span class="p">.</span><span class="n">low_risk</span>
-    <span class="p">):</span>
-        <span class="n">action</span> <span class="o">=</span> <span class="nf">execute</span><span class="p">(</span><span class="n">decision</span><span class="p">.</span><span class="n">choice</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="n">decision</span><span class="p">.</span><span class="n">confidence</span> <span class="o">&gt;=</span> <span class="n">policy</span><span class="p">.</span><span class="n">analysis_threshold</span><span class="p">:</span>
-        <span class="n">action</span> <span class="o">=</span> <span class="nf">ask_llm_to_analyze</span><span class="p">(</span><span class="n">decision</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">action</span> <span class="o">=</span> <span class="nf">request_human_review</span><span class="p">(</span><span class="n">decision</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
-
-<span class="nf">record</span><span class="p">(</span><span class="n">decision</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">final_outcome</span><span class="p">)</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Uma análise adicional da LLM ou uma revisão humana não dispensa a verificação
-de permissões na execução posterior. A autorização também precisa ocorrer no
-momento de usar a ferramenta, com os argumentos e o estado atuais.</p>
-
-<p>Sem registrar o que o modelo decidiu, qual política foi aplicada e qual foi o
-resultado final, não há como avaliar qualidade, investigar incidentes ou
-ajustar os limites.</p>
-
-<h2 id="o-caso-de-negócio-precisa-incluir-os-erros">O caso de negócio precisa incluir os erros</h2>
-
-<p>Na <a href="https://blog.cloudflare.com/clef-decision-models/">tabela publicada pela Cloudflare</a>,
-os resultados de latência mediana foram:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>modelo</th>
-      <th style="text-align: right">latência mediana</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Jev</td>
-      <td style="text-align: right">524,1 ms</td>
-    </tr>
-    <tr>
-      <td>Clef</td>
-      <td style="text-align: right">209,3 ms</td>
-    </tr>
-    <tr>
-      <td>Clef-flash</td>
-      <td style="text-align: right"><strong>38,8 ms</strong></td>
-    </tr>
-    <tr>
-      <td>Laya</td>
-      <td style="text-align: right">5,8 ms</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>A Cloudflare diz ter executado 43 avaliações e observa que o Laya ganhou em
-velocidade, mas perdeu qualidade nos testes apresentados. Eu usaria esses
-números para formular uma hipótese, não para aprovar uma compra. Foram
-publicados por um concorrente e dependem de hardware, rede, carga, dados e
-definição de qualidade.</p>
-
-<p>Essa leitura segue a preocupação de
-<a href="/posts/numeros-nao-mentem/">Um número correto ainda pode contar a história errada em tecnologia</a>:
-a métrica precisa vir acompanhada do cenário e do custo dos erros.</p>
-
-<p>Para o fluxo completo, eu estimaria cada parcela em reais por mês:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>benefício mensal
-  = economia com chamadas de LLM
-  + economia com trabalho manual
-  + valor da redução de latência
-  - custo do modelo
-  - custo dos fallbacks
-  - custo de operação
-  - custo esperado dos erros
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O custo esperado dos erros faz parte da comparação. Para uma decisão de baixo
-impacto, ele pode ser pequeno. Para fraude, crédito, acesso,
-saúde, segurança ou movimentação financeira, pode dominar toda a conta.</p>
-
-<p>Além da mediana, eu mediria:</p>
-
-<ul>
-  <li>latência p95 e p99;</li>
-  <li>taxa de timeout;</li>
-  <li>disponibilidade;</li>
-  <li>custo por mil decisões;</li>
-  <li>proporção encaminhada à LLM;</li>
-  <li>proporção encaminhada a pessoas;</li>
-  <li>taxa e custo de falsos positivos e falsos negativos;</li>
-  <li>resultado de negócio depois da decisão.</li>
-</ul>
-
-<p>Um modelo mais rápido que transfere casos demais para revisão pode custar mais
-no final.</p>
-
-<h2 id="probabilidade-calibrada-precisa-funcionar-nos-nossos-dados">Probabilidade calibrada precisa funcionar nos nossos dados</h2>
-
-<p>Se um modelo binário bem calibrado atribui probabilidade próxima de 0,93 a
-muitos casos comparáveis, esperamos que aproximadamente 93% deles pertençam à
-classe positiva. A
-<a href="https://scikit-learn.org/stable/modules/calibration.html">documentação de calibração do scikit-learn</a>
-usa essa interpretação por frequência.</p>
-
-<p>Isso não quer dizer que uma resposta individual esteja “93% correta”.
-Também não quer dizer que a calibração publicada pelo fornecedor continuará
-válida para nossos clientes, idiomas, produtos ou padrões de fraude.</p>
-
-<p>Na prática, eu criaria limites diferentes por decisão:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>ordenar uma fila interna
-→ tolerância maior a erro
-
-bloquear uma conta
-→ tolerância menor e caminho de contestação
-
-autorizar uma ação irreversível
-→ outra verificação ou aprovação humana
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Na <a href="https://docs.typesafe.ai/confidence">documentação do Jev sobre confiança</a>,
-<code>confidence</code> é uma estatística derivada da distribuição de
-probabilidades. Não é uma probabilidade adicional de acerto. Para
-<code>choice</code>, ela considera a maior probabilidade em relação a uma
-distribuição uniforme; para <code>score</code>, considera também a distância
-entre os níveis.</p>
-
-<p>Eu validaria a relação entre esse campo e os erros observados antes de escolher
-limites de automação. Um valor de confiança de 0,93 não significa, por si só,
-93% de acertos, e um único limite global pode esconder diferenças entre tarefas.</p>
-
-<h2 id="eu-implantaria-em-cinco-etapas">Eu implantaria em cinco etapas</h2>
-
-<h3 id="1-escolher-uma-decisão-estreita">1. Escolher uma decisão estreita</h3>
-
-<p>Começaria por uma única bifurcação com volume, resultado observável e baixo
-impacto. “Qual fila recebe este chamado?” é melhor experimento do que “o agente
-pode administrar sozinho a operação?”.</p>
-
-<p>Definiria antes do teste:</p>
-
-<ul>
-  <li>quem é responsável pela decisão;</li>
-  <li>o que conta como acerto;</li>
-  <li>qual erro é mais caro;</li>
-  <li>qual é o baseline atual;</li>
-  <li>quando o experimento deve ser interrompido.</li>
-</ul>
-
-<h3 id="2-construir-uma-avaliação-interna">2. Construir uma avaliação interna</h3>
-
-<p>Usaria casos históricos representativos, incluindo exceções e períodos
-recentes. Compararia o modelo de decisão com o fluxo atual, não apenas com outro
-modelo.</p>
-
-<p>Separaria os dados usados para escolher thresholds daqueles usados para a
-avaliação final. Também examinaria segmentos com comportamentos diferentes,
-como idioma, produto, região, canal ou tipo de cliente.</p>
-
-<h3 id="3-executar-em-modo-sombra">3. Executar em modo sombra</h3>
-
-<p>O modelo receberia entradas reais e registraria decisões sem controlar o
-resultado. Essa etapa permite medir latência, custo, calibração e divergências
-sem expor clientes ao novo fluxo.</p>
-
-<p>Modo sombra não elimina risco de dados. Antes de ativá-lo, ainda é necessário
-verificar retenção, residência, acesso, dados pessoais e termos de uso do
-fornecedor.</p>
-
-<h3 id="4-automatizar-apenas-a-faixa-segura">4. Automatizar apenas a faixa segura</h3>
-
-<p>Depois dos testes, liberaria uma parcela pequena de decisões autorizadas,
-reversíveis, de baixo impacto e dentro dos limites de confiança validados. O
-restante continuaria no fluxo existente.</p>
-
-<p>Usaria <em>feature flag</em>, limite de volume, fallback conhecido e um mecanismo de
-desativação imediata. Aumentaria a exposição somente se as métricas de negócio,
-risco e operação permanecessem dentro dos limites definidos.</p>
-
-<h3 id="5-monitorar-o-resultado-não-apenas-o-modelo">5. Monitorar o resultado, não apenas o modelo</h3>
-
-<p>Registraria versão do modelo, esquema das perguntas, alternativas oferecidas,
-probabilidades, latência, política aplicada, fallback e resultado posterior.</p>
-
-<p>Também acompanharia mudança de distribuição. Uma decisão calibrada no mês do
-lançamento pode deixar de ser confiável depois de uma alteração de produto, de
-uma campanha comercial ou de uma nova estratégia de ataque.</p>
-
-<h3 id="fontes-consultadas">Fontes consultadas</h3>
-
-<ul>
-  <li><a href="https://blog.bytebytego.com/p/ep227-top-9-places-to-use-jev">ByteByteGo — EP227: Top 9 Places to Use Jev</a>, publicada em 26 de setembro de 2026</li>
-  <li><a href="https://docs.typesafe.ai/introduction">TypeSafe AI — Documentação do Jev</a></li>
-  <li><a href="https://docs.typesafe.ai/confidence">TypeSafe AI — Confidence</a></li>
-  <li><a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">TypeSafe AI — Introducing System One Models &amp; Jev</a></li>
-  <li><a href="https://blog.cloudflare.com/clef-decision-models/">Cloudflare — Introducing Clef</a></li>
-  <li><a href="https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/">Cloudflare Developers — Clef no Workers AI</a></li>
-  <li><a href="https://openai.com/index/introducing-structured-outputs-in-the-api/">OpenAI — Introducing Structured Outputs in the API</a></li>
-  <li><a href="https://scikit-learn.org/stable/modules/calibration.html">scikit-learn — Probability calibration</a></li>
-</ul>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Arquitetura de software" /><category term="Inteligência artificial" /><category term="LLM" /><category term="Modelos de decisão" /><summary type="html"><![CDATA[Nove aplicações, exemplos de arquitetura e critérios para comparar regras, modelos de decisão e LLMs, considerando latência, custo e erros.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/jev-clef-modelos-de-decisao.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/jev-clef-modelos-de-decisao.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Como usar um harness como assistente de anotação</title><link href="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/" rel="alternate" type="text/html" title="Como usar um harness como assistente de anotação" /><published>2026-10-02T00:00:00-03:00</published><updated>2026-10-02T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao</id><content type="html" xml:base="https://www.gpupo.com/posts/como-usar-um-harness-como-assistente-de-anotacao/"><![CDATA[<p>Durante muito tempo, anotar significava escolher onde guardar alguma coisa.</p>
-
-<p>Abrimos um aplicativo, criamos uma nota, pensamos num título, escolhemos uma
-pasta, talvez acrescentamos algumas tags, fazemos links com outras notas e
-seguimos em frente.</p>
-
-<p>Funciona.</p>
-
-<p>Mas existe um custo escondido: além de ter a ideia, precisamos administrar o
-sistema que guarda a ideia.</p>
-
-<p>É justamente nessa parte que um <em>harness</em> começa a ficar interessante.</p>
-
-<h2 id="o-modelo-sozinho-não-é-o-assistente">O modelo sozinho não é o assistente</h2>
-
-<p>Neste texto, uso <em>harness</em> como nome para o ambiente que coloca o modelo para
-trabalhar: instruções, ferramentas, permissões e o fluxo que transforma uma
-resposta em ação.</p>
-
-<p>O termo não identifica uma arquitetura única. Dependendo do produto, esse
-ambiente pode ter capacidades e limites bastante diferentes.</p>
-
-<p>Quando conversamos com um modelo de linguagem numa janela de chat, ele consegue
-escrever, resumir, classificar e sugerir. Isso não significa, por si só, que
-consiga cuidar das nossas notas.</p>
-
-<p>Para isso, o sistema precisa oferecer acesso ao lugar onde elas existem e às
-operações necessárias para trabalhar ali. Pode incluir ferramentas para:</p>
-
-<ul>
-  <li>ler e escrever arquivos;</li>
-  <li>navegar em diretórios;</li>
-  <li>executar comandos;</li>
-  <li>pesquisar na web;</li>
-  <li>consultar serviços externos.</li>
-</ul>
-
-<p>O modelo interpreta o pedido e propõe o que fazer. O harness disponibiliza as
-ferramentas, aplica permissões e executa as operações autorizadas.</p>
-
-<p>Essa distinção importa. A capacidade não está apenas no modelo. Depende também
-do que o ambiente permite que ele leia, altere e consulte.</p>
-
-<h2 id="em-vez-de-abrir-o-sistema-podemos-dizer-anote">Em vez de abrir o sistema, podemos dizer: anote</h2>
-
-<p>Imagine que nossas notas sejam arquivos Markdown dentro de um diretório. Essa
-mesma pasta pode ser aberta pelo Obsidian para navegação e edição, mas também
-pode ser entregue a um agente por meio de um harness.</p>
-
-<p>A partir daí, em vez de fazer todo o trabalho manual, podemos dizer:</p>
-
-<blockquote>
-  <p>Anote esta indicação de filme.</p>
-</blockquote>
-
-<p>Num ambiente configurado para isso, o agente pode criar a nota, registrar a
-data e a fonte da indicação e procurar relações com pessoas, diretores ou
-assuntos já presentes no arquivo.</p>
-
-<p>Depois podemos perguntar:</p>
-
-<blockquote>
-  <p>Qual era mesmo aquele filme que registrei algum tempo atrás?</p>
-</blockquote>
-
-<p>O agente tem onde procurar.</p>
-
-<figure class="editorial-photo">
-  <img src="/assets/images/codex-vault-assistente-anotacao.webp" alt="Terminal com o Codex verificando links Markdown e criando um mapa de conteúdo num cofre de notas." width="1361" height="1035" loading="lazy" decoding="async" />
-  <figcaption>O Codex trabalhando diretamente no meu cofre de notas: criação do mapa de conteúdo dos projetos e conferência dos links Markdown.</figcaption>
-</figure>
-
-<p>Isso é diferente de usar um chatbot como bloco de notas. O conhecimento não
-fica apenas na conversa. Ele é persistido num sistema que continua disponível
-para outras sessões, ferramentas e modelos.</p>
-
-<h2 id="arquivos-que-continuam-sendo-nossos">Arquivos que continuam sendo nossos</h2>
-
-<p>Não é necessário começar com um banco de dados criado especialmente para a IA.
-Podemos trabalhar com elementos simples:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre>meu-caderno/
-├── AGENTS.md
-├── inbox/
-├── notes/
-├── attachments/
-└── templates/
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>As notas podem continuar em Markdown. Imagens, PDFs e outros anexos podem ficar
-ao lado delas.</p>
-
-<p>Estar no diretório, porém, não torna todo anexo automaticamente pesquisável. O
-harness ainda precisa de ferramentas capazes de extrair texto, ler metadados ou
-aplicar OCR quando o conteúdo estiver apenas numa imagem.</p>
-
-<p>Se amanhã trocarmos o agente, o modelo ou o harness, os arquivos continuam ali.
-O Obsidian continua abrindo o diretório. Um editor de texto continua abrindo as
-notas. O Git continua capaz de versionar as alterações.</p>
-
-<p>Essa portabilidade, porém, não acontece automaticamente. Ela depende de manter
-os dados em formatos legíveis, documentar as convenções e evitar que uma parte
-essencial do sistema exista apenas dentro de um serviço proprietário.</p>
-
-<p>Arquivos simples também não resolvem todos os cenários. Se o volume crescer
-muito, várias pessoas precisarem editar ao mesmo tempo ou as consultas exigirem
-estrutura rígida, um índice ou banco de dados pode se tornar necessário. O
-ponto é que não precisamos começar por ele para experimentar o fluxo.</p>
-
-<p>A inteligência pode mudar. A base de conhecimento não precisa mudar com ela.</p>
-
-<h2 id="o-agentsmd-funciona-como-manual-de-trabalho">O <code class="language-plaintext highlighter-rouge">AGENTS.md</code> funciona como manual de trabalho</h2>
-
-<p>Se o agente vai alterar nossas notas, precisa saber como queremos que isso seja
-feito.</p>
-
-<p>É aí que um arquivo como <code class="language-plaintext highlighter-rouge">AGENTS.md</code> se torna útil. Ele pode explicar:</p>
-
-<ul>
-  <li>que aquele diretório é um cofre de notas;</li>
-  <li>como nomear os arquivos;</li>
-  <li>quando criar uma nota e quando atualizar uma existente;</li>
-  <li>como representar pessoas, empresas, obras e decisões;</li>
-  <li>como guardar fontes e datas de consulta;</li>
-  <li>como relacionar assuntos;</li>
-  <li>quais informações não podem ser alteradas;</li>
-  <li>quais mudanças exigem revisão humana.</li>
-</ul>
-
-<p>Essa convenção não pertence a todos os harnesses. No Codex, especificamente, a
-<a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">documentação oficial sobre <code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>
-explica que os arquivos são lidos no início da execução e combinados do escopo
-global até o diretório de trabalho. Instruções mais próximas do arquivo em que
-o agente trabalha podem especializar as regras mais gerais.</p>
-
-<p>Isso reduz a necessidade de repetir o mesmo contexto em toda sessão. Uma regra
-como esta pode ficar no próprio ambiente:</p>
-
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre>Quando uma nova nota mencionar uma pessoa, livro ou empresa já existente,
-adicione o link correspondente.
-
-Não invente relações apenas porque duas notas usam palavras parecidas.
-
-Registre a origem e a data de consulta de toda informação trazida da web.
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O agente não precisa lembrar da conversa anterior. Precisa conseguir reler as
-instruções e reencontrar os arquivos.</p>
-
-<h2 id="a-estrutura-pode-crescer-com-o-uso">A estrutura pode crescer com o uso</h2>
-
-<p>Também não é necessário desenhar toda a taxonomia antes de começar.</p>
-
-<p>Há um risco em criar uma grande árvore de diretórios quando ainda não existe
-material suficiente para mostrar quais divisões serão úteis. Podemos começar
-com uma caixa de entrada e algumas notas:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre>um livro
-uma reunião
-um produto em avaliação
-uma ideia
-uma decisão
-uma empresa
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Conforme o material aparece, padrões começam a surgir. Talvez faça sentido
-separar empresas. Talvez apareçam projetos, equipamentos, livros, decisões ou
-pesquisas.</p>
-
-<p>O sistema pode ganhar estrutura em resposta ao uso real. O harness diminui o
-trabalho mecânico de renomear, mover e atualizar links, mas não deveria
-reorganizar tudo silenciosamente. Mudanças amplas precisam ser revisáveis e,
-quando possível, versionadas.</p>
-
-<h2 id="um-exemplo-estou-pensando-em-comprar-alguma-coisa">Um exemplo: estou pensando em comprar alguma coisa</h2>
-
-<p>Estamos navegando pela web e encontramos um equipamento interessante. Copiamos
-o endereço e dizemos:</p>
-
-<blockquote>
-  <p>Estou considerando comprar isto. Anote.</p>
-</blockquote>
-
-<p>O agente pode registrar o produto, a URL, o preço encontrado e o motivo do
-interesse. Como preços mudam, vale preservar também a moeda, a loja e a data da
-consulta:</p>
-
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="gh"># Interface de áudio — modelo X</span>
-<span class="p">
--</span> Estado: considerando
-<span class="p">-</span> Fonte: https://exemplo.com/produto
-<span class="p">-</span> Preço observado: R$ 999
-<span class="p">-</span> Consultado em: 2026-10-02
-<span class="p">-</span> Motivo: usar nas gravações em casa
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Alguns dias depois encontramos um concorrente:</p>
-
-<blockquote>
-  <p>Compare com aquele que eu estava considerando e registre.</p>
-</blockquote>
-
-<p>Agora pode existir uma relação entre os dois. Depois compramos um deles:</p>
-
-<blockquote>
-  <p>Comprei este.</p>
-</blockquote>
-
-<p>O agente pode atualizar o estado ou criar o registro da compra e ligá-lo à
-pesquisa anterior.</p>
-
-<p>Meses depois, aquela pequena sequência conta uma história:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>pesquisa → comparação → decisão → compra
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Não foi necessário projetar um banco de dados completo antes de começar. A
-estrutura apareceu durante o uso.</p>
-
-<h2 id="outro-exemplo-uma-leitura">Outro exemplo: uma leitura</h2>
-
-<p>Durante a leitura de um livro surge uma ideia:</p>
-
-<blockquote>
-  <p>Anote esta ideia e relacione com o livro.</p>
-</blockquote>
-
-<p>Mais tarde aparece outra reflexão sobre o mesmo assunto. O agente pode sugerir
-uma ligação com a primeira nota. Depois encontramos outro livro que trata do
-tema e o sistema começa a formar uma pequena rede de conhecimento.</p>
-
-<p>Meses depois, ao pesquisar o assunto, podemos reencontrar ideias que já haviam
-saído da memória.</p>
-
-<p>É a mesma possibilidade que me interessa na história do
-<a href="/posts/zettelkasten-longa-historia-pensar-com-pedacos-de-papel/">Zettelkasten</a>:
-o valor não está apenas nas notas individuais, mas nos caminhos que conseguimos
-percorrer entre elas.</p>
-
-<p>O agente pode ajudar a encontrar candidatos a conexão. A decisão de que duas
-ideias realmente têm uma relação continua merecendo julgamento. Coincidência
-de palavras não é o mesmo que relação de significado.</p>
-
-<h2 id="o-agente-também-pode-pesquisar">O agente também pode pesquisar</h2>
-
-<p>Um harness pode oferecer ferramentas além do sistema de arquivos. Se houver
-acesso à web, podemos pedir ao agente que consulte o site de uma empresa,
-recupere a ficha técnica de um equipamento ou busque dados bibliográficos de um
-livro.</p>
-
-<p>Nesse ponto, ele deixa de ser apenas um arquivista e passa a ajudar na pesquisa
-do próprio arquivo.</p>
-
-<p>Mas informações externas precisam entrar com procedência. Eu manteria pelo
-menos três distinções visíveis:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>o que eu escrevi
-o que veio de uma fonte
-o que o agente inferiu
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Sem essa separação, uma síntese produzida pelo modelo pode parecer uma anotação
-pessoal antiga, e uma inferência pode reaparecer meses depois como se fosse um
-fato confirmado.</p>
-
-<p>Também evitaria permitir que uma pesquisa na web sobrescrevesse silenciosamente
-o conteúdo original. É mais seguro acrescentar a fonte, a data e o resultado
-em uma seção identificada ou propor uma alteração para revisão.</p>
-
-<h2 id="local-não-significa-automaticamente-privado">Local não significa automaticamente privado</h2>
-
-<p>Não precisamos transformar esse sistema imediatamente em servidor, aplicativo
-ou serviço acessível pelo celular.</p>
-
-<p>Se o agente tem acesso a notas pessoais, arquivos e outras ferramentas do
-computador, expô-lo na internet aumenta a superfície de risco. Em muitos
-cenários, faz sentido manter o harness restrito à máquina e conceder apenas as
-permissões necessárias para o trabalho.</p>
-
-<p>Ainda assim, “local” não garante que todos os dados permaneçam no computador.
-Isso depende do modelo utilizado, dos serviços conectados, das ferramentas e
-da configuração de rede. Um agente executado localmente pode enviar conteúdo a
-uma API remota.</p>
-
-<p>Antes de apontá-lo para um cofre pessoal, eu verificaria:</p>
-
-<ul>
-  <li>quais diretórios ele consegue ler e escrever;</li>
-  <li>para quais serviços o conteúdo pode ser enviado;</li>
-  <li>quais operações exigem aprovação;</li>
-  <li>como revisar e reverter alterações;</li>
-  <li>onde ficam logs, backups e histórico;</li>
-  <li>quais notas contêm dados que não deveriam ser expostos.</li>
-</ul>
-
-<p>Durante o dia, uma alternativa simples é anotar no papel ou numa caixa de
-entrada limitada. Depois transferimos aquilo que vale a pena para o sistema.
-Essa etapa parece menos conveniente, mas funciona também como triagem: nem tudo
-precisa entrar no arquivo permanente.</p>
-
-<h2 id="anotar-deixa-de-ser-administrar-arquivos">Anotar deixa de ser administrar arquivos</h2>
-
-<p>Com um assistente trabalhando sobre o sistema, a preocupação muda.</p>
-
-<p>Antes perguntávamos:</p>
-
-<blockquote>
-  <p>Onde devo guardar isso?</p>
-</blockquote>
-
-<p>Agora podemos perguntar:</p>
-
-<blockquote>
-  <p>Vale a pena guardar isso?</p>
-</blockquote>
-
-<p>A primeira pergunta é sobre administração de arquivos. A segunda é sobre
-conhecimento.</p>
-
-<p>Se decidirmos registrar algo, podemos delegar parte do trabalho mecânico:
-criar, nomear, estruturar, relacionar e, quando autorizado, enriquecer a nota.</p>
-
-<p>Isso não significa registrar automaticamente tudo o que acontece. Um sistema
-que captura tudo pode produzir apenas um grande depósito de ruído.</p>
-
-<p>A escolha humana continua essencial:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>isto foi interessante
-isto foi uma decisão
-quero lembrar desta conversa
-esta ideia talvez volte a ser útil
-esta informação merece sobreviver ao momento
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O agente não precisa decidir sozinho tudo o que importa. Ele precisa tornar
-mais barato preservar, encontrar e revisar aquilo que decidimos guardar.</p>
-
-<p>Continuamos fazendo o que fazemos há séculos: anotando para não depender
-exclusivamente da memória.</p>
-
-<p>Só que agora o caderno pode ter um assistente.</p>
-
-<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="harness-assistente-anotacao-title">
-  <h2 id="harness-assistente-anotacao-title">Um assistente para o caderno</h2>
-  <p>Artes em colagem editorial geradas com IA a partir deste artigo.</p>
-  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
-  <div class="editorial-carousel__viewport" id="harness-assistente-anotacao-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 6">
-      <a href="/assets/images/carousels/harness-assistente-anotacao/01.webp" title="Abrir quadro 1 em tamanho original">
-        <img src="/assets/images/carousels/harness-assistente-anotacao/01.webp" alt="O caderno pode ter um assistente. Um harness reúne instruções, ferramentas e permissões para o agente trabalhar nas notas. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 1 de 6 · O caderno pode ter um assistente</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 6">
-      <a href="/assets/images/carousels/harness-assistente-anotacao/02.webp" title="Abrir quadro 2 em tamanho original">
-        <img src="/assets/images/carousels/harness-assistente-anotacao/02.webp" alt="Podemos dizer: “Anote isto.”. Com acesso autorizado, o agente pode criar a nota, registrar a fonte e a data e procurar relações no arquivo. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 2 de 6 · Podemos dizer: “Anote isto.”</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 6">
-      <a href="/assets/images/carousels/harness-assistente-anotacao/03.webp" title="Abrir quadro 3 em tamanho original">
-        <img src="/assets/images/carousels/harness-assistente-anotacao/03.webp" alt="As notas continuam em arquivos. Markdown pode ser aberto por outros editores e ferramentas. A portabilidade depende dos formatos e das convenções que mantemos. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 3 de 6 · As notas continuam em arquivos</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 6">
-      <a href="/assets/images/carousels/harness-assistente-anotacao/04.webp" title="Abrir quadro 4 em tamanho original">
-        <img src="/assets/images/carousels/harness-assistente-anotacao/04.webp" alt="Regras para conectar e pesquisar. O AGENTS.md pode orientar o trabalho. Separe escrita pessoal, fontes externas e inferências. Palavras parecidas não garantem uma relação. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 4 de 6 · Regras para conectar e pesquisar</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="5 de 6">
-      <a href="/assets/images/carousels/harness-assistente-anotacao/05.webp" title="Abrir quadro 5 em tamanho original">
-        <img src="/assets/images/carousels/harness-assistente-anotacao/05.webp" alt="Local não garante privacidade. Um agente na sua máquina pode enviar conteúdo a serviços remotos. Confira acessos, destinos dos dados e formas de reverter mudanças. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 5 de 6 · Local não garante privacidade</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="6 de 6">
-      <a href="/assets/images/carousels/harness-assistente-anotacao/06.webp" title="Abrir quadro 6 em tamanho original">
-        <img src="/assets/images/carousels/harness-assistente-anotacao/06.webp" alt="Vale a pena guardar isto?. O agente pode reduzir o trabalho de criar, organizar e reencontrar notas. A escolha do que merece ficar continua nossa. Ilustração em colagem editorial de papel." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 6 de 6 · Vale a pena guardar isto?</figcaption>
-    </figure>
-    
-  </div>
-  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
-    <button class="btn" type="button" data-carousel-previous="" aria-controls="harness-assistente-anotacao-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
-    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 6</span>
-    <button class="btn" type="button" data-carousel-next="" aria-controls="harness-assistente-anotacao-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
-  </div>
-  <details class="editorial-carousel__transcript">
-    <summary>Ler o texto dos quadros</summary>
-    <ol>
-      <li><p>O caderno pode ter um assistente<br />
-<br />
-Um harness reúne instruções, ferramentas e permissões para o agente trabalhar nas notas.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>Podemos dizer: “Anote isto.”<br />
-<br />
-Com acesso autorizado, o agente pode criar a nota, registrar a fonte e a data e procurar relações no arquivo.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>As notas continuam em arquivos<br />
-<br />
-Markdown pode ser aberto por outros editores e ferramentas.<br />
-A portabilidade depende dos formatos e das convenções que mantemos.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>Regras para conectar e pesquisar<br />
-<br />
-O AGENTS.md pode orientar o trabalho.<br />
-Separe escrita pessoal, fontes externas e inferências. Palavras parecidas não garantem uma relação.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>Local não garante privacidade<br />
-<br />
-Um agente na sua máquina pode enviar conteúdo a serviços remotos.<br />
-Confira acessos, destinos dos dados e formas de reverter mudanças.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>Vale a pena guardar isto?<br />
-<br />
-O agente pode reduzir o trabalho de criar, organizar e reencontrar notas.<br />
-A escolha do que merece ficar continua nossa.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-    </ol>
-  </details>
-</section>
-<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão do conhecimento" /><category term="Markdown" /><category term="Obsidian" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como conectar um agente a notas Markdown para registrar, relacionar e pesquisar informações sem deixar o conhecimento preso à conversa.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/codex-vault-assistente-anotacao.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Por que anotar?</title><link href="https://www.gpupo.com/posts/por-que-anotar/" rel="alternate" type="text/html" title="Por que anotar?" /><published>2026-10-02T00:00:00-03:00</published><updated>2026-10-02T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/por-que-anotar</id><content type="html" xml:base="https://www.gpupo.com/posts/por-que-anotar/"><![CDATA[<p>Eu anoto porque não confio na minha memória.</p>
-
-<p>Não no sentido de achar que tenho uma memória particularmente ruim. Apenas não
-quero usá-la como arquivo.</p>
-
-<p>Uma ideia aparece enquanto leio um livro. Outra surge numa conversa. Alguém me
-indica um filme. Vejo um equipamento que talvez queira comprar. Descubro uma
-relação interessante entre duas coisas que, naquele momento, parecem não ter
-nada a ver.</p>
-
-<p>Se decido que preciso me lembrar de tudo isso, crio um problema.</p>
-
-<p>A cabeça começa a manter as coisas vivas:</p>
-
-<blockquote>
-  <p>Não esquece daquele negócio.</p>
-</blockquote>
-
-<blockquote>
-  <p>Depois procura aquilo.</p>
-</blockquote>
-
-<blockquote>
-  <p>Você precisa responder fulano.</p>
-</blockquote>
-
-<blockquote>
-  <p>Lembra daquela ideia.</p>
-</blockquote>
-
-<p>Existe uma diferença grande entre <strong>lembrar de alguma coisa</strong> e <strong>saber que
-alguma coisa está guardada</strong>.</p>
-
-<p>Quando confio no lugar onde anoto, posso esquecer.</p>
-
-<p>Essa é uma das maiores utilidades da anotação para mim.</p>
-
-<h2 id="a-nota-não-precisa-ser-importante-agora">A nota não precisa ser importante agora</h2>
-
-<p>Durante muito tempo associei anotação a coisas importantes.</p>
-
-<p>Hoje penso quase ao contrário. Muitas coisas que anoto ainda não sei se são
-importantes.</p>
-
-<p>Às vezes estou lendo um livro e alguma frase provoca uma ideia. Anoto.</p>
-
-<p>Meses depois encontro aquela nota relacionada a outro assunto que estou
-estudando e penso:</p>
-
-<blockquote>
-  <p>Puxa, isso aqui era bom.</p>
-</blockquote>
-
-<p>Eu já havia esquecido completamente.</p>
-
-<p>A ideia continuou existindo porque eu não dependia mais da memória para
-mantê-la viva.</p>
-
-<p>Esse talvez seja o ponto que mais me interessa. Não quero apenas criar um
-arquivo daquilo que já sei. Quero permitir que meu eu do futuro encontre coisas
-que meu eu do presente ainda não sabe para que servirão.</p>
-
-<h2 id="anotar-também-cria-conexões">Anotar também cria conexões</h2>
-
-<p>Uma nota isolada tem algum valor. Duas notas relacionadas começam a ter outro.</p>
-
-<p>Se alguém me indicou um filme, posso registrar o filme e a pessoa. Se depois eu
-quiser lembrar “qual era mesmo aquele filme que o Guido indicou?”, não preciso
-procurar pelo filme. Posso chegar até ele pelo Guido.</p>
-
-<p>Um livro pode estar ligado às ideias que tive durante a leitura.</p>
-
-<p>Uma empresa pode estar ligada a uma conversa, uma proposta, uma pessoa e uma
-decisão.</p>
-
-<p>Um equipamento pode estar ligado à época em que o comprei, à banda em que
-tocava e às músicas que tentei tocar com ele.</p>
-
-<figure class="editorial-photo">
-  <img src="/assets/images/nota-negociacao-contrabaixo.webp" alt="Nota exibida no navegador com a foto de um contrabaixo rosa e um checklist de verificações antes da compra." width="1237" height="987" loading="lazy" decoding="async" />
-  <figcaption>Uma nota que comecei durante a negociação de um contrabaixo, reunindo a foto do instrumento e o checklist antes de fechar.</figcaption>
-</figure>
-
-<p>Pouco a pouco, aquilo deixa de ser uma coleção de documentos e passa a parecer
-uma pequena Wikipédia pessoal.</p>
-
-<p>O interessante não são apenas as páginas. São os links entre elas.</p>
-
-<p>Foi também o que me chamou atenção ao pesquisar a
-<a href="/posts/zettelkasten-longa-historia-pensar-com-pedacos-de-papel/">história do Zettelkasten</a>.
-Uma ficha guarda uma ideia. As referências entre fichas permitem reencontrá-la
-por caminhos que talvez não estivessem claros quando ela foi escrita.</p>
-
-<h2 id="registrar-não-significa-decidir-fazer">Registrar não significa decidir fazer</h2>
-
-<p>Existe um perigo nisso tudo.</p>
-
-<p>Quando começamos a anotar, podemos transformar qualquer coisa em obrigação.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>Vi um produto interessante → tarefa
-Pensei em ler um livro       → tarefa
-Imaginei um projeto          → tarefa
-Descobri um lugar            → tarefa
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Em pouco tempo, criamos uma máquina especializada em produzir culpa.</p>
-
-<p>Por isso tento separar duas coisas:</p>
-
-<blockquote>
-  <p><strong>Registrar não significa decidir fazer.</strong></p>
-</blockquote>
-
-<p>Posso querer guardar uma ideia sem assumir compromisso algum com ela. Posso
-registrar um livro que talvez leia algum dia. Posso colocar uma possibilidade
-numa espécie de “um dia, talvez”.</p>
-
-<p>Ela está segura. Não preciso executá-la agora e também não preciso continuar me
-lembrando dela.</p>
-
-<p>Uma tarefa carrega um compromisso. Uma nota pode apenas preservar uma
-possibilidade.</p>
-
-<h2 id="papel-ainda-funciona-muito-bem">Papel ainda funciona muito bem</h2>
-
-<p>Nem toda nota precisa nascer digital.</p>
-
-<p>Quando estou lendo alguma coisa que considero importante, gosto de ter papel e
-caneta por perto.</p>
-
-<p>Pegar o celular para registrar uma ideia parece mais eficiente. O problema é
-que o celular contém também mensagens, e-mail, notificações, navegador e todo o
-resto. Eu entro para escrever três palavras e posso sair vinte minutos depois
-sem lembrar direito por que peguei o telefone.</p>
-
-<p>Por isso o papel continua sendo uma boa caixa de entrada.</p>
-
-<p>Depois posso transferir aquilo que vale a pena para meu sistema. Essa
-transferência, inclusive, tem valor: é um pequeno momento de revisão.</p>
-
-<p>Nem tudo precisa sobreviver.</p>
-
-<h2 id="a-ia-mudou-um-pouco-essa-conta">A IA mudou um pouco essa conta</h2>
-
-<p>Antes, havia também um custo para organizar.</p>
-
-<p>Se eu criasse notas demais, depois teria que classificar, renomear, relacionar
-e procurar tudo aquilo.</p>
-
-<p>Hoje um agente com acesso ao sistema de notas pode ajudar nesse trabalho. Posso
-dizer “anote isso”, e ele pode propor um título, criar o arquivo, relacioná-lo a
-uma pessoa já existente e encontrar outra nota sobre o mesmo assunto.</p>
-
-<p>Expliquei esse arranjo em
-<a href="/posts/como-usar-um-harness-como-assistente-de-anotacao/"><em>Como usar um harness como assistente de anotação</em></a>.
-A capacidade depende das ferramentas, permissões e instruções oferecidas ao
-agente. As relações sugeridas também precisam de revisão: palavras parecidas
-não garantem que duas ideias estejam realmente conectadas.</p>
-
-<p>Isso torna o registro relativamente barato, mas não elimina a escolha.</p>
-
-<p>Continuo achando que vale perguntar:</p>
-
-<blockquote>
-  <p><strong>Isto merece ocupar espaço no meu sistema?</strong></p>
-</blockquote>
-
-<p>A diferença é que agora não preciso gastar tanta energia decidindo onde
-exatamente colocar nem executando todas as operações mecânicas.</p>
-
-<h2 id="o-objetivo-não-é-lembrar-mais">O objetivo não é lembrar mais</h2>
-
-<p>Quanto mais uso notas, menos acho que o objetivo seja melhorar minha memória.</p>
-
-<p>Talvez seja justamente o contrário.</p>
-
-<p>Quero poder esquecer tranquilamente. Quero saber que uma ideia, uma indicação,
-uma decisão ou uma lembrança está em algum lugar onde consigo encontrá-la de
-novo.</p>
-
-<p>E quero que, eventualmente, coisas registradas em momentos diferentes voltem a
-se encontrar.</p>
-
-<p>Anotar, para mim, é isso.</p>
-
-<p>Não é tentar guardar tudo.</p>
-
-<p>É não obrigar minha cabeça a continuar carregando aquilo que pode ficar em
-outro lugar.</p>
-
-<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="por-que-anotar-title">
-  <h2 id="por-que-anotar-title">Papel, notas e possibilidades</h2>
-  <p>Artes em colagem editorial geradas com IA a partir deste ensaio.</p>
-  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
-  <div class="editorial-carousel__viewport" id="por-que-anotar-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
-      <a href="/assets/images/carousels/por-que-anotar/01.webp" title="Abrir quadro 1 em tamanho original">
-        <img src="/assets/images/carousels/por-que-anotar/01.webp" alt="Papel e caneta por perto. Às vezes anoto uma frase, uma ideia ou alguma coisa que talvez nunca use. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 1 de 4 · Papel e caneta por perto</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
-      <a href="/assets/images/carousels/por-que-anotar/02.webp" title="Abrir quadro 2 em tamanho original">
-        <img src="/assets/images/carousels/por-que-anotar/02.webp" alt="Meses depois, outras relações. Reencontrar uma anotação pode revelar conexões que eu não tinha percebido quando a escrevi. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 2 de 4 · Meses depois, outras relações</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
-      <a href="/assets/images/carousels/por-que-anotar/03.webp" title="Abrir quadro 3 em tamanho original">
-        <img src="/assets/images/carousels/por-que-anotar/03.webp" alt="Nem toda ideia precisa virar tarefa. Anotar não significa assumir um compromisso.  Uma nota pode apenas preservar uma possibilidade. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 3 de 4 · Nem toda ideia precisa virar tarefa</figcaption>
-    </figure>
-    
-    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
-      <a href="/assets/images/carousels/por-que-anotar/04.webp" title="Abrir quadro 4 em tamanho original">
-        <img src="/assets/images/carousels/por-que-anotar/04.webp" alt="A IA ajuda. A escolha continua.. Ela pode ajudar a organizar e relacionar notas. Eu ainda preciso revisar as conexões e escolher o que guardar.  Leia Por que anotar? em gpupo.com. Colagem ilustrativa de papel em azul, verde e ocre." width="1080" height="1350" loading="lazy" decoding="async" />
-      </a>
-      <figcaption>Quadro 4 de 4 · A IA ajuda. A escolha continua.</figcaption>
-    </figure>
-    
-  </div>
-  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
-    <button class="btn" type="button" data-carousel-previous="" aria-controls="por-que-anotar-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
-    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
-    <button class="btn" type="button" data-carousel-next="" aria-controls="por-que-anotar-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
-  </div>
-  <details class="editorial-carousel__transcript">
-    <summary>Ler o texto dos quadros</summary>
-    <ol>
-      <li><p>Papel e caneta por perto<br />
-<br />
-Às vezes anoto uma frase, uma ideia ou alguma coisa que talvez nunca use.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>Meses depois, outras relações<br />
-<br />
-Reencontrar uma anotação pode revelar conexões que eu não tinha percebido quando a escrevi.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>Nem toda ideia precisa virar tarefa<br />
-<br />
-Anotar não significa assumir um compromisso.<br />
-<br />
-Uma nota pode apenas preservar uma possibilidade.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-      <li><p>A IA ajuda. A escolha continua.<br />
-<br />
-Ela pode ajudar a organizar e relacionar notas. Eu ainda preciso revisar as conexões e escolher o que guardar.<br />
-<br />
-Leia Por que anotar? em gpupo.com.<br />
-<br />
-Gilmar Pupo · gpupo.com</p></li>
-    </ol>
-  </details>
-</section>
-<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Gestão do conhecimento" /><category term="Notas" /><category term="Memória" /><category term="Zettelkasten" /><category term="Agentes de IA" /><summary type="html"><![CDATA[Anoto menos para lembrar de tudo e mais para conseguir esquecer com tranquilidade, reencontrar ideias e deixar que elas se relacionem no futuro.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/nota-negociacao-contrabaixo.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Handoff: uma memória simples para agentes que não precisam lembrar de tudo</title><link href="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/" rel="alternate" type="text/html" title="Handoff: uma memória simples para agentes que não precisam lembrar de tudo" /><published>2026-10-01T00:00:00-03:00</published><updated>2026-10-01T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes</id><content type="html" xml:base="https://www.gpupo.com/posts/handoff-memoria-simples-para-agentes/"><![CDATA[<p>Existe uma tentação comum quando começamos a trabalhar com agentes de IA:
-tentar fazer com que eles <strong>lembrem de tudo</strong>.</p>
-
-<p>A conversa inteira. Todas as decisões. Todos os detalhes. Tudo o que aconteceu
-ontem.</p>
-
-<p>Na maior parte dos trabalhos, não preciso reconstruir cada passo. Preciso saber
-qual era o objetivo, onde o trabalho parou e o que fazer em seguida.</p>
-
-<p>É aí que entra o <strong>handoff</strong>.</p>
-
-<h2 id="passar-o-bastão">Passar o bastão</h2>
-
-<p>Handoff é a passagem de um trabalho entre turnos. Uma pessoa termina sua parte
-e outra assume. Antes de sair, ela deixa registrado:</p>
-
-<ul>
-  <li>o que foi feito;</li>
-  <li>o que ficou pendente;</li>
-  <li>quais decisões foram tomadas;</li>
-  <li>onde estão os arquivos;</li>
-  <li>quais verificações já foram executadas;</li>
-  <li>qual deve ser o próximo passo.</li>
-</ul>
-
-<p>Com agentes, funciona da mesma forma.</p>
-
-<p>Em vez de depender indefinidamente de uma sessão extensa, encerramos num ponto
-coerente e criamos um documento curto de passagem.</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre>sessão 1
-   ↓
-handoff.md
-   ↓
-sessão 2
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>A próxima sessão não precisa reconstruir toda a história. Precisa de contexto
-suficiente para continuar e de referências que permitam verificar esse
-contexto no projeto.</p>
-
-<h2 id="sessões-crescem">Sessões crescem</h2>
-
-<p>Enquanto trabalhamos com um agente, a sessão acumula prompts, respostas,
-arquivos, decisões, tentativas e correções. Esse contexto tem custo e limites.</p>
-
-<p>Alguns sistemas conseguem compactá-lo. Na Responses API da OpenAI, por exemplo,
-a <a href="https://developers.openai.com/api/docs/guides/compaction">compactação</a>
-carrega para a próxima janela um estado reduzido com informações dos turnos
-anteriores. A própria documentação diz que esse estado é opaco e não foi feito
-para leitura humana.</p>
-
-<p>Isso ajuda a manter uma interação longa, mas resolve um problema diferente. A
-compactação preserva contexto para o sistema continuar. O handoff registra, de
-forma legível e deliberada, o que a próxima pessoa ou sessão precisa conferir.</p>
-
-<p>Foi por isso que passei a preferir uma prática explícita:</p>
-
-<blockquote>
-  <p><strong>Quando chego a um ponto de equilíbrio, faço o handoff.</strong></p>
-</blockquote>
-
-<p>Registro o estado atual e posso começar outra sessão sem tratar a conversa
-anterior como a única fonte de continuidade.</p>
-
-<h2 id="um-handoff-pode-ser-simples">Um handoff pode ser simples</h2>
-
-<p>Não é necessária uma plataforma especial. Um arquivo Markdown já resolve
-bastante:</p>
-
-<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-</pre></td><td class="rouge-code"><pre><span class="gh"># Handoff</span>
-
-Atualizado em: 2026-10-01
-
-<span class="gu">## Objetivo</span>
-Gerar a nova versão da proposta comercial.
-
-<span class="gu">## O que foi feito</span>
-<span class="p">-</span> dados técnicos consolidados;
-<span class="p">-</span> template escolhido;
-<span class="p">-</span> primeira versão do HTML gerada.
-
-<span class="gu">## Decisões</span>
-<span class="p">-</span> usar o template B;
-<span class="p">-</span> manter valores na moeda original;
-<span class="p">-</span> não incluir opcionais ainda.
-
-<span class="gu">## Verificações</span>
-<span class="p">-</span> HTML aberto e revisado no navegador;
-<span class="p">-</span> valores comparados com dados/equalizacao.md.
-
-<span class="gu">## Pendências</span>
-<span class="p">-</span> validar prazo;
-<span class="p">-</span> revisar condições comerciais;
-<span class="p">-</span> gerar PDF.
-
-<span class="gu">## Próximo passo</span>
-Confirmar o prazo com a área comercial antes de gerar o PDF.
-
-<span class="gu">## Arquivos</span>
-<span class="p">-</span> output/proposta-v03.html
-<span class="p">-</span> dados/equalizacao.md
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>No dia seguinte, outra sessão lê esse arquivo, confere se os caminhos ainda
-existem e continua.</p>
-
-<p>Uma data de atualização ajuda a detectar um handoff antigo. Em projetos com
-mudanças paralelas, também pode ser útil registrar a branch ou o commit usado
-como referência. O documento continua curto, mas deixa de depender de um estado
-implícito do repositório.</p>
-
-<h2 id="handoff-não-é-memória-completa">Handoff não é memória completa</h2>
-
-<p>Essa distinção é importante. O handoff não tenta guardar tudo. Ele preserva <strong>o
-necessário para continuidade</strong>.</p>
-
-<p>É a diferença entre entregar para alguém centenas de páginas de conversa ou
-dizer:</p>
-
-<blockquote>
-  <p>Cheguei até aqui.<br />
-Estas decisões já foram tomadas.<br />
-Estes são os arquivos.<br />
-Falta fazer isto.</p>
-</blockquote>
-
-<p>Para muitos trabalhos, isso é suficiente. Não é suficiente quando precisamos
-reconstruir toda a sequência de mudanças, demonstrar uma aprovação formal ou
-auditar cada ação. Nesses casos, o handoff deve apontar para o histórico do Git,
-para registros de decisão, chamados, logs ou outros artefatos apropriados.</p>
-
-<p>O <code class="language-plaintext highlighter-rouge">handoff.md</code> descreve o estado presente. O
-<a href="/posts/versionar-e-criar-checkpoints/">versionamento preserva os checkpoints</a>
-que nos trouxeram até ele.</p>
-
-<h2 id="o-conhecimento-permanente-fica-em-outro-lugar">O conhecimento permanente fica em outro lugar</h2>
-
-<p>O handoff também não substitui a base do agente.</p>
-
-<p>Se durante o trabalho descobrimos uma regra permanente, ela provavelmente
-deveria ir para o
-<a href="/artigos/agents-md-nao-e-um-readme/"><code class="language-plaintext highlighter-rouge">AGENTS.md</code></a>. Se
-descobrimos um procedimento reutilizável, talvez deva virar uma skill. Se
-produzimos um bom exemplo, ele pode permanecer entre os artefatos de referência.</p>
-
-<p>Uma separação útil é:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-</pre></td><td class="rouge-code"><pre>AGENTS.md
-→ como trabalhar
-
-skills/
-→ como executar capacidades específicas
-
-knowledge/
-→ o que precisa ser conhecido
-
-handoff.md
-→ onde paramos
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O handoff registra o estado do trabalho, não todo o conhecimento do agente. Se
-uma regra continuar válida depois que a tarefa terminar, escondê-la no handoff
-torna essa regra difícil de reencontrar.</p>
-
-<h2 id="manter-o-handoff-confiável">Manter o handoff confiável</h2>
-
-<p>Um handoff pode falhar mesmo estando bem escrito. Isso acontece quando ele fica
-desatualizado, menciona arquivos que não existem mais ou declara como concluída
-uma verificação que nunca foi executada.</p>
-
-<p>Antes de encerrar a sessão, eu conferiria quatro coisas:</p>
-
-<ol>
-  <li>os caminhos citados existem;</li>
-  <li>decisões estão separadas de sugestões ainda não aprovadas;</li>
-  <li>verificações executadas estão separadas das que ainda faltam;</li>
-  <li>o próximo passo pode ser iniciado sem reler a conversa inteira.</li>
-</ol>
-
-<p>Também não transformaria o <code class="language-plaintext highlighter-rouge">handoff.md</code> em um diário acumulativo. Quando uma
-pendência for resolvida, o estado deve ser atualizado. Se o histórico for
-importante, ele já tem lugares melhores para viver.</p>
-
-<h2 id="isso-permite-descartar-sessões">Isso permite descartar sessões</h2>
-
-<p>Quando existe um handoff confiável, a sessão deixa de ser um ativo precioso.</p>
-
-<p>Podemos encerrá-la, abrir outra, trocar de modelo, retomar o trabalho amanhã ou
-passar a tarefa para outra pessoa. Essa portabilidade tem limites: modelos e
-ferramentas diferentes podem interpretar instruções de maneiras diferentes.
-Ainda assim, um estado legível e verificável reduz a dependência de uma conversa
-específica.</p>
-
-<p>Essa prática complementa a ideia de que
-<a href="/posts/todo-agente-acorda-com-amnesia/">todo agente acorda com amnésia</a>.
-Não precisamos impedir a amnésia. Precisamos deixar o projeto preparado para
-continuar apesar dela.</p>
-
-<h2 id="uma-memória-pequena-pode-ser-melhor">Uma memória pequena pode ser melhor</h2>
-
-<p>Existem projetos que exigem mecanismos de memória mais sofisticados. Um agente
-que acompanha relacionamentos durante meses, atende muitas pessoas ou precisa
-recuperar milhares de fatos não deveria depender apenas de um arquivo Markdown.</p>
-
-<p>Para trabalhos com começo, estado atual e próximo passo reconhecíveis, eu
-começaria pela solução mais simples:</p>
-
-<p><strong>persistir o que importa e passar o bastão.</strong></p>
-
-<p>O objetivo não é fazer o agente lembrar de tudo. É garantir que ele saiba
-<strong>onde estamos e para onde devemos ir</strong>.</p>
-
-<p>Às vezes, uma boa memória não é aquela que guarda tudo. É aquela que registra o
-necessário e deixa claro o que pode ser esquecido.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Agentes de IA" /><category term="Gestão de contexto" /><category term="Handoff" /><category term="Documentação" /><category term="AGENTS.md" /><summary type="html"><![CDATA[Como registrar decisões, arquivos, pendências e o próximo passo para continuar um trabalho com agentes em outra sessão.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Hoje consigo pedir a preparação de um anúncio apontando para sua ficha e confirmar os dados que faltam. O agente transforma essas informações em arquivos que posso ler, revisar e manter. Eu continuo fotografando os equipamentos, decidindo as condições e conversando com os interessados.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="Agentes de IA" /><category term="Codex" /><category term="Obsidian" /><category term="Markdown" /><category term="Automação" /><category term="Marketplace" /><summary type="html"><![CDATA[Sete anúncios de equipamentos musicais, um catálogo no Obsidian e artes revisáveis: como usei Codex e Markdown mantendo as decisões comerciais comigo.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

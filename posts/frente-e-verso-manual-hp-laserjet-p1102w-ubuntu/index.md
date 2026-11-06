@@ -9,7 +9,7 @@ Tags: Ubuntu, Linux, Impressão, PDF, Automação
 
 ---
 
-A impressora HP LaserJet P1102w que uso imprime em apenas um lado por vez. Para imprimir
+A [impressora HP LaserJet P1102w que uso](/posts/nao-arrumo-mais-impressora-agora-delego-para-o-agente/) imprime em apenas um lado por vez. Para imprimir
 um PDF frente e verso, eu precisava virar as folhas manualmente, mas a fila
 instalada no meu Ubuntu não oferecia uma opção que conduzisse essa sequência.
 

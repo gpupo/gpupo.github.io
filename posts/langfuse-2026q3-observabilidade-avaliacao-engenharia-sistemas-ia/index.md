@@ -440,6 +440,8 @@ homelab](/artigos/email-marvin-gerencio-infraestrutura-2026/),
 com backup, restauração, Nomad e uma pendência de compatibilidade que permaneceu
 depois do deploy.
 
+Essa arquitetura também entrou na minha reflexão sobre [quando começar pelo PostgreSQL e quando aceitar outro serviço](/posts/postgresql-primeiro-outro-servico-quando-houver-um-motivo/).
+
 Self-hosting ajuda a controlar onde os traces ficam. Não decide quais dados
 deveriam entrar neles. Prompt, documentos recuperados, parâmetros de tools,
 respostas, dados de usuário e metadata podem carregar informações pessoais,

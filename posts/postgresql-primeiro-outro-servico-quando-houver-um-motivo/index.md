@@ -70,7 +70,7 @@ A alternativa também teria responsabilidades, possivelmente maiores. Naquele mo
 
 ## O banco de vídeos não precisava guardar os vídeos
 
-Outra experiência veio do Video Data Product, meu projeto para organizar e processar informações sobre vídeos.
+Outra experiência veio do [Video Data Product](/artigos/biblioteca-pessoal-videos-podcasts/), meu projeto para organizar e processar informações sobre vídeos.
 
 Nesse caso, seria fácil cair no extremo oposto: já que PostgreSQL aceita JSON e textos extensos, por que não guardar absolutamente tudo nele?
 
@@ -154,7 +154,7 @@ A segunda opção nem sempre é mais simples. Às vezes, apenas esconde melhor a
 
 Até aqui, os exemplos favorecem o PostgreSQL. Mas houve uma situação recente em que minha preferência pessoal não fez muita diferença.
 
-Eu precisava atualizar o Langfuse.
+Eu precisava atualizar o [Langfuse](/posts/langfuse-2026q3-observabilidade-avaliacao-engenharia-sistemas-ia/).
 
 Na versão 2, os traces eram armazenados no PostgreSQL. A partir da versão 3, a arquitetura self-hosted passou a utilizar ClickHouse para os eventos analíticos, Redis para filas e cache e armazenamento compatível com S3 para objetos, além do PostgreSQL.
 

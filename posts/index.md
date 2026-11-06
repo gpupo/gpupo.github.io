@@ -56,6 +56,138 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-06T00:00:00-03:00">
+              06/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#obsidian">Obsidian</a>
+              
+              <a class="article-tag" href="/posts/tags/#configuração">Configuração</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-do-conhecimento">Gestão do conhecimento</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/plugins-obsidian-uso-desativo-2026/">Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo</a></h4>
+          
+          <p class="post-archive-summary">Um retrato do meu cofre em novembro: sete plugins comunitários habilitados, oito instalados e desligados, e a configuração dos recursos nativos.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-29T00:00:00-03:00">
+              29/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#arquitetura-de-software">Arquitetura de software</a>
+              
+              <a class="article-tag" href="/posts/tags/#custos">Custos</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/o-custo-de-fazer-a-ia-entender-seu-software/">O custo de fazer a IA entender seu software</a></h4>
+          
+          <p class="post-archive-summary">Por que uma pequena alteração pode exigir tanto contexto de um agente de IA — e como distinguir custo de tokens, arquitetura e organização do conhecimento.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-29T00:00:00-03:00">
+              29/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#mcp">MCP</a>
+              
+              <a class="article-tag" href="/posts/tags/#segurança">Segurança</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/dar-ferramentas-a-ia-nao-e-dar-autorizacao/">Dar ferramentas à IA não é dar autorização</a></h4>
+          
+          <p class="post-archive-summary">Por que agentes precisam de permissões por operação, verificação de dados e confirmação de resultados antes de agir fora da conversa.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-28T00:00:00-03:00">
+              28/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#memória">Memória</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/um-chatbot-em-1960-a-mesa-o-arquivo-e-as-etiquetas/">Um chatbot em 1960: a mesa, o arquivo e as etiquetas</a></h4>
+          
+          <p class="post-archive-summary">Uma mesa de escritório, um fichário e fotografias temporárias ajudam a explicar contexto, memória e reaproveitamento em chatbots.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-10-26T00:00:00-03:00">
               26/10/2026
             </time>
@@ -140,6 +272,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
           <h4><a class="post-archive-post-title" href="/posts/frente-e-verso-manual-hp-laserjet-p1102w-ubuntu/">Frente e verso manual na HP LaserJet P1102w no Ubuntu</a></h4>
           
           <p class="post-archive-summary">Um script para imprimir PDFs frente e verso na HP LaserJet P1102w, com a sequência das páginas e uma pausa para recolocar o papel.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-10-26T00:00:00-03:00">
+              26/10/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#leitura">Leitura</a>
+              
+              <a class="article-tag" href="/posts/tags/#prompt-engineering">Prompt engineering</a>
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência artificial</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/conversar-sobre-um-livro-sem-estragar-o-proximo-capitulo/">Conversar sobre um livro sem estragar o próximo capítulo</a></h4>
+          
+          <p class="post-archive-summary">Um prompt para discutir com a IA apenas o trecho já lido de um livro, evitar até alusões ao futuro e reconhecer o limite dessa proteção.</p>
           
         </article>
       

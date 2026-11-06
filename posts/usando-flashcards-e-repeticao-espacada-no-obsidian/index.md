@@ -10,7 +10,7 @@ Tags: Obsidian, Flashcards, Repetição espaçada, Aprendizado, Inglês
 ---
 
 Guardo no Obsidian parte do material que uso para estudar inglês. As notas são
-úteis para registrar e consultar explicações, exemplos e referências, mas não
+úteis para [registrar e reencontrar explicações, exemplos e referências](/posts/por-que-anotar/), mas não
 me fazem necessariamente praticar a recuperação do conteúdo. Eu queria usar
 parte desse material de outra forma: tentar responder antes de reler a
 explicação.
