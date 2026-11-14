@@ -196,3 +196,90 @@ O sinal abriu.
 O carro indicou a marcha.
 
 Marcelo acelerou.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="o-homem-que-nao-terceirizava-title">
+  <h2 id="o-homem-que-nao-terceirizava-title">O homem que não terceirizava, em quatro quadros</h2>
+  <p>Chamada para um conto de ficção, com trechos e cenas em colagem editorial geradas com IA.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="o-homem-que-nao-terceirizava-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/o-homem-que-nao-terceirizava/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/o-homem-que-nao-terceirizava/01.webp" alt="Ficção. O homem que não terceirizava. “Ferramenta é ferramenta. Pensar é comigo.” Homem de suéter azul diante de notebook e xícara de café, com bloco de notas e luminária." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · O homem que não terceirizava</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/o-homem-que-nao-terceirizava/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/o-homem-que-nao-terceirizava/02.webp" alt="Ficção. Uma terça-feira comum. O carro indica a vaga. O calendário organiza o dia. A máquina prepara o café. Homem pensativo entre um carro, um calendário e uma máquina de café." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · Uma terça-feira comum</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/o-homem-que-nao-terceirizava/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/o-homem-que-nao-terceirizava/03.webp" alt="Ficção. — Organizar tudo bem.. Desde que ele não pense por nós. Equipe de escritório conversa diante de um quadro de bilhetes, com notebook e canecas à mesa." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · — Organizar tudo bem.</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/o-homem-que-nao-terceirizava/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/o-homem-que-nao-terceirizava/04.webp" alt="Ficção. De quem veio a pergunta?. Marcelo tenta separar o pensamento das ferramentas que o acompanham.  Leia o conto em gpupo.com → Ficção. Homem diante de um quadro que reúne mãos escrevendo, notebook e um ponto de interrogação." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · De quem veio a pergunta?</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="o-homem-que-nao-terceirizava-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="o-homem-que-nao-terceirizava-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>FICÇÃO<br />
+<br />
+O homem que não terceirizava<br />
+<br />
+“Ferramenta é ferramenta. Pensar é comigo.”<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+1/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+Uma terça-feira comum<br />
+<br />
+O carro indica a vaga.<br />
+O calendário organiza o dia.<br />
+A máquina prepara o café.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+2/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+— Organizar tudo bem.<br />
+<br />
+Desde que ele não pense por nós.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+3/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+De quem veio a pergunta?<br />
+<br />
+Marcelo tenta separar o pensamento das ferramentas que o acompanham.<br />
+<br />
+Leia o conto em gpupo.com → Ficção.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+4/4</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

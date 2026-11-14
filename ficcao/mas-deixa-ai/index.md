@@ -420,3 +420,90 @@ E, numa linha menor:
 mas deixa aí
 
 Ele deixou.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="mas-deixa-ai-title">
+  <h2 id="mas-deixa-ai-title">Mas deixa aí, em quatro quadros</h2>
+  <p>Chamada para um conto de ficção, com trechos e cenas em colagem editorial geradas com IA.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="mas-deixa-ai-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/mas-deixa-ai/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/mas-deixa-ai/01.webp" alt="Ficção. Mas deixa aí. O livro de Calvin e Haroldo tinha desaparecido da sala. Pai olha pela porta para o filho adolescente lendo um livro no quarto." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Mas deixa aí</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/mas-deixa-ai/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/mas-deixa-ai/02.webp" alt="Ficção. — Tá lendo?. — Tentando. O filho levantou o livro. — Mas está em inglês. Filho lê um livro grande enquanto o pai o observa da porta." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · — Tá lendo?</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/mas-deixa-ai/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/mas-deixa-ai/03.webp" alt="Ficção. Entre as páginas. Foi assim que começaram a conversar por dentro de Calvin e Haroldo. Pai e filho diante de um livro aberto com bilhetes entre as páginas e duas canetas sobre a mesa." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Entre as páginas</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/mas-deixa-ai/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/mas-deixa-ai/04.webp" alt="Ficção. Mas deixa aí. Um pai, um filho e as conversas que ficam dentro de um livro.  Leia o conto em gpupo.com → Ficção. Pai e filho compartilham um livro à mesa da cozinha, com bilhetes e canecas." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · Mas deixa aí</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="mas-deixa-ai-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="mas-deixa-ai-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>FICÇÃO<br />
+<br />
+Mas deixa aí<br />
+<br />
+O livro de Calvin e Haroldo tinha desaparecido da sala.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+1/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+— Tá lendo?<br />
+<br />
+— Tentando.<br />
+O filho levantou o livro.<br />
+— Mas está em inglês.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+2/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+Entre as páginas<br />
+<br />
+Foi assim que começaram a conversar por dentro de Calvin e Haroldo.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+3/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+Mas deixa aí<br />
+<br />
+Um pai, um filho e as conversas que ficam dentro de um livro.<br />
+<br />
+Leia o conto em gpupo.com → Ficção.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+4/4</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

@@ -20,7 +20,26 @@ escuto, estudo, uso e escrevo.
 </nav>
 
 
-<div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-10">
+<div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-11">
+      <h2 id="culture-archive-2026-11">Novembro de 2026</h2>
+      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-11-14" data-editorial="equipamento">
+          <article>
+            <time datetime="2026-11-14T00:00:00-03:00">14 nov</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/equipamento-musical/" aria-label="Ver índice de Equipamento musical">[Equipamento musical]</a>
+              <h3 class="no_anchor"><a href="/equipamento-musical/criando-hub-midi-raspberry-pi-beatstep-fm1/">Preparando um hub MIDI com Raspberry Pi para ligar o BeatStep ao FM-1</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-11-11" data-editorial="equipamento">
+          <article>
+            <time datetime="2026-11-11T00:00:00-03:00">11 nov</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/equipamento-musical/" aria-label="Ver índice de Equipamento musical">[Equipamento musical]</a>
+              <h3 class="no_anchor"><a href="/equipamento-musical/transformando-meu-fm1-num-synth-inspirado-no-minimoog/">Transformando meu FM-1 num synth inspirado no Minimoog</a></h3>
+            </div>
+          </article>
+        </li></ol>
+    </section><section class="culture-archive-group" aria-labelledby="culture-archive-2026-10">
       <h2 id="culture-archive-2026-10">Outubro de 2026</h2>
       <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-10-21" data-editorial="equipamento">
           <article>

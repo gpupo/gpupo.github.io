@@ -386,3 +386,89 @@ Talvez ouvisse a música.
 Talvez não.
 
 Mas durante algum tempo, pelo menos, ninguém teria esquecido.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="nao-esquece-dessa-musica-title">
+  <h2 id="nao-esquece-dessa-musica-title">Não esquece dessa música, em quatro quadros</h2>
+  <p>Chamada para um conto de ficção, com trechos e cenas em colagem editorial geradas com IA.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="nao-esquece-dessa-musica-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/nao-esquece-dessa-musica/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/nao-esquece-dessa-musica/01.webp" alt="Ficção. Não esquece dessa música. Dentro de um CD de João Bosco, uma fotografia. No verso, um pedido. Caixa de CD aberta sobre madeira, com uma fotografia envelhecida de um casal sentado a uma mesa." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · Não esquece dessa música</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/nao-esquece-dessa-musica/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/nao-esquece-dessa-musica/02.webp" alt="Ficção. Guaratuba, janeiro de 2001.. Não esquece dessa música. Mãos seguram uma fotografia envelhecida de um casal à mesa, diante de muro branco e árvore." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · Guaratuba, janeiro de 2001.</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/nao-esquece-dessa-musica/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/nao-esquece-dessa-musica/03.webp" alt="Ficção. Qual música?. Qualquer música poderia ter sido aquela. Homem sentado no chão escuta um aparelho de CD; a fotografia do casal está sobre uma mesa ao lado." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · Qual música?</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/nao-esquece-dessa-musica/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/nao-esquece-dessa-musica/04.webp" alt="Ficção. O que fica dentro dos discos. Uma fotografia e uma memória que não veio com o nome de ninguém.  Leia o conto em gpupo.com → Ficção. Fotografia do casal junto de uma caixa de CD e um caderno aberto, em uma colagem de papel." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · O que fica dentro dos discos</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="nao-esquece-dessa-musica-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="nao-esquece-dessa-musica-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>FICÇÃO<br />
+<br />
+Não esquece dessa música<br />
+<br />
+Dentro de um CD de João Bosco, uma fotografia.<br />
+No verso, um pedido.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+1/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+Guaratuba, janeiro de 2001.<br />
+<br />
+Não esquece dessa música.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+2/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+Qual música?<br />
+<br />
+Qualquer música poderia ter sido aquela.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+3/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+O que fica dentro dos discos<br />
+<br />
+Uma fotografia e uma memória que não veio com o nome de ninguém.<br />
+<br />
+Leia o conto em gpupo.com → Ficção.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+4/4</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

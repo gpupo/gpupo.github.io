@@ -56,6 +56,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-14T00:00:00-03:00">
+              14/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#engenharia-de-software">Engenharia de software</a>
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#produtividade">Produtividade</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/">Apresentações como código: revisando slides com Quarto e agentes de IA</a></h4>
+          
+          <p class="post-archive-summary">Fontes em Markdown, tema compartilhado e mudanças no Git: uma forma de trabalhar com agentes na revisão de apresentações, sem pular a renderização e o ensaio.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-11-06T00:00:00-03:00">
               06/11/2026
             </time>

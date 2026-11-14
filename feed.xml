@@ -1,4 +1,321 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-11-06T10:17:09-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo</title><link href="https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026/" rel="alternate" type="text/html" title="Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo" /><published>2026-11-06T00:00:00-03:00</published><updated>2026-11-06T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026</id><content type="html" xml:base="https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026/"><![CDATA[<figure class="editorial-photo">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt-BR"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.gpupo.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.gpupo.com/" rel="alternate" type="text/html" hreflang="pt-BR" /><updated>2026-11-14T08:04:31-03:00</updated><id>https://www.gpupo.com/feed.xml</id><title type="html">Gilmar Pupo</title><subtitle>Ajudo empresas a transformar problemas de tecnologia e inteligência artificial em decisões, sistemas e produtos que funcionam na prática.</subtitle><author><name>Gilmar Pupo</name></author><entry><title type="html">Apresentações como código: revisando slides com Quarto e agentes de IA</title><link href="https://www.gpupo.com/posts/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/" rel="alternate" type="text/html" title="Apresentações como código: revisando slides com Quarto e agentes de IA" /><published>2026-11-14T00:00:00-03:00</published><updated>2026-11-14T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/apresentacoes-com-quarto-revealjs-e-agentes-de-ia</id><content type="html" xml:base="https://www.gpupo.com/posts/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/"><![CDATA[<p>Uma apresentação técnica exige escolher o que explicar, em qual ordem e com quanto detalhe. É fácil preencher os slides e descobrir, durante o ensaio, que a sequência não ajuda a contar a história.</p>
+
+<p>Quando o conteúdo está em arquivos de texto, posso trabalhar nessas escolhas com ferramentas que já uso para desenvolver software: editor, Git e um agente com acesso ao repositório. Consigo pedir uma revisão sobre a fonte, examinar o que mudou e guardar a versão que fez sentido.</p>
+
+<p>A base que tenho no repositório da BP STRAT usa <strong>Quarto para gerar apresentações Reveal.js</strong>. O conteúdo fica em arquivos <code class="language-plaintext highlighter-rouge">.qmd</code>, junto de um tema compartilhado, imagens e documentos de apoio. Essa estrutura existe; os pedidos ao agente que apresento aqui são exemplos de como trabalhar com ela. Não há uma automação instalada para revisar e publicar os decks sozinha.</p>
+
+<figure class="editorial-photo">
+  <img src="/assets/images/apresentacoes-com-quarto-revealjs-e-agentes-de-ia.webp" alt="Notebook, cartões de slides e tela de apresentação conectados por uma linha, em desenho de caneta azul." width="1536" height="1024" loading="eager" decoding="async" />
+  <figcaption>Da fonte à apresentação: ilustração conceitual gerada por IA.</figcaption>
+</figure>
+
+<h2 id="o-que-significa-tratar-uma-apresentação-como-código">O que significa tratar uma apresentação como código</h2>
+
+<p>Neste caso, significa manter conteúdo e configuração em arquivos que posso editar e versionar. O arquivo <code class="language-plaintext highlighter-rouge">.qmd</code> reúne Markdown, metadados, imagens, diagramas e notas de fala. O Quarto renderiza a apresentação para o navegador usando Reveal.js, conforme a <a href="https://quarto.org/docs/presentations/revealjs/">documentação oficial</a>.</p>
+
+<p>A organização do projeto é esta, com alguns arquivos omitidos:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre>presentations/
+├── _quarto.yml
+├── index.qmd
+├── filters/slides.lua
+├── _sass/custom/quarto.scss
+├── images/
+└── slides/
+    ├── template.qmd
+    ├── _about.qmd
+    ├── sdlc-spec-driven-ai.qmd
+    └── slides-assets/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>O <code class="language-plaintext highlighter-rouge">_quarto.yml</code> concentra a configuração. O tema Sass define a aparência compartilhada. Em <code class="language-plaintext highlighter-rouge">slides/</code> ficam as apresentações. A saída vai para <code class="language-plaintext highlighter-rouge">_build</code>, que está fora do versionamento, assim como os HTMLs gerados nessa pasta de apresentações.</p>
+
+<p>Para revisar uma mudança, olho para a fonte. Para avaliar o que será apresentado, preciso olhar para a saída. São duas verificações diferentes, e as duas importam.</p>
+
+<h2 id="o-agente-precisa-saber-o-que-a-apresentação-deve-fazer">O agente precisa saber o que a apresentação deve fazer</h2>
+
+<p>“Melhore esses slides” deixa decisões demais em aberto. Melhorar para quem? Para uma conversa de vinte minutos ou para um treinamento de duas horas? O público já conhece o assunto?</p>
+
+<p>Eu começaria delimitando público, duração, objetivo e fontes que o agente pode consultar. Um exemplo de pedido sobre esse repositório:</p>
+
+<blockquote>
+  <p>Revise <code class="language-plaintext highlighter-rouge">presentations/slides/sdlc-spec-driven-ai.qmd</code> para uma palestra de 25 minutos dirigida a lideranças de engenharia. O objetivo é explicar como especificações ajudam a orientar o trabalho com agentes. Leia o deck e os documentos relacionados em <code class="language-plaintext highlighter-rouge">docs/metodologia/sdd/</code>. Identifique repetições, saltos de raciocínio e slides densos. Edite a fonte preservando o tema. Não acrescente números nem citações sem fonte. Explique o que foi removido ou reorganizado e o que ainda depende de revisão humana.</p>
+</blockquote>
+
+<p>Os 25 minutos são uma restrição desse exemplo, não um tempo medido para o deck existente. A intenção é dar critérios para a revisão: uma apresentação introdutória pede escolhas diferentes das de um treinamento técnico.</p>
+
+<p>O acesso ao repositório também permite consultar o material que sustenta a fala. Se um slide explica uma decisão de arquitetura, o agente pode ler o documento relacionado antes de reescrever a explicação. Isso oferece contexto; a conferência da afirmação continua necessária.</p>
+
+<p>Para uma alteração pequena, prefiro um pedido igualmente pequeno:</p>
+
+<blockquote>
+  <p>Revise apenas o slide “O problema é antigo”. Encurte os tópicos e leve a explicação longa para as notas do apresentador. Preserve o sentido técnico e os demais slides.</p>
+</blockquote>
+
+<p>Depois, o diff ajuda a responder uma pergunta concreta: o agente tornou a mensagem mais clara ou removeu uma ressalva de que eu precisava?</p>
+
+<h2 id="nem-tudo-o-que-preciso-dizer-deve-aparecer-na-tela">Nem tudo o que preciso dizer deve aparecer na tela</h2>
+
+<p>O formato permite guardar notas junto do slide. A <a href="https://quarto.org/docs/presentations/revealjs/presenting.html">documentação de apresentação do Quarto</a> descreve o uso dessas notas na visão do apresentador. A sintaxe aparece no template do projeto:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="gu">## Uma decisão por slide</span>
+
+Uma mensagem central que o público deve levar.
+
+::: {.notes}
+Explicar o contexto e apresentar um exemplo durante a fala.
+:::
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Essa separação dá um destino para explicações que precisam acompanhar a apresentação, mas deixam a tela densa. Posso pedir ao agente que proponha esse deslocamento e conferir se o slide ainda se sustenta durante a fala.</p>
+
+<p>Os decks também têm diagramas Mermaid escritos na fonte. Rótulos e relações podem ser revisados junto do texto que explica o desenho. Ainda assim, um diagrama correto pode ficar ilegível quando renderizado. Não consigo avaliar isso apenas lendo o Markdown.</p>
+
+<h2 id="o-tema-resolve-a-parte-compartilhada">O tema resolve a parte compartilhada</h2>
+
+<p>Na configuração existente, as apresentações reutilizam o mesmo tema Sass, com fundo escuro, texto claro, acentos em laranja, Genos nos títulos e Inter no corpo. Esses são detalhes da identidade da BP STRAT, não requisitos do Quarto.</p>
+
+<p>A decisão útil é centralizar o que deve ser comum. Uma mudança na cor dos títulos começa no tema; um slide com ideias demais pede uma revisão do conteúdo. Mexer no tamanho da fonte para caber tudo pode apenas adiar a decisão de cortar.</p>
+
+<p>Há cuidados de reutilização no projeto. As fontes vêm do Google Fonts, e alguns caminhos de logos e fundos partem da raiz do site. Para apresentar sem rede ou servir os arquivos em um subdiretório, eu conferiria essas dependências no destino.</p>
+
+<p>O template também inclui <code class="language-plaintext highlighter-rouge">_about.qmd</code>, que contém um encerramento institucional e um exemplo com placeholders. Reaproveitar esse arquivo exige revisar o que está sendo incluído.</p>
+
+<h2 id="renderizar-faz-parte-da-revisão">Renderizar faz parte da revisão</h2>
+
+<p>Com o Quarto instalado, a partir da raiz do repositório:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">cd </span>presentations
+quarto preview
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Para gerar as saídas:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>quarto render
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>O destino configurado é <code class="language-plaintext highlighter-rouge">_build</code>. Na revisão, eu separaria a leitura em passagens: primeiro a sequência das ideias; depois os termos, exemplos e fontes; por fim, a composição renderizada. Isso evita tentar corrigir um problema de argumento apenas mudando o layout.</p>
+
+<p>No navegador, preciso conferir se o texto cabe, se as imagens têm tamanho suficiente e se os diagramas são legíveis. No ensaio, preciso descobrir se consigo explicar aquilo no tempo disponível.</p>
+
+<p>Se o agente tiver acesso ao navegador, posso incluir a inspeção visual no pedido. Se ele só conseguiu ler o <code class="language-plaintext highlighter-rouge">.qmd</code>, deve registrar essa limitação. Uma fonte organizada não comprova a legibilidade do slide.</p>
+
+<h2 id="gerar-o-deck-e-publicá-lo-são-etapas-separadas">Gerar o deck e publicá-lo são etapas separadas</h2>
+
+<p>O repositório reúne site e apresentações, mas o Jekyll exclui <code class="language-plaintext highlighter-rouge">presentations</code> do build. O workflow de publicação consultado executa o Jekyll e não renderiza o projeto Quarto.</p>
+
+<p>Por isso, acrescentar um <code class="language-plaintext highlighter-rouge">.qmd</code> não basta para colocar uma apresentação no ar pelo fluxo atual. Ainda é preciso definir o destino dos slides, renderizar o projeto e incorporar a saída à entrega. Fontes, imagens e caminhos precisam funcionar nesse endereço.</p>
+
+<p>O catálogo local já tem outra parte resolvida: um filtro Lua percorre os <code class="language-plaintext highlighter-rouge">.qmd</code> diretamente em <code class="language-plaintext highlighter-rouge">slides/</code>, ignora nomes iniciados por underscore e monta links para os HTMLs. Isso também inclui <code class="language-plaintext highlighter-rouge">template.qmd</code>. A convenção de nomes organiza a lista, mas não substitui uma decisão sobre o que está pronto para aparecer nela.</p>
+
+<h2 id="o-próximo-passo-cabe-em-um-único-slide">O próximo passo cabe em um único slide</h2>
+
+<p>Para quem já trabalha com Git e precisa manter apresentações técnicas próximas da documentação, essa abordagem oferece uma base prática de revisão. Há um custo: manter o ambiente de renderização, o tema e a publicação. Se a equipe precisa editar tudo em uma ferramenta visual e não trabalha com repositórios, eu avaliaria esse custo antes de adotar o formato.</p>
+
+<p>Eu começaria com um deck existente e um problema específico: um slide denso, uma passagem que não conecta duas ideias ou um diagrama difícil de explicar. Daria ao agente o objetivo e as fontes, revisaria o diff e abriria o resultado no navegador.</p>
+
+<p>O argumento e o ensaio continuam comigo. A alteração só merece ficar quando ajuda a explicar o assunto para aquele público, no tempo que tenho para apresentar.</p>
+
+<section class="editorial-carousel" data-editorial-carousel="" aria-roledescription="carrossel" aria-labelledby="apresentacoes-com-quarto-revealjs-e-agentes-de-ia-title">
+  <h2 id="apresentacoes-com-quarto-revealjs-e-agentes-de-ia-title">Apresentações como código, em cinco quadros</h2>
+  <p>Um roteiro para revisar slides com um agente, conferir as alterações e ensaiar.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="apresentacoes-com-quarto-revealjs-e-agentes-de-ia-slides" data-carousel-viewport="" tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 5">
+      <a href="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/01.webp" alt="Apresentações como código
+
+Quarto + Reveal.js + agentes de IA
+
+Conteúdo em texto.
+Mudanças no Git.
+Revisão antes de apresentar.
+
+Fonte → Revisão → Slides
+
+Gilmar Pupo · gpupo.com
+
+1/5" width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 1 de 5 · Apresentações como código</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 5">
+      <a href="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/02.webp" alt="Dê um objetivo ao agente
+
+“Melhore os slides” deixa muita coisa em aberto.
+
+Informe público, duração e objetivo.
+Indique as fontes de apoio.
+Peça justificativa para os cortes.
+
+Público → Tempo → Objetivo
+
+Gilmar Pupo · gpupo.com
+
+2/5" width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 2 de 5 · Dê um objetivo ao agente</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 5">
+      <a href="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/03.webp" alt="Revise o que mudou
+
+O diff ajuda a avaliar cada alteração.
+
+Confira termos, exemplos e ressalvas.
+Mova explicações para as notas
+quando a tela ficar densa.
+
+Texto → Diff → Decisão
+
+Gilmar Pupo · gpupo.com
+
+3/5" width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 3 de 5 · Revise o que mudou</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 5">
+      <a href="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/04.webp" alt="Abra os slides no navegador
+
+Markdown organizado não comprova legibilidade.
+
+Renderize e confira texto,
+imagens e diagramas.
+Depois, ensaie em voz alta.
+
+Renderizar → Conferir → Ensaiar
+
+Gilmar Pupo · gpupo.com
+
+4/5" width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 4 de 5 · Abra os slides no navegador</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="5 de 5">
+      <a href="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/05.webp" title="Abrir quadro 5 em tamanho original">
+        <img src="/assets/images/carousels/apresentacoes-com-quarto-revealjs-e-agentes-de-ia/05.webp" alt="Comece com um único slide
+
+Escolha um problema que você consegue avaliar.
+
+Peça uma revisão delimitada.
+Leia o diff e confira a saída.
+O argumento continua com quem apresenta.
+
+Objetivo → Revisão → Ensaio
+
+Gilmar Pupo · gpupo.com
+
+5/5" width="1080" height="1350" loading="lazy" decoding="async" />
+      </a>
+      <figcaption>Quadro 5 de 5 · Comece com um único slide</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls="" hidden="">
+    <button class="btn" type="button" data-carousel-previous="" aria-controls="apresentacoes-com-quarto-revealjs-e-agentes-de-ia-slides" aria-label="Quadro anterior" disabled=""><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status="" role="status" aria-live="polite" aria-atomic="true">1 de 5</span>
+    <button class="btn" type="button" data-carousel-next="" aria-controls="apresentacoes-com-quarto-revealjs-e-agentes-de-ia-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>Apresentações como código<br />
+<br />
+Quarto + Reveal.js + agentes de IA<br />
+<br />
+Conteúdo em texto.<br />
+Mudanças no Git.<br />
+Revisão antes de apresentar.<br />
+<br />
+Fonte → Revisão → Slides<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+<br />
+1/5</p></li>
+      <li><p>Dê um objetivo ao agente<br />
+<br />
+“Melhore os slides” deixa muita coisa em aberto.<br />
+<br />
+Informe público, duração e objetivo.<br />
+Indique as fontes de apoio.<br />
+Peça justificativa para os cortes.<br />
+<br />
+Público → Tempo → Objetivo<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+<br />
+2/5</p></li>
+      <li><p>Revise o que mudou<br />
+<br />
+O diff ajuda a avaliar cada alteração.<br />
+<br />
+Confira termos, exemplos e ressalvas.<br />
+Mova explicações para as notas<br />
+quando a tela ficar densa.<br />
+<br />
+Texto → Diff → Decisão<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+<br />
+3/5</p></li>
+      <li><p>Abra os slides no navegador<br />
+<br />
+Markdown organizado não comprova legibilidade.<br />
+<br />
+Renderize e confira texto,<br />
+imagens e diagramas.<br />
+Depois, ensaie em voz alta.<br />
+<br />
+Renderizar → Conferir → Ensaiar<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+<br />
+4/5</p></li>
+      <li><p>Comece com um único slide<br />
+<br />
+Escolha um problema que você consegue avaliar.<br />
+<br />
+Peça uma revisão delimitada.<br />
+Leia o diff e confira a saída.<br />
+O argumento continua com quem apresenta.<br />
+<br />
+Objetivo → Revisão → Ensaio<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+<br />
+5/5</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer=""></script>]]></content><author><name>Gilmar Pupo</name></author><category term="Engenharia de software" /><category term="Agentes de IA" /><category term="Produtividade" /><summary type="html"><![CDATA[Fontes em Markdown, tema compartilhado e mudanças no Git: uma forma de trabalhar com agentes na revisão de apresentações, sem pular a renderização e o ensaio.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/apresentacoes-com-quarto-revealjs-e-agentes-de-ia.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/apresentacoes-com-quarto-revealjs-e-agentes-de-ia.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo</title><link href="https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026/" rel="alternate" type="text/html" title="Meus plugins do Obsidian em 2026: quais mantenho ligados e quais desativo" /><published>2026-11-06T00:00:00-03:00</published><updated>2026-11-06T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026</id><content type="html" xml:base="https://www.gpupo.com/posts/plugins-obsidian-uso-desativo-2026/"><![CDATA[<figure class="editorial-photo">
   <img src="/assets/images/plugins-obsidian-2026.webp" alt="Caderno aberto com notas interligadas e módulos de busca, templates, desenho e cartões iluminados; outros módulos estão desconectados sobre a mesa." width="1536" height="1024" loading="eager" decoding="async" />
   <figcaption>Ilustração conceitual gerada por IA: módulos ativos e desativados em um caderno de notas.</figcaption>
 </figure>
@@ -1425,238 +1742,4 @@ Gilmar Pupo · gpupo.com</p></li>
 
 <p>O projeto também aceita gravações dentro de subpastas. Posso copiar as pastas criadas pelo gravador para uma área de entrada chamada <code class="language-plaintext highlighter-rouge">INBOX</code>, mantendo a organização que veio do cartão.</p>
 
-<p>A identificação do instrumento pode vir do nome da pasta ou ser atribuída durante o processamento. Para os arquivos que chegaram sem essa informação, usei uma análise das frequências, executada separadamente, para inferir se eram baixo ou guitarra. Passei então essa classificação ao script. Nesse material, a diferença entre os timbres ficou bem marcada: os baixos concentravam mais energia nos graves.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Baixo" /><category term="Guitarra" /><category term="Gravação Musical" /><category term="Estudo musical" /><category term="Agentes" /><category term="Python" /><category term="FFmpeg" /><summary type="html"><![CDATA[Um agente e um script para separar minhas gravações de estudo em frases identificadas, preservar os originais e facilitar a volta às ideias de baixo e guitarra.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Coloquei um agente de IA para cuidar dos meus anúncios de usados</title><link href="https://www.gpupo.com/posts/agente-ia-anuncios-usados/" rel="alternate" type="text/html" title="Coloquei um agente de IA para cuidar dos meus anúncios de usados" /><published>2026-10-09T00:00:00-03:00</published><updated>2026-10-09T00:00:00-03:00</updated><id>https://www.gpupo.com/posts/agente-ia-anuncios-usados</id><content type="html" xml:base="https://www.gpupo.com/posts/agente-ia-anuncios-usados/"><![CDATA[<p>Vender um pedal usado envolve uma sequência de tarefas pequenas: encontrar as fotos, conferir o modelo, definir o preço, escrever o anúncio, preparar uma imagem e lembrar onde aquilo foi publicado. Quando são vários equipamentos, essas tarefas começam a disputar espaço com a própria negociação.</p>
-
-<p>Eu já tinha as fichas dos meus equipamentos musicais no Obsidian. Nesse aplicativo, o <em>vault</em> é a pasta que reúne minhas notas e anexos. Em 8 de outubro de 2026, usei esse material para montar um assistente de anúncios com IA. Queria apontar para uma nota existente e receber um anúncio organizado, com texto curto, imagens e histórico.</p>
-
-<p>O resultado foi anúncios cadastrados,  artes salvas, um catálogo com nomes, preços e imagens.</p>
-
-<p>As fichas dos equipamentos já continham marca, modelo, informações técnicas e dados de inventário. Durante a preparação da venda, elas receberam os preços atuais e as fotografias dos exemplares.</p>
-
-<p>O agente usado nesse trabalho foi o Codex, com acesso aos arquivos locais e à ferramenta integrada de geração de imagens. Para orientar sua atuação, mantive um arquivo <code class="language-plaintext highlighter-rouge">AGENTS.md</code> no projeto Assistente Marketplace.</p>
-
-<p>A missão definida no documento é ajudar um vendedor particular a preparar e organizar anúncios de equipamentos musicais. Eu continuo responsável pelos preços, pela avaliação de propostas, pela publicação e pelo fechamento dos negócios.</p>
-
-<p>Algumas instruções tiveram efeito direto no resultado:</p>
-
-<ul>
-  <li>cada anúncio deve ter uma nota canônica, com identificador único;</li>
-  <li>os preços precisam ser números nos metadados, com valores separados para troca e Pix;</li>
-  <li>informações desconhecidas ficam pendentes;</li>
-  <li>fotografias e artes têm campos distintos;</li>
-  <li>publicações, reservas e vendas dependem de confirmação;</li>
-  <li>alterações relevantes entram no histórico;</li>
-  <li>negociações e contratos têm registros próprios.</li>
-</ul>
-
-<p>O <code class="language-plaintext highlighter-rouge">AGENTS.md</code> também passou a guardar minha preferência de redação. Editei o primeiro anúncio, informei que queria seguir aquele formato e o padrão foi incorporado às instruções para os próximos itens.</p>
-
-<p>Isso tornou uma correção pontual reutilizável. Nos pedidos seguintes, bastou indicar os equipamentos e confirmar o estado de conservação.</p>
-
-<p>As instruções ajudam a orientar o comportamento, mas continuam exigindo conferência. Elas não são uma garantia técnica de que toda saída estará correta.</p>
-
-<h2 id="usei-markdown-com-propriedades-como-base-de-dados">Usei Markdown com propriedades como base de dados</h2>
-
-<p>Cada anúncio ganhou um arquivo Markdown com um bloco YAML no início. Nesse bloco, chamado de <em>frontmatter</em>, o Obsidian guarda as <a href="https://help.obsidian.md/properties">propriedades da nota</a>. Usei essas propriedades para registrar preços, estado do anúncio e referências à mídia.</p>
-
-<p>Este é um trecho simplificado do registro real do Ditto Looper, após a confirmação da publicação em 8 de outubro. O estado da arte aparece separado do estado do anúncio:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-</pre></td><td class="rouge-code"><pre><span class="nn">---</span>
-<span class="na">tipo</span><span class="pi">:</span> <span class="s">anuncio</span>
-<span class="na">id</span><span class="pi">:</span> <span class="s">AN-2026-0004</span>
-<span class="na">produto</span><span class="pi">:</span> <span class="s">TC Electronic Ditto Looper</span>
-<span class="na">categoria</span><span class="pi">:</span> <span class="s">pedal</span>
-<span class="na">condicao</span><span class="pi">:</span> <span class="s">usado</span>
-<span class="na">conservacao</span><span class="pi">:</span> <span class="s">excelente condição</span>
-<span class="na">status</span><span class="pi">:</span> <span class="s">ativo</span>
-<span class="na">arquivado</span><span class="pi">:</span> <span class="kc">false</span>
-<span class="na">preco_troca</span><span class="pi">:</span> <span class="m">1400</span>
-<span class="na">preco_pix</span><span class="pi">:</span> <span class="m">900</span>
-<span class="na">moeda</span><span class="pi">:</span> <span class="s">BRL</span>
-<span class="na">publicado_em</span><span class="pi">:</span> <span class="s">2026-10-08</span>
-<span class="na">ficha_tecnica</span><span class="pi">:</span> <span class="s2">"</span><span class="s">[[notes/3.20260905.tc-eletronic-ditto-looper]]"</span>
-<span class="na">foto_principal</span><span class="pi">:</span> <span class="s2">"</span><span class="s">[[assets/98fa8f7dd9323d413471400f68fec848_MD5.jpeg]]"</span>
-<span class="na">arte</span><span class="pi">:</span> <span class="s2">"</span><span class="s">[[Marketplace/Midia/Artes/AN-2026-0004</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">TC</span><span class="nv"> </span><span class="s">Electronic</span><span class="nv"> </span><span class="s">Ditto</span><span class="nv"> </span><span class="s">Looper</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">v1.png]]"</span>
-<span class="na">arte_status</span><span class="pi">:</span> <span class="s">rascunho</span>
-<span class="na">canais</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s">WhatsApp - Grupo de Compra e Venda</span>
-<span class="nn">---</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>O nome do produto e os preços são dados. A ficha técnica, a fotografia e a arte são referências a outros arquivos. O corpo da nota reúne o texto público, as imagens, observações internas e o histórico.</p>
-
-<p>Essa separação facilita uma tarefa comum: conferir o anúncio sem precisar reler toda a documentação técnica do equipamento. A ficha completa continua no inventário e recebe um link; suas especificações não precisam ser repetidas no texto de venda.</p>
-
-<p>A organização efetiva ficou distribuída assim:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-</pre></td><td class="rouge-code"><pre>obsidian-main-vault/
-├── Assistente-Marketplace/
-│   ├── AGENTS.md
-│   ├── README.md
-│   ├── Modelos/                 # contratos em Markdown e HTML
-│   └── Contratos/Referencias/   # exemplos fornecidos
-└── obsidian/
-    ├── notes/                  # fichas dos equipamentos
-    ├── assets/                 # fotografias já usadas no Vault
-    └── Marketplace/
-        ├── Anuncios/           # registros canônicos
-        ├── Midia/Artes/        # peças gráficas separadas
-        └── Painel.base         # consultas e catálogo
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Preservei as fotos em <code class="language-plaintext highlighter-rouge">assets/</code>, onde elas já estavam, e salvei as artes em uma pasta própria. Assim, cada imagem continua com uma procedência identificável, sem duplicar as fotografias só para encaixar uma estrutura nova.</p>
-
-<h2 id="o-anúncio-público-ficou-curto">O anúncio público ficou curto</h2>
-
-<p>Uma ficha de equipamento pode ter páginas de especificações. Para anunciar no celular, escolhi uma estrutura que cabe em poucas linhas:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-</pre></td><td class="rouge-code"><pre>Pedal TC Electronic Ditto Looper
-
-Usado, Excelente condição
-
-Troca: R$ 1.400,00
-À vista / Pix: R$ 900,00
-
-Somente negociação presencial em Curitiba
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Esse texto foi produzido a partir dos dados do anúncio e da condição comercial que defini. Informações técnicas detalhadas continuam disponíveis na ficha para quando alguém perguntar.</p>
-
-<h2 id="as-artes-exigiram-direção-visual-e-revisão">As artes exigiram direção visual e revisão</h2>
-
-<p>Pedi uma identidade inspirada em anúncios de revistas de guitarra dos anos 1990: composição vertical próxima de 4:5, tipografia forte, fotografia grande, textura discreta e dois blocos de preço bem visíveis.</p>
-
-<p>As peças foram geradas com ImageGen a partir das fotos fornecidas. Cada uma recebeu os textos e valores do respectivo registro. Os arquivos de trabalho ficaram em PNG, com 1122 × 1402 pixels, e os prompts foram guardados nas notas dos anúncios. As artes continuavam marcadas como rascunho ou com atualização pendente; publicação do anúncio e aprovação da imagem são etapas distintas.</p>
-
-<p>Este é um exemplo do resultado para o Ditto, ainda registrado como rascunho para revisão:</p>
-
-<figure class="editorial-photo editorial-photo--reference">
-  <img src="/assets/images/agente-ia-anuncios-usados-ditto-arte.webp" alt="Arte de referência do anúncio do TC Electronic Ditto Looper, com fotografia do pedal, estilo de revista de guitarra dos anos 1990 e preços de R$ 1.400 para troca e R$ 900 no Pix" width="1122" height="1402" loading="lazy" decoding="async" />
-  <figcaption>Arte v1 do Ditto, criada com ImageGen a partir da foto do exemplar e mantida como rascunho. Os valores registram o experimento de 8 de outubro de 2026.</figcaption>
-</figure>
-
-<p>A fotografia original permanece disponível separadamente:</p>
-
-<figure class="editorial-photo">
-  <img src="/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" alt="Fotografia original do pedal TC Electronic Ditto Looper sobre uma mesa de madeira, com o controle de volume, o footswitch e o conector lateral visíveis" width="1200" height="1600" loading="lazy" decoding="async" />
-  <figcaption>Fotografia do exemplar usada como entrada para a composição. O original permanece preservado no inventário.</figcaption>
-</figure>
-
-<h2 id="o-catálogo-veio-dos-mesmos-registros">O catálogo veio dos mesmos registros</h2>
-
-<p>Depois das primeiras artes, pedi uma lista com nomes, preços e fotos. Para isso, foi criado um <code class="language-plaintext highlighter-rouge">Painel.base</code>, que consulta as propriedades das notas no Obsidian.</p>
-
-<p>O <a href="https://help.obsidian.md/bases">Obsidian Bases</a> permite criar vistas em tabelas e cartões a partir dos arquivos e de suas propriedades. O <a href="https://help.obsidian.md/bases/syntax">formato <code class="language-plaintext highlighter-rouge">.base</code></a> descreve essas vistas, filtros e fórmulas.</p>
-
-<p>No meu painel, o catálogo usa o campo <code class="language-plaintext highlighter-rouge">arte</code> quando há uma peça gráfica vinculada. Enquanto esse campo está vazio, mostra <code class="language-plaintext highlighter-rouge">foto_principal</code>. A lógica está registrada na própria Base:</p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="na">formulas</span><span class="pi">:</span>
-  <span class="na">imagem_anuncio</span><span class="pi">:</span> <span class="s">if(arte, arte, foto_principal)</span>
-  <span class="na">imagem_lista</span><span class="pi">:</span> <span class="s">if(formula.imagem_anuncio, image(formula.imagem_anuncio), "")</span>
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Existem vistas de catálogo e lista com fotos, além de filtros para ativos, rascunhos, pausados, reservados, vendidos, arquivados e negociações.</p>
-
-<p>Um anúncio aparece na vista Ativos quando satisfaz três condições:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre>tipo = anuncio
-status = ativo
-arquivado = false
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>A vista Catálogo inclui ativos e rascunhos, mostrando o status. Isso permite ver o que está preparado e o que já teve publicação confirmada.</p>
-
-<p>O benefício prático é que a lista lê as notas existentes. Quando o registro muda, a consulta reflete os dados; não preciso manter uma segunda relação manual dos mesmos itens.</p>
-
-<p>Essa atualização vale para o painel local. O texto copiado para o WhatsApp, uma postagem no Facebook ou um PNG enviado anteriormente precisa ser atualizado no respectivo canal quando houver mudança.</p>
-
-<h2 id="a-publicação-continuou-comigo">A publicação continuou comigo</h2>
-
-<p>O fluxo de criação começou com <code class="language-plaintext highlighter-rouge">status: rascunho</code>. Preparar o anúncio e gerar uma arte não comprovam publicação.</p>
-
-<p>Eu publiquei os itens e depois informei ao agente:</p>
-
-<blockquote>
-  <p>anunciei todos no grupo wpp</p>
-</blockquote>
-
-<p>Com essa confirmação, ele atualizou os sete registros para <code class="language-plaintext highlighter-rouge">ativo</code>, anotou o canal, a data de publicação e uma entrada no histórico.</p>
-
-<p>O agente fez o trabalho local de preparação e organização. A ação externa de publicar foi minha. Não houve integração para enviar mensagens ao grupo ou operar o marketplace.</p>
-
-<p>O histórico guarda a sequência de eventos. Uma entrada antiga pode dizer que o anúncio era rascunho; uma entrada posterior registra sua ativação. Isso permite entender como o estado atual foi alcançado.</p>
-
-<h2 id="deixei-regras-para-propostas-e-modelos-para-contratos">Deixei regras para propostas e modelos para contratos</h2>
-
-<p>Além dos anúncios, documentei como o assistente deve lidar com negociações. Cada item tem um preço de troca e outro para pagamento integral via Pix, definido como meu melhor preço à vista.</p>
-
-<p>Para uma proposta com equipamento mais dinheiro, a regra registrada aplica ao saldo a proporção entre esses dois preços:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>complemento_pix = preco_pix × (preco_troca - valor_aceito) / preco_troca
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Por exemplo, em uma simulação com os valores do Ditto, o preço de troca é R$ 1.400 e o de Pix é R$ 900. Se eu aceitasse um equipamento por R$ 350, o complemento calculado seria:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre>saldo de troca = 1.400 - 350 = R$ 1.050
-complemento Pix = 900 × (1.050 / 1.400) = R$ 675
-</pre></td></tr></tbody></table></code></pre></div></div>
-
-<p>Esse cenário é ilustrativo, sem proposta recebida ou aceite registrado. A fórmula representa a regra comercial que defini para esse projeto. O valor declarado pelo interessado precisa ser separado do valor que eu aceito. O cálculo ajuda a conferir uma negociação; minha decisão comercial continua necessária.</p>
-
-<p>Se o valor aceito superar o preço de troca, as instruções exigem uma decisão minha, em vez de gerar complemento negativo ou troco automático.</p>
-
-<p>Também forneci três contratos anteriores como referência. Os PDFs foram preservados, transcritos para Markdown e HTML, e usados para preparar dois modelos reutilizáveis: permuta e pagamento misto com recibo.</p>
-
-<p>O Markdown fica como versão editável; o HTML independente é destinado à impressão em A4. Os modelos não reaproveitam automaticamente dados pessoais dos exemplos, e um recibo depende da confirmação de recebimento.</p>
-
-<p>Hoje consigo pedir a preparação de um anúncio apontando para sua ficha e confirmar os dados que faltam. O agente transforma essas informações em arquivos que posso ler, revisar e manter. Eu continuo fotografando os equipamentos, decidindo as condições e conversando com os interessados.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Inteligência artificial" /><category term="Agentes de IA" /><category term="Codex" /><category term="Obsidian" /><category term="Markdown" /><category term="Automação" /><category term="Marketplace" /><summary type="html"><![CDATA[Sete anúncios de equipamentos musicais, um catálogo no Obsidian e artes revisáveis: como usei Codex e Markdown mantendo as decisões comerciais comigo.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" /><media:content medium="image" url="https://www.gpupo.com/assets/images/agente-ia-anuncios-usados-ditto-foto.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>A identificação do instrumento pode vir do nome da pasta ou ser atribuída durante o processamento. Para os arquivos que chegaram sem essa informação, usei uma análise das frequências, executada separadamente, para inferir se eram baixo ou guitarra. Passei então essa classificação ao script. Nesse material, a diferença entre os timbres ficou bem marcada: os baixos concentravam mais energia nos graves.</p>]]></content><author><name>Gilmar Pupo</name></author><category term="Baixo" /><category term="Guitarra" /><category term="Gravação Musical" /><category term="Estudo musical" /><category term="Agentes" /><category term="Python" /><category term="FFmpeg" /><summary type="html"><![CDATA[Um agente e um script para separar minhas gravações de estudo em frases identificadas, preservar os originais e facilitar a volta às ideias de baixo e guitarra.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.gpupo.com/android-chrome-512x512.png" /><media:content medium="image" url="https://www.gpupo.com/android-chrome-512x512.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

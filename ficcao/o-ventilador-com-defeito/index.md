@@ -26,3 +26,88 @@ O lascado o incomodava. Quando o visitei, me ofereceu o instrumento em troca de 
 Preciso limpar o violão lascado na mão. O lascado não me incomoda. É um leve sinal que lembra uma história. Sim, ela aconteceu, tenho certeza.
 
 Quanto ao ventilador do sonho, ainda acho que deveria ter pedido um dinheiro por ele.
+
+
+
+
+<section class="editorial-carousel" data-editorial-carousel aria-roledescription="carrossel" aria-labelledby="o-ventilador-com-defeito-title">
+  <h2 id="o-ventilador-com-defeito-title">O ventilador com defeito, em quatro quadros</h2>
+  <p>Chamada para um conto de ficção, com trechos e cenas em colagem editorial geradas com IA.</p>
+  <p class="editorial-carousel__hint">Deslize para acompanhar os quadros. Com o carrossel em foco, use as setas do teclado.</p>
+  <div class="editorial-carousel__viewport" id="o-ventilador-com-defeito-slides" data-carousel-viewport tabindex="0" role="group" aria-label="Quadros do carrossel">
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="1 de 4">
+      <a href="/assets/images/carousels/o-ventilador-com-defeito/01.webp" title="Abrir quadro 1 em tamanho original">
+        <img src="/assets/images/carousels/o-ventilador-com-defeito/01.webp" alt="Ficção. O ventilador com defeito. Hoje eu tive um sonho. Ventilador antigo e guitarra vermelha sobre o balcão de uma loja de penhores, com violão ao fundo." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 1 de 4 · O ventilador com defeito</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="2 de 4">
+      <a href="/assets/images/carousels/o-ventilador-com-defeito/02.webp" title="Abrir quadro 2 em tamanho original">
+        <img src="/assets/images/carousels/o-ventilador-com-defeito/02.webp" alt="Ficção. Vinte reais. Uma Stratocaster vermelha, um ventilador e um negócio que só parece normal dentro de um sonho. Mão segura papel dobrado ao lado de ventilador antigo e guitarra vermelha, em colagem onírica." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 2 de 4 · Vinte reais</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="3 de 4">
+      <a href="/assets/images/carousels/o-ventilador-com-defeito/03.webp" title="Abrir quadro 3 em tamanho original">
+        <img src="/assets/images/carousels/o-ventilador-com-defeito/03.webp" alt="Ficção. O violão lascado. É um leve sinal que lembra uma história. Detalhe da mão de um violão com um pequeno lascado, junto a tecido, livros e caneca." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 3 de 4 · O violão lascado</figcaption>
+    </figure>
+    
+    <figure class="editorial-carousel__slide" role="group" aria-roledescription="quadro" aria-label="4 de 4">
+      <a href="/assets/images/carousels/o-ventilador-com-defeito/04.webp" title="Abrir quadro 4 em tamanho original">
+        <img src="/assets/images/carousels/o-ventilador-com-defeito/04.webp" alt="Ficção. O que um objeto guarda. Um sonho, um instrumento e uma lembrança que insiste.  Leia o conto em gpupo.com → Ficção. Violão sobre uma cadeira, ventilador ao fundo e recortes com a imagem de uma guitarra vermelha." width="1080" height="1350" loading="lazy" decoding="async">
+      </a>
+      <figcaption>Quadro 4 de 4 · O que um objeto guarda</figcaption>
+    </figure>
+    
+  </div>
+  <div class="editorial-carousel__controls" data-carousel-controls hidden>
+    <button class="btn" type="button" data-carousel-previous aria-controls="o-ventilador-com-defeito-slides" aria-label="Quadro anterior" disabled><span aria-hidden="true">←</span> Anterior</button>
+    <span class="editorial-carousel__status" data-carousel-status role="status" aria-live="polite" aria-atomic="true">1 de 4</span>
+    <button class="btn" type="button" data-carousel-next aria-controls="o-ventilador-com-defeito-slides" aria-label="Próximo quadro">Próximo <span aria-hidden="true">→</span></button>
+  </div>
+  <details class="editorial-carousel__transcript">
+    <summary>Ler o texto dos quadros</summary>
+    <ol>
+      <li><p>FICÇÃO<br />
+<br />
+O ventilador com defeito<br />
+<br />
+Hoje eu tive um sonho.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+1/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+Vinte reais<br />
+<br />
+Uma Stratocaster vermelha, um ventilador e um negócio que só parece normal dentro de um sonho.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+2/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+O violão lascado<br />
+<br />
+É um leve sinal que lembra uma história.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+3/4</p></li>
+      <li><p>FICÇÃO<br />
+<br />
+O que um objeto guarda<br />
+<br />
+Um sonho, um instrumento e uma lembrança que insiste.<br />
+<br />
+Leia o conto em gpupo.com → Ficção.<br />
+<br />
+Gilmar Pupo · gpupo.com<br />
+4/4</p></li>
+    </ol>
+  </details>
+</section>
+<script src="/assets/js/editorial-carousel.js" defer></script>

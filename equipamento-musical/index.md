@@ -28,6 +28,42 @@ essas coisas.
   <li>
     <article class="editorial-list-item">
       
+      <time datetime="2026-11-14T00:00:00-03:00">
+        
+        14/11/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/equipamento-musical/criando-hub-midi-raspberry-pi-beatstep-fm1/">Preparando um hub MIDI com Raspberry Pi para ligar o BeatStep ao FM-1</a></h2>
+        
+        <p>Depois de instalar o FMini-1, comecei a preparar uma caixa para ligar controlador e sintetizador sem o computador. Os testes passaram pelo Linux; a montagem no Raspberry ainda está por fazer.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
+      <time datetime="2026-11-11T00:00:00-03:00">
+        
+        11/11/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/equipamento-musical/transformando-meu-fm1-num-synth-inspirado-no-minimoog/">Transformando meu FM-1 num synth inspirado no Minimoog</a></h2>
+        
+        <p>Instalei o FMini-1 no meu M-Vave FM-1 para explorar outros timbres. Até conseguir tocar, precisei descobrir por que o aparelho desaparecia do instalador.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
       <time datetime="2026-10-21T00:00:00-03:00">
         
         21/10/2026
