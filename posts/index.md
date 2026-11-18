@@ -56,6 +56,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-18T00:00:00-03:00">
+              18/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#segurança">Segurança</a>
+              
+              <a class="article-tag" href="/posts/tags/#engenharia-social">Engenharia social</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/agente-ia-risco-golpe-emails-ofertas/">Usando um agente de IA para avaliar o risco de golpe em e-mails de ofertas</a></h4>
+          
+          <p class="post-archive-summary">Uma abordagem para um cargo de direção tinha autenticação válida e correspondia a uma vaga pública. O que faltava comprovar era a identidade de quem fazia o contato.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-11-14T00:00:00-03:00">
               14/11/2026
             </time>
