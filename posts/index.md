@@ -56,6 +56,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-19T00:00:00-03:00">
+              19/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência Artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#automação">Automação</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-documental">Gestão documental</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/processador-documentos-ia-caixa-entrada-taxonomia/">Da caixa de entrada à pasta certa: um processador de documentos com IA</a></h4>
+          
+          <p class="post-archive-summary">Como organizei uma POC que extrai conteúdo, propõe nomes e classifica documentos, e o que ainda falta para levar esse fluxo a vários drives compartilhados.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-11-18T00:00:00-03:00">
               18/11/2026
             </time>
