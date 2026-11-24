@@ -18,6 +18,42 @@ blues, jazz e algumas descobertas pelo caminho.
   <li>
     <article class="editorial-list-item">
       
+      <time datetime="2026-11-20T00:00:00-03:00">
+        
+        20/11/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/musica/agente-ia-cifras-kindle/">Usando meu agente de IA para enviar cifras pro meu Kindle</a></h2>
+        
+        <p>Como os testes no Kindle mudaram a diagramação de um repertório de 25 hinos da Harpa Cristã, até caber um hino por página com os graus acima da letra.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
+      <time datetime="2026-11-19T00:00:00-03:00">
+        
+        19/11/2026
+        
+      </time>
+      
+      <div>
+        <h2 class="no_anchor"><a href="/musica/harpa-crista-repertorio-estudo-cifras/">Harpa Cristã: hinos conhecidos e uma nova atenção às cifras</a></h2>
+        
+        <p>Uma seleção de 25 hinos para estudar por graus, acompanhar o canto e revisar cifras sem transformar leituras prováveis em certezas.</p>
+        
+      </div>
+    </article>
+  </li>
+  
+  <li>
+    <article class="editorial-list-item">
+      
       <time datetime="2026-10-21T00:00:00-03:00">
         
         21/10/2026

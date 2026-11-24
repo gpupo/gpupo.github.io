@@ -11,6 +11,11 @@ Tags: Inteligência Artificial, Automação, Gestão documental, Engenharia de s
 
 O pedido era fácil de entender: colocar um arquivo num “cesto de documentos” e deixar que um agente identificasse o conteúdo, aplicasse uma taxonomia, padronizasse o nome, escolhesse a pasta e devolvesse um retorno sobre o processamento.
 
+<figure class="editorial-photo">
+  <img src="/assets/images/processador-documentos-ia-caixa-entrada-taxonomia.webp" alt="Desenho em caneta azul de uma bandeja com documentos, notebook com propostas de classificação, lupa e pastas organizadas; acima, uma sequência representa análise e revisão antes do arquivamento." width="1200" height="800" loading="eager" decoding="async">
+  <figcaption>Ilustração conceitual gerada por IA: da entrada de documentos à organização, com análise e conferência.</figcaption>
+</figure>
+
 O ambiente tinha sete drives compartilhados. Cada gestor organizava os arquivos de um jeito, e havia também um acervo acumulado em um drive fora dessa estrutura. Entravam fotos e relatórios de pós-venda, notas fiscais, pedidos de compra, comprovantes de pagamento e propostas comerciais.
 
 O problema era o tempo gasto para guardar e depois encontrar esses arquivos. Escrever uma instrução de organização ajudaria a definir o padrão; a automação poderia aplicar esse padrão ao que chegasse, desde que houvesse uma regra para os casos duvidosos.
@@ -327,6 +332,8 @@ Os dados de revisão têm mascaramento de alguns identificadores, mas isso não 
 Antes de reproduzir a solução, eu retiraria do código identificadores concretos usados em regras e qualquer senha de contingência fixa, levando essas configurações para armazenamento local protegido. O conteúdo do documento também deve ser tratado como dado não confiável: uma instrução encontrada num PDF não pode ampliar os destinos ou as permissões do processador.
 
 O que eu colocaria em piloto é um cesto, poucos tipos documentais e uma pessoa responsável pela revisão. A expansão viria depois de observar se as pessoas encontram os arquivos pelo padrão criado e se o custo de corrigir as decisões cabe na rotina. Padronizar nomes e pastas é uma parte do trabalho; o resultado que interessa é conseguir guardar e recuperar o documento sem criar outra tarefa de organização.
+
+Na continuação, apresento um [roteiro para levar esse fluxo ao Google Workspace com Gemini, Workspace Studio e Apps Script](/posts/processador-documentos-gemini-workspace-studio/).
 
 [drive-changes]: https://developers.google.com/workspace/drive/api/guides/manage-changes "Google Drive API — Retrieve changes"
 [drive-shared]: https://developers.google.com/workspace/drive/api/guides/enable-shareddrives "Google Drive API — Implement shared drive support"

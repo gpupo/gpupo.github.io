@@ -22,7 +22,23 @@ escuto, estudo, uso e escrevo.
 
 <div class="culture-archive"><section class="culture-archive-group" aria-labelledby="culture-archive-2026-11">
       <h2 id="culture-archive-2026-11">Novembro de 2026</h2>
-      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-11-14" data-editorial="equipamento">
+      <ol class="culture-archive-entries list-style-none"><li class="culture-archive-entry" data-date="2026-11-20" data-editorial="musica">
+          <article>
+            <time datetime="2026-11-20T00:00:00-03:00">20 nov</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/agente-ia-cifras-kindle/">Usando meu agente de IA para enviar cifras pro meu Kindle</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-11-19" data-editorial="musica">
+          <article>
+            <time datetime="2026-11-19T00:00:00-03:00">19 nov</time>
+            <div class="culture-archive-entry-content">
+              <a class="culture-archive-editorial" href="/musica/" aria-label="Ver índice de Música">[Música]</a>
+              <h3 class="no_anchor"><a href="/musica/harpa-crista-repertorio-estudo-cifras/">Harpa Cristã: hinos conhecidos e uma nova atenção às cifras</a></h3>
+            </div>
+          </article>
+        </li><li class="culture-archive-entry" data-date="2026-11-14" data-editorial="equipamento">
           <article>
             <time datetime="2026-11-14T00:00:00-03:00">14 nov</time>
             <div class="culture-archive-entry-content">

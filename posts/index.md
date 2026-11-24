@@ -56,6 +56,105 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
       
         <article class="post-archive-post">
           <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-24T00:00:00-03:00">
+              24/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência Artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-do-conhecimento">Gestão do conhecimento</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/o-trabalho-do-agente-precisa-sobreviver-a-conversa/">O trabalho do agente precisa sobreviver à conversa</a></h4>
+          
+          <p class="post-archive-summary">Como registro orientações, decisões, fontes e próximos passos para retomar o trabalho com um agente sem depender apenas do histórico da sessão.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-24T00:00:00-03:00">
+              24/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência Artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#agentes-de-ia">Agentes de IA</a>
+              
+              <a class="article-tag" href="/posts/tags/#janela-de-contexto">Janela de contexto</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/janela-de-contexto-e-a-superficie-da-mesa-de-trabalho/">Janela de contexto e a superfície da mesa de trabalho</a></h4>
+          
+          <p class="post-archive-summary">A analogia da mesa de trabalho para entender o que ocupa a janela de contexto, os limites da compactação e a preparação da próxima sessão com um agente.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-24T00:00:00-03:00">
+              24/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#obsidian">Obsidian</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-do-conhecimento">Gestão do conhecimento</a>
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência Artificial</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/bases-obsidian-organizar-notas-agentes-ia/">Bases do Obsidian para organizar notas e trabalhar com agentes de IA</a></h4>
+          
+          <p class="post-archive-summary">Como uso fichas Markdown, propriedades e visualizações para consultar meu acervo de softwares e preparar arquivos que agentes de IA podem ajudar a organizar.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
             <time class="article-date" datetime="2026-11-19T00:00:00-03:00">
               19/11/2026
             </time>
@@ -74,6 +173,39 @@ para uma leitura mais compacta ou a grade para navegar visualmente pelos temas.<
           <h4><a class="post-archive-post-title" href="/posts/processador-documentos-ia-caixa-entrada-taxonomia/">Da caixa de entrada à pasta certa: um processador de documentos com IA</a></h4>
           
           <p class="post-archive-summary">Como organizei uma POC que extrai conteúdo, propõe nomes e classifica documentos, e o que ainda falta para levar esse fluxo a vários drives compartilhados.</p>
+          
+        </article>
+      
+    
+  
+    
+    
+    
+    
+    
+      
+
+      
+        <article class="post-archive-post">
+          <div class="post-archive-post-meta">
+            <time class="article-date" datetime="2026-11-19T00:00:00-03:00">
+              19/11/2026
+            </time>
+            
+            <div class="article-tags" aria-label="Tags do post">
+              
+              <a class="article-tag" href="/posts/tags/#inteligência-artificial">Inteligência Artificial</a>
+              
+              <a class="article-tag" href="/posts/tags/#automação">Automação</a>
+              
+              <a class="article-tag" href="/posts/tags/#gestão-documental">Gestão documental</a>
+              
+            </div>
+            
+          </div>
+          <h4><a class="post-archive-post-title" href="/posts/processador-documentos-gemini-workspace-studio/">Da caixa de entrada ao Google Drive: um processador com Gemini e Workspace Studio</a></h4>
+          
+          <p class="post-archive-summary">Um roteiro para adaptar o processador documental ao Google Workspace: começar com propostas em uma fila de revisão e acrescentar validação e publicação controlada em Apps Script.</p>
           
         </article>
       
